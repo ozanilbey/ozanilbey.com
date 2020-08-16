@@ -6,30 +6,40 @@
 
   "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
 
-  "description": "ozanilbey's isomorphic web application boilerplate",
-  "keywords": "ozanilbey, isomorphic, web, application, boilerplate",
+  "description": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities.",
+  "keywords": "Ozan İlbey Yılmaz, ozanilbey, design, designer, multidisciplinary designer, developer, web designer, web developer, user interface designer, UI designer, user experience designer, UX designer, frontend developer, piccture, cardz, favogue semantica",
   "author": "Ozan İlbey Yılmaz",
 
   "mobile-web-app-capable": "yes",
-  "apple-mobile-web-app-capable": "yes",
-  "apple-mobile-web-app-title": "Isomorphic",
-  "apple-mobile-web-app-status-bar-style": "#4ad575",
-  "theme-color": "#4ad575",
+  "theme-color": "#4ddc79",
 
-  "msapplication-navbutton-color": "#4ad575",
-  "msapplication-TileColor": "#4ad575",
+  "apple-mobile-web-app-capable": "yes",
+  "apple-mobile-web-app-title": "ozanilbey",
+  "apple-mobile-web-app-status-bar-style": "#4ddc79",
+
+  "msapplication-navbutton-color": "#4ddc79",
+  "msapplication-TileColor": "#4ddc79",
   "msapplication-TileImage": "/public/images/identity/icon-touch.png",
 
   "twitter:card": "summary_large_image",
   "twitter:site": "@ozanilbey",
   "twitter:creator": "@ozanilbey",
-  "twitter:title": "Isomorphic",
-  "twitter:description": "ozanilbey's isomorphic web application boilerplate",
+  "twitter:title": "ozanilbey",
+  "twitter:description": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities.",
   "twitter:image": "/public/images/identity/thumbnail.png",
+
+  "fb:app_id": {
+    "property": "fb:app_id",
+    "content": "380662769053506"
+  },
+  "fb:profile_id": {
+    "property": "fb:profile_id",
+    "content": "710116551"
+  },
 
   "og:title": {
     "property": "og:title",
-    "content": "Isomorphic"
+    "content": "ozanilbey"
   },
   "og:type": {
     "property": "og:type",
@@ -37,7 +47,7 @@
   },
   "og:url": {
     "property": "og:url",
-    "content": "https://github.com/ozanilbey/isomorphic"
+    "content": "https://ozanilbey.com"
   },
   "og:image": {
     "property": "og:image",
@@ -45,7 +55,7 @@
   },
   "og:description": {
     "property": "og:description",
-    "content": "ozanilbey's isomorphic web application boilerplate"
+    "content": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities."
   },
   "og:locale": {
     "property": "og:locale",
@@ -53,6 +63,36 @@
   },
   "og:site_name": {
     "property": "og:site_name",
-    "content": "Isomorphic"
+    "content": "ozanilbey"
+  },
+
+  "profile:first_name": {
+    "property": "profile:first_name",
+    "content": "Ozan İlbey"
+  },
+  "profile:last_name": {
+    "property": "profile:last_name",
+    "content": "Yılmaz"
+  },
+  "profile:username": {
+    "property": "profile:username",
+    "content": "ozanilbey"
+  },
+  "profile:gender": {
+    "property": "profile:gender",
+    "content": "male"
+  },
+
+  "name": {
+    "itemprop": "name",
+    "content": "ozanilbey"
+  },
+  "description": {
+    "itemprop": "description",
+    "content": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities."
+  },
+  "image": {
+    "itemprop": "image",
+    "content": "/public/images/identity/thumbnail.png"
   }
 }
