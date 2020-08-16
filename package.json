@@ -1,7 +1,7 @@
 {
-  "name": "isomorphic",
+  "name": "ozanilbey",
   "version": "1.0.0",
-  "description": "ozanilbey's isomorphic web application boilerplate",
+  "description": "ozanilbey's website",
   "main": "server.js",
   "scripts": {
     "build": "npm run build:client && npm run build:server",
@@ -14,17 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ozanilbey/isomorphic.git"
+    "url": "git+https://github.com/ozanilbey/ozanilbey.com.git"
   },
   "bugs": {
-    "url": "https://github.com/ozanilbey/isomorphic/issues"
+    "url": "https://github.com/ozanilbey/ozanilbey.com/issues"
   },
   "standard": {
     "parser": "babel-eslint"
   },
   "author": "Ozan İlbey Yılmaz",
   "license": "ISC",
-  "homepage": "https://github.com/ozanilbey/isomorphic#readme",
+  "homepage": "https://github.com/ozanilbey/ozanilbey.com#readme",
   "dependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
