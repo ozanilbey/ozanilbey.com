@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+  &::selection {
+    background-color: fade(black, 10%);
+  }
+}
+a, button {
+  cursor: pointer;
+}
+br {
+  user-select: none;
+}
+img {
+  user-select: none;
+}
+svg {
+  pointer-events: none;
+  user-select: none;
+}
+input[type="text"], input[type="number"], input[type="password"],
+input[type="url"], input[type="email"], input[type="search"], input[type="tel"],
+textarea {
+  width: auto;
+  padding: .5em .75em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: fade(black, 10%);
+  border-radius: .25em;
+  user-select: none;
+  transition: border-color .25s ease;
+  background-color: transparent;
+  &:focus {
+    border-color: fade(black, 20%);
+  }
+}
+textarea {
+  resize: none;
+}
+ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+code {
+  display: inline-block;
+}

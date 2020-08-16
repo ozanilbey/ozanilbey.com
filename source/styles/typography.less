@@ -1,0 +1,139 @@
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Oxygen-Sans,
+               Ubuntu,
+               Cantarell,
+               "Helvetica Neue",
+               Helvetica,
+               Arial,
+               sans-serif,
+               "Apple Color Emoji",
+               "Segoe UI Emoji",
+               "Segoe UI Symbol";
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5em;
+  line-height: 125%;
+}
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -.025em;
+}
+h2 {
+  font-size: 2.25rem;
+  letter-spacing: -.02em;
+}
+h3 {
+  font-size: 2rem;
+  letter-spacing: -.015em;
+}
+h4 {
+  font-size: 1.75rem;
+  letter-spacing: -.01em;
+}
+h5 {
+  font-size: 1.5rem;
+  letter-spacing: -.005em;
+}
+h6 {
+  font-size: 1.25rem;
+}
+a {
+  text-decoration: none;
+}
+i {
+  font-style: italic;
+}
+code {
+  font-family: monospace;
+  letter-spacing: 0;
+  white-space: pre;
+}
+
+// Line
+.text-line-single {
+  overflow: hidden;
+  max-width: 100%;
+  line-height: calc(100% / 3 * 2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Alignment
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-justified {
+  text-align: justify;
+}
+
+// Responsive
+
+/* Window Width < 320 */
+@media only screen and (max-width: @breakpoints[xxsmall-limit-superior]) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* 320 ≤ Window Width < 480 */
+@media only screen and (min-width: @breakpoints[xsmall-limit-inferior]) and (max-width: @breakpoints[xsmall-limit-superior]) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* 1024 ≤ Window Width < 1280 */
+@media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* 1280 ≤ Window Width < 1440 */
+@media only screen and (min-width: @breakpoints[xlarge-limit-inferior]) and (max-width: @breakpoints[xlarge-limit-superior]) {
+  html {
+    font-size: 17px;
+  }
+}
+
+/* 1440 ≤ Window Width */
+@media only screen and (min-width: @breakpoints[xxlarge-limit-inferior]) {
+  html {
+    font-size: 18px;
+  }
+}

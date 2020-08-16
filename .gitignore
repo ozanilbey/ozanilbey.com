@@ -1,0 +1,15 @@
+# Node.js
+node_modules
+
+# npm
+npm-debug.*
+
+# macOS
+.DS_Store
+Icon?
+
+# Application
+server.bundle.js
+public/index.html
+public/scripts
+public/styles
