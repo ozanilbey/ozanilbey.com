@@ -18,7 +18,7 @@ import './Section.less'
 function Section (props) {
   // Data
   const TagName = props.semanticTag
-  const className = getClassName(props, {
+  const className = getClassName(props.className, {
     screen: props.isFullScreen ? 'full' : null,
     spacing: props.spacing,
     align: props.align

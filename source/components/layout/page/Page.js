@@ -14,7 +14,7 @@ import './Page.less'
 // Component: Layout > Page
 function Page (props) {
   // Data
-  const className = getClassName(props, {
+  const className = getClassName(props.className, {
     decoration: props.isZebraStriped ? 'zebra-stripes' : null,
     screen: 'full'
   })

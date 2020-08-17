@@ -21,7 +21,7 @@ import './Stack.less'
 // Component: Layout > Stack
 function Stack (props) {
   // Data
-  const className = getClassName(props, {
+  const className = getClassName(props.className, {
     wrap: props.willWrap
       ? props.willWrapReverse ? 'reverse' : null
       : 'disabled',

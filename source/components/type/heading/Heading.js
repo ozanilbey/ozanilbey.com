@@ -12,7 +12,7 @@ import './Heading.less'
 function Heading (props) {
   // Data
   const TagName = `h${props.rank}`
-  const className = getClassName(props, {
+  const className = getClassName(props.className, {
     'heading-size': props.rank === 1 ? props.displaySize : 'normal',
     'text-line': props.isSingleLine ? 'single' : 'auto'
   })

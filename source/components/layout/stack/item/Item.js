@@ -18,7 +18,7 @@ import './Item.less'
 // Component: Layout > Flex > Item
 function Item (props) {
   // Data
-  const className = getClassName(props, {
+  const className = getClassName(props.className, {
     ...getResponsiveData(props, 'offset'),
     ...getResponsiveData(props, 'size'),
     ...getResponsiveData(props, 'text', label => `${label}-align`)

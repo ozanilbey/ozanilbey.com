@@ -11,7 +11,7 @@ import './Container.less'
 // Component: Layout > Container
 function Container (props) {
   // Data
-  const className = getClassName(props, {
+  const className = getClassName(props.className, {
     width: props.isMaximumWidth ? 'maximum' : null
   })
 
