@@ -20,7 +20,7 @@ function Error () {
   return (
     <Page name="error">
       <Helmet>
-        <title>Isomorphic | Error</title>
+        <title>ozanilbey</title>
       </Helmet>
       <Page.Header
         isFullScreen

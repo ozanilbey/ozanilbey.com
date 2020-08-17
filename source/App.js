@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 // Pages
 import Home from '~/pages/home/Home'
 import Error from '~/pages/error/Error'
-import Features from '~/pages/features/Features'
+import Works from '~/pages/works/Works'
 
 // Style
 import '~/styles/index.less'
@@ -19,9 +19,9 @@ function App () {
       <Route exact path="/">
         <Home />
       </Route>
-      {/* Features */}
-      <Route path="/features/:feature?">
-        <Features />
+      {/* Works */}
+      <Route path="/works/:work?">
+        <Works />
       </Route>
       {/* Error */}
       <Route>

@@ -1,6 +1,5 @@
 // Modules
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 // Components
@@ -17,12 +16,12 @@ function Home () {
   return (
     <Page name="home">
       <Helmet>
-        <title>Isomorphic | Home</title>
+        <title>ozanilbey</title>
       </Helmet>
       <Page.Header name="introduction">
         <Container>
           <Heading displaySize="big">Home</Heading>
-          <p>This is <b>Home</b> page. There is also <Link to="/features">Features</Link> page.</p>
+          <p>This is <b>Home</b> page.</p>
         </Container>
       </Page.Header>
     </Page>
