@@ -1,5 +1,5 @@
 // Constants
-import { SIZING_ALTERNATIVES } from '~/constants/generic'
+import { SIZING_ALTERNATIVES } from '~/constants/layout'
 
 // Get final className of component
 export const getClassName = (props, items) => {

@@ -13,7 +13,7 @@ import {
   ALIGNMENT_HORIZONTAL_OPTIONS,
   ALIGNMENT_VERTICAL_OPTIONS,
   SPACING_OPTIONS
-} from '~/constants/generic'
+} from '~/constants/layout'
 
 // Style
 import './Stack.less'

@@ -10,7 +10,7 @@ import {
   ALIGNMENT_HORIZONTAL_OPTIONS,
   BLOCK_OFFSET_OPTIONS,
   BLOCK_SIZE_OPTIONS
-} from '~/constants/generic'
+} from '~/constants/layout'
 
 // Style
 import './Item.less'

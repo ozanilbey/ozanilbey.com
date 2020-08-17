@@ -9,7 +9,7 @@ import { getClassName } from '~/utilities/component'
 import {
   BOX_ALIGNMENT_VERTICAL_OPTIONS,
   SPACING_OPTIONS
-} from '~/constants/generic'
+} from '~/constants/layout'
 
 // Style
 import './Section.less'
