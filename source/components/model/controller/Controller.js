@@ -28,6 +28,9 @@ function Controller (props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState(props.defaultTheme)
 
+  // References
+  const screen = useRef()
+
   // Methods
   const toggleMenu = () => setIsMenuOpen(condition => !condition)
   const toggleTheme = () => setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
@@ -39,6 +42,9 @@ function Controller (props) {
       if (localStorage) localStorage.setItem('theme', theme)
     }
   }, [theme])
+  useEffect(() => {
+    screen.current.scrollTo(0, 0)
+  }, [page, subpage])
 
   // Render
   return (
@@ -46,6 +52,7 @@ function Controller (props) {
       data-model="controller"
       className={isMenuOpen ? 'open' : null}>
       <div
+        ref={screen}
         className="screen">
         <Navigation
           page={page}
