@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light dark;
+  --figure-color-rgb: 255, 255, 255;
+  --figure-color: rgb(var(--figure-color-rgb));
+  --ground-color-rgb: 42, 45, 48;
+  --ground-color: rgb(var(--ground-color-rgb));
+  --ground-shade-color-rgb: 28, 30, 32;
+  --ground-shade-color: rgb(var(--ground-shade-color-rgb));
+  --background-color-rgb: 28, 30, 32;
+  --background-color: rgb(var(--background-color-rgb));
+}
+
+:root.light {
+  --figure-color-rgb: 42, 45, 48;
+  --ground-color-rgb: 255, 255, 255;
+  --ground-shade-color-rgb: 243, 246, 249;
+  --background-color-rgb: 239, 243, 247;
+}
+
+html, body {
+  background-color: var(--background-color);
+}
+
+* {
+  color: var(--figure-color);
+}
