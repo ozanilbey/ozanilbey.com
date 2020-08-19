@@ -21,8 +21,8 @@ function Work (props) {
   // Render
   return (
     <Page
-      name="layout"
-      parentName="features">
+      name={props.slug}
+      parentName="works">
       <Helmet>
         <title>ozanilbey:works</title>
       </Helmet>
