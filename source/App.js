@@ -4,30 +4,64 @@ import { Route, Switch } from 'react-router-dom'
 
 // Pages
 import Home from '~/pages/home/Home'
-import Error from '~/pages/error/Error'
+import Profile from '~/pages/profile/Profile'
 import Works from '~/pages/works/Works'
+import Contact from '~/pages/contact/Contact'
+import Error from '~/pages/error/Error'
+
+// Components
+import Controller from '~/components/model/controller/Controller'
+
+// Constants
+import { THEME_OPTIONS, DEFAULT_THEME } from '~/constants/settings'
 
 // Style
 import '~/styles/index.less'
+
+// Methods
+const getDefaultTheme = () => {
+  let theme
+  if (localStorage) theme = localStorage.getItem('theme')
+  if (THEME_OPTIONS.includes(theme)) return theme
+  else {
+    if (window) {
+      const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
+      const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
+      return isOtherThemePreferred ? otherTheme : DEFAULT_THEME
+    } else return DEFAULT_THEME
+  }
+}
 
 // Application
 function App () {
   // Render
   return (
-    <Switch>
-      {/* Home */}
-      <Route exact path="/">
-        <Home />
-      </Route>
-      {/* Works */}
-      <Route path="/works/:work?">
-        <Works />
-      </Route>
-      {/* Error */}
-      <Route>
-        <Error />
-      </Route>
-    </Switch>
+    <Route path="/:page?/:subpage?">
+      <Controller defaultTheme={getDefaultTheme()}>
+        <Switch>
+          {/* Home */}
+          <Route exact path="/">
+            <Home />
+          </Route>
+          {/* Profile */}
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          {/* Works */}
+          <Route path="/works/:work?">
+            <Works />
+          </Route>
+          {/* Contact */}
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          {/* Error */}
+          <Route>
+            <Error />
+          </Route>
+        </Switch>
+      </Controller>
+    </Route>
   )
 }
 

@@ -1,0 +1,95 @@
+[data-model="controller"] {
+  &.open {
+    & > .screen {
+      overflow: hidden;
+      top: 5rem;
+      border-radius: 1rem;
+      transform: scale(.98);
+      box-shadow: 0 0 3.5rem fade(black, 20%);
+      & > * {
+        &:not([data-model="navigation"]), &[data-model="navigation"] .identity {
+          pointer-events: none;
+          cursor: not-allowed;
+        }
+      }
+    }
+    & > .menu {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  & > .screen {
+    overflow: auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    transform-origin: center top;
+    box-shadow: 0 0 0 fade(black, 0%);
+    transition: top .35s ease,
+                border-radius .35s ease,
+                transform .35s ease,
+                box-shadow .35s ease;
+  }
+  & > .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: fixed;
+    z-index: 0;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    transition: top .35s ease,
+                opacity .35s ease;
+    ul {
+      display: inline-block;
+      font-size: .9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      li {
+        display: inline-block;
+        margin-right: 3rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          opacity: .5;
+          color: var(--figure-color);
+          transition: opacity .35s ease;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  /*
+  a {
+    display: inline-block;
+    position: relative;
+    opacity: .65;
+    color: inherit;
+    font-family: "Gotham Rounded", sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    letter-spacing: -.06em;
+    text-align: right;
+    text-transform: lowercase;
+    vertical-align: middle;
+    transition: opacity .5s ease;
+    &:hover {
+      opacity: 1;
+      left: 0;
+    }
+    &.brand, &.switch {
+      opacity: 1;
+    }
+  }
+  */
+}
