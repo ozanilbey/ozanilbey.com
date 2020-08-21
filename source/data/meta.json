@@ -21,14 +21,14 @@
 
   "msapplication-navbutton-color": "#4ddc79",
   "msapplication-TileColor": "#4ddc79",
-  "msapplication-TileImage": "/public/images/identity/icon-touch.png",
+  "msapplication-TileImage": "/images/identity/icon-touch.png",
 
   "twitter:card": "summary_large_image",
   "twitter:site": "@ozanilbey",
   "twitter:creator": "@ozanilbey",
   "twitter:title": "ozanilbey",
   "twitter:description": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities.",
-  "twitter:image": "/public/images/identity/thumbnail.png",
+  "twitter:image": "/images/identity/thumbnail.png",
 
   "fb:app_id": {
     "property": "fb:app_id",
@@ -53,7 +53,7 @@
   },
   "og:image": {
     "property": "og:image",
-    "content": "/public/images/identity/thumbnail.png"
+    "content": "/images/identity/thumbnail.png"
   },
   "og:description": {
     "property": "og:description",
@@ -95,6 +95,6 @@
   },
   "image": {
     "itemprop": "image",
-    "content": "/public/images/identity/thumbnail.png"
+    "content": "/images/identity/thumbnail.png"
   }
 }

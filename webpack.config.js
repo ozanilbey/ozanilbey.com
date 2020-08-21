@@ -30,9 +30,8 @@ module.exports = ({ base }) => {
       }
       : { server: path.join(__dirname, './source/server.js') },
     output: {
-      publicPath: '/',
-      path: path.resolve(__dirname),
-      filename: isClient ? 'public/scripts/[name].js' : 'server.bundle.js'
+      path: path.resolve(__dirname, isClient ? './public' : './'),
+      filename: isClient ? 'scripts/[name].js' : 'server.bundle.js'
     },
     resolve: {
       alias: { '~': path.join(__dirname, './source') },
@@ -53,11 +52,14 @@ module.exports = ({ base }) => {
           use: 'raw-loader'
         },
         {
-          test: /\.(css|less)?$/,
+          test: /\.(css|less)$/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: { hmr: !isProduction }
+              options: {
+                hmr: !isProduction,
+                publicPath: isClient ? '' : '/public/'
+              }
             },
             { loader: 'css-loader' },
             {
@@ -89,13 +91,13 @@ module.exports = ({ base }) => {
     },
     performance: { hints: false },
     plugins: [
-      new MiniCssExtractPlugin({ filename: 'public/styles/main.css' }),
+      new MiniCssExtractPlugin({ filename: `${isClient ? '' : 'public/'}styles/main.css` }),
       ...(
         isClient
           ? [
             new HtmlWebpackPlugin({
               template: 'source/template.html',
-              filename: 'public/index.html',
+              filename: 'index.html',
               base: '/',
               title,
               meta,
@@ -124,8 +126,7 @@ module.exports = ({ base }) => {
     devServer: {
       host: '0.0.0.0',
       port: process.env.PORT || 8000,
-      publicPath: '/',
-      contentBase: './public',
+      contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true,
       hot: true,
       progress: true,

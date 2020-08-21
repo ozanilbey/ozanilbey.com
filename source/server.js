@@ -40,7 +40,7 @@ app.get('*.css', (request, response, next) => {
 })
 
 // Serve static files
-app.use('/public', express.static('public'))
+app.use('/', express.static('public'))
 
 // Handle all other requests
 app.use((request, response) => {
