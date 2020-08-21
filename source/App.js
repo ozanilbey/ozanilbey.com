@@ -1,5 +1,5 @@
 // Modules
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 // Pages
@@ -18,26 +18,31 @@ import { THEME_OPTIONS, DEFAULT_THEME } from '~/constants/settings'
 // Style
 import '~/styles/index.less'
 
-// Methods
-const getDefaultTheme = () => {
-  let theme
-  if (localStorage) theme = localStorage.getItem('theme')
-  if (THEME_OPTIONS.includes(theme)) return theme
-  else {
-    if (window) {
-      const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
-      const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
-      return isOtherThemePreferred ? otherTheme : DEFAULT_THEME
-    } else return DEFAULT_THEME
-  }
-}
-
 // Application
 function App () {
+  // State
+  const [defaultTheme, setDefaultTheme] = useState(null)
+
+  // Effects
+  useEffect(() => {
+    const getDefaultTheme = () => {
+      let theme
+      if (localStorage) theme = localStorage.getItem('theme')
+      if (THEME_OPTIONS.includes(theme)) return theme
+      else {
+        if (window) {
+          const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
+          const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
+          return isOtherThemePreferred ? otherTheme : DEFAULT_THEME
+        } else return DEFAULT_THEME
+      }
+    }
+    setDefaultTheme(getDefaultTheme() || DEFAULT_THEME)
+  }, [])
   // Render
   return (
     <Route path="/:page?/:subpage?">
-      <Controller defaultTheme={getDefaultTheme()}>
+      <Controller defaultTheme={defaultTheme}>
         <Switch>
           {/* Home */}
           <Route exact path="/">

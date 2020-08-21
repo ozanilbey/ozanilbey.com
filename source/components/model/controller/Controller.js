@@ -9,15 +9,10 @@ import Container from '~/components/layout/container/Container'
 import Stack from '~/components/layout/stack/Stack'
 
 // Constants
-import { THEME_OPTIONS, DEFAULT_THEME, NAVIGATION_MENU_OPTIONS } from '~/constants/settings'
+import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/settings'
 
 // Style
 import './Controller.less'
-
-// Data
-let defaultTheme
-if (localStorage) defaultTheme = localStorage.getItem('theme')
-if (!defaultTheme) defaultTheme = DEFAULT_THEME
 
 // Component: Model > Controller
 function Controller (props) {
@@ -36,6 +31,9 @@ function Controller (props) {
   const toggleTheme = () => setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
 
   // Effects
+  useEffect(() => {
+    if (props.defaultTheme) setTheme(props.defaultTheme)
+  }, [props.defaultTheme])
   useEffect(() => {
     if (THEME_OPTIONS.includes(theme)) {
       if (document) document.documentElement.className = theme
