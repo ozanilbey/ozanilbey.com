@@ -1,6 +1,6 @@
 // Modules
 import React, { useState, useEffect } from 'react'
-import { Link, NavLink, useParams } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 // Components
