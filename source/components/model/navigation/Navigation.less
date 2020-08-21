@@ -22,11 +22,12 @@
     opacity: .65;
     height: inherit;
     color: inherit;
-    font-family: "Gotham Rounded", sans-serif;
-    font-size: 1.75rem;
-    letter-spacing: -.06em;
-    text-align: right;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
     line-height: inherit;
+    letter-spacing: -.05em;
     text-transform: lowercase;
     vertical-align: middle;
     transition: opacity .5s ease;
@@ -48,16 +49,16 @@
       }
     }
     .label {
-      width: 7rem;
+      width: 6rem;
       text-align: left;
-      text-indent: -7rem;
+      text-indent: -6rem;
       overflow: hidden;
       transition: opacity .5s ease, text-indent .5s ease;
       &:before {
         content: ":";
         display: inline-block;
         position: relative;
-        width: .375rem;
+        width: .5rem;
         text-align: center;
       }
       &[data-label="home"], &[data-label="error"] {
