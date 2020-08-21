@@ -1,5 +1,5 @@
 // Data
-const title = 'Isomorphic'
+const title = 'ozanilbey'
 const meta = require('./source/data/meta.json')
 
 // Modules
