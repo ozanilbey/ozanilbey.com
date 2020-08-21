@@ -42,7 +42,7 @@ module.exports = ({ base }) => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx)?$/,
+          test: /\.jsx?$/,
           exclude: /node_modules(?!\/webpack-dev-server)/,
           use: ['babel-loader']
         },
