@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 // Components
+import Logo from '~/components/identity/logo/Logo'
 import Container from '~/components/layout/container/Container'
 import Icon from '~/components/interface/icon/Icon'
 
@@ -43,7 +44,7 @@ function Navigation (props) {
             to="/"
             className="brand"
             activeClassName="active">
-            ozanilbey
+            <Logo />
           </NavLink>
           <Link
             to={`/${label}`}
