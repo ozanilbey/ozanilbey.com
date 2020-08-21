@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   height: 4rem;
+  line-height: 4rem;
   background-color: rgba(var(--ground-color-rgb), .75);
   box-shadow: 0 2px 0 rgba(var(--figure-color-rgb), 0.05);
   backdrop-filter: blur(1rem);
@@ -13,17 +14,19 @@
     justify-content: space-between;
     align-items: center;
     height: inherit;
+    line-height: inherit;
   }
   a {
     display: inline-block;
     position: relative;
     opacity: .65;
+    height: inherit;
     color: inherit;
     font-family: "Gotham Rounded", sans-serif;
     font-size: 1.75rem;
-    line-height: 1.75rem;
     letter-spacing: -.06em;
     text-align: right;
+    line-height: inherit;
     text-transform: lowercase;
     vertical-align: middle;
     transition: opacity .5s ease;
@@ -36,16 +39,16 @@
     }
   }
   .identity {
+    height: inherit;
+    line-height: inherit;
     [data-identity="logo"] {
       width: 6.5rem;
-      height: 4rem;
       & > * {
         fill: var(--figure-color);
       }
     }
     .label {
       width: 7rem;
-      height: 1.75rem;
       text-align: left;
       text-indent: -7rem;
       overflow: hidden;
