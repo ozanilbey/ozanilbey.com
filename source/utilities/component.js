@@ -9,6 +9,15 @@ export const getClassName = (suffix, items) => {
   if (classes.length > 0) return classes.join(' ')
 }
 
+// Get additional attributes of component
+export const getAttributes = (props, list) => {
+  const attributes = {}
+  Object.keys(props).forEach(prop => {
+    if (prop && props[prop] && list.includes(prop.split('-')[0])) attributes[prop] = props[prop]
+  })
+  return attributes
+}
+
 // Get values of a property at each breakpoint
 export const getResponsiveData = (source, property, formatLabel) => {
   const list = {}
