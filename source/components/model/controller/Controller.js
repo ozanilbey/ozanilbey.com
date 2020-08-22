@@ -8,6 +8,12 @@ import Navigation from '~/components/model/navigation/Navigation'
 import Container from '~/components/layout/container/Container'
 import Stack from '~/components/layout/stack/Stack'
 
+// Context
+import ControllerContext from '~/context/Controller'
+
+// Hooks
+import useScroll from '~/hooks/useScroll'
+
 // Constants
 import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/settings'
 
@@ -16,15 +22,16 @@ import './Controller.less'
 
 // Component: Model > Controller
 function Controller (props) {
+  // References
+  const screen = useRef()
+
   // Data
-  const { page, subpage } = useParams()
+  const pages = useParams()
+  const scroll = useScroll(screen)
 
   // State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState(props.defaultTheme)
-
-  // References
-  const screen = useRef()
 
   // Methods
   const toggleMenu = () => setIsMenuOpen(condition => !condition)
@@ -42,59 +49,60 @@ function Controller (props) {
   }, [theme])
   useEffect(() => {
     screen.current.scrollTo(0, 0)
-  }, [page, subpage])
+  }, [pages])
 
   // Render
   return (
-    <div
-      data-model="controller"
-      className={isMenuOpen ? 'open' : null}>
+    <ControllerContext.Provider value={{ pages, scroll, theme }}>
       <div
-        ref={screen}
-        className="screen">
-        <Navigation
-          page={page}
-          isMenuOpen={isMenuOpen}
-          toggleMenu={toggleMenu}
-          toggleTheme={toggleTheme} />
-        {props.children}
-      </div>
-      <nav className="menu">
-        <Container>
-          <Stack
-            willWrap
-            vertical="middle">
-            <Stack.Item
-              sizeS={12}
-              sizeM={8}>
-              <ul>
-                {NAVIGATION_MENU_OPTIONS.map(option =>
-                  <li key={option}>
-                    <NavLink
-                      to={`/${option === 'home' ? '' : option}`}
-                      className={`${option} item`}
-                      activeClassName="active"
-                      onClick={() => setIsMenuOpen(false)}>
-                      {option}
-                    </NavLink>
+        data-model="controller"
+        className={isMenuOpen ? 'open' : null}>
+        <div
+          ref={screen}
+          className="screen">
+          <Navigation
+            page={pages.page}
+            isMenuOpen={isMenuOpen}
+            toggleMenu={toggleMenu}
+            toggleTheme={toggleTheme} />
+          {props.children}
+        </div>
+        <nav className="menu">
+          <Container>
+            <Stack
+              willWrap
+              vertical="middle">
+              <Stack.Item
+                sizeS={12}
+                sizeM={8}>
+                <ul>
+                  {NAVIGATION_MENU_OPTIONS.map(option =>
+                    <li key={option}>
+                      <NavLink
+                        to={`/${option === 'home' ? '' : option}`}
+                        className={`${option} item`}
+                        activeClassName="active"
+                        onClick={() => setIsMenuOpen(false)}>
+                        {option}
+                      </NavLink>
+                    </li>
+                  )}
+                </ul>
+              </Stack.Item>
+              <Stack.Item
+                sizeS={12}
+                sizeM={4}>
+                <ul>
+                  <li>
+                    <a href="https://github.com/ozanilbey">GitHub</a>
                   </li>
-                )}
-              </ul>
-            </Stack.Item>
-            <Stack.Item
-              sizeS={12}
-              sizeM={2}
-              offsetM={2}>
-              <ul>
-                <li>
-                  <a href="https://github.com/ozanilbey">GitHub</a>
-                </li>
-              </ul>
-            </Stack.Item>
-          </Stack>
-        </Container>
-      </nav>
-    </div>
+                </ul>
+              </Stack.Item>
+            </Stack>
+          </Container>
+        </nav>
+      </div>
+    </ControllerContext.Provider>
   )
 }
 
