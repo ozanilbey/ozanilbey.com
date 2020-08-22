@@ -26,12 +26,14 @@ function Navigation (props) {
   // Effect
   useEffect(() => {
     setIsLabelVisible(false)
+    let timer
     if (NAVIGATION_MENU_OPTIONS.includes(props.page)) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         setLabel(props.page)
         setIsLabelVisible(true)
       }, 500)
     }
+    return () => clearTimeout(timer)
   }, [props.page])
 
   // Render
