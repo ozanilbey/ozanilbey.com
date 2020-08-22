@@ -1,5 +1,5 @@
 // Modules
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 
 // Context
 const Controller = createContext(null)
