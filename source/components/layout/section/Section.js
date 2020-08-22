@@ -23,7 +23,7 @@ function Section (props) {
     spacing: props.spacing,
     align: props.align
   })
-  const semanticTagProperty = { [`data-${props.semanticTag}`]: props.name }
+  const semanticTagProperty = { [`data-${props.semanticTag}`]: props.name || '' }
 
   // Render
   return (
