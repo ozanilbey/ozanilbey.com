@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 
 // Components
 import Container from '~/components/layout/container/Container'
-import Heading from '~/components/type/heading/Heading'
+import Headline from '~/components/model/headline/Headline'
 import Page from '~/components/layout/page/Page'
 
 // Style
@@ -20,7 +20,7 @@ function Profile () {
       </Helmet>
       <Page.Header name="introduction">
         <Container>
-          <Heading displaySize="big">Profile</Heading>
+          <Headline displaySize="big">Profile</Headline>
           <p>This is <b>Profile</b> page.</p>
         </Container>
       </Page.Header>

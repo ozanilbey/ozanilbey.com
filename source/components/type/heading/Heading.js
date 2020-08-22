@@ -1,31 +1,34 @@
 // Modules
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 // Utilities
-import { getClassName } from '~/utilities/component'
+import { getClassName, getAttributes } from '~/utilities/component'
 
 // Style
 import './Heading.less'
 
 // Component: Typography > Heading
-function Heading (props) {
+const Heading = forwardRef((props, ref) => {
   // Data
   const TagName = `h${props.rank}`
   const className = getClassName(props.className, {
     'heading-size': props.rank === 1 ? props.displaySize : 'normal',
     'text-line': props.isSingleLine ? 'single' : 'auto'
   })
+  const attributes = getAttributes(props, ['style', 'data', 'aria'])
 
   // Render
   return (
     <TagName
+      {...attributes}
+      ref={ref}
       data-type="heading"
       className={className}>
       {props.children}
     </TagName>
   )
-}
+})
 
 // Properties
 Heading.propTypes = {
