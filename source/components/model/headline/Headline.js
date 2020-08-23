@@ -49,7 +49,7 @@ function Headline (props) {
       setOpacity(
         calculateOpacity(
           headline.current, // element
-          { top: 4 * getBaseFontSize(), bottom: 40, range: 80, maximum: 1, minimum: 0.4 } // options
+          { top: 4 * getBaseFontSize(), bottom: 40, range: 80, maximum: 1, minimum: 0.5 } // options
         )
       )
     }
@@ -62,8 +62,9 @@ function Headline (props) {
       ref={headline}
       data-model="headline"
       rank={1}
+      isSingleLine
       displaySize={props.displaySize}
-      style={{ opacity }}>
+      style={{ color: `rgba(var(--figure-color-rgb), ${opacity})` }}>
       {props.children}
     </Heading>
   )
