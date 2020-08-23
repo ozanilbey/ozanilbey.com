@@ -19,12 +19,12 @@ body {
                "Apple Color Emoji",
                "Segoe UI Emoji",
                "Segoe UI Symbol";
-  font-weight: normal;
+  font-weight: 300;
   line-height: 150%;
-  letter-spacing: 0;
+  letter-spacing: -.0225em;
 }
 h1, h2, h3, h4, h5, h6, strong, b {
-  font-weight: bold;
+  font-weight: 700;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5em;
@@ -32,26 +32,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 2.5rem;
-  letter-spacing: -.025em;
+  letter-spacing: -.0375em;
 }
 h2 {
   font-size: 2.25rem;
-  letter-spacing: -.02em;
+  letter-spacing: -.03em;
 }
 h3 {
   font-size: 2rem;
-  letter-spacing: -.015em;
+  letter-spacing: -.0225em;
 }
 h4 {
   font-size: 1.75rem;
-  letter-spacing: -.01em;
+  letter-spacing: -.015em;
 }
 h5 {
   font-size: 1.5rem;
-  letter-spacing: -.005em;
+  letter-spacing: -.075em;
 }
 h6 {
   font-size: 1.25rem;
+  letter-spacing: 0;
 }
 a {
   text-decoration: none;
@@ -65,11 +66,22 @@ code {
   white-space: pre;
 }
 
+// Sizing
+.lead {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  letter-spacing: -.03em;
+}
+.detail {
+  font-size: .75em;
+  line-height: .75em;
+  letter-spacing: -.015em;
+}
+
 // Line
 .text-line-single {
-  overflow: hidden;
   max-width: 100%;
-  line-height: calc(100% / 3 * 2);
+  line-height: 75%;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -93,48 +105,48 @@ code {
 /* Window Width < 320 */
 @media only screen and (max-width: @breakpoints[xxsmall-limit-superior]) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 /* 320 ≤ Window Width < 480 */
 @media only screen and (min-width: @breakpoints[xsmall-limit-inferior]) and (max-width: @breakpoints[xsmall-limit-superior]) {
   html {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
 /* 480 ≤ Window Width < 768 */
 @media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 /* 768 ≤ Window Width < 1024 */
 @media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
   html {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 /* 1024 ≤ Window Width < 1280 */
 @media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 /* 1280 ≤ Window Width < 1440 */
 @media only screen and (min-width: @breakpoints[xlarge-limit-inferior]) and (max-width: @breakpoints[xlarge-limit-superior]) {
   html {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
 /* 1440 ≤ Window Width */
 @media only screen and (min-width: @breakpoints[xxlarge-limit-inferior]) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
