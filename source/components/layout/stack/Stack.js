@@ -44,6 +44,7 @@ function Stack (props) {
   return (
     <div
       data-layout="stack"
+      data-stack={props.name}
       className={className}>
       {renderChildren(props.children)}
     </div>

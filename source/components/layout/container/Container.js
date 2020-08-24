@@ -19,7 +19,7 @@ function Container (props) {
   return (
     <div
       data-layout="container"
-      data-name={props.name}
+      data-container={props.name}
       className={className}>
       {props.children}
     </div>
