@@ -2,14 +2,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Shapes
+// Subcomponents
 import Contrast from './shapes/Contrast'
 import Exit from './shapes/Exit'
 import GitHub from './shapes/GitHub'
 import HamburgerMenu from './shapes/HamburgerMenu'
 import Star from './shapes/Star'
 
-// Interface: Icon
+// Component: Interface > Icon
 const Icon = props => {
   switch (props.name) {
     case 'contrast':
@@ -25,6 +25,7 @@ const Icon = props => {
   }
 }
 
+// Properties
 Icon.propTypes = {
   name: PropTypes.string.isRequired
 }
