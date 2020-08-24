@@ -74,6 +74,18 @@ code {
   white-space: pre;
 }
 
+// Color
+p, span, small {
+  color: rgba(var(--figure-color-rgb), .65);
+  strong {
+    color: var(--figure-color);
+    font-weight: 500;
+  }
+}
+.dim {
+  color: rgba(var(--figure-color-rgb), .5)
+}
+
 // Sizing
 .lead {
   font-size: 1.25em;
