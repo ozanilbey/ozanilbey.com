@@ -82,19 +82,19 @@
     a {
       opacity: 1;
       text-align: center;
-      .icon {
+      &.theme-switch {
+        height: 1rem;
+      }
+      &.menu-switch {
+        height: 0.8rem;
+      }
+      [data-interface="icon"] {
         height: inherit;
         vertical-align: top;
         & > * {
           fill: var(--figure-color)
         }
       }
-    }
-    .theme-switch {
-      height: 1rem;
-    }
-    .menu-switch {
-      height: 0.8rem;
     }
   }
 }
