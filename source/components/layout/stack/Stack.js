@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import Item from './item/Item'
 
 // Utilities
-import { getClassName, getResponsiveData } from '~/utilities/component'
+import { getClassName, getAttributes, getResponsiveData } from '~/utilities/component'
 
 // Constants
 import {
@@ -30,6 +30,7 @@ function Stack (props) {
     ...getResponsiveData(props, 'vertical', label => `align-${label}`),
     ...getResponsiveData(props, 'text', label => `${label}-align`)
   })
+  const attributes = getAttributes(props, ['style', 'data', 'aria'])
 
   // Methods
   const renderChildren = children => {
@@ -43,6 +44,7 @@ function Stack (props) {
   // Render
   return (
     <div
+      {...attributes}
       data-layout="stack"
       data-stack={props.name}
       className={className}>
