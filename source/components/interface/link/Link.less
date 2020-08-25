@@ -1,0 +1,81 @@
+[data-interface="link"] {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  &[disabled] {
+    opacity: .25 !important;
+    cursor: not-allowed;
+  }
+  &.type-regular {
+    position: relative;
+    &:hover {
+      &:after {
+        opacity: .5;
+        bottom: .0875em;
+      }
+    }
+    &:after {
+      content: "";
+      opacity: .25;
+      position: absolute;
+      left: 0;
+      bottom: .175em;
+      width: 100%;
+      height: 1px;
+      border-width: 0;
+      border-style: solid;
+      border-color: inherit;
+      border-bottom-width: 1px;
+      transition: opacity .15s ease,
+                  bottom .15s ease;
+    }
+  }
+  &.type-cta, &.type-external, &.type-download {
+    position: relative;
+    padding-right: 1em;
+    &:after {
+      content: "→";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: 700;
+      transition: top .05s ease,
+                  right .05s ease;
+    }
+  }
+  &.type-cta {
+    &:after {
+      right: -.05em;
+    }
+    &:hover {
+      &:after {
+        right: -.175em;
+      }
+    }
+  }
+  &.type-external {
+    &:after {
+      top: .05em;
+      right: .05em;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      &:after {
+        top: -.05em;
+        right: -.05em;
+      }
+    }
+  }
+  &.type-download {
+    &:after {
+      transform: rotate(90deg);
+    }
+    &:hover {
+      &:after {
+        top: .125em;
+      }
+    }
+  }
+}
