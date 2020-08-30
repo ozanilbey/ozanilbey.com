@@ -13,29 +13,61 @@ import './Card.less'
 
 // Component: Card
 function Card (props) {
-  const className = getClassName(props.className, { layout: props.layout })
+  const className = getClassName(props.className, {
+    layout: props.isCarousel ? 'vertical' : props.layout
+  })
   return (
     <div
       data-interface="card"
       className={className}
-      style={props.style}>
-      {props.icon &&
-        <Icon
-          name={props.icon}
-          className="visual" />
+      style={{
+        ...(props.style || {}),
+        ...props.color ? { backgroundColor: props.color } : {}
+      }}>
+      {
+        props.isCustom
+          ? props.children
+          : <>
+            {props.visual &&
+              <div className="visual">
+                {typeof props.visual === 'string' &&
+                  <img
+                    src={props.visual}
+                    className="image" />
+                }
+                {props.isCarousel && typeof props.visual === 'object' &&
+                  <ul className="carousel">
+                    {props.visual.map((item, index) =>
+                      <li key={index}>
+                        <img src={item} />
+                      </li>
+                    )}
+                  </ul>
+                }
+              </div>
+            }
+            <div className="content">
+              {props.icon &&
+                <div className="icon">
+                  {
+                    props.isIconCustomized
+                      ? props.icon
+                      : <Icon
+                        name={props.icon}
+                        color={props.iconColor}
+                        className="icon" />
+                  }
+                </div>
+              }
+              {(props.title || props.description) &&
+                <div className="text">
+                  {props.title && <strong className="title">{props.title}</strong>}
+                  {props.description && <p className="description">{props.description}</p>}
+                </div>
+              }
+            </div>
+          </>
       }
-      {props.image &&
-        <img
-          src={props.image}
-          className="visual" />
-      }
-      {(props.title || props.description) &&
-        <div className="text">
-          {props.title && <strong className="title">{props.title}</strong>}
-          {props.description && <p className="description">{props.description}</p>}
-        </div>
-      }
-      {props.children}
     </div>
   )
 }
@@ -46,11 +78,22 @@ Card.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   description: PropTypes.string,
-  icon: PropTypes.string,
-  image: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]),
+  iconColor: PropTypes.string,
+  iconURL: PropTypes.string,
+  isCarousel: PropTypes.bool,
+  isCustom: PropTypes.bool,
+  isIconCustomized: PropTypes.bool,
   layout: PropTypes.oneOf(['horizontal', 'vertical']),
   style: PropTypes.object,
-  title: PropTypes.string
+  title: PropTypes.string,
+  visual: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ])
 }
 
 // Export

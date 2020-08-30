@@ -3,6 +3,7 @@
   position: relative;
   padding: 1.25rem;
   color: var(--figure-color);
+  font-size: .9rem;
   font-weight: 300;
   border-radius: 1rem;
   background-color: var(--foreground-color);
@@ -29,14 +30,16 @@
   }
   &.layout-horizontal {
     display: flex;
-    flex-direction: row;
     & > .visual {
-      flex-shrink: 0;
-      flex-grow: 0;
       margin-right: 1rem;
-      &[data-interface="icon"] {
-        width: 2.5rem;
-        height: 2.5rem;
+      & > .carousel {
+        flex-direction: column;
+      }
+    }
+    & > .content {
+      flex-direction: row;
+      & > .icon {
+        margin-bottom: 1rem;
       }
     }
   }
@@ -47,14 +50,78 @@
       flex-grow: 1;
       width: 100%;
     }
+    & > .visual {
+      margin-bottom: 1rem;
+      & > .carousel {
+        display: flex;
+        width: 100%;
+        & > * {
+          margin-right: 2px;
+          &:last-child {
+            margin-right: 0;
+          }
+          width: 100%;
+          & > * {
+            width: 100%;
+          }
+        }
+      }
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    & > .content {
+      & > .icon {
+        margin-right: 1rem;
+      }
+    }
   }
-  & > .text {
-    .title {
-      display: inline-block;
-      margin-bottom: .25rem;
+  & > .visual {
+    height: auto;
+    border-radius: .25rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  & > .content {
+    display: flex;
+    .icon {
+      flex-shrink: 0;
+      flex-grow: 0;
+      text-align: left;
+      & > * {
+        width: 2rem;
+        height: 2rem;
+        vertical-align: top;
+        &[data-orientation="portrait"] {
+          height: auto;
+          max-height: 2.75rem;
+        }
+        &[data-orientation="landscape"] {
+          width: auto;
+          max-width: 2.75rem;
+        }
+        &:not([data-orientation]) {
+          width: 2.375rem;
+          height: 2.375rem;
+        }
+      }
     }
-    .description {
-      font-size: .9em;
+    .text {
+      text-align: left;
+      & > * {
+        display: block;
+      }
+      .title {
+        margin-bottom: .25rem;
+        line-height: 125%;
+      }
+      .description {
+        line-height: calc(4rem / 3);
+      }
     }
+  }
+  img {
+    vertical-align: top;
   }
 }
