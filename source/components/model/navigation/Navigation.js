@@ -12,7 +12,7 @@ import Icon from '~/components/interface/icon/Icon'
 import { getClassName } from '~/utilities/component'
 
 // Constants
-import { NAVIGATION_MENU_OPTIONS } from '~/constants/settings'
+import { NAVIGATION_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Navigation.less'

@@ -13,7 +13,8 @@ import Error from '~/pages/error/Error'
 import Controller from '~/components/model/controller/Controller'
 
 // Constants
-import { THEME_OPTIONS, DEFAULT_THEME } from '~/constants/settings'
+import { THEME_OPTIONS } from '~/constants/options'
+import { DEFAULT_THEME } from '~/constants/settings'
 
 // Style
 import '~/styles/index.less'

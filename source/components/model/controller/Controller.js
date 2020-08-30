@@ -15,7 +15,7 @@ import ControllerContext from '~/context/Controller'
 import useScroll from '~/hooks/useScroll'
 
 // Constants
-import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/settings'
+import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Controller.less'
