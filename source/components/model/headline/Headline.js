@@ -2,18 +2,18 @@
 import React, { useContext, useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 
-// Components
-import Heading from '~/components/type/heading/Heading'
-
 // Context
 import ControllerContext from '~/context/Controller'
 
-// Style
-import './Headline.less'
+// Components
+import Heading from '~/components/type/heading/Heading'
 
 // Utilities
 import { getBaseFontSize } from '~/utilities/document'
 import { getTwoPointFormEquivalent } from '~/utilities/math'
+
+// Style
+import './Headline.less'
 
 // Helpers
 function calculateOpacity (element, options = {}) {
