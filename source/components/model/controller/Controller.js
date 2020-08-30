@@ -13,6 +13,7 @@ import ControllerContext from '~/context/Controller'
 
 // Hooks
 import useScroll from '~/hooks/useScroll'
+import useDimensions from '~/hooks/useDimensions'
 
 // Constants
 import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/options'
@@ -28,6 +29,7 @@ function Controller (props) {
   // Data
   const pages = useParams()
   const scroll = useScroll(screen)
+  const dimensions = useDimensions(screen)
 
   // State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -53,7 +55,7 @@ function Controller (props) {
 
   // Render
   return (
-    <ControllerContext.Provider value={{ pages, scroll, theme }}>
+    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme }}>
       <div
         data-model="controller"
         className={isMenuOpen ? 'open' : null}>
