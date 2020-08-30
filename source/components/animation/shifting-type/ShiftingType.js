@@ -14,7 +14,7 @@ function ShiftingType (props) {
   const attributes = getAttributes(props, 'style', 'data', 'aria')
 
   // State
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(props.startIndex)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
   // Effects
@@ -56,7 +56,12 @@ ShiftingType.propTypes = {
   className: PropTypes.string,
   colors: PropTypes.array,
   interval: PropTypes.number,
+  startIndex: PropTypes.number,
   words: PropTypes.array
+}
+
+ShiftingType.defaultProps = {
+  startIndex: 0
 }
 
 // Export
