@@ -30,6 +30,7 @@ function calculateSlideAmount (element, options = {}) {
 function SlidingBox (props) {
   // Data
   const { scroll, dimensions } = useContext(ControllerContext)
+  const bufferZoneHeight = 3.5 * getBaseFontSize() // Equals to navigation height
 
   // References
   const slider = useRef()
@@ -44,8 +45,8 @@ function SlidingBox (props) {
         calculateSlideAmount(
           slider.current, // element
           { // options
-            top: 4 * getBaseFontSize(),
-            bottom: 0,
+            top: 2 * bufferZoneHeight,
+            bottom: bufferZoneHeight,
             maximum: Math.abs(slider.current.parentElement.clientWidth - slider.current.clientWidth),
             minimum: 0
           }
@@ -53,7 +54,7 @@ function SlidingBox (props) {
       )
     }
     handleSlide()
-  }, [scroll, dimensions])
+  }, [scroll, dimensions, bufferZoneHeight])
 
   // Render
   return (
