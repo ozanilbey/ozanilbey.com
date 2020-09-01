@@ -8,7 +8,7 @@ import { getClassName } from '~/utilities/component'
 // Style
 import './SkillMap.less'
 
-// Component: Chart > SkillMap
+// Component: Content > SkillMap
 function SkillMap (props) {
   // Methods
   function renderArrow (side) {
@@ -23,7 +23,7 @@ function SkillMap (props) {
   // Render
   return (
     <div
-      data-chart="skill-map"
+      data-content="skill-map"
       style={{ width: `${props.skills.length * props.unitSize}rem` }}>
       <div
         className="sections"
