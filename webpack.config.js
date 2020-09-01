@@ -1,6 +1,6 @@
 // Data
 const title = 'ozanilbey'
-const meta = require('./source/data/meta.json')
+const meta = require('./source/data/metaData.json')
 
 // Modules
 const path = require('path')
