@@ -15,6 +15,9 @@ import ControllerContext from '~/context/Controller'
 import useScroll from '~/hooks/useScroll'
 import useDimensions from '~/hooks/useDimensions'
 
+// Utilities
+import { getBaseFontSize } from '~/utilities/document'
+
 // Constants
 import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/options'
 
@@ -51,6 +54,24 @@ function Controller (props) {
   }, [theme])
   useEffect(() => {
     screen.current.scrollTo(0, 0)
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const target = screen.current.querySelector(`[data-section="${window.location.hash.substring(1)}"]`)
+      if (target) {
+        // Timeout prevents the jumpy feeling
+        const timer = setTimeout(() => {
+          screen.current.scrollTo({
+            top: target.offsetTop - 3.5 * getBaseFontSize(), // Navigation height is 3.5rem
+            behavior: 'smooth'
+          })
+          window.history.replaceState(
+            null,
+            null,
+            window.location.href.split('#')[0]
+          )
+        }, 500)
+        return () => clearTimeout(timer)
+      }
+    }
   }, [pages])
 
   // Render
