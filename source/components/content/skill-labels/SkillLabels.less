@@ -1,0 +1,86 @@
+[data-content="skill-labels"] {
+  display: block;
+  & > .labels {
+    & > li {
+      display: inline-block;
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+      padding: .5em;
+      font-size: .9rem;
+      line-height: 1rem;
+      vertical-align: middle;
+      border-radius: .5rem;
+      box-shadow: 0 0 1rem var(--shadow-color);
+      background-color: var(--foreground-color);
+      cursor: default;
+      &:before {
+        display: none;
+      }
+      & > dl {
+        display: block;
+        width: auto;
+        height: 1rem;
+        font-weight: 500;
+        line-height: 1rem;
+        & > dt {
+          display: inline-block;
+          width: auto;
+          height: inherit;
+          vertical-align: top;
+          & + dd {
+            margin-left: 10px;
+          }
+        }
+        & > dd {
+          display: inline-block;
+          width: auto;
+          height: 1rem;
+          margin-right: .15rem;
+          padding: 0 .1875rem;
+          font-size: .75rem;
+          line-height: 1rem;
+          vertical-align: middle;
+          border-radius: .1rem;
+          background-color: rgba(var(--background-color-rgb), .3);
+          box-shadow: inset 0 0 .5rem fade(black, 5%);
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  & > .legend {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+    font-size: .9rem;
+    & > * {
+      margin-right: 1rem;
+      color: unset !important;
+      &:before {
+        content: "•";
+        margin-right: .25em;
+        font-size: 1.25em;
+        font-weight: 700;
+      }
+    }
+  }
+  & [data-level] {
+    &[data-level="novice"] {
+      &, &:before {
+        color: var(--pink);
+      }
+    }
+    &[data-level="intermediate"] {
+      &, &:before {
+        color: var(--yellow);
+      }
+    }
+    &[data-level="advanced"] {
+      &, &:before {
+        color: var(--green);
+      }
+    }
+  }
+}
