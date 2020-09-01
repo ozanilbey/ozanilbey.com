@@ -49,7 +49,7 @@ function Headline (props) {
       setOpacity(
         calculateOpacity(
           headline.current, // element
-          { top: 4 * getBaseFontSize(), bottom: 40, range: 80, maximum: 1, minimum: 0.5 } // options
+          { top: 3.5 * getBaseFontSize() + 40, bottom: 40, range: 80, maximum: 1, minimum: 0.5 } // options
         )
       )
     }
