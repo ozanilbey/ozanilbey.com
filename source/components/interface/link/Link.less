@@ -70,12 +70,19 @@
   }
   &.type-download {
     &:after {
+      top: -.025em;
+      right: -.05em;
       transform: rotate(90deg);
     }
     &:hover {
       &:after {
         top: .125em;
       }
+    }
+  }
+  &.arrow-hidden {
+    &:after {
+      display: none !important;
     }
   }
 }

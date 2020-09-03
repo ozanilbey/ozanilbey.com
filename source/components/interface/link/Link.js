@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Link as RouterLink } from 'react-router-dom'
 
 // Utilities
-import { getClassName } from '~/utilities/component'
+import { getClassName, getAttributes } from '~/utilities/component'
 
 // Style
 import './Link.less'
@@ -17,19 +17,32 @@ const PseudoLink = props => props.to
 // Component: Link
 function Link (props) {
   const className = getClassName(props.className, {
-    type: props.type
+    type: props.type,
+    arrow: props.isArrowHidden ? 'hidden' : null
   })
+  const attributes = getAttributes(props, ['style', 'href', 'to', 'target', 'rel', 'data', 'aria'])
+  const additionalAttributes = props.type === 'external'
+    ? {
+      target: '_blank',
+      rel: 'noreferrer'
+    }
+    : {}
   return (
     <PseudoLink
-      {...props}
+      {...attributes}
+      {...additionalAttributes}
       data-interface="link"
-      className={className} />
+      className={className}>
+      {props.children}
+    </PseudoLink>
   )
 }
 
 // Properties
 Link.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
+  isArrowHidden: PropTypes.bool,
   type: PropTypes.oneOf(['regular', 'cta', 'external', 'download'])
 }
 PseudoLink.propTypes = {
