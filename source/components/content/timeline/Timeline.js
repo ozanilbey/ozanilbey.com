@@ -24,20 +24,24 @@ function Timeline (props) {
 
   // Render
   return (
-    <div data-content="timeline">
+    <div
+      data-content="timeline"
+      className={props.data.filter(item => item.isSeparate).length > 0 ? 'with-separate-item' : ''}>
       <ul className="labels">
         {
           props.data.map((item, index) =>
             <li
               key={index}
-              className={getClassName(index % 2 === 0 ? 'top' : 'bottom', {
-                endless: !item.end
+              className={getClassName(index % 2 === 0 ? 'bottom' : 'top', {
+                'open-start': item.start.isOpen,
+                'open-end': !item.end || item.end.isOpen,
+                separate: item.isSeparate
               })}
               style={{
                 left: `${calculateLength(minimumYear, 1, item.start.year, item.start.month)}rem`,
                 width: `calc(${calculateLength(item.start.year, item.start.month, item.end?.year, item.end?.month)}rem + 2px)`
               }}>
-              {item.label}
+              <span className="name">{item.label}</span>
             </li>
           )
         }
