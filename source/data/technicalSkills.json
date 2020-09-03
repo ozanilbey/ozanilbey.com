@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Graphics",
+    "items": [
+      { "name": "Sketch", "level": 2 },
+      { "name": "Photoshop", "level": 2 },
+      { "name": "Illustrator", "level": 2 }
+    ]
+  },
+  {
+    "name": "Web Design",
+    "items": [
+      { "name": "Mobile-first", "level": 2 },
+      { "name": "Responsive", "level": 2 },
+      { "name": "Cross-browser", "level": 2 }
+    ]
+  },
+  {
+    "name": "UX",
+    "items": [
+      { "name": "Wireframing", "level": 2 },
+      { "name": "Storyboarding", "level": 1 }
+    ]
+  },
+  {
+    "name": "UI",
+    "items": [
+      { "name": "Prototyping", "level": 2 },
+      { "name": "Interaction", "level": 2 },
+      { "name": "Animation", "level": 2 },
+      { "name": "Usability", "level": 2 },
+      { "name": "Accessibility", "level": 1 }
+    ]
+  },
+  {
+    "name": "Markup",
+    "items": [
+      { "name": "HTML", "level": 2 },
+      { "name": "DOM", "level": 2 },
+      { "name": "XML", "level": 2 },
+      { "name": "JSX", "level": 2 },
+      { "name": "EJS", "level": 0 }
+    ]
+  },
+  {
+    "name": "Styling",
+    "items": [
+      { "name": "CSS", "level": 2 },
+      { "name": "LESS", "level": 2 },
+      { "name": "Sass", "level": 1 }
+    ]
+  },
+  {
+    "name": "Data",
+    "items": [
+      { "name": "GraphQL", "level": 2 },
+      { "name": "REST", "level": 2 },
+      { "name": "Mongo", "level": 1 },
+      { "name": "SQL", "level": 0 }
+    ]
+  },
+  {
+    "name": "Native/Mobile",
+    "items": [
+      { "name": "React Native", "level": 2 },
+      { "name": "Expo", "level": 2 }
+    ]
+  },
+  {
+    "name": "Frontend",
+    "items": [
+      { "name": "JavaScript", "level": 2 },
+      { "name": "ES10", "level": 2 },
+      { "name": "React/Hooks", "level": 2 },
+      { "name": "Riot", "level": 2 },
+      { "name": "Redux", "level": 1 }
+    ]
+  },
+  {
+    "name": "Backend",
+    "items": [
+      { "name": "Node", "level": 1 },
+      { "name": "Express", "level": 1 }
+    ]
+  },
+  { "name": "Webpack" },
+  { "name": "Linting" },
+  { "name": "DevTools" },
+  { "name": "CLI" },
+  { "name": "Git" }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "for": "Labris Networks",
+    "role": "User Interface Designer",
+    "link": "labrisnetworks.com",
+    "start": {
+      "year": 2008,
+      "month": 8
+    },
+    "end": {
+      "year": 2009,
+      "month": 5
+    },
+    "location": "Ankara"
+  },
+  {
+    "for": "Kodobur",
+    "role": "User Interface Designer",
+    "link": "kodobur.com",
+    "start": {
+      "year": 2010,
+      "month": 10
+    },
+    "end": {
+      "year": 2012,
+      "month": 8
+    },
+    "location": "Ankara"
+  },
+  {
+    "for": "Fraktal Proje",
+    "role": "Co-founder + Project Manager",
+    "link": "fraktalproje.com",
+    "start": {
+      "year": 2013,
+      "month": 1
+    },
+    "end": {
+      "year": 2013,
+      "month": 9
+    },
+    "location": "Ankara"
+  },
+  {
+    "for": "Semantica",
+    "role": "Founder + CEO",
+    "start": {
+      "year": 2013,
+      "month": 12
+    },
+    "end": {
+      "year": 2016,
+      "month": 4
+    },
+    "location": "San Francisco"
+  },
+  {
+    "for": "Digitoy Games",
+    "role": "Social Media Marketing Consultant",
+    "link": "digitoy.games",
+    "start": {
+      "year": 2016,
+      "month": 11
+    },
+    "end": {
+      "year": 2019,
+      "month": 2
+    },
+    "location": "Izmir",
+    "isRemote": true
+  },
+  {
+    "for": "Grou.ps",
+    "role": "Product Manager",
+    "link": "groups-inc.com",
+    "start": {
+      "year": 2018,
+      "month": 2
+    },
+    "end": {
+      "year": 2019,
+      "month": 4
+    },
+    "location": "Reno",
+    "isRemote": true
+  },
+  {
+    "for": "Docu.ai",
+    "role": "Full-Stack Developer + Designer",
+    "link": "docu.ai",
+    "start": {
+      "year": 2019,
+      "month": 4
+    },
+    "end": {
+      "year": 2020,
+      "month": 1
+    },
+    "location": "San Francisco",
+    "isRemote": true
+  },
+  {
+    "for": "Base64.ai",
+    "role": "Full-Stack Developer + Designer",
+    "link": "base64.ai",
+    "start": {
+      "year": 2020,
+      "month": 1
+    },
+    "end": {
+      "year": 2020,
+      "month": 4
+    },
+    "location": "New York",
+    "isRemote": true
+  },
+  {
+    "for": "Freelance",
+    "role": "Designer + Developer",
+    "start": {
+      "year": 2003,
+      "month": 6
+    }
+  }
+]

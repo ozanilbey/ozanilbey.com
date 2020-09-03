@@ -1,0 +1,27 @@
+[
+  {
+    "school": "Anadolu University",
+    "concentrations": ["Business Administration", "Public Relations"],
+    "start": {
+      "year": 2007,
+      "month": 11
+    },
+    "end": {
+      "year": 2011,
+      "month": 6
+    }
+  },
+  {
+    "school": "Middle East Technical University",
+    "concentrations": ["Urban Design", "Industrial Design"],
+    "isDropout": true,
+    "start": {
+      "year": 2007,
+      "month": 9
+    },
+    "end": {
+      "year": 2013,
+      "month": 7
+    }
+  }
+]
