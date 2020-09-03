@@ -13,7 +13,10 @@ export const getClassName = (suffix, items) => {
 export const getAttributes = (props, list) => {
   const attributes = {}
   Object.keys(props).forEach(prop => {
-    if (prop && props[prop] && list.includes(prop.split('-')[0])) attributes[prop] = props[prop]
+    if (
+      prop && props[prop] !== undefined && props[prop] !== null &&
+      list.includes(prop.split('-')[0])
+    ) attributes[prop] = props[prop]
   })
   return attributes
 }
