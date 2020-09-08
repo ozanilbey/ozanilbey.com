@@ -1,15 +1,18 @@
 // Modules
 import React, { useState, useRef, useEffect } from 'react'
-import { NavLink, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import PropTypes from 'prop-types'
+
+// Context
+import ControllerContext from '~/context/Controller'
 
 // Components
 import Navigation from '~/components/model/navigation/Navigation'
 import Container from '~/components/layout/container/Container'
 import Stack from '~/components/layout/stack/Stack'
+import Link from '~/components/interface/link/Link'
+import Icon from '~/components/interface/icon/Icon'
 
-// Context
-import ControllerContext from '~/context/Controller'
 
 // Hooks
 import useScroll from '~/hooks/useScroll'
@@ -19,7 +22,7 @@ import useDimensions from '~/hooks/useDimensions'
 import { getBaseFontSize } from '~/utilities/document'
 
 // Constants
-import { THEME_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/options'
+import { THEME_OPTIONS, COLOR_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Controller.less'
@@ -41,6 +44,13 @@ function Controller (props) {
   // Methods
   const toggleMenu = () => setIsMenuOpen(condition => !condition)
   const toggleTheme = () => setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
+  function getColor (page) {
+    const pages = [...NAVIGATION_MENU_OPTIONS]
+    pages.shift()
+    return pages.includes(page)
+      ? COLOR_OPTIONS[pages.indexOf(page)]
+      : COLOR_OPTIONS[COLOR_OPTIONS.length - 1]
+  }
 
   // Effects
   useEffect(() => {
@@ -79,6 +89,7 @@ function Controller (props) {
     <ControllerContext.Provider value={{ pages, scroll, dimensions, theme }}>
       <div
         data-model="controller"
+        data-color={getColor(pages.page)}
         className={isMenuOpen ? 'open' : null}>
         <div
           ref={screen}
@@ -97,27 +108,45 @@ function Controller (props) {
               vertical="middle">
               <Stack.Item
                 sizeS={12}
-                sizeM={8}>
-                <ul>
+                sizeM={9}>
+                <ul className="pages">
                   {NAVIGATION_MENU_OPTIONS.map(option =>
                     <li key={option}>
-                      <NavLink
+                      <Link
                         to={`/${option === 'home' ? '' : option}`}
                         className={`${option} item`}
                         activeClassName="active"
                         onClick={() => setIsMenuOpen(false)}>
                         {option}
-                      </NavLink>
+                      </Link>
                     </li>
                   )}
                 </ul>
               </Stack.Item>
               <Stack.Item
                 sizeS={12}
-                sizeM={4}>
-                <ul>
+                sizeM={3}>
+                <ul className="social">
                   <li>
-                    <a href="https://github.com/ozanilbey">GitHub</a>
+                    <Link
+                      type="external"
+                      href="//github.com/ozanilbey">
+                      <Icon name="github" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      type="external"
+                      href="//twitter.com/ozanilbey">
+                      <Icon name="twitter" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      type="external"
+                      href="//linkedin.com/in/ozanilbey">
+                      <Icon name="linkedin" />
+                    </Link>
                   </li>
                 </ul>
               </Stack.Item>
