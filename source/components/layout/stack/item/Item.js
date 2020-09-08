@@ -28,6 +28,7 @@ function Item (props) {
   return (
     <div
       data-layout="stack-item"
+      data-stack-item={props.name}
       className={className}>
       {props.children}
     </div>
@@ -38,6 +39,7 @@ function Item (props) {
 Item.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  name: PropTypes.string,
   offset: PropTypes.oneOf(BLOCK_OFFSET_OPTIONS),
   offsetL: PropTypes.oneOf(BLOCK_OFFSET_OPTIONS),
   offsetM: PropTypes.oneOf(BLOCK_OFFSET_OPTIONS),
