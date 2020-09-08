@@ -1,0 +1,32 @@
+/* 1440 < Window Width */
+@media only screen and (min-width: (@breakpoints[xxlarge-limit-inferior] + 1)) {
+  [data-model="controller"] {
+    &.open {
+      & > .screen {
+        top: 5rem;
+      }
+    }
+    & > .screen {
+      top: 2rem;
+      width: 1440px;
+      margin: 0 auto;
+      border-radius: 1rem;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      [data-layout="page"] {
+        min-height: calc(100vh - 2.5rem);
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  [data-layout="page"] {
+    & > * {
+      &:last-child {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+    }
+  }
+}
