@@ -8,10 +8,15 @@ import Contrast from './shapes/Contrast'
 import Exit from './shapes/Exit'
 import GitHub from './shapes/GitHub'
 import HamburgerMenu from './shapes/HamburgerMenu'
+import LinkedIn from './shapes/LinkedIn'
 import Star from './shapes/Star'
+import Twitter from './shapes/Twitter'
 
 // Utilities
 import { getAttributes } from '~/utilities/component'
+
+// Style
+import './Icon.less'
 
 // Component: Interface > Icon
 const Icon = props => {
@@ -35,8 +40,12 @@ const Icon = props => {
       return <GitHub {...attributes} />
     case 'hamburger-menu':
       return <HamburgerMenu {...attributes} />
+    case 'linkedin':
+      return <LinkedIn {...attributes} />
     case 'star':
       return <Star {...attributes} />
+    case 'twitter':
+      return <Twitter {...attributes} />
   }
 }
 

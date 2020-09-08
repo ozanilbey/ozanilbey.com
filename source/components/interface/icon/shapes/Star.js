@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Component: Interface > Icon Star (Shape)
+// Component: Interface > Icon > Star (Shape)
 const Star = props => (
   <svg
     {...props}

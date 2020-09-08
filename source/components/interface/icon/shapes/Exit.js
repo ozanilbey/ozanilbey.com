@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Component: Interface > Icon Exit (Shape)
+// Component: Interface > Icon > Exit (Shape)
 const Exit = props => (
   <svg
     {...props}

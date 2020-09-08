@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Component: Interface > Icon GitHub (Shape)
+// Component: Interface > Icon > GitHub (Shape)
 const GitHub = props => (
   <svg
     {...props}

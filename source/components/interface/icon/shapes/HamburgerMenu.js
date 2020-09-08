@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Component: Interface > Icon Hamburger Menu (Shape)
+// Component: Interface > Icon > Hamburger Menu (Shape)
 const HamburgerMenu = props => (
   <svg
     {...props}
