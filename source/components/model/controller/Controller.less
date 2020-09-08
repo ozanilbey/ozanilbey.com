@@ -1,4 +1,22 @@
 [data-model="controller"] {
+  &[data-color] {
+    --primary-color: rgb(var(--primary-color-rgb));
+    &[data-color="green"] {
+      --primary-color-rgb: var(--green-rgb);
+    }
+    &[data-color="yellow"] {
+      --primary-color-rgb: var(--yellow-rgb);
+    }
+    &[data-color="pink"] {
+      --primary-color-rgb: var(--pink-rgb);
+    }
+    &[data-color="purple"] {
+      --primary-color-rgb: var(--purple-rgb);
+    }
+    &[data-color="blue"] {
+      --primary-color-rgb: var(--blue-rgb);
+    }
+  }
   &.open {
     & > .screen {
       overflow: hidden;
