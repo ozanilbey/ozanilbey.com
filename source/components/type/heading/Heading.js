@@ -38,6 +38,7 @@ Heading.propTypes = {
   isSingleLine: PropTypes.bool,
   rank: PropTypes.oneOf([1, 2, 3, 4, 5, 6])
 }
+Heading.displayName = 'Heading'
 Heading.defaultProps = {
   displaySize: 'normal',
   isSingleLine: false,
