@@ -18,9 +18,10 @@ const PseudoLink = props => props.to
 function Link (props) {
   const className = getClassName(props.className, {
     type: props.type,
-    arrow: props.isArrowHidden ? 'hidden' : null
+    arrow: props.isArrowHidden ? 'hidden' : null,
+    'text-line': props.isSingleLine ? 'single' : 'auto'
   })
-  const attributes = getAttributes(props, ['style', 'href', 'to', 'target', 'rel', 'data', 'aria'])
+  const attributes = getAttributes(props, ['style', 'href', 'to', 'target', 'rel', 'onClick', 'data', 'aria'])
   const additionalAttributes = props.type === 'external'
     ? {
       target: '_blank',
@@ -43,6 +44,7 @@ Link.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   isArrowHidden: PropTypes.bool,
+  isSingleLine: PropTypes.bool,
   type: PropTypes.oneOf(['regular', 'cta', 'external', 'download'])
 }
 PseudoLink.propTypes = {
