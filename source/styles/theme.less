@@ -1,39 +1,42 @@
 :root {
   color-scheme: light dark;
-  --green-rgb: 47, 215, 127;
-  --green: rgb(var(--green-rgb));
-  --yellow-rgb: 255, 183, 0;
-  --yellow: rgb(var(--yellow-rgb));
-  --orange-rgb: 255, 127, 47;
-  --orange: rgb(var(--orange-rgb));
-  --pink-rgb: 255, 63, 111;
-  --pink: rgb(var(--pink-rgb));
-  --purple-rgb: 135, 103, 255;
-  --purple: rgb(var(--purple-rgb));
-  --blue-rgb: 0, 191, 255;
-  --blue: rgb(var(--blue-rgb));
-  --primary-color-rgb: var(--green-rgb);
-  --primary-color: rgb(var(--primary-color));
-  --figure-color-rgb: 255, 255, 255;
-  --figure-color: rgb(var(--figure-color-rgb));
-  --ground-color-rgb: 35, 41, 47;
-  --ground-color: rgb(var(--ground-color-rgb));
-  --ground-alternative-color-rgb: 29, 34, 39;
-  --ground-alternative-color: rgb(var(--ground-alternative-color-rgb));
-  --foreground-color-rgb: 47, 55, 63;
-  --foreground-color: rgb(var(--foreground-color-rgb));
-  --background-color-rgb: 23, 27, 31;
-  --background-color: rgb(var(--background-color-rgb));
-  --shade-color: rgba(0, 0, 0, 10%);
+  --hue: 210;
+  --saturation: 15%;
+  --green-hsl: 149, 65%, 50%;
+  --green: hsl(var(--green-hsl));
+  --yellow-hsl: 43, 100%, 50%;
+  --yellow: hsl(var(--yellow-hsl));
+  --orange-hsl: 23, 100%, 59%;
+  --orange: hsl(var(--orange-hsl));
+  --pink-hsl: 345, 100%, 62%;
+  --pink: hsl(var(--pink-hsl));
+  --purple-hsl: 253, 100%, 70%;
+  --purple: hsl(var(--purple-hsl));
+  --blue-hsl: 195, 100%, 50%;
+  --blue: hsl(var(--blue-hsl));
+  --primary-color-hsl: var(--green-hsl);
+  --primary-color: hsl(var(--primary-color));
+  --figure-color-hsl: var(--hue), var(--saturation), 99%; // +99
+  --figure-color: hsl(var(--figure-color-hsl));
+  --foreground-color-hsl: var(--hue), var(--saturation), 18%; // +18
+  --foreground-color: hsl(var(--foreground-color-hsl));
+  --ground-color-hsl: var(--hue), var(--saturation), 15%; // +15
+  --ground-color: hsl(var(--ground-color-hsl));
+  --ground-alternative-color-hsl: var(--hue), var(--saturation), 12%; // +12
+  --ground-alternative-color: hsl(var(--ground-alternative-color-hsl));
+  --background-color-hsl: var(--hue), var(--saturation), 9%; // +9
+  --background-color: hsl(var(--background-color-hsl));
+  --shade-color: hsla(var(--background-color-hsl), .15);
 }
 
 :root.light {
-  --figure-color-rgb: 47, 55, 71;
-  --ground-color-rgb: 243, 245, 247;
-  --ground-alternative-color-rgb: 237, 240, 243;
-  --foreground-color-rgb: 255, 255, 255;
-  --background-color-rgb: 225, 230, 235;
-  --shade-color: rgba(var(--figure-color-rgb), 5%);
+  --saturation: 18%;
+  --figure-color-hsl: var(--hue), var(--saturation), 28%; // - 72
+  --foreground-color-hsl: var(--hue), var(--saturation), 100%;
+  --ground-color-hsl: var(--hue), var(--saturation), 97%; // -3
+  --ground-alternative-color-hsl: var(--hue), var(--saturation), 94%; // -6
+  --background-color-hsl: var(--hue), var(--saturation), 91%; // -9
+  --shade-color: hsla(var(--figure-color-hsl), .05);
 }
 
 html, body {
@@ -41,5 +44,5 @@ html, body {
 }
 
 body {
-  color: rgba(var(--figure-color-rgb), .625);
+  color: hsla(var(--figure-color-hsl), .625);
 }

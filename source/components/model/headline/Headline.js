@@ -64,7 +64,7 @@ function Headline (props) {
       rank={1}
       isSingleLine
       displaySize={props.displaySize}
-      style={{ color: `rgba(var(--figure-color-rgb), ${opacity})` }}>
+      style={{ color: `hsla(var(--figure-color-hsl), ${opacity})` }}>
       {props.children}
     </Heading>
   )

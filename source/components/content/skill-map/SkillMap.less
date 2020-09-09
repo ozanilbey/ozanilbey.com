@@ -6,20 +6,20 @@
     padding: 0 1px;
     line-height: 1rem;
     text-transform: uppercase;
-    border-color: rgba(var(--figure-color-rgb), .5);
+    border-color: hsla(var(--figure-color-hsl), .5);
     border-style: solid;
     border-bottom-width: 2px;
     & > * {
       display: inline-block;
       height: 100%;
-      border-color: rgba(var(--figure-color-rgb), .5);
+      border-color: hsla(var(--figure-color-hsl), .5);
       border-style: dashed;
     }
     .arrow {
       position: absolute;
       height: inherit;
-      color: rgba(var(--figure-color-rgb), .25);
-      border-color: rgba(var(--figure-color-rgb), .25);
+      color: hsla(var(--figure-color-hsl), .25);
+      border-color: hsla(var(--figure-color-hsl), .25);
       border-bottom-width: 2px;
       &:before {
         display: inline-block;
@@ -50,11 +50,11 @@
       }
     }
     .section {
-      color: rgba(var(--figure-color-rgb), .375);
+      color: hsla(var(--figure-color-hsl), .375);
       font-weight: 500;
       letter-spacing: .25em;
       text-align: center;
-      border-color: rgba(var(--figure-color-rgb), .25);
+      border-color: hsla(var(--figure-color-hsl), .25);
       border-left-width: 1px;
       border-right-width: 1px;
       &:first-of-type {
@@ -78,7 +78,7 @@
         width: 2px;
         height: 2rem;
         vertical-align: top;
-        background-color: rgba(var(--figure-color-rgb), .5);
+        background-color: hsla(var(--figure-color-hsl), .5);
       }
       &:after {
         content: "";
@@ -105,7 +105,7 @@
       .name {
         width: 100%;
         height: 2rem;
-        color: var(--figure-color);
+        color: var(--primary-color);
         font-size: .9rem;
         font-weight: 500;
         line-height: 2rem;
