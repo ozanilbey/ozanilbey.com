@@ -8,3 +8,7 @@ export const slug = text =>
     .trim()
     .replace(/[\s\W-]+/g, '-')
     .toLowerCase()
+
+// Format text to have uppercased first letter
+export const upperCaseFirstLetter = text =>
+  text.charAt(0).toUpperCase() + text.substring(1)
