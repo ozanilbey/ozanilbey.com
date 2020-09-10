@@ -20,7 +20,7 @@ import useDimensions from '~/hooks/useDimensions'
 
 // Utilities
 import { getBaseFontSize } from '~/utilities/document'
-import { getSlug } from '~/utilities/format'
+import { slug } from '~/utilities/format'
 
 // Data
 import socialAccounts from '~/data/socialAccounts'
@@ -133,14 +133,14 @@ function Controller (props) {
                 <ul className="social">
                   {
                     socialAccounts
-                      .filter(option => SOCIAL_MENU_OPTIONS.includes(getSlug(option.platform)))
+                      .filter(option => SOCIAL_MENU_OPTIONS.includes(slug(option.platform)))
                       .map(option =>
                         <li key={option.platform}>
                           <Link
                             isArrowHidden
                             type="external"
                             href={`//${option.link}`}>
-                            <Icon name={getSlug(option.platform)} />
+                            <Icon name={slug(option.platform)} />
                           </Link>
                         </li>
                       )

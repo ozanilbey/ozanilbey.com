@@ -1,9 +1,9 @@
-// Get two-digit number
-export const getTwoDigitNumber = integer =>
+// Format number to have two digits
+export const twoDigitNumber = integer =>
   ('0' + integer).slice(-2)
 
-// Get slug
-export const getSlug = text =>
+// Format text to be slug
+export const slug = text =>
   text
     .trim()
     .replace(/[\s\W-]+/g, '-')
