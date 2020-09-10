@@ -25,7 +25,8 @@
       "year": 2012,
       "month": 8
     },
-    "location": "Ankara"
+    "location": "Ankara",
+    "isRemote": true
   },
   {
     "for": "Fraktal Proje",
