@@ -80,12 +80,9 @@ module.exports = ({ base }) => {
       minimize: true,
       minimizer: [
         new TerserPlugin({
-          terserOptions: {
-            parallel: true,
-            warnings: false,
-            extractComments: true,
-            output: { comments: false }
-          }
+          parallel: true,
+          sourceMap: true,
+          extractComments: true
         })
       ]
     },
