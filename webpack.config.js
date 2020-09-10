@@ -35,7 +35,7 @@ module.exports = ({ base }) => {
     },
     resolve: {
       alias: { '~': path.join(__dirname, './source') },
-      extensions: ['.js', '.jsx', '.less', '.gql']
+      extensions: ['.js', '.jsx', '.less', '.json', '.gql']
     },
     target: isClient ? 'web' : 'node',
     externals: isClient ? {} : [nodeExternals()],
