@@ -20,9 +20,13 @@ import useDimensions from '~/hooks/useDimensions'
 
 // Utilities
 import { getBaseFontSize } from '~/utilities/document'
+import { getSlug } from '~/utilities/format'
+
+// Data
+import socialAccounts from '~/data/socialAccounts'
 
 // Constants
-import { THEME_OPTIONS, COLOR_OPTIONS, NAVIGATION_MENU_OPTIONS } from '~/constants/options'
+import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS, SOCIAL_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Controller.less'
@@ -45,7 +49,7 @@ function Controller (props) {
   const toggleMenu = () => setIsMenuOpen(condition => !condition)
   const toggleTheme = () => setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
   function getColor (page) {
-    const pages = [...NAVIGATION_MENU_OPTIONS]
+    const pages = [...PAGES_MENU_OPTIONS]
     pages.shift()
     return pages.includes(page)
       ? COLOR_OPTIONS[pages.indexOf(page)]
@@ -110,7 +114,7 @@ function Controller (props) {
                 sizeS={12}
                 sizeM={9}>
                 <ul className="pages">
-                  {NAVIGATION_MENU_OPTIONS.map(option =>
+                  {PAGES_MENU_OPTIONS.map(option =>
                     <li key={option}>
                       <Link
                         to={`/${option === 'home' ? '' : option}`}
@@ -127,27 +131,20 @@ function Controller (props) {
                 sizeS={12}
                 sizeM={3}>
                 <ul className="social">
-                  <li>
-                    <Link
-                      type="external"
-                      href="//github.com/ozanilbey">
-                      <Icon name="github" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      type="external"
-                      href="//twitter.com/ozanilbey">
-                      <Icon name="twitter" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      type="external"
-                      href="//linkedin.com/in/ozanilbey">
-                      <Icon name="linkedin" />
-                    </Link>
-                  </li>
+                  {
+                    socialAccounts
+                      .filter(option => SOCIAL_MENU_OPTIONS.includes(getSlug(option.platform)))
+                      .map(option =>
+                        <li key={option.platform}>
+                          <Link
+                            isArrowHidden
+                            type="external"
+                            href={`//${option.link}`}>
+                            <Icon name={getSlug(option.platform)} />
+                          </Link>
+                        </li>
+                      )
+                  }
                 </ul>
               </Stack.Item>
             </Stack>

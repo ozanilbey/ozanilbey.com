@@ -1,18 +1,18 @@
 // Modules
 import React, { useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 // Components
 import Logo from '~/components/identity/logo/Logo'
 import Container from '~/components/layout/container/Container'
+import Link from '~/components/interface/link/Link'
 import Icon from '~/components/interface/icon/Icon'
 
 // Utilities
 import { getClassName } from '~/utilities/component'
 
 // Constants
-import { NAVIGATION_MENU_OPTIONS } from '~/constants/options'
+import { PAGES_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Navigation.less'
@@ -27,7 +27,7 @@ function Navigation (props) {
   useEffect(() => {
     setIsLabelVisible(false)
     let timer
-    if (NAVIGATION_MENU_OPTIONS.includes(props.page)) {
+    if (PAGES_MENU_OPTIONS.includes(props.page)) {
       timer = setTimeout(() => {
         setLabel(props.page)
         setIsLabelVisible(true)
@@ -41,13 +41,13 @@ function Navigation (props) {
     <nav data-model="navigation">
       <Container>
         <div className="identity">
-          <NavLink
+          <Link
             exact
             to="/"
             className="brand"
             activeClassName="active">
             <Logo />
-          </NavLink>
+          </Link>
           <Link
             to={`/${label}`}
             data-label={label}
@@ -56,16 +56,16 @@ function Navigation (props) {
           </Link>
         </div>
         <div className="controls">
-          <a
+          <Link
             className="menu-switch"
             onClick={() => props.toggleMenu()}>
             <Icon name={props.isMenuOpen ? 'exit' : 'hamburger-menu'} />
-          </a>
-          <a
+          </Link>
+          <Link
             className="theme-switch"
             onClick={() => props.toggleTheme()}>
             <Icon name="contrast" />
-          </a>
+          </Link>
         </div>
       </Container>
     </nav>
