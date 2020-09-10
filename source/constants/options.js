@@ -1,4 +1,5 @@
-export const NAVIGATION_MENU_OPTIONS = ['home', 'profile', 'works', 'contact']
+export const PAGES_MENU_OPTIONS = ['home', 'profile', 'works', 'contact']
+export const SOCIAL_MENU_OPTIONS = ['github', 'twitter', 'linkedin']
 export const THEME_OPTIONS = ['light', 'dark']
 export const COLOR_OPTIONS = ['green', 'yellow', 'pink', 'purple', 'blue']
 export const LEVEL_OPTIONS = ['novice', 'intermediate', 'advanced']

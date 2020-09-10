@@ -24,7 +24,7 @@ function Page (props) {
     return React.Children.map(children, child => {
       if (!child.props) return child
       if (child.props.isHidden) return null
-      return cloneElement(child, {})
+      return cloneElement(child, child.props)
     })
   }
 
