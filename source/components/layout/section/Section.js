@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Utilities
-import { getClassName } from '~/utilities/component'
+import { getClassName, getAttributes } from '~/utilities/component'
 
 // Constants
 import {
@@ -24,12 +24,14 @@ function Section (props) {
     align: props.align
   })
   const semanticTagProperty = { [`data-${props.semanticTag}`]: props.name || '' }
+  const attributes = getAttributes(props, ['style', 'data', 'aria'])
 
   // Render
   return (
     <TagName
       data-layout="section"
       {...semanticTagProperty}
+      {...attributes}
       className={className}>
       {props.children}
     </TagName>
