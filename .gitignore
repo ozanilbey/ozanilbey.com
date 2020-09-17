@@ -1,8 +1,7 @@
-# Node.js
+# Node & npm
 node_modules
-
-# npm
 npm-debug.*
+.env
 
 # macOS
 .DS_Store
