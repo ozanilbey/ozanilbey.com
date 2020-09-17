@@ -15,9 +15,6 @@ const app = express()
 // Server
 const server = new http.Server(app)
 
-// Designated port (8000 if not assigned)
-const port = process.env.PORT || 8000
-
 // HTML template
 const template = readFileSync('public/index.html', 'utf8')
 
@@ -70,6 +67,9 @@ app.use((request, response) => {
     response.end()
   }
 })
+
+// Designate a port (8000 if not assigned)
+const port = process.env.PORT || 8000
 
 // Start listening to the port
 server.listen(port, '0.0.0.0', () => {
