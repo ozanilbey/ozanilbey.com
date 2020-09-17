@@ -1,0 +1,73 @@
+[data-interface="form"] {
+  opacity: 1;
+  font-size: .875em;
+  transition: opacity .25s ease;
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+  &.loading {
+    pointer-events: none;
+    .content {
+      [data-interface="form-input"] {
+        &[data-form-input="submit"] {
+          height: 3rem;
+          background-image: linear-gradient(
+            -45deg, transparent 25%,
+            fade(white, 12.5%) 25%,
+            fade(white, 12.5%) 50%,
+            transparent 50%,
+            transparent 75%,
+            fade(white, 12.5%) 75%
+          );
+          background-size: 3rem;
+          animation: loading-stripes 10s infinite linear;
+        }
+      }
+    }
+    @keyframes loading-stripes {
+      from {
+        background-position: 0%;
+      }
+      to {
+        background-position: 100%;
+      }
+    }
+  }
+  & > .notice {
+    margin-bottom: 1.5rem;
+    & > * {
+      display: block;
+      margin-bottom: .5rem;
+      padding: .375rem .5rem;
+      color: var(--danger-color);
+      font-size: .75rem;
+      line-height: .5rem;
+      text-align: center;
+      border: 1px solid hsla(var(--danger-color-hsl), .25);
+      border-radius: .75rem;
+      background-color: hsla(var(--danger-color-hsl), .1);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  & > .content {
+    & > * {
+      width: 100%;
+      margin-bottom: 1em;
+      &:first-child {
+        margin-top: 0;
+      }
+      &.label, & > .label {
+        margin-bottom: .25em;
+        margin-left: .125em;
+      }
+    }
+    [data-interface="form-input"] {
+      &[data-form-input="submit"] {
+        font-size: .9rem;
+      }
+    }
+  }
+}

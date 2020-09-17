@@ -1,0 +1,22 @@
+[data-interface="form-field"] {
+  display: block;
+  width: 100%;
+  & + & {
+    margin-top: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  & > .label {
+    display: block;
+    height: 1em;
+    margin-bottom: .5em;
+    padding-left: .375em;
+    color: hsla(var(--figure-color-hsl), .375);
+    font-size: .75em;
+    line-height: 80%;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: top;
+  }
+}

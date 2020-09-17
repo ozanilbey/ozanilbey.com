@@ -1,0 +1,52 @@
+[data-interface="form-input"] {
+  color: hsla(var(--figure-color-hsl), .75);
+  font-weight: 300;
+  font-size: 1em;
+  &[data-form-input="text"],
+  &[data-form-input="number"],
+  &[data-form-input="email"],
+  &[data-form-input="password"],
+  &[data-form-input="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: .625em .875em;
+    line-height: 1.75em;
+    border: none;
+    border-radius: .75em;
+    outline: none;
+  }
+  &[data-form-input="text"],
+  &[data-form-input="number"],
+  &[data-form-input="email"],
+  &[data-form-input="password"] {
+    opacity: .9;
+    background-color: var(--foreground-color);
+    box-shadow: 0 0 1em .125em var(--shade-color);
+    transform: scale(1);
+    transition-property: opacity, box-shadow, transform;
+    transition-duration: .25s;
+    transition-timing-function: ease;
+    &:focus {
+      opacity: 1;
+      box-shadow: 0 0 1em .25em var(--shade-color);
+      transform: scale(1.02);
+    }
+    &::placeholder {
+      opacity: .25;
+      color: inherit;
+    }
+  }
+  &[data-form-input="submit"] {
+    opacity: .875;
+    font-family: inherit;
+    font-size: .9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    transition: opacity .25s ease;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
