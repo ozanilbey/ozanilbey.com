@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Messenger",
+    "link": "//m.me/ozanilbey",
+    "color": [0, 132, 255]
+  },
+  {
+    "name": "WhatsApp",
+    "link": "//wa.me/905337459735",
+    "color": [37, 211, 102]
+  },
+  {
+    "name": "Email",
+    "link": "mailto:ozanilbey@ozanilbey.net",
+    "color": [212, 70, 56]
+  },
+  {
+    "name": "Phone",
+    "link": "tel:+905337459735",
+    "color": [255, 112, 41]
+  },
+  {
+    "name": "FaceTime",
+    "link": "facetime://ozanilbey@icloud.com",
+    "color": [52, 218, 79]
+  }
+]
