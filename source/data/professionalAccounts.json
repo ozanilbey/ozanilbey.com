@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Behance",
+    "link": "behance.net/ozanilbey",
+    "color": [0, 87, 255]
+  },
+  {
+    "name": "Dribbble",
+    "link": "dribbble.com/ozanilbey",
+    "color": [234, 76, 137]
+  },
+  {
+    "name": "GitHub",
+    "link": "github.com/ozanilbey",
+    "color": [36, 41, 46]
+  },
+  {
+    "name": "LinkedIn",
+    "link": "linkedin.com/in/ozanilbey",
+    "color": [10, 102, 194]
+  }
+]
