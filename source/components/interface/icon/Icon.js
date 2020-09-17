@@ -4,13 +4,23 @@ import PropTypes from 'prop-types'
 
 // Subcomponents
 import Audio from './shapes/Audio'
+import Behance from './shapes/Behance'
 import Contrast from './shapes/Contrast'
+import Dribbble from './shapes/Dribbble'
+import Email from './shapes/Email'
 import Exit from './shapes/Exit'
+import Facebook from './shapes/Facebook'
+import FaceTime from './shapes/FaceTime'
 import GitHub from './shapes/GitHub'
 import HamburgerMenu from './shapes/HamburgerMenu'
+import Instagram from './shapes/Instagram'
 import LinkedIn from './shapes/LinkedIn'
+import Messenger from './shapes/Messenger'
+import Phone from './shapes/Phone'
+import Snapchat from './shapes/Snapchat'
 import Star from './shapes/Star'
 import Twitter from './shapes/Twitter'
+import WhatsApp from './shapes/WhatsApp'
 
 // Utilities
 import { getAttributes } from '~/utilities/component'
@@ -32,20 +42,40 @@ const Icon = props => {
   switch (props.name) {
     case 'audio':
       return <Audio {...attributes} />
+    case 'behance':
+      return <Behance {...attributes} />
     case 'contrast':
       return <Contrast {...attributes} />
+    case 'dribbble':
+      return <Dribbble {...attributes} />
+    case 'email':
+      return <Email {...attributes} />
     case 'exit':
       return <Exit {...attributes} />
+    case 'facebook':
+      return <Facebook {...attributes} />
+    case 'facetime':
+      return <FaceTime {...attributes} />
     case 'github':
       return <GitHub {...attributes} />
     case 'hamburger-menu':
       return <HamburgerMenu {...attributes} />
+    case 'instagram':
+      return <Instagram {...attributes} />
     case 'linkedin':
       return <LinkedIn {...attributes} />
+    case 'messenger':
+      return <Messenger {...attributes} />
+    case 'phone':
+      return <Phone {...attributes} />
+    case 'snapchat':
+      return <Snapchat {...attributes} />
     case 'star':
       return <Star {...attributes} />
     case 'twitter':
       return <Twitter {...attributes} />
+    case 'whatsapp':
+      return <WhatsApp {...attributes} />
   }
 }
 
