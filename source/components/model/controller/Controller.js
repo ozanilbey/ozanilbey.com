@@ -23,10 +23,10 @@ import { getBaseFontSize } from '~/utilities/document'
 import { slug } from '~/utilities/format'
 
 // Data
-import socialAccounts from '~/data/socialAccounts'
+import professionalAccounts from '~/data/professionalAccounts'
 
 // Constants
-import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS, SOCIAL_MENU_OPTIONS } from '~/constants/options'
+import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS, NETWORKS_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Controller.less'
@@ -132,15 +132,15 @@ function Controller (props) {
                 sizeM={3}>
                 <ul className="social">
                   {
-                    socialAccounts
-                      .filter(option => SOCIAL_MENU_OPTIONS.includes(slug(option.platform)))
+                    professionalAccounts
+                      .filter(option => NETWORKS_MENU_OPTIONS.includes(slug(option.name)))
                       .map(option =>
-                        <li key={option.platform}>
+                        <li key={option.name}>
                           <Link
                             isArrowHidden
                             type="external"
                             href={`//${option.link}`}>
-                            <Icon name={slug(option.platform)} />
+                            <Icon name={slug(option.name)} />
                           </Link>
                         </li>
                       )
