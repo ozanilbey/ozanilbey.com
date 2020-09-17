@@ -1,22 +1,22 @@
 [
   {
-    "platform": "GitHub",
-    "link": "github.com/ozanilbey"
+    "name": "Twitter",
+    "link": "twitter.com/ozanilbey",
+    "color": [29, 161, 242]
   },
   {
-    "platform": "Twitter",
-    "link": "twitter.com/ozanilbey"
+    "name": "Instagram",
+    "link": "instagram.com/ozanilbey",
+    "color": [185, 0, 180]
   },
   {
-    "platform": "LinkedIn",
-    "link": "linkedin.com/in/ozanilbey"
+    "name": "Facebook",
+    "link": "facebook.com/ozanilbey",
+    "color": [24, 119, 242]
   },
   {
-    "platform": "Facebook",
-    "link": "facebook.com/ozanilbey"
-  },
-  {
-    "platform": "Instagram",
-    "link": "instagram.com/ozanilbey"
+    "name": "Snapchat",
+    "link": "snapchat.com/add/ozanilbey",
+    "color": [255, 252, 0]
   }
 ]
