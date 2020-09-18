@@ -8,24 +8,25 @@ const defaultDimensionValues = {
 }
 
 // Hook: useDimensions
-function useDimensions (ref) {
+function useDimensions () {
   // State
   const [dimensions, setDimensions] = useState(defaultDimensionValues)
 
   // Effects
   useEffect(() => {
-    const element = ref.current
     function handleDimensions () {
-      setDimensions({
-        width: element?.innerWidth || 0,
-        height: element?.innerHeight || 0
-      })
+      if (typeof window !== 'undefined') {
+        setDimensions({
+          width: window?.innerWidth || 0,
+          height: window?.innerHeight || 0
+        })
+      }
     }
-    if (element) element.addEventListener('resize', handleDimensions)
+    if (typeof window !== 'undefined') window.addEventListener('resize', handleDimensions)
     return () => {
-      if (element) element.removeEventListener('resize', handleDimensions)
+      if (typeof window !== 'undefined') window.removeEventListener('resize', handleDimensions)
     }
-  }, [ref])
+  }, [])
 
   // Return
   return dimensions

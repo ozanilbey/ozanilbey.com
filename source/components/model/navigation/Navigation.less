@@ -1,14 +1,15 @@
 [data-model="navigation"] {
-  position: sticky;
-  z-index: 2147483646; // 2147483647 - 1
-  top: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2147483646; // 2147483647 (maximum z-index available) - 1
   left: 0;
   right: 0;
-  height: 3.5rem;
-  line-height: 3.5rem;
-  background-color: hsla(var(--ground-color-hsl), .8);
-  box-shadow: 0 2px 0 hsla(var(--figure-color-hsl), .05);
-  backdrop-filter: blur(1rem);
+  background-color: var(--background-color);
+  & > * {
+    width: inherit;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
   [data-layout="container"] {
     flex-direction: row;
     justify-content: space-between;
@@ -16,83 +17,156 @@
     height: inherit;
     line-height: inherit;
   }
-  [data-interface="link"] {
-    display: inline-block;
-    position: relative;
-    opacity: .65;
-    height: inherit;
-    color: inherit;
-    font-family: "Montserrat";
-    font-size: 1.375rem;
-    font-weight: 400;
-    font-style: normal;
-    line-height: inherit;
-    letter-spacing: -.05em;
-    text-transform: lowercase;
-    vertical-align: middle;
-    transition: opacity .5s ease;
-    &:hover {
-      opacity: 1;
-      left: 0;
-    }
-    &.brand, &.switch {
-      opacity: 1;
-    }
-  }
-  .identity {
-    height: inherit;
-    line-height: inherit;
-    [data-interface="link"] {
-      vertical-align: top;
-    }
-    [data-identity="logo"] {
-      position: relative;
-      top: -0.025rem;
-      width: 5.875rem;
-      & > * {
-        fill: var(--figure-color);
+  & > * {
+    &.base {
+      background-color: var(--ground-color);
+      &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: hsla(var(--figure-color-hsl), 0.05);
       }
-    }
-    .label {
-      width: 5.5rem;
-      text-align: left;
-      text-indent: -5.5rem;
-      overflow: hidden;
-      transition: opacity .5s ease, text-indent .5s ease;
-      &:before {
-        content: ":";
+      [data-interface="link"] {
         display: inline-block;
         position: relative;
-        width: .5rem;
-        text-align: center;
-      }
-      &[data-label="home"], &[data-label="error"] {
-        visibility: hidden;
-        width: 1px;
-      }
-      &.visible {
-        text-indent: 0;
-      }
-    }
-  }
-  .controls {
-    & > * {
-      margin-left: 1rem;
-    }
-    [data-interface="link"] {
-      opacity: 1;
-      text-align: center;
-      &.theme-switch {
-        height: 1rem;
-      }
-      &.menu-switch {
-        height: 0.8rem;
-      }
-      [data-interface="icon"] {
+        opacity: .65;
         height: inherit;
-        vertical-align: top;
+        color: inherit;
+        font-family: "Montserrat";
+        font-size: 1.375rem;
+        font-weight: 400;
+        font-style: normal;
+        line-height: inherit;
+        letter-spacing: -.05em;
+        text-transform: lowercase;
+        vertical-align: middle;
+        transition: opacity .5s ease;
+        &:hover {
+          opacity: 1;
+          left: 0;
+        }
+        &.brand, &.switch {
+          opacity: 1;
+        }
+      }
+      .identity {
+        height: inherit;
+        line-height: inherit;
+        [data-interface="link"] {
+          vertical-align: top;
+        }
+        [data-identity="logo"] {
+          position: relative;
+          top: -0.025rem;
+          width: 5.875rem;
+          & > * {
+            fill: var(--figure-color);
+          }
+        }
+        .label {
+          width: 5.5rem;
+          text-align: left;
+          text-indent: -5.5rem;
+          overflow: hidden;
+          transition: opacity .5s ease, text-indent .5s ease;
+          &:before {
+            content: ":";
+            display: inline-block;
+            position: relative;
+            width: .5rem;
+            text-align: center;
+          }
+          &[data-label="home"], &[data-label="error"] {
+            visibility: hidden;
+            width: 1px;
+          }
+          &.visible {
+            text-indent: 0;
+          }
+        }
+      }
+      .controls {
         & > * {
-          fill: var(--figure-color)
+          margin-left: 1rem;
+        }
+        [data-interface="link"] {
+          opacity: 1;
+          text-align: center;
+          &.theme-switch {
+            height: 1rem;
+          }
+          &.menu-switch {
+            height: 0.8rem;
+          }
+          [data-interface="icon"] {
+            height: inherit;
+            vertical-align: top;
+            & > * {
+              fill: var(--figure-color)
+            }
+          }
+        }
+      }
+    }
+    &.menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 0;
+      height: 5rem;
+      ul {
+        display: inline-block;
+        width: 100%;
+        font-size: .85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        &.pages {
+          text-align: left;
+          & > * {
+            margin-right: 2.5rem;
+          }
+        }
+        &.social {
+          text-align: right;
+          & > * {
+            margin-right: 1rem;
+            [data-interface="link"] {
+              & > [data-interface="icon"] {
+                &[data-icon="twitter"] {
+                  width: 1.25rem;
+                  height: 1.25rem;
+                }
+              }
+            }
+          }
+        }
+        & > * {
+          display: inline-block;
+          &:last-child {
+            margin-right: 0 !important;
+          }
+          [data-interface="link"] {
+            opacity: .5;
+            color: var(--figure-color);
+            font-size: .9em;
+            font-weight: 700;
+            transition: opacity .35s ease;
+            &:hover {
+              opacity: 1;
+            }
+            &:before, &:after {
+              display: none;
+            }
+            & > [data-interface="icon"] {
+              width: 1.125rem;
+              height: 1.125rem;
+              vertical-align: middle;
+              & > * {
+                fill: var(--figure-color);
+              }
+            }
+          }
         }
       }
     }

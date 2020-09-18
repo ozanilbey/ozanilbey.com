@@ -8,24 +8,25 @@ const defaultScrollValue = {
 }
 
 // Hook: useScroll
-function useScroll (ref) {
+function useScroll () {
   // State
   const [scroll, setScroll] = useState(defaultScrollValue)
 
   // Effects
   useEffect(() => {
-    const element = ref.current
     function handleScroll () {
-      setScroll({
-        horizontal: element?.scrollLeft || 0,
-        vertical: element?.scrollTop || 0
-      })
+      if (typeof window !== 'undefined') {
+        setScroll({
+          horizontal: window.scrollX || 0,
+          vertical: window.scrollY || 0
+        })
+      }
     }
-    if (element) element.addEventListener('scroll', handleScroll)
+    if (typeof window !== 'undefined') window.addEventListener('scroll', handleScroll)
     return () => {
-      if (element) element.removeEventListener('scroll', handleScroll)
+      if (typeof window !== 'undefined') window.removeEventListener('scroll', handleScroll)
     }
-  }, [ref])
+  })
 
   // Return
   return scroll

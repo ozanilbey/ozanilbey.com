@@ -1,5 +1,12 @@
+// Body
+body {
+  &.stationary {
+    overflow: hidden;
+  }
+}
+
+// Page
 [data-layout="page"] {
-  margin-top: -3.5rem;
   & > * {
     position: relative;
     background-color: var(--ground-color);
@@ -43,6 +50,7 @@
   }
 }
 
+// Connector
 [data-content="connector"] {
   [data-interface="icon"] {
     & > * {

@@ -1,5 +1,5 @@
 // Modules
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -8,10 +8,6 @@ import ControllerContext from '~/context/Controller'
 
 // Components
 import Navigation from '~/components/model/navigation/Navigation'
-import Container from '~/components/layout/container/Container'
-import Stack from '~/components/layout/stack/Stack'
-import Link from '~/components/interface/link/Link'
-import Icon from '~/components/interface/icon/Icon'
 
 
 // Hooks
@@ -20,26 +16,19 @@ import useDimensions from '~/hooks/useDimensions'
 
 // Utilities
 import { getBaseFontSize } from '~/utilities/document'
-import { slug } from '~/utilities/format'
-
-// Data
-import professionalAccounts from '~/data/professionalAccounts'
 
 // Constants
-import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS, NETWORKS_MENU_OPTIONS } from '~/constants/options'
+import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS } from '~/constants/options'
 
 // Style
 import './Controller.less'
 
 // Component: Model > Controller
 function Controller (props) {
-  // References
-  const screen = useRef()
-
   // Data
   const pages = useParams()
-  const scroll = useScroll(screen)
-  const dimensions = useDimensions(screen)
+  const scroll = useScroll()
+  const dimensions = useDimensions()
 
   // State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -58,6 +47,11 @@ function Controller (props) {
 
   // Effects
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.body.classList[isMenuOpen ? 'add' : 'remove']('stationary')
+    }
+  }, [isMenuOpen])
+  useEffect(() => {
     if (props.defaultTheme) setTheme(props.defaultTheme)
   }, [props.defaultTheme])
   useEffect(() => {
@@ -67,23 +61,25 @@ function Controller (props) {
     }
   }, [theme])
   useEffect(() => {
-    screen.current.scrollTo(0, 0)
-    if (typeof window !== 'undefined' && window.location.hash) {
-      const target = screen.current.querySelector(`[data-section="${window.location.hash.substring(1)}"]`)
-      if (target) {
-        // Timeout prevents the jumpy feeling
-        const timer = setTimeout(() => {
-          screen.current.scrollTo({
-            top: target.offsetTop - 3.5 * getBaseFontSize(), // Navigation height is 3.5rem
-            behavior: 'smooth'
-          })
-          window.history.replaceState(
-            null,
-            null,
-            window.location.href.split('#')[0]
-          )
-        }, 500)
-        return () => clearTimeout(timer)
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0)
+      if (window.location.hash) {
+        const target = document.body.querySelector(`[data-section="${window.location.hash.substring(1)}"]`)
+        if (target) {
+          // Timeout prevents the jumpy feeling
+          const timer = setTimeout(() => {
+            document.body.scrollTo({
+              top: target.offsetTop - 3.5 * getBaseFontSize(), // Navigation height is 3.5rem
+              behavior: 'smooth'
+            })
+            window.history.replaceState(
+              null,
+              null,
+              window.location.href.split('#')[0]
+            )
+          }, 500)
+          return () => clearTimeout(timer)
+        }
       }
     }
   }, [pages])
@@ -95,61 +91,12 @@ function Controller (props) {
         data-model="controller"
         data-color={getColor(pages.page)}
         className={isMenuOpen ? 'open' : null}>
-        <div
-          ref={screen}
-          className="screen">
-          <Navigation
-            page={pages.page}
-            isMenuOpen={isMenuOpen}
-            toggleMenu={toggleMenu}
-            toggleTheme={toggleTheme} />
-          {props.children}
-        </div>
-        <nav className="menu">
-          <Container>
-            <Stack
-              willWrap
-              vertical="middle">
-              <Stack.Item
-                sizeS={12}
-                sizeM={9}>
-                <ul className="pages">
-                  {PAGES_MENU_OPTIONS.map(option =>
-                    <li key={option}>
-                      <Link
-                        to={`/${option === 'home' ? '' : option}`}
-                        className={`${option} item`}
-                        activeClassName="active"
-                        onClick={() => setIsMenuOpen(false)}>
-                        {option}
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </Stack.Item>
-              <Stack.Item
-                sizeS={12}
-                sizeM={3}>
-                <ul className="social">
-                  {
-                    professionalAccounts
-                      .filter(option => NETWORKS_MENU_OPTIONS.includes(slug(option.name)))
-                      .map(option =>
-                        <li key={option.name}>
-                          <Link
-                            isArrowHidden
-                            type="external"
-                            href={`//${option.link}`}>
-                            <Icon name={slug(option.name)} />
-                          </Link>
-                        </li>
-                      )
-                  }
-                </ul>
-              </Stack.Item>
-            </Stack>
-          </Container>
-        </nav>
+        <Navigation
+          page={pages.page}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+          toggleTheme={toggleTheme} />
+        {props.children}
       </div>
     </ControllerContext.Provider>
   )
