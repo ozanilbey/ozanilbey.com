@@ -2,9 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Utilities
-import { getClassName } from '~/utilities/component'
-
 // Constants
 import { LEVEL_OPTIONS } from '~/constants/options'
 
