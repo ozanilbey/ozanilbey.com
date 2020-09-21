@@ -12,3 +12,7 @@ export const slug = text =>
 // Format text to have uppercased first letter
 export const upperCaseFirstLetter = text =>
   text.charAt(0).toUpperCase() + text.substring(1)
+
+// Format array to be an RGB color string
+export const rgbColor = array =>
+  `rgb(${array.join(', ')})`

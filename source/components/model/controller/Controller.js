@@ -33,11 +33,13 @@ function Controller (props) {
   // State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState(props.defaultTheme)
+  const [color, setColor] = useState(null)
 
   // Methods
   const toggleMenu = () => setIsMenuOpen(condition => !condition)
   const toggleTheme = () => setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
   function getColor (page) {
+  function getPageColor (page) {
     const pages = [...PAGES_MENU_OPTIONS]
     pages.shift()
     return pages.includes(page)
@@ -86,13 +88,14 @@ function Controller (props) {
 
   // Render
   return (
-    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme }}>
+    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme, color, setColor }}>
       <div
         data-model="controller"
-        data-color={getColor(pages.page)}
+        data-color={getPageColor(pages.page)}
         className={isMenuOpen ? 'open' : null}>
         <Navigation
           page={pages.page}
+          color={color}
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
           toggleTheme={toggleTheme} />

@@ -12,7 +12,7 @@ import Icon from '~/components/interface/icon/Icon'
 
 // Utilities
 import { getClassName } from '~/utilities/component'
-import { slug } from '~/utilities/format'
+import { slug, rgbColor } from '~/utilities/format'
 
 // Data
 import professionalAccounts from '~/data/professionalAccounts'
@@ -110,7 +110,9 @@ function Navigation (props) {
           </Stack>
         </Container>
       </div>
-      <div className="base">
+      <div
+        className="base"
+        style={props.color ? { backgroundColor: rgbColor(props.color) } : {}}>
         <Container>
           <div className="identity">
             <Link
