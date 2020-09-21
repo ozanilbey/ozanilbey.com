@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Subcomponents
+import AngelList from './shapes/AngelList'
 import Audio from './shapes/Audio'
 import Behance from './shapes/Behance'
 import Contrast from './shapes/Contrast'
@@ -13,6 +14,7 @@ import Facebook from './shapes/Facebook'
 import FaceTime from './shapes/FaceTime'
 import GitHub from './shapes/GitHub'
 import HamburgerMenu from './shapes/HamburgerMenu'
+import Information from './shapes/Information'
 import Instagram from './shapes/Instagram'
 import LinkedIn from './shapes/LinkedIn'
 import Messenger from './shapes/Messenger'
@@ -40,6 +42,8 @@ const Icon = props => {
 
   // Render
   switch (props.name) {
+    case 'angellist':
+      return <AngelList {...attributes} />
     case 'audio':
       return <Audio {...attributes} />
     case 'behance':
@@ -60,6 +64,8 @@ const Icon = props => {
       return <GitHub {...attributes} />
     case 'hamburger-menu':
       return <HamburgerMenu {...attributes} />
+    case 'information':
+      return <Information {...attributes} />
     case 'instagram':
       return <Instagram {...attributes} />
     case 'linkedin':
