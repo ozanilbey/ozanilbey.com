@@ -62,7 +62,7 @@ function Headline (props) {
       ref={headline}
       data-model="headline"
       rank={1}
-      isSingleLine
+      isSingleLine={props.isSingleLine}
       displaySize={props.displaySize}
       style={{ color: `hsla(var(--figure-color-hsl), ${opacity})` }}>
       {props.children}
@@ -74,7 +74,8 @@ function Headline (props) {
 Headline.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  displaySize: PropTypes.oneOf(['normal', 'big', 'bigger', 'biggest'])
+  displaySize: PropTypes.oneOf(['normal', 'big', 'bigger', 'biggest']),
+  isSingleLine: PropTypes.bool
 }
 
 // Export
