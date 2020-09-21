@@ -101,10 +101,10 @@
   }
 }
 
-/* 1680 < Window Width */
-@media only screen and (min-width: (@breakpoints[xxlarge-limit-superior] + 1)) {
+/* 1440 < Window Width */
+@media only screen and (min-width: (@breakpoints[xxlarge-limit-inferior] + 1)) {
   [data-model="controller"] {
-    width: 1440px;
+    width: @breakpoints[xxlarge-limit-inferior];
     margin: 0 auto;
     &.open {
       & > * {
@@ -120,7 +120,7 @@
     }
     & > [data-model="navigation"] {
       & > * {
-        width: 1440px;
+        width: @breakpoints[xxlarge-limit-inferior];
         &.base {
           border-radius: 1rem;
         }
