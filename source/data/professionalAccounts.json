@@ -18,5 +18,10 @@
     "name": "LinkedIn",
     "link": "linkedin.com/in/ozanilbey",
     "color": [10, 102, 194]
+  },
+  {
+    "name": "AngelList",
+    "link": "https://angel.co/ozanilbey",
+    "color": [10, 102, 194]
   }
 ]
