@@ -1,5 +1,5 @@
 // Modules
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
 
@@ -10,9 +10,12 @@ import Stack from '~/components/layout/stack/Stack'
 import Link from '~/components/interface/link/Link'
 import Icon from '~/components/interface/icon/Icon'
 
+// Context
+import ControllerContext from '~/context/Controller'
+
 // Utilities
 import { getClassName } from '~/utilities/component'
-import { slug, rgbColor } from '~/utilities/format'
+import { slug } from '~/utilities/format'
 
 // Data
 import professionalAccounts from '~/data/professionalAccounts'
@@ -27,6 +30,10 @@ import './Navigation.less'
 function Navigation (props) {
   // Data
   const history = useHistory()
+  const { colors } = useContext(ControllerContext)
+
+  // References
+  const base = useRef()
 
   // State
   const [label, setLabel] = useState('')
@@ -62,6 +69,20 @@ function Navigation (props) {
     }
     return () => clearTimeout(timer)
   }, [props.page])
+  useEffect(() => {
+    let target
+    if (typeof window !== 'undefined') {
+      target = base.current
+      if (colors?.primary) target.style.setProperty('--ground-color', colors.primary)
+      if (colors?.secondary) target.style.setProperty('--figure-color', colors.secondary)
+    }
+    return () => {
+      if (target) {
+        target.style.removeProperty('--figure-color')
+        target.style.removeProperty('--ground-color')
+      }
+    }
+  }, [colors])
 
   // Render
   return (
@@ -111,8 +132,8 @@ function Navigation (props) {
         </Container>
       </div>
       <div
-        className="base"
-        style={props.color ? { backgroundColor: rgbColor(props.color) } : {}}>
+        ref={base}
+        className="base">
         <Container>
           <div className="identity">
             <Link
@@ -149,6 +170,7 @@ function Navigation (props) {
 
 // Properties
 Navigation.propTypes = {
+  colors: PropTypes.object,
   isMenuOpen: PropTypes.bool,
   page: PropTypes.string,
   toggleMenu: PropTypes.func,

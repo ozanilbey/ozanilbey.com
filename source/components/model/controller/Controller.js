@@ -1,5 +1,5 @@
 // Modules
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -30,15 +30,21 @@ function Controller (props) {
   const scroll = useScroll()
   const dimensions = useDimensions()
 
+  // References
+  const controller = useRef()
+
   // State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState(props.defaultTheme)
-  const [color, setColor] = useState(null)
+  const [colors, setColors] = useState(null)
 
   // Methods
-  const toggleMenu = () => setIsMenuOpen(condition => !condition)
-  const toggleTheme = () => setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
-  function getColor (page) {
+  function toggleMenu () {
+    setIsMenuOpen(condition => !condition)
+  }
+  function toggleTheme () {
+    setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
+  }
   function getPageColor (page) {
     const pages = [...PAGES_MENU_OPTIONS]
     pages.shift()
@@ -62,6 +68,16 @@ function Controller (props) {
       if (localStorage) localStorage.setItem('theme', theme)
     }
   }, [theme])
+  useEffect(() => {
+    let target
+    if (typeof window !== 'undefined') {
+      target = controller.current
+      if (colors?.primary) target.style.setProperty('--primary-color', colors.primary)
+    }
+    return () => {
+      if (target) target.style.removeProperty('--primary-color')
+    }
+  }, [colors])
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.scrollTo(0, 0)
@@ -88,14 +104,15 @@ function Controller (props) {
 
   // Render
   return (
-    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme, color, setColor }}>
+    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme, colors, setColors }}>
       <div
+        ref={controller}
         data-model="controller"
         data-color={getPageColor(pages.page)}
         className={isMenuOpen ? 'open' : null}>
         <Navigation
           page={pages.page}
-          color={color}
+          colors={colors}
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
           toggleTheme={toggleTheme} />

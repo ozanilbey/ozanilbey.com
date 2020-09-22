@@ -23,16 +23,17 @@
       background-color: var(--ground-color);
       &:after {
         content: "";
+        opacity: .05;
         display: block;
         height: 2px;
-        background-color: hsla(var(--figure-color-hsl), 0.05);
+        background-color: var(--figure-color);
       }
       [data-interface="link"] {
         display: inline-block;
         position: relative;
         opacity: .65;
         height: inherit;
-        color: inherit;
+        color: var(--figure-color);
         font-family: "Montserrat";
         font-size: 1.375rem;
         font-weight: 400;
