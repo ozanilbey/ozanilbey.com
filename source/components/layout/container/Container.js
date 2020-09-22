@@ -12,7 +12,8 @@ import './Container.less'
 function Container (props) {
   // Data
   const className = getClassName(props.className, {
-    width: props.isMaximumWidth ? 'maximum' : null
+    width: props.isMaximumWidth ? 'maximum' : null,
+    block: props.isBlockLayout
   })
 
   // Render
@@ -30,10 +31,12 @@ function Container (props) {
 Container.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  isBlockLayout: PropTypes.bool,
   isMaximumWidth: PropTypes.bool,
   name: PropTypes.string
 }
 Container.defaultProps = {
+  isBlockLayout: false,
   isMaximumWidth: false
 }
 
