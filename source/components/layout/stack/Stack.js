@@ -35,6 +35,7 @@ function Stack (props) {
   // Methods
   const renderChildren = children => {
     return React.Children.map(children, child => {
+      if (!child) return null
       if (!child.props || child.type.displayName !== 'Stack.Item') return child
       if (child.props.isHidden) return null
       return cloneElement(child, {})
