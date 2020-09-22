@@ -1,0 +1,12 @@
+[data-model="color-fill"] {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  & > * {
+    position: relative;
+    display: inline-block;
+    & > * {
+      position: relative;
+    }
+  }
+}
