@@ -1,12 +1,15 @@
 [data-model="color-fill"] {
   overflow: hidden;
-  position: relative;
   display: inline-block;
+  position: relative;
+  vertical-align: top;
   & > * {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     & > * {
       position: relative;
+      vertical-align: top;
     }
   }
 }
