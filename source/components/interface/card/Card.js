@@ -48,7 +48,13 @@ function Card (props) {
             }
             <div className="content">
               {props.icon &&
-                <div className="icon">
+                <div
+                  className="icon"
+                  style={
+                    props.iconBackgroundColor
+                      ? { backgroundColor: props.iconBackgroundColor }
+                      : {}
+                  }>
                   {
                     props.isIconCustomized
                       ? props.icon
@@ -82,6 +88,7 @@ Card.propTypes = {
     PropTypes.string,
     PropTypes.node
   ]),
+  iconBackgroundColor: PropTypes.string,
   iconColor: PropTypes.string,
   iconURL: PropTypes.string,
   isCarousel: PropTypes.bool,
