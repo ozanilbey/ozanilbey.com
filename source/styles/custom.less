@@ -22,9 +22,6 @@ body {
       z-index: 2;
       background-color: var(--ground-alternative-color);
     }
-    &:first-child {
-      padding-top: 11rem; // 7.5rem (header padding) + 3.5rem (patch)
-    }
     &:last-child {
       border-bottom: 1px solid var(--shade-color);
       box-shadow: 0 0 0.5rem var(--shade-color);
@@ -40,7 +37,7 @@ body {
   [data-header] {
     position: relative;
     z-index: 4;
-    padding-bottom: 7.5rem;
+    margin-top: calc(3.5rem - 1px); // 1px is necessary for visual continuity
     background-color: var(--ground-color);
     [data-model="headline"] {
       margin-bottom: .375em;
