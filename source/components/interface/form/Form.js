@@ -129,7 +129,7 @@ const Form = props => {
     fieldMatch: (reference, value, field) => {
       field = values[field]
       const condition = field && value === field
-      const error = `${reference} fields don't match.`
+      const error = `${reference} fields don’t match.`
       return [condition, error]
     }
   }
