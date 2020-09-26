@@ -3,6 +3,6 @@ export const NETWORKS_MENU_OPTIONS = ['github', 'behance', 'dribbble', 'linkedin
 export const THEME_OPTIONS = ['light', 'dark']
 export const COLOR_OPTIONS = ['green', 'yellow', 'pink', 'purple', 'blue']
 export const LEVEL_OPTIONS = ['novice', 'intermediate', 'advanced']
-export const SUMMARY_OPTIONS = ['work', 'employment', 'education']
 export const TEXT_INPUT_OPTIONS = ['text', 'number', 'email', 'password']
 export const INPUT_TYPE_OPTIONS = [...TEXT_INPUT_OPTIONS, 'checkbox', 'submit']
+export const MEDIA_TYPE_OPTIONS = ['image', 'video', 'document']
