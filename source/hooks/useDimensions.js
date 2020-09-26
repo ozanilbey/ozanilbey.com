@@ -22,6 +22,7 @@ function useDimensions () {
         })
       }
     }
+    handleDimensions()
     if (typeof window !== 'undefined') window.addEventListener('resize', handleDimensions)
     return () => {
       if (typeof window !== 'undefined') window.removeEventListener('resize', handleDimensions)
