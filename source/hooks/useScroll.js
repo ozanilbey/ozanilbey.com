@@ -26,7 +26,7 @@ function useScroll () {
     return () => {
       if (typeof window !== 'undefined') window.removeEventListener('scroll', handleScroll)
     }
-  })
+  }, [])
 
   // Return
   return scroll
