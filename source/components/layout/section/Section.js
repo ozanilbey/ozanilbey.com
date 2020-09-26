@@ -1,5 +1,5 @@
 // Modules
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 // Utilities
@@ -15,7 +15,7 @@ import {
 import './Section.less'
 
 // Component: Layout > Section
-function Section (props) {
+const Section = forwardRef((props, ref) => {
   // Data
   const TagName = props.semanticTag
   const className = getClassName(props.className, {
@@ -29,6 +29,7 @@ function Section (props) {
   // Render
   return (
     <TagName
+      ref={ref}
       data-layout="section"
       {...semanticTagProperty}
       {...attributes}
@@ -36,7 +37,7 @@ function Section (props) {
       {props.children}
     </TagName>
   )
-}
+})
 
 // Properties
 Section.propTypes = {
@@ -48,6 +49,7 @@ Section.propTypes = {
   semanticTag: PropTypes.oneOf(['header', 'section', 'footer']),
   spacing: PropTypes.oneOf(SPACING_OPTIONS)
 }
+Section.displayName = 'Section'
 Section.defaultProps = {
   semanticTag: 'section'
 }
