@@ -58,10 +58,7 @@ function Hint (props) {
           onClick={
             props.isBodyClickable
               ? null
-              : () => {
-                console.log(JSON.stringify(isActive))
-                setIsActive(condition => !condition)
-              }
+              : () => setIsActive(condition => !condition)
           }>
           <Icon name="information" />
         </div>
