@@ -7,6 +7,13 @@ body {
 
 // Page
 [data-layout="page"] {
+  &[data-parent="works"] {
+    & > * {
+      &:first-child {
+        padding-bottom: 0;
+      }
+    }
+  }
   & > * {
     position: relative;
     background-color: var(--ground-color);
