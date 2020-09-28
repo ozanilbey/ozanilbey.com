@@ -14,7 +14,7 @@ const PseudoLink = props => props.to
   ? <RouterLink {...props}>{props.children}</RouterLink>
   : <a {...props}>{props.children}</a>
 
-// Component: Link
+// Component: Interface > Link
 function Link (props) {
   const className = getClassName(props.className, {
     type: props.type,

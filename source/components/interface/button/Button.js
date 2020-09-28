@@ -16,8 +16,8 @@ const PseudoButton = props => (props.href || props.to)
   ? <Link {...props}>{props.children}</Link>
   : <button {...props}>{props.children}</button>
 
-// Component: Button
 function Button (props) {
+// Component: Interface > Button
   const className = getClassName(props.className, { size: props.size })
   return (
     <PseudoButton

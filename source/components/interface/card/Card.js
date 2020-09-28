@@ -11,7 +11,7 @@ import { getClassName } from '~/utilities/component'
 // Style
 import './Card.less'
 
-// Component: Card
+// Component: Interface > Card
 function Card (props) {
   const className = getClassName(props.className, {
     layout: props.isCarousel ? 'vertical' : props.layout

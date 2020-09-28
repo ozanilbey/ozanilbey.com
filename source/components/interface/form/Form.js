@@ -15,7 +15,7 @@ import { INPUT_TYPE_OPTIONS } from '~/constants/options'
 // Styles
 import './Form.less'
 
-// Component: Form
+// Component: Interface > Form
 const Form = props => {
   // Data
   const attributes = getAttributes(props, ['style', 'data', 'aria'])
