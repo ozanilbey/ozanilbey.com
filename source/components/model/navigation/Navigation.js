@@ -15,7 +15,7 @@ import ControllerContext from '~/context/Controller'
 
 // Utilities
 import { getClassName } from '~/utilities/component'
-import { slug } from '~/utilities/format'
+import { slug, rgbColor } from '~/utilities/format'
 
 // Data
 import professionalAccounts from '~/data/professionalAccounts'
@@ -73,8 +73,8 @@ function Navigation (props) {
     let target
     if (typeof window !== 'undefined') {
       target = base.current
-      if (colors?.primary) target.style.setProperty('--ground-color', colors.primary)
-      if (colors?.secondary) target.style.setProperty('--figure-color', colors.secondary)
+      if (colors?.primary) target.style.setProperty('--ground-color', rgbColor(colors.primary))
+      if (colors?.secondary) target.style.setProperty('--figure-color', rgbColor(colors.secondary))
     }
     return () => {
       if (target) {
