@@ -13,13 +13,12 @@ import './Card.less'
 
 // Component: Interface > Card
 function Card (props) {
-  const className = getClassName(props.className, {
-    layout: props.isCarousel ? 'vertical' : props.layout
-  })
   return (
     <div
       data-interface="card"
-      className={className}
+      className={getClassName(props.className, {
+        layout: props.isCarousel ? 'vertical' : props.layout
+      })}
       style={{
         ...(props.style || {}),
         ...props.color ? { backgroundColor: props.color } : {}
