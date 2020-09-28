@@ -20,6 +20,7 @@ import { slug, rgbColor } from '~/utilities/format'
 
 // Constants
 import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS } from '~/constants/options'
+import { WORK_FILTERS } from '~/constants/content'
 
 // Style
 import './Controller.less'
