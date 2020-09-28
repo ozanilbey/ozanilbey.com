@@ -11,7 +11,7 @@ import { getTwoPointFormEquivalent } from '~/utilities/math'
 // Style
 import './SkillBars.less'
 
-// Component: Content > SkillBars
+// Component: Content > Skill Bars
 function SkillBars (props) {
   // Data
   const currentYear = new Date().getFullYear()

@@ -13,7 +13,7 @@ import Piccture from './shapes/Piccture'
 // Utilities
 import { getAttributes } from '~/utilities/component'
 
-// Component: Content > BrandMark
+// Component: Content > Brand Mark
 const BrandMark = props => {
   // Data
   const attributes = {

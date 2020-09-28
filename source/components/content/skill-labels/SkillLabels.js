@@ -8,7 +8,7 @@ import { LEVEL_OPTIONS } from '~/constants/options'
 // Style
 import './SkillLabels.less'
 
-// Component: Content > SkillLabels
+// Component: Content > Skill Labels
 function SkillLabels (props) {
   // Render
   return (

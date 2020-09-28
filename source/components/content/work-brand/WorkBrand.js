@@ -12,7 +12,7 @@ import { rgbColor } from '~/utilities/format'
 // Style
 import './WorkBrand.less'
 
-// Component: Content > WorkBrand
+// Component: Content > Work Brand
 const WorkBrand = props => (
   <div data-content="work-brand">
     {props.data.type !== 'collection' &&

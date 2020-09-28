@@ -8,7 +8,7 @@ import { getClassName } from '~/utilities/component'
 // Style
 import './SkillMap.less'
 
-// Component: Content > SkillMap
+// Component: Content > Skill Map
 function SkillMap (props) {
   // Methods
   function renderArrow (side) {
