@@ -1,3 +1,27 @@
+// Root
+:root {
+  &.light {
+    [data-extreme="light"] {
+      [data-section="summary"] small > i,
+      [data-content="promotion"] .dim,
+      [data-content="promotion"] [data-interface="link"],
+      [data-content="colophon"] {
+        --primary-color: hsla(var(--figure-color-hsl), 0.5) !important;
+      }
+    }
+  }
+  &.dark {
+    [data-extreme="dark"] {
+      [data-section="summary"] small > i,
+      [data-content="promotion"] .dim,
+      [data-content="promotion"] [data-interface="link"],
+      [data-content="colophon"] {
+        --primary-color: hsla(var(--figure-color-hsl), 0.5) !important;
+      }
+    }
+  }
+}
+
 // Body
 body {
   &.stationary {

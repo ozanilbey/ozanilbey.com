@@ -16,6 +16,7 @@ import useDimensions from '~/hooks/useDimensions'
 
 // Utilities
 import { getBaseFontSize } from '~/utilities/document'
+import { slug, rgbColor } from '~/utilities/format'
 
 // Constants
 import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS } from '~/constants/options'
@@ -45,6 +46,11 @@ function Controller (props) {
   function toggleTheme () {
     setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
   }
+  function checkColor (rgb) {
+    const lightness = rgb.reduce((a, b) => a + b) / (255 * 3)
+    if (lightness < 0.25) return 'dark'
+    else if (lightness > 0.75) return 'light'
+  }
   function getPageColor (page) {
     const pages = [...PAGES_MENU_OPTIONS]
     pages.shift()
@@ -72,10 +78,17 @@ function Controller (props) {
     let target
     if (typeof window !== 'undefined') {
       target = controller.current
-      if (colors?.primary) target.style.setProperty('--primary-color', colors.primary)
+      if (colors?.primary) {
+        const extreme = checkColor(colors.primary)
+        if (extreme) target.setAttribute('data-extreme', checkColor(colors.primary))
+        target.style.setProperty('--primary-color', rgbColor(colors.primary))
+      }
     }
     return () => {
-      if (target) target.style.removeProperty('--primary-color')
+      if (target) {
+        target.style.removeProperty('--primary-color')
+        target.removeAttribute('data-extreme')
+      }
     }
   }, [colors])
   useEffect(() => {
