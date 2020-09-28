@@ -2,3 +2,4 @@ export const WORK_TYPES = ['collection', 'corporate-identity', 'desktop-website'
 export const SUMMARY_TYPES = ['work', 'employment', 'education']
 export const FEATURED_WORKS = ['docu', 'graphjs', 'base64', 'favogue', 'piccture', 'cardz']
 export const SELECTED_WORKS = [...FEATURED_WORKS, 'brush', 'fihrist', 'groups']
+export const WORK_FILTERS = ['Selected Works', 'UI/UX/IxD', 'Graphic Design', 'Social Media', 'Corporate Identity', 'Collections']

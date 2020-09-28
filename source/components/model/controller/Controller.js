@@ -93,7 +93,12 @@ function Controller (props) {
   }, [colors])
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.scrollTo(0, 0)
+      const willPreventScroll = (
+        // Prevent scroll after changing Works page filter
+        pages.page === 'works' &&
+        WORK_FILTERS.map(filter => slug(filter)).includes(pages.subpage)
+      )
+      if (!willPreventScroll) window.scrollTo(0, 0)
       if (window.location.hash) {
         const target = document.body.querySelector(`[data-section="${window.location.hash.substring(1)}"]`)
         if (target) {
