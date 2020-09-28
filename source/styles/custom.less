@@ -8,6 +8,15 @@ body {
 // Page
 [data-layout="page"] {
   &[data-parent="works"] {
+    &[data-page="logo-collection"] {
+      [data-section] {
+        &[data-section="summary"] {
+          [data-media="image"] {
+            max-width: 100%;
+          }
+        }
+      }
+    }
     & > * {
       &:first-child {
         padding-bottom: 0;
