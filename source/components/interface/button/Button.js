@@ -1,5 +1,5 @@
 // Modules
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 // Components
@@ -12,21 +12,23 @@ import './Button.less'
 import { getClassName } from '~/utilities/component'
 
 // Subcomponent: PseudoButton
-const PseudoButton = props => (props.href || props.to)
-  ? <Link {...props}>{props.children}</Link>
-  : <button {...props}>{props.children}</button>
+const PseudoButton = forwardRef((props, ref) => (props.href || props.to)
+  ? <Link {...props} ref={ref}>{props.children}</Link>
+  : <button {...props} ref={ref}>{props.children}</button>
+)
 
-function Button (props) {
 // Component: Interface > Button
+const Button = forwardRef((props, ref) => {
   const className = getClassName(props.className, { size: props.size })
   return (
     <PseudoButton
       {...props}
+      ref={ref}
       role="button"
       data-interface="button"
       className={className} />
   )
-}
+})
 
 // Properties
 Button.propTypes = {
@@ -34,11 +36,16 @@ Button.propTypes = {
   isLoading: PropTypes.bool,
   className: PropTypes.string
 }
+Button.defaultProps = {
+  size: 'medium'
+}
+Button.displayName = 'Button'
 PseudoButton.propTypes = {
   to: PropTypes.string,
   href: PropTypes.string,
   children: PropTypes.node
 }
+PseudoButton.displayName = 'PseudoButton'
 
 // Export
 export default Button
