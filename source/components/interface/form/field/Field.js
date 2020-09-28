@@ -2,9 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Utilities
-import { getAttributes } from '~/utilities/component'
-
 // Style
 import './Field.less'
 
