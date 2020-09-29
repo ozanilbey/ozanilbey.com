@@ -152,12 +152,17 @@ function Navigation (props) {
           </div>
           <div className="controls">
             <Link
-              className="menu-switch"
+              className="menu"
               onClick={() => props.toggleMenu()}>
               <Icon name={props.isMenuOpen ? 'exit' : 'hamburger-menu'} />
             </Link>
             <Link
-              className="theme-switch"
+              className="color"
+              onClick={() => props.shiftColor()}>
+              <Icon name="color" />
+            </Link>
+            <Link
+              className="theme"
               onClick={() => props.toggleTheme()}>
               <Icon name="contrast" />
             </Link>
@@ -173,6 +178,7 @@ Navigation.propTypes = {
   colors: PropTypes.object,
   isMenuOpen: PropTypes.bool,
   page: PropTypes.string,
+  shiftColor: PropTypes.func,
   toggleMenu: PropTypes.func,
   toggleTheme: PropTypes.func
 }

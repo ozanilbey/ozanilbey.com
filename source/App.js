@@ -13,8 +13,8 @@ import Error from '~/pages/error/Error'
 import Controller from '~/components/model/controller/Controller'
 
 // Constants
-import { THEME_OPTIONS } from '~/constants/options'
-import { DEFAULT_THEME } from '~/constants/settings'
+import { THEME_OPTIONS, COLOR_OPTIONS } from '~/constants/options'
+import { DEFAULT_THEME, DEFAULT_COLOR } from '~/constants/settings'
 
 // Style
 import '~/styles/index.less'
@@ -22,28 +22,29 @@ import '~/styles/index.less'
 // Application
 function App () {
   // State
-  const [defaultTheme, setDefaultTheme] = useState(null)
+  const [defaultSettings, setDefaultSettings] = useState(null)
 
   // Effects
   useEffect(() => {
-    const getDefaultTheme = () => {
-      let theme
-      if (localStorage) theme = localStorage.getItem('theme')
-      if (THEME_OPTIONS.includes(theme)) return theme
-      else {
-        if (window) {
-          const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
-          const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
-          return isOtherThemePreferred ? otherTheme : DEFAULT_THEME
-        } else return DEFAULT_THEME
-      }
+    let theme
+    if (localStorage) theme = localStorage.getItem('theme')
+    if (!THEME_OPTIONS.includes(theme)) {
+      if (window) {
+        const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
+        const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
+        theme = isOtherThemePreferred ? otherTheme : DEFAULT_THEME
+      } else { theme = DEFAULT_THEME }
     }
-    setDefaultTheme(getDefaultTheme() || DEFAULT_THEME)
+    let color
+    if (localStorage) color = localStorage.getItem('color')
+    color = COLOR_OPTIONS.includes(color) ? color : DEFAULT_COLOR
+    setDefaultSettings({ theme, color })
   }, [])
+
   // Render
   return (
     <Route path="/:page?/:subpage?">
-      <Controller defaultTheme={defaultTheme}>
+      <Controller settings={defaultSettings}>
         <Switch>
           {/* Home */}
           <Route exact path="/">

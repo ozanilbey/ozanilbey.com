@@ -19,7 +19,7 @@ import { getBaseFontSize } from '~/utilities/document'
 import { slug, rgbColor } from '~/utilities/format'
 
 // Constants
-import { THEME_OPTIONS, COLOR_OPTIONS, PAGES_MENU_OPTIONS } from '~/constants/options'
+import { THEME_OPTIONS, COLOR_OPTIONS } from '~/constants/options'
 import { WORK_FILTERS } from '~/constants/content'
 
 // Style
@@ -37,7 +37,8 @@ function Controller (props) {
 
   // State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [theme, setTheme] = useState(props.defaultTheme)
+  const [theme, setTheme] = useState(props.settings?.theme)
+  const [color, setColor] = useState(props.settings?.color)
   const [colors, setColors] = useState(null)
 
   // Methods
@@ -47,17 +48,17 @@ function Controller (props) {
   function toggleTheme () {
     setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
   }
+  function shiftColor () {
+    setColor(color =>
+      COLOR_OPTIONS[(
+        COLOR_OPTIONS.indexOf(color) + 1
+      ) % COLOR_OPTIONS.length]
+    )
+  }
   function checkColor (rgb) {
     const lightness = rgb.reduce((a, b) => a + b) / (255 * 3)
     if (lightness < 0.25) return 'dark'
     else if (lightness > 0.75) return 'light'
-  }
-  function getPageColor (page) {
-    const pages = [...PAGES_MENU_OPTIONS]
-    pages.shift()
-    return pages.includes(page)
-      ? COLOR_OPTIONS[pages.indexOf(page)]
-      : COLOR_OPTIONS[COLOR_OPTIONS.length - 1]
   }
 
   // Effects
@@ -67,14 +68,18 @@ function Controller (props) {
     }
   }, [isMenuOpen])
   useEffect(() => {
-    if (props.defaultTheme) setTheme(props.defaultTheme)
-  }, [props.defaultTheme])
+    if (props.settings?.theme) setTheme(props.settings.theme)
+    if (props.settings?.color) setColor(props.settings.color)
+  }, [props.settings])
   useEffect(() => {
     if (THEME_OPTIONS.includes(theme)) {
       if (document) document.documentElement.className = theme
       if (localStorage) localStorage.setItem('theme', theme)
     }
-  }, [theme])
+    if (COLOR_OPTIONS.includes(color)) {
+      if (localStorage) localStorage.setItem('color', color)
+    }
+  }, [theme, color])
   useEffect(() => {
     let target
     if (typeof window !== 'undefined') {
@@ -127,14 +132,17 @@ function Controller (props) {
       <div
         ref={controller}
         data-model="controller"
-        data-color={getPageColor(pages.page)}
+        data-page={pages?.page || 'home'}
+        data-subpage={pages?.subpage || null}
+        data-color={color}
         className={isMenuOpen ? 'open' : null}>
         <Navigation
           page={pages.page}
           colors={colors}
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
-          toggleTheme={toggleTheme} />
+          toggleTheme={toggleTheme}
+          shiftColor={shiftColor} />
         {props.children}
       </div>
     </ControllerContext.Provider>
@@ -144,7 +152,10 @@ function Controller (props) {
 // Properties
 Controller.propTypes = {
   children: PropTypes.node,
-  defaultTheme: PropTypes.oneOf(THEME_OPTIONS)
+  settings: PropTypes.shape({
+    theme: PropTypes.oneOf(THEME_OPTIONS),
+    color: PropTypes.oneOf(COLOR_OPTIONS)
+  })
 }
 
 // Export

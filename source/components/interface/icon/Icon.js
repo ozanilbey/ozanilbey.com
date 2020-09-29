@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import AngelList from './shapes/AngelList'
 import Audio from './shapes/Audio'
 import Behance from './shapes/Behance'
+import Color from './shapes/Color'
 import Contrast from './shapes/Contrast'
 import Dribbble from './shapes/Dribbble'
 import Email from './shapes/Email'
@@ -48,6 +49,8 @@ const Icon = props => {
       return <Audio {...attributes} />
     case 'behance':
       return <Behance {...attributes} />
+    case 'color':
+      return <Color {...attributes} />
     case 'contrast':
       return <Contrast {...attributes} />
     case 'dribbble':
