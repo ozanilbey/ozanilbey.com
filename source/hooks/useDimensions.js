@@ -1,6 +1,9 @@
 // Modules
 import { useState, useEffect } from 'react'
 
+// Utilities
+import { checkIfClient } from '~/utilities/document'
+
 // Data
 const defaultDimensionValues = {
   width: 0,
@@ -23,9 +26,9 @@ function useDimensions () {
       }
     }
     handleDimensions()
-    if (typeof window !== 'undefined') window.addEventListener('resize', handleDimensions)
+    if (checkIfClient()) window.addEventListener('resize', handleDimensions)
     return () => {
-      if (typeof window !== 'undefined') window.removeEventListener('resize', handleDimensions)
+      if (checkIfClient()) window.removeEventListener('resize', handleDimensions)
     }
   }, [])
 

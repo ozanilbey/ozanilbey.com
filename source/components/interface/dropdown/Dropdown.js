@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Button from '~/components/interface/button/Button'
 
 // Utilities
+import { checkIfClient } from '~/utilities/document'
 import { getClassName } from '~/utilities/component'
 
 // Style
@@ -48,11 +49,11 @@ function Dropdown (props) {
         if (!button.current.contains(target) && !content.current.contains(target)) setIsOpen(false)
       }
     }
-    if (typeof window !== 'undefined') {
+    if (checkIfClient()) {
       document.body.addEventListener('click', handleClick)
     }
     return () => {
-      if (typeof window !== 'undefined') document.body.removeEventListener('click', handleClick)
+      if (checkIfClient()) document.body.removeEventListener('click', handleClick)
     }
   }, [])
 

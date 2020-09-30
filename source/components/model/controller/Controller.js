@@ -15,8 +15,8 @@ import useScroll from '~/hooks/useScroll'
 import useDimensions from '~/hooks/useDimensions'
 
 // Utilities
-import { getBaseFontSize } from '~/utilities/document'
 import { slug, rgbColor } from '~/utilities/format'
+import { checkIfClient, getBaseFontSize } from '~/utilities/document'
 
 // Constants
 import { THEME_OPTIONS, COLOR_OPTIONS } from '~/constants/options'
@@ -63,7 +63,7 @@ function Controller (props) {
 
   // Effects
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (checkIfClient()) {
       document.body.classList[isMenuOpen ? 'add' : 'remove']('stationary')
     }
   }, [isMenuOpen])
@@ -98,7 +98,7 @@ function Controller (props) {
     }
   }, [colors])
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (checkIfClient()) {
       const willPreventScroll = (
         // Prevent scroll after changing Works page filter
         pages.page === 'works' &&

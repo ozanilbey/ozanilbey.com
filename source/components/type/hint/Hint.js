@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Icon from '~/components/interface/icon/Icon'
 
 // Utilities
+import { checkIfClient } from '~/utilities/document'
 import { getClassName, getAttributes } from '~/utilities/component'
 
 // Style
@@ -30,11 +31,11 @@ function Hint (props) {
     function handleClick ({ target }) {
       if (container.current && !container.current.contains(target)) setIsActive(false)
     }
-    if (typeof window !== 'undefined') {
+    if (checkIfClient()) {
       document.body.addEventListener('click', handleClick)
     }
     return () => {
-      if (typeof window !== 'undefined') document.body.removeEventListener('click', handleClick)
+      if (checkIfClient()) document.body.removeEventListener('click', handleClick)
     }
   }, [])
 

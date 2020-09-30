@@ -1,6 +1,9 @@
 // Modules
 import { useState, useEffect } from 'react'
 
+// Utilities
+import { checkIfClient } from '~/utilities/document'
+
 // Data
 const defaultScrollValue = {
   horizontal: 0,
@@ -22,9 +25,9 @@ function useScroll () {
         })
       }
     }
-    if (typeof window !== 'undefined') window.addEventListener('scroll', handleScroll)
+    if (checkIfClient()) window.addEventListener('scroll', handleScroll)
     return () => {
-      if (typeof window !== 'undefined') window.removeEventListener('scroll', handleScroll)
+      if (checkIfClient()) window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
