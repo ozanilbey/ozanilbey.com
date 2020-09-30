@@ -1,5 +1,5 @@
 // Modules
-import React, { useContext, useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
 
@@ -10,8 +10,6 @@ import Stack from '~/components/layout/stack/Stack'
 import Link from '~/components/interface/link/Link'
 import Icon from '~/components/interface/icon/Icon'
 
-// Context
-import ControllerContext from '~/context/Controller'
 // Helpers
 import { getClassName } from '~/helpers/component'
 
