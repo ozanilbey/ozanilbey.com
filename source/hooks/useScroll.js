@@ -18,12 +18,10 @@ function useScroll () {
   // Effects
   useEffect(() => {
     function handleScroll () {
-      if (typeof window !== 'undefined') {
-        setScroll({
-          horizontal: window.scrollX || 0,
-          vertical: window.scrollY || 0
-        })
-      }
+      setScroll({
+        horizontal: window.scrollX || 0,
+        vertical: window.scrollY || 0
+      })
     }
     if (checkIfClient()) window.addEventListener('scroll', handleScroll)
     return () => {

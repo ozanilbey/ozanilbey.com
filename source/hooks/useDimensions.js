@@ -18,12 +18,10 @@ function useDimensions () {
   // Effects
   useEffect(() => {
     function handleDimensions () {
-      if (typeof window !== 'undefined') {
-        setDimensions({
-          width: window?.innerWidth || 0,
-          height: window?.innerHeight || 0
-        })
-      }
+      setDimensions({
+        width: window?.innerWidth || 0,
+        height: window?.innerHeight || 0
+      })
     }
     handleDimensions()
     if (checkIfClient()) window.addEventListener('resize', handleDimensions)
