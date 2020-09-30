@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
 import Field from './field/Field'
 import Input from './input/Input'
 
-// Utilities
-import { getClassName, getAttributes } from '~/utilities/component'
+// Helpers
+import { getClassName, getAttributes } from '~/helpers/component'
 
 // Constants
 import { INPUT_TYPE_OPTIONS } from '~/constants/options'

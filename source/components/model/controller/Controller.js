@@ -14,8 +14,10 @@ import Navigation from '~/components/model/navigation/Navigation'
 import useScroll from '~/hooks/useScroll'
 import useDimensions from '~/hooks/useDimensions'
 
+// Helpers
+import { checkIfClient, getBaseFontSize } from '~/helpers/document'
+
 // Utilities
-import { checkIfClient, getBaseFontSize } from '~/utilities/document'
 import { slug } from '~/utilities/format'
 
 // Constants

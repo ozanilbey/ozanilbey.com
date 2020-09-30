@@ -8,8 +8,8 @@ import Link from '~/components/interface/link/Link'
 // Style
 import './Button.less'
 
-// Utilities
-import { getClassName } from '~/utilities/component'
+// Helpers
+import { getClassName } from '~/helpers/component'
 
 // Subcomponent: PseudoButton
 const PseudoButton = forwardRef((props, ref) => (props.href || props.to)

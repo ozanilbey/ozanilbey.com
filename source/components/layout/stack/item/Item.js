@@ -2,8 +2,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Utilities
-import { getClassName, getResponsiveData } from '~/utilities/component'
+// Helpers
+import { getClassName, getResponsiveData } from '~/helpers/component'
 
 // Constants
 import {

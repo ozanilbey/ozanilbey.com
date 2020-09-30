@@ -2,8 +2,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Utilities
-import { getAttributes } from '~/utilities/component'
+// Helpers
+import { getAttributes } from '~/helpers/component'
 
 // Constants
 import { MEDIA_ENDPOINT } from '~/constants/settings'

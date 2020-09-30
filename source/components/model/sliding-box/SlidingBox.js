@@ -5,9 +5,11 @@ import PropTypes from 'prop-types'
 // Context
 import ControllerContext from '~/context/Controller'
 
+// Helpers
+import { getBaseFontSize } from '~/helpers/document'
+import { getClassName } from '~/helpers/component'
+
 // Utilities
-import { getClassName } from '~/utilities/component'
-import { getBaseFontSize } from '~/utilities/document'
 import { getTwoPointFormEquivalent } from '~/utilities/math'
 
 // Style

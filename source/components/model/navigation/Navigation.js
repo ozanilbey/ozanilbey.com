@@ -12,9 +12,10 @@ import Icon from '~/components/interface/icon/Icon'
 
 // Context
 import ControllerContext from '~/context/Controller'
+// Helpers
+import { getClassName } from '~/helpers/component'
 
 // Utilities
-import { getClassName } from '~/utilities/component'
 import { slug } from '~/utilities/format'
 
 // Data

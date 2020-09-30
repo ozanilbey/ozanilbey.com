@@ -8,8 +8,10 @@ import ControllerContext from '~/context/Controller'
 // Components
 import Heading from '~/components/type/heading/Heading'
 
+// Helpers
+import { getBaseFontSize } from '~/helpers/document'
+
 // Utilities
-import { getBaseFontSize } from '~/utilities/document'
 import { getTwoPointFormEquivalent } from '~/utilities/math'
 
 // Style

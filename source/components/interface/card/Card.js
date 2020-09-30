@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 // Components
 import Icon from '~/components/interface/icon/Icon'
 
-// Utilities
-import { getClassName } from '~/utilities/component'
+// Helpers
+import { getClassName } from '~/helpers/component'
 
 // Style
 import './Card.less'

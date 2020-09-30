@@ -1,8 +1,8 @@
 // Modules
 import { useState, useEffect } from 'react'
 
-// Utilities
-import { checkIfClient } from '~/utilities/document'
+// Helpers
+import { checkIfClient } from '~/helpers/document'
 
 // Data
 const defaultDimensionValues = {

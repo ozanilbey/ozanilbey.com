@@ -10,8 +10,8 @@ import Favogue from './shapes/Favogue'
 import GraphJS from './shapes/GraphJS'
 import Piccture from './shapes/Piccture'
 
-// Utilities
-import { getAttributes } from '~/utilities/component'
+// Helpers
+import { getAttributes } from '~/helpers/component'
 
 // Component: Content > Brand Mark
 const BrandMark = props => {

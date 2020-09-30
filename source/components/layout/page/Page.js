@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 // Components
 import Section from '~/components/layout/section/Section'
 
-// Utilities
-import { getClassName } from '~/utilities/component'
+// Helpers
+import { getClassName } from '~/helpers/component'
 
 // Style
 import './Page.less'

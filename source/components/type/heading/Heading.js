@@ -2,8 +2,8 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
-// Utilities
-import { getClassName, getAttributes } from '~/utilities/component'
+// Helpers
+import { getClassName, getAttributes } from '~/helpers/component'
 
 // Style
 import './Heading.less'

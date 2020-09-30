@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 // Components
 import Item from './item/Item'
 
-// Utilities
-import { getClassName, getAttributes, getResponsiveData } from '~/utilities/component'
+// Helpers
+import { getClassName, getAttributes, getResponsiveData } from '~/helpers/component'
 
 // Constants
 import {

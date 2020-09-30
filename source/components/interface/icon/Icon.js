@@ -25,8 +25,8 @@ import Star from './shapes/Star'
 import Twitter from './shapes/Twitter'
 import WhatsApp from './shapes/WhatsApp'
 
-// Utilities
-import { getAttributes } from '~/utilities/component'
+// Helpers
+import { getAttributes } from '~/helpers/component'
 
 // Style
 import './Icon.less'

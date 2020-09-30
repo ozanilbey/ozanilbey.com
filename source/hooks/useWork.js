@@ -1,8 +1,8 @@
 // Modules
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 
-// Utilities
-import { checkIfClient } from '~/utilities/document'
+// Helpers
+import { checkIfClient } from '~/helpers/document'
 
 // Content
 import Fihrist from '~/content/summary/work/Fihrist'

@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-// Utilities
-import { getClassName } from '~/utilities/component'
+// Helpers
+import { getClassName } from '~/helpers/component'
 
 // Style
 import './List.less'

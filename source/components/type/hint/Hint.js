@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 // Components
 import Icon from '~/components/interface/icon/Icon'
 
-// Utilities
-import { checkIfClient } from '~/utilities/document'
-import { getClassName, getAttributes } from '~/utilities/component'
+// Helpers
+import { checkIfClient } from '~/helpers/document'
+import { getClassName, getAttributes } from '~/helpers/component'
 
 // Style
 import './Hint.less'

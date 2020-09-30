@@ -7,8 +7,10 @@ import Link from '~/components/interface/link/Link'
 import Card from '~/components/interface/card/Card'
 import Icon from '~/components/interface/icon/Icon'
 
+// Helpers
+import { getClassName } from '~/helpers/component'
+
 // Utilities
-import { getClassName } from '~/utilities/component'
 import { slug } from '~/utilities/format'
 
 // Style

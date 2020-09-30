@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 // Components
 import Button from '~/components/interface/button/Button'
 
-// Utilities
-import { checkIfClient } from '~/utilities/document'
-import { getClassName } from '~/utilities/component'
+// Helpers
+import { checkIfClient } from '~/helpers/document'
+import { getClassName } from '~/helpers/component'
 
 // Style
 import './Dropdown.less'
