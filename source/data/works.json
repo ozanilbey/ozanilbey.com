@@ -1,0 +1,18 @@
+[
+  {
+    "type": "project",
+    "slug": "fihrist",
+    "brand": "Fihrist",
+    "label": "Text-only reading experience",
+    "description": "Fihrist is a platform for articles aiming to create a text-only reading experience.",
+    "output": "Web Application",
+    "year": 2017,
+    "colors": {
+      "primary": [255, 255, 99],
+      "secondary": [0, 0, 0]
+    },
+    "isLive": false,
+    "preview": ["Responsive Website"],
+    "tags": ["UI/UX/IxD", "Frontend"]
+  }
+]

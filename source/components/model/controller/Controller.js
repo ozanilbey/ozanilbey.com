@@ -15,8 +15,8 @@ import useScroll from '~/hooks/useScroll'
 import useDimensions from '~/hooks/useDimensions'
 
 // Utilities
-import { slug, rgbColor } from '~/utilities/format'
 import { checkIfClient, getBaseFontSize } from '~/utilities/document'
+import { slug } from '~/utilities/format'
 
 // Constants
 import { THEME_OPTIONS, COLOR_OPTIONS } from '~/constants/options'
@@ -39,7 +39,6 @@ function Controller (props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState(props.settings?.theme)
   const [color, setColor] = useState(props.settings?.color)
-  const [colors, setColors] = useState(null)
 
   // Methods
   function toggleMenu () {
@@ -54,11 +53,6 @@ function Controller (props) {
         COLOR_OPTIONS.indexOf(color) + 1
       ) % COLOR_OPTIONS.length]
     )
-  }
-  function checkColor (rgb) {
-    const lightness = rgb.reduce((a, b) => a + b) / (255 * 3)
-    if (lightness < 0.25) return 'dark'
-    else if (lightness > 0.75) return 'light'
   }
 
   // Effects
@@ -80,23 +74,6 @@ function Controller (props) {
       if (localStorage) localStorage.setItem('color', color)
     }
   }, [theme, color])
-  useEffect(() => {
-    let target
-    if (typeof window !== 'undefined') {
-      target = controller.current
-      if (colors?.primary) {
-        const extreme = checkColor(colors.primary)
-        if (extreme) target.setAttribute('data-extreme', checkColor(colors.primary))
-        target.style.setProperty('--primary-color', rgbColor(colors.primary))
-      }
-    }
-    return () => {
-      if (target) {
-        target.style.removeProperty('--primary-color')
-        target.removeAttribute('data-extreme')
-      }
-    }
-  }, [colors])
   useEffect(() => {
     if (checkIfClient()) {
       const willPreventScroll = (
@@ -128,7 +105,7 @@ function Controller (props) {
 
   // Render
   return (
-    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme, colors, setColors }}>
+    <ControllerContext.Provider value={{ pages, scroll, dimensions, theme }}>
       <div
         ref={controller}
         data-model="controller"
@@ -138,7 +115,6 @@ function Controller (props) {
         className={isMenuOpen ? 'open' : null}>
         <Navigation
           page={pages.page}
-          colors={colors}
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
           toggleTheme={toggleTheme}

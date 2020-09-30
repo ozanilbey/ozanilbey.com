@@ -15,7 +15,7 @@ import ControllerContext from '~/context/Controller'
 
 // Utilities
 import { getClassName } from '~/utilities/component'
-import { slug, rgbColor } from '~/utilities/format'
+import { slug } from '~/utilities/format'
 
 // Data
 import professionalAccounts from '~/data/professionalAccounts'
@@ -30,7 +30,6 @@ import './Navigation.less'
 function Navigation (props) {
   // Data
   const history = useHistory()
-  const { colors } = useContext(ControllerContext)
 
   // References
   const base = useRef()
@@ -69,20 +68,6 @@ function Navigation (props) {
     }
     return () => clearTimeout(timer)
   }, [props.page])
-  useEffect(() => {
-    let target
-    if (typeof window !== 'undefined') {
-      target = base.current
-      if (colors?.primary) target.style.setProperty('--ground-color', rgbColor(colors.primary))
-      if (colors?.secondary) target.style.setProperty('--figure-color', rgbColor(colors.secondary))
-    }
-    return () => {
-      if (target) {
-        target.style.removeProperty('--figure-color')
-        target.style.removeProperty('--ground-color')
-      }
-    }
-  }, [colors])
 
   // Render
   return (
