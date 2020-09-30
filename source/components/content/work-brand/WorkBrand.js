@@ -32,7 +32,7 @@ const WorkBrand = props => (
         color: props.data.colors?.secondary && rgbColor(props.data.colors.secondary),
         fontSize: `${props.size / 80}em`
       }}>
-      {props.data.label || (props.data.output + (props.data.type !== 'collection' && props.data.attribute ? `: ${props.data.attribute}` : ''))}
+      {props.data.label || (props.data.output + (props.data.attribute ? `: ${props.data.attribute}` : ''))}
     </strong>
   </div>
 )
