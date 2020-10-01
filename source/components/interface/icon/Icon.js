@@ -20,7 +20,6 @@ import LinkedIn from './shapes/LinkedIn'
 import Messenger from './shapes/Messenger'
 import Phone from './shapes/Phone'
 import Snapchat from './shapes/Snapchat'
-import Star from './shapes/Star'
 import Twitter from './shapes/Twitter'
 import WhatsApp from './shapes/WhatsApp'
 
@@ -76,8 +75,6 @@ const Icon = props => {
       return <Phone {...attributes} />
     case 'snapchat':
       return <Snapchat {...attributes} />
-    case 'star':
-      return <Star {...attributes} />
     case 'twitter':
       return <Twitter {...attributes} />
     case 'whatsapp':
