@@ -45,7 +45,7 @@ Link.propTypes = {
   className: PropTypes.string,
   isArrowHidden: PropTypes.bool,
   isSingleLine: PropTypes.bool,
-  type: PropTypes.oneOf(['regular', 'cta', 'external', 'download'])
+  type: PropTypes.oneOf(['regular', 'cta', 'back', 'external', 'download'])
 }
 PseudoLink.propTypes = {
   to: PropTypes.string,

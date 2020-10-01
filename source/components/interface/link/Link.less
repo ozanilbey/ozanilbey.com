@@ -32,15 +32,13 @@
                   bottom .15s ease;
     }
   }
-  &.type-cta, &.type-external, &.type-download {
+  &.type-cta, &.type-external, &.type-download, &.type-back {
     position: relative;
-    padding-right: 1em;
     &:after {
       content: "→";
       display: inline-block;
       position: absolute;
       top: 0;
-      right: 0;
       font-family: "Inter",
                    -apple-system,
                    BlinkMacSystemFont,
@@ -60,8 +58,12 @@
       transition: top .05s ease,
                   right .05s ease;
     }
+    &.arrow-hidden {
+      padding-right: 0;
+    }
   }
   &.type-cta {
+    padding-right: 1em;
     &:after {
       right: -.05em;
     }
@@ -72,6 +74,7 @@
     }
   }
   &.type-external {
+    padding-right: 1em;
     &:after {
       top: .05em;
       right: .05em;
@@ -85,6 +88,7 @@
     }
   }
   &.type-download {
+    padding-right: 1em;
     &:after {
       top: -.025em;
       right: -.05em;
@@ -96,8 +100,22 @@
       }
     }
   }
+  &.type-back {
+    padding-left: 1em;
+    &:after {
+      left: -.05em;
+      transform: scaleX(-1);
+    }
+    &:hover {
+      &:after {
+        left: -.175em;
+      }
+    }
+    &.arrow-hidden {
+      padding-left: 0;
+    }
+  }
   &.arrow-hidden {
-    padding-right: 0;
     &:after {
       display: none !important;
     }
