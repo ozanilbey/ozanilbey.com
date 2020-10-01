@@ -55,7 +55,7 @@ function App () {
             <Profile />
           </Route>
           {/* Works */}
-          <Route path="/works/:work?">
+          <Route path="/works/:workOrFilter?">
             <Works />
           </Route>
           {/* Contact */}

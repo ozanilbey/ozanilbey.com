@@ -17,12 +17,12 @@ import './Works.less'
 // Page: Works
 function Works () {
   // Data
-  const { work } = useParams()
+  const { workOrFilter } = useParams()
 
   // Render
-  if (work) return <Work slug={work} />
-  return (
-    <Page name="works">
+  return workOrFilter && isDisplayingWork
+    ? <Work slug={workOrFilter} />
+    : <Page name="works">
       <Helmet>
         <title>ozanilbey:works</title>
       </Helmet>
@@ -41,7 +41,6 @@ function Works () {
         </Container>
       </Page.Section>
     </Page>
-  )
 }
 
 // Export
