@@ -11,29 +11,23 @@ import Icon from '~/components/interface/icon/Icon'
 import { getClassName } from '~/helpers/component'
 
 // Utilities
-import { slug } from '~/utilities/format'
+import { slug, rgbColor } from '~/utilities/format'
 
 // Style
-import './Connector.less'
+import './ConnectButtons.less'
 
-// Component: Content > Connector
-function Connector (props) {
+// Component: Content > Connect Buttons
+function ConnectButtons (props) {
   // Data
   const className = getClassName(null, {
     'text-align': props.isCentered ? 'center' : null,
     'with-label': !!props.label
   })
 
-  // Methods
-  function getColor (rgb) {
-    if (!rgb) return null
-    return `rgb(${rgb.join(', ')})`
-  }
-
   // Render
   return (
     <ul
-      data-content="connector"
+      data-content="connect-buttons"
       data-label={props.label}
       className={className}>
       {props.data.map((item, index) =>
@@ -45,10 +39,10 @@ function Connector (props) {
             href={item.link}>
             <Card
               isCustom
-              color={props.isIconColored ? null : getColor(item.color)}>
+              color={props.isIconColored ? null : rgbColor(item.color)}>
               <Icon
                 name={slug(item.name)}
-                color={props.isIconColored ? getColor(item.color) : null}
+                color={props.isIconColored ? rgbColor(item.color) : null}
                 className="icon" />
             </Card>
           </Link>
@@ -59,7 +53,7 @@ function Connector (props) {
 }
 
 // Properties
-Connector.propTypes = {
+ConnectButtons.propTypes = {
   className: PropTypes.string,
   data: PropTypes.array,
   isCentered: PropTypes.bool,
@@ -68,4 +62,4 @@ Connector.propTypes = {
 }
 
 // Export
-export default Connector
+export default ConnectButtons
