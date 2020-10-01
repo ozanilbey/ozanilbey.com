@@ -49,13 +49,6 @@ function Controller (props) {
   function toggleTheme () {
     setTheme(theme => THEME_OPTIONS.find(item => item !== theme))
   }
-  function shiftColor () {
-    setColor(color =>
-      COLOR_OPTIONS[(
-        COLOR_OPTIONS.indexOf(color) + 1
-      ) % COLOR_OPTIONS.length]
-    )
-  }
 
   // Effects
   useEffect(() => {
@@ -119,8 +112,7 @@ function Controller (props) {
           page={pages.page}
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
-          toggleTheme={toggleTheme}
-          shiftColor={shiftColor} />
+          toggleTheme={toggleTheme} />
         {props.children}
       </div>
     </ControllerContext.Provider>
