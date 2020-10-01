@@ -11,6 +11,9 @@ import Link from '~/components/interface/link/Link'
 // Hooks
 import useWork from '~/hooks/useWork'
 
+// Helpers
+import { getWorkTitle } from '~/helpers/content'
+
 // Style
 import './Work.less'
 
@@ -20,12 +23,6 @@ function Work (props) {
   const { meta, summary } = useWork(props.slug)
 
   // Methods
-  function getTitle ({ brand, label, output }) {
-    let title = brand || 'Collection:'
-    if (label) title = `${title} ${label}`
-    if (output) title = `${title} ${output}`
-    return title
-  }
   function getExcerpt () {
     const excerpt = {
       year: typeof meta.year === 'number' ? meta.year : meta.year.join('–'),
@@ -65,7 +62,7 @@ function Work (props) {
       name={props.slug}
       parentName="works">
       <Helmet>
-        <title>{getTitle(meta)} | ozanilbey:works</title>
+        <title>{getWorkTitle(meta)} | ozanilbey:works</title>
       </Helmet>
       <Page.Section name="excerpt">
         <Container isBlockLayout>
