@@ -85,7 +85,7 @@
   }
   & > .content {
     display: flex;
-    .icon {
+    & > .icon {
       flex-shrink: 0;
       flex-grow: 0;
       text-align: left;
@@ -107,17 +107,17 @@
         }
       }
     }
-    .text {
+    & > .text {
       text-align: left;
       & > * {
         display: block;
       }
-      .title {
+      & > .title {
         margin-bottom: .25rem;
         font-weight: 700;
         line-height: 125%;
       }
-      .description {
+      & > .description {
         line-height: calc(4rem / 3);
       }
     }
