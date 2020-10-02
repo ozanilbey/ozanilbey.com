@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Email",
+    "link": "mailto:?body=LINK&subject=MESSAGE",
+    "color": [212, 70, 56]
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/intent/tweet/?url=LINK&text=MESSAGE",
+    "color": [29, 161, 242]
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/shareArticle?mini=true&url=LINK&title=MESSAGE",
+    "color": [10, 102, 194]
+  },
+  {
+    "name": "Facebook",
+    "link": "https://facebook.com/sharer/sharer.php?u=LINK",
+    "color": [24, 119, 242]
+  },
+  {
+    "name": "WhatsApp",
+    "link": "whatsapp://send?text=MESSAGE%20LINK",
+    "color": [37, 211, 102]
+  }
+]
