@@ -1,11 +1,8 @@
 // Modules
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 
 // Helpers
 import { checkIfClient } from '~/helpers/document'
-
-// Content
-import Fihrist from '~/content/summary/work/Fihrist'
 
 // Utilities
 import { rgbColor } from '~/utilities/format'
@@ -13,20 +10,10 @@ import { rgbColor } from '~/utilities/format'
 // Data
 import works from '~/data/works'
 
-// Helper
-function renderWorkSummary (slug) {
-  switch (slug) {
-    case 'fihrist':
-      return <Fihrist />
-    default:
-      return null
-  }
-}
-
 // Hook: useWork
 function useWork (slug) {
   // State
-  const [work, setWork] = useState({})
+  const [work, setWork] = useState(null)
 
   // Methods
   function checkColorExtremity (rgb) {
@@ -37,12 +24,9 @@ function useWork (slug) {
 
   // Effects
   useEffect(() => {
-    const meta = works.find(work => work.slug === slug)
-    if (!meta) return
-    setWork({
-      meta,
-      summary: renderWorkSummary(slug)
-    })
+    const data = works.find(work => work.slug === slug)
+    if (!data) return
+    setWork(data)
   }, [slug])
   useLayoutEffect(() => {
     let controller
@@ -63,12 +47,12 @@ function useWork (slug) {
     if (checkIfClient()) {
       controller = document.querySelector('[data-model="controller"]')
       navigation = document.querySelector('[data-model="navigation"]')
-      if (work.meta && controller && navigation) setColors(work.meta.colors)
+      if (work && controller && navigation) setColors(work.colors)
     }
     return () => {
       if (controller && navigation) resetColors()
     }
-  }, [work.meta])
+  }, [work])
 
   // Return
   return work

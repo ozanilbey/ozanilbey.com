@@ -6,7 +6,7 @@ import Container from '~/components/layout/container/Container'
 import Heading from '~/components/type/heading/Heading'
 import Media from '~/components/content/media/Media'
 
-// Content: Summary > Fihrist (Work)
+// Content: Work Summary > Fihrist (Item)
 const Fihrist = () => (
   <>
     <Container isBlockLayout>

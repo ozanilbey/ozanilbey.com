@@ -8,6 +8,9 @@ import Container from '~/components/layout/container/Container'
 import Page from '~/components/layout/page/Page'
 import Link from '~/components/interface/link/Link'
 
+// Content
+import WorkSummary from '~/content/work-summary/WorkSummary'
+
 // Hooks
 import useWork from '~/hooks/useWork'
 
@@ -20,17 +23,17 @@ import './Work.less'
 // Page: Works > Work
 function Work (props) {
   // Data
-  const { meta, summary } = useWork(props.slug)
+  const work = useWork(props.slug)
 
   // Methods
   function getExcerpt () {
     const excerpt = {
-      year: typeof meta.year === 'number' ? meta.year : meta.year.join('–'),
-      tags: meta.tags.join(', ')
+      year: typeof work.year === 'number' ? work.year : work.year.join('–'),
+      tags: work.tags.join(', ')
     }
-    if (meta.client) {
-      excerpt.client = meta.client.fullName || meta.client.name
-      if (meta.client.link) excerpt.client = <Link type="external" href={`//${meta.client.link}`}>{excerpt.client}</Link>
+    if (work.client) {
+      excerpt.client = work.client.fullName || work.client.name
+      if (work.client.link) excerpt.client = <Link type="external" href={`//${work.client.link}`}>{excerpt.client}</Link>
     }
     return (
       <ul>
@@ -40,13 +43,13 @@ function Work (props) {
             {excerpt[key]}
           </li>
         )}
-        {meta.isLive &&
+        {work.isLive &&
           <li>
             <strong>demo</strong>
             <Link
               type="external"
               className="live"
-              href={`//${meta.link}`}>
+              href={`//${work.link}`}>
               See it live
             </Link>
           </li>
@@ -56,22 +59,20 @@ function Work (props) {
   }
 
   // Render
-  if (!meta || !summary) return null
+  if (!work) return null
   return (
     <Page
       name={props.slug}
       parentName="works">
       <Helmet>
-        <title>{getWorkTitle(meta)} | ozanilbey:works</title>
+        <title>{getWorkTitle(work)} | ozanilbey:works</title>
       </Helmet>
       <Page.Section name="excerpt">
         <Container isBlockLayout>
           {getExcerpt()}
         </Container>
       </Page.Section>
-      <Page.Section name="summary">
-        {summary}
-      </Page.Section>
+      <WorkSummary identifier={work.slug} />
     </Page>
   )
 }
