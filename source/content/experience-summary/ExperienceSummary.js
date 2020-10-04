@@ -14,7 +14,7 @@ function ExperienceSummary (props) {
     switch (props.type) {
       case 'education':
         return renderEducationSummary()
-      case 'middle-east-technical-university':
+      case 'employment':
         return renderEmploymentSummary()
       default:
         return null
