@@ -1,0 +1,62 @@
+[data-content="welcome"] {
+  & p:first-of-type {
+    & > * {
+      vertical-align: middle;
+    }
+  }
+  .pronunciation {
+    display: inline-block;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: .25rem;
+    color: hsla(var(--figure-color-hsl), .75);
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: .75rem;
+    border-radius: 50%;
+    background-color: hsla(var(--primary-color-hsl), 0);
+    transition: background-color .15s ease;
+    user-select: none;
+    cursor: pointer;
+    &:after {
+      content: attr(data-text);
+      opacity: 0;
+      display: inline-block;
+      position: absolute;
+      right: -3.75rem;
+      width: 3.5rem;
+      color: var(--primary-color);
+      line-height: 1.5rem;
+      vertical-align: top;
+      transform: scale(.8);
+      transition: opacity .15s ease-in-out,
+                  transform .15s ease-in-out;
+    }
+    &.active {
+      background-color: hsla(var(--primary-color-hsl), .125);
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      & > [data-interface="icon"] {
+        opacity: 1;
+        left: 0;
+      }
+    }
+    & > [data-interface="icon"] {
+      opacity: 1;
+      position: relative;
+      left: -.25rem;
+      width: 1rem;
+      height: .75rem;
+      margin: .375rem .25rem;
+      vertical-align: top;
+      transition: opacity .15s ease,
+                  left .15s ease;
+      & > * {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
