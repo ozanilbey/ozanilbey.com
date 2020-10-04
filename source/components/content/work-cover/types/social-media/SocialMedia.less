@@ -1,0 +1,72 @@
+[data-work-cover="social-media"] {
+  .post {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30em;
+    padding: 1.25em;
+    padding-bottom: 0;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    background-color: white;
+    & > * {
+      width: 100%;
+      &.information {
+        height: 2.5em;
+        margin-bottom: 1.25em;
+        text-align: left;
+        & > * {
+          display: inline-block;
+          vertical-align: top;
+          &[data-interface="icon"] {
+            width: 2.5em;
+            height: 2.5em;
+            margin-right: .75em;
+            & > * {
+              fill: fade(black, 37.5%) !important;
+            }
+          }
+          &.text {
+            & > * {
+              display: block;
+              color: black;
+              &.publisher {
+                opacity: .75;
+                font-size: 1.125em;
+                font-weight: 700;
+                line-height: 1.25em;
+              }
+              &.time {
+                opacity: .5;
+                font-size: .875em;
+                font-weight: 500;
+                line-height: 1.125em;
+              }
+            }
+          }
+        }
+      }
+      &.content {
+        overflow: hidden;
+        height: 25em;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset 0 0 .25em fade(black, 7.5%)
+        }
+        & > [data-content="media"] {
+          min-width: 100%;
+          min-height: 25em;
+          margin-left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

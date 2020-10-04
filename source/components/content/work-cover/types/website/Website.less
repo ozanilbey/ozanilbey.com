@@ -1,0 +1,52 @@
+[data-work-cover="website"] {
+  .browser {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30em;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    background-color: #eee;
+    & > * {
+      &.bar {
+        height: 2em;
+        padding: .7em;
+        text-align: left;
+        & > .button {
+          display: inline-block;
+          width: .6em;
+          height: .6em;
+          margin-right: .4em;
+          vertical-align: top;
+          border-radius: .3em;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      &.site {
+        overflow: hidden;
+        position: relative;
+        height: 28em;
+        margin: 0 .125em;
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset 0 0 .25em fade(black, 7.5%);
+        }
+        & > [data-content="media"] {
+          min-width: 100%;
+          min-height: 28em;
+          margin-left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

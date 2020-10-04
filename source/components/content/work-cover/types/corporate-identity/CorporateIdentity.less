@@ -1,0 +1,52 @@
+[data-work-cover="corporate-identity"] {
+  .letterhead {
+    overflow: hidden;
+    z-index: 2;
+    top: 0;
+    right: 3em;
+    width: 24em;
+    height: 30em;
+    & > [data-content="media"] {
+      min-width: 100%;
+      min-height: 30em;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .folder {
+    overflow: hidden;
+    z-index: 1;
+    top: 3em;
+    right: 0;
+    width: 24em;
+    height: 27em;
+    & > [data-content="media"] {
+      min-width: 100%;
+      min-height: 27em;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .others {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 21em;
+    height: 30em;
+    & > [data-content="media"] {
+      width: 20.25em;
+      margin-right: .75em;
+      margin-top: .75em;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: -1em;
+      }
+    }
+  }
+}
