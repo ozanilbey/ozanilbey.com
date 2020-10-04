@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet'
 import Container from '~/components/layout/container/Container'
 import Heading from '~/components/type/heading/Heading'
 import Page from '~/components/layout/page/Page'
+// Subcontent
+import Social from './content/social/Social'
+
 
 // Style
 import './Contact.less'
@@ -24,6 +27,7 @@ function Contact () {
           <p>This is <b>Contact</b> page.</p>
         </Container>
       </Page.Header>
+      <Social />
     </Page>
   )
 }
