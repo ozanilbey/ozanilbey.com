@@ -1,0 +1,134 @@
+[data-content="showcase"] {
+  & > [data-interface="link"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & > [data-interface="card"] {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 4%;
+      padding-bottom: 0;
+      font-size: 1rem;
+      word-wrap: break-word;
+      transform: scale(1) !important;
+      cursor: pointer;
+      &:hover {
+        &:after {
+          bottom: 0;
+        }
+        & > * {
+          &.visual {
+            top: 1px; // 1px prevents visual discomfort
+          }
+          &.content {
+            top: 0;
+          }
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: -2.5em;
+        height: 2.5em;
+        background-color: rgba(black, 7.5%);
+        box-shadow: inset 0 .125em .25em 0 fade(black, 5%);
+        transition: bottom .35s ease;
+      }
+      & > * {
+        flex-basis: 50%;
+        position: relative;
+        transition: top .35s ease;
+        &.visual {
+          position: relative;
+          top: 1.25em;
+          height: auto;
+          margin-right: 4%;
+          border-radius: .25em;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          & > * {
+            width: 100%;
+          }
+        }
+        &.content {
+          align-self: flex-end;
+          overflow: hidden;
+          display: block;
+          position: relative;
+          top: 2.5em;
+          text-align: left;
+          & > [data-content="work-brand"] {
+            margin-bottom: 1em;
+            & > .label {
+              margin-top: .75em;
+            }
+          }
+          .text {
+            line-height: 150%;
+            .description {
+              line-height: inherit;
+              li {
+                &[data-label] {
+                  &:before {
+                    content: attr(data-label) ':';
+                    margin-right: .25em;
+                    font-weight: 500;
+                  }
+                  &[data-label="Title"],
+                  &[data-label="Description"] {
+                    font-weight: 500;
+                    &:before {
+                      display: none;
+                    }
+                  }
+                  &[data-label="Description"] {
+                    margin-bottom: .5em;
+                  }
+                  &:not([data-label="Description"]) {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  }
+                }
+              }
+            }
+          }
+          .tags {
+            overflow: hidden;
+            height: 3em;
+            margin-top: 2em;
+            font-size: calc(.8em);
+            font-weight: 700;
+            line-height: 3em;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            user-select: none;
+            & > * {
+              display: inline-block;
+              margin-top: 0;
+              color: fade(black, 37.5%);
+              font-size: inherit;
+              &:before {
+                content: "\00b7";
+                display: inline-block;
+                margin: 0 .25em;
+              }
+              &:first-child {
+                &:before {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
