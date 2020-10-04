@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Planning",
+    "skills": ["branding", "product strategy", "asset management"]
+  },
+  {
+    "category": "Marketing",
+    "skills": ["visuals", "emails", "ads", "social media"]
+  },
+  {
+    "category": "User Experience",
+    "skills": ["research", "ideation", "wireframing", "mockups"]
+  },
+  {
+    "category": "User Interface",
+    "skills": ["layout", "typography", "color", "usability", "IA"]
+  },
+  {
+    "category": "Interaction",
+    "skills": ["prototyping", "visual representations", "animations"]
+  },
+  {
+    "category": "Frontend",
+    "skills": ["architecture", "markup", "styling", "DOM", "APIs", "web/mobile"]
+  },
+  {
+    "category": "Backend",
+    "skills": ["architecture", "auth", "data processing", "API"]
+  },
+  {
+    "category": "Database",
+    "skills": ["modeling", "management", "CRUD"]
+  }
+]
