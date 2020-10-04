@@ -9,6 +9,8 @@ import ControllerContext from '~/context/Controller'
 // Components
 import Navigation from '~/components/model/navigation/Navigation'
 
+// Content
+import Colophon from '~/content/colophon/Colophon'
 
 // Hooks
 import useScroll from '~/hooks/useScroll'
@@ -114,6 +116,9 @@ function Controller (props) {
           toggleMenu={toggleMenu}
           toggleTheme={toggleTheme} />
         {props.children}
+        <Colophon
+          color={color}
+          updateColor={setColor} />
       </div>
     </ControllerContext.Provider>
   )
