@@ -3,98 +3,10 @@
     "http-equiv": "Content-Type",
     "content": "text/html; charset=UTF-8"
   },
-
   "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
-
-  "description": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities.",
-  "keywords": "Ozan İlbey Yılmaz, ozanilbey, design, designer, multidisciplinary designer, developer, web designer, web developer, user interface designer, UI designer, user experience designer, UX designer, frontend developer, piccture, cardz, favogue semantica",
-  "author": "Ozan İlbey Yılmaz",
-
+  "application-name": "ozanilbey",
+  "theme-color": "#2dd27d",
   "color-scheme": "dark light",
-
-  "mobile-web-app-capable": "yes",
-  "theme-color": "#4ddc79",
-
-  "apple-mobile-web-app-capable": "yes",
-  "apple-mobile-web-app-title": "ozanilbey",
-  "apple-mobile-web-app-status-bar-style": "#4ddc79",
-
-  "msapplication-navbutton-color": "#4ddc79",
-  "msapplication-TileColor": "#4ddc79",
-  "msapplication-TileImage": "/images/identity/icon-touch.png",
-
-  "twitter:card": "summary_large_image",
-  "twitter:site": "@ozanilbey",
-  "twitter:creator": "@ozanilbey",
-  "twitter:title": "ozanilbey",
-  "twitter:description": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities.",
-  "twitter:image": "/images/identity/thumbnail.png",
-
-  "fb:app_id": {
-    "property": "fb:app_id",
-    "content": "380662769053506"
-  },
-  "fb:profile_id": {
-    "property": "fb:profile_id",
-    "content": "710116551"
-  },
-
-  "og:title": {
-    "property": "og:title",
-    "content": "ozanilbey"
-  },
-  "og:type": {
-    "property": "og:type",
-    "content": "website"
-  },
-  "og:url": {
-    "property": "og:url",
-    "content": "https://ozanilbey.com"
-  },
-  "og:image": {
-    "property": "og:image",
-    "content": "/images/identity/thumbnail.png"
-  },
-  "og:description": {
-    "property": "og:description",
-    "content": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities."
-  },
-  "og:locale": {
-    "property": "og:locale",
-    "content": "en_US"
-  },
-  "og:site_name": {
-    "property": "og:site_name",
-    "content": "ozanilbey"
-  },
-
-  "profile:first_name": {
-    "property": "profile:first_name",
-    "content": "Ozan İlbey"
-  },
-  "profile:last_name": {
-    "property": "profile:last_name",
-    "content": "Yılmaz"
-  },
-  "profile:username": {
-    "property": "profile:username",
-    "content": "ozanilbey"
-  },
-  "profile:gender": {
-    "property": "profile:gender",
-    "content": "male"
-  },
-
-  "name": {
-    "itemprop": "name",
-    "content": "ozanilbey"
-  },
-  "description": {
-    "itemprop": "description",
-    "content": "Ozan İlbey Yılmaz is a senior multidisciplinary designer+developer mainly focused on creating digital products with unique visual identities."
-  },
-  "image": {
-    "itemprop": "image",
-    "content": "/images/identity/thumbnail.png"
-  }
+  "supported-color-schemes": "dark light",
+  "mobile-web-app-capable": "yes"
 }
