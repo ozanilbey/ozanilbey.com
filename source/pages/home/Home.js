@@ -1,11 +1,15 @@
 // Modules
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
-import Container from '~/components/layout/container/Container'
-import Heading from '~/components/type/heading/Heading'
 import Page from '~/components/layout/page/Page'
+
+// Content
+import Welcome from '~/content/welcome/Welcome'
+import Profile from '~/content/profile/Profile'
+import Portfolio from '~/content/portfolio/Portfolio'
+import OpenSource from '~/content/open-source/OpenSource'
+import Contact from '~/content/contact/Contact'
 
 // Style
 import './Home.less'
@@ -15,15 +19,11 @@ function Home () {
   // Render
   return (
     <Page name="home">
-      <Helmet>
-        <title>ozanilbey</title>
-      </Helmet>
-      <Page.Header name="introduction">
-        <Container>
-          <Heading displaySize="big">Home</Heading>
-          <p>This is <b>Home</b> page.</p>
-        </Container>
-      </Page.Header>
+      <Welcome />
+      <Profile />
+      <Portfolio />
+      <OpenSource />
+      <Contact />
     </Page>
   )
 }
