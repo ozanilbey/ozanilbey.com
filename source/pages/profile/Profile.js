@@ -1,11 +1,15 @@
 // Modules
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
-import Container from '~/components/layout/container/Container'
-import Headline from '~/components/model/headline/Headline'
 import Page from '~/components/layout/page/Page'
+
+// Subcontent
+import Introduction from './content/introduction/Introduction'
+import Personality from './content/personality/Personality'
+import ProfessionalSkills from './content/professional-skills/ProfessionalSkills'
+import Employment from './content/employment/Employment'
+import Education from './content/education/Education'
 
 // Style
 import './Profile.less'
@@ -15,15 +19,11 @@ function Profile () {
   // Render
   return (
     <Page name="profile">
-      <Helmet>
-        <title>ozanilbey:profile</title>
-      </Helmet>
-      <Page.Header name="introduction">
-        <Container>
-          <Headline displaySize="big">Profile</Headline>
-          <p>This is <b>Profile</b> page.</p>
-        </Container>
-      </Page.Header>
+      <Introduction />
+      <Personality />
+      <ProfessionalSkills />
+      <Employment />
+      <Education />
     </Page>
   )
 }
