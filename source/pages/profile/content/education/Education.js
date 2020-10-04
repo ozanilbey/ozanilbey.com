@@ -25,7 +25,7 @@ import education from '~/data/education'
 // Style
 import './Education.less'
 
-// Content: Education
+// Subcontent: Profile > Education
 function Education () {
   // Render
   return (

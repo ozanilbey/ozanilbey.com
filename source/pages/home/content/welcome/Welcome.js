@@ -14,7 +14,7 @@ import { getClassName } from '~/helpers/component'
 // Style
 import './Welcome.less'
 
-// Content: Welcome
+// Subcontent: Home > Welcome
 function Welcome () {
   // References
   const pronunciation = useRef()

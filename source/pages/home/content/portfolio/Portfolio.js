@@ -18,7 +18,7 @@ import { FEATURED_WORKS } from '~/constants/content'
 // Style
 import './Portfolio.less'
 
-// Content: Portfolio
+// Subcontent: Home > Portfolio
 function Portfolio () {
   // Render
   return (

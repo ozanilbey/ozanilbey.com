@@ -16,7 +16,7 @@ import allSkills from '~/data/allSkills'
 // Style
 import './Profile.less'
 
-// Content: Profile
+// Subcontent: Home > Profile
 function Profile () {
   // Render
   return (

@@ -25,7 +25,7 @@ import employment from '~/data/employment'
 // Style
 import './Employment.less'
 
-// Content: Employment
+// Subcontent: Profile > Employment
 function Employment () {
   // Render
   return (

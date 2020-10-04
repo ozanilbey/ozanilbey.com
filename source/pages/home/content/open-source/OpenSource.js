@@ -13,7 +13,7 @@ import Heading from '~/components/type/heading/Heading'
 // Style
 import './OpenSource.less'
 
-// Content: Open Source
+// Subcontent: Home > Open Source
 function OpenSource () {
   // Render
   return (

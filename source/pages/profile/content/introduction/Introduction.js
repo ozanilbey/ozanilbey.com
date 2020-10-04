@@ -10,7 +10,7 @@ import Hint from '~/components/type/hint/Hint'
 // Style
 import './Introduction.less'
 
-// Content: Introduction
+// Subcontent: Profile > Introduction
 function Introduction () {
   // Render
   return (

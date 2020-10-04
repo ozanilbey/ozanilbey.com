@@ -11,7 +11,7 @@ import Heading from '~/components/type/heading/Heading'
 // Style
 import './Contact.less'
 
-// Content: Contact
+// Subcontent: Home > Contact
 function Contact () {
   // Render
   return (

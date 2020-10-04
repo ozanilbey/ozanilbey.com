@@ -11,7 +11,7 @@ import List from '~/components/content/list/List'
 // Style
 import './Personality.less'
 
-// Content: Personality
+// Subcontent: Profile > Personality
 function Personality () {
   // Render
   return (

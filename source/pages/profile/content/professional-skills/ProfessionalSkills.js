@@ -17,7 +17,7 @@ import technicalSkills from '~/data/technicalSkills'
 // Style
 import './ProfessionalSkills.less'
 
-// Content: Professional Skills
+// Subcontent: Profile > Professional Skills
 function ProfessionalSkills () {
   // Render
   return (
