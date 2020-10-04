@@ -12,6 +12,9 @@ import Error from '~/pages/error/Error'
 // Components
 import Controller from '~/components/model/controller/Controller'
 
+// Helpers
+import { checkIfClient } from '~/helpers/document'
+
 // Constants
 import { THEME_OPTIONS, COLOR_OPTIONS } from '~/constants/options'
 import { DEFAULT_THEME, DEFAULT_COLOR } from '~/constants/settings'
@@ -29,7 +32,7 @@ function App () {
     let theme
     if (localStorage) theme = localStorage.getItem('theme')
     if (!THEME_OPTIONS.includes(theme)) {
-      if (window) {
+      if (checkIfClient()) {
         const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
         const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
         theme = isOtherThemePreferred ? otherTheme : DEFAULT_THEME
