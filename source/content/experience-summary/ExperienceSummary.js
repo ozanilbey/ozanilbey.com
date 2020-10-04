@@ -5,6 +5,12 @@ import PropTypes from 'prop-types'
 // Subcontent
 import AnadoluUniversity from './items/education/AnadoluUniversity'
 import MiddleEastTechnicalUniversity from './items/education/MiddleEastTechnicalUniversity'
+import DigitoyGames from './items/employment/DigitoyGames'
+import FraktalProje from './items/employment/FraktalProje'
+import Freelance from './items/employment/Freelance'
+import LabrisNetworks from './items/employment/LabrisNetworks'
+import Kodobur from './items/employment/Kodobur'
+import Semantica from './items/employment/Semantica'
 
 // Constants
 import { EXPERIENCE_SUMMARY_TYPES } from '~/constants/content'
@@ -37,6 +43,18 @@ function ExperienceSummary (props) {
   }
   function renderEmploymentSummary () {
     switch (props.identifier) {
+      case 'digitoy-games':
+        return <DigitoyGames />
+      case 'fraktal-proje':
+        return <FraktalProje />
+      case 'freelance':
+        return <Freelance />
+      case 'kodobur':
+        return <Kodobur />
+      case 'labris-networks':
+        return <LabrisNetworks />
+      case 'semantica':
+        return <Semantica />
       default:
         return null
     }
