@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import ControllerContext from '~/context/Controller'
 
 // Helpers
-import { getBaseFontSize } from '~/helpers/document'
+import { checkIfClient, getBaseFontSize } from '~/helpers/document'
 import { getClassName } from '~/helpers/component'
 
 // Utilities
@@ -17,7 +17,7 @@ import './SlidingBox.less'
 
 // Helpers
 function calculateSlideAmount (element, options = {}) {
-  if (typeof window === 'undefined' || !element) return 0
+  if (!checkIfClient() || !element) return 0
   const defaultOptions = { top: 0, bottom: 0, minimum: 0, maximum: 1000 }
   const { top, bottom, minimum, maximum } = { ...defaultOptions, ...options }
   const { y, height } = element.getBoundingClientRect()

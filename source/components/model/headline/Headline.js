@@ -9,7 +9,7 @@ import ControllerContext from '~/context/Controller'
 import Heading from '~/components/type/heading/Heading'
 
 // Helpers
-import { getBaseFontSize } from '~/helpers/document'
+import { checkIfClient, getBaseFontSize } from '~/helpers/document'
 
 // Utilities
 import { getTwoPointFormEquivalent } from '~/utilities/math'
@@ -19,7 +19,7 @@ import './Headline.less'
 
 // Helpers
 function calculateOpacity (element, options = {}) {
-  if (typeof window === 'undefined' || !element) return 0
+  if (!checkIfClient() || !element) return 0
   const defaultOptions = { top: 0, bottom: 0, range: 50, minimum: 0, maximum: 1 }
   const { top, bottom, range, minimum, maximum } = { ...defaultOptions, ...options }
   const { y, height } = element.getBoundingClientRect()

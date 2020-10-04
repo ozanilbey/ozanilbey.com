@@ -64,14 +64,17 @@ function Controller (props) {
   }, [props.settings])
   useEffect(() => {
     if (THEME_OPTIONS.includes(theme)) {
-      if (document) document.documentElement.className = theme
-      if (localStorage) localStorage.setItem('theme', theme)
+      if (checkIfClient()) {
+        document.documentElement.className = theme
+        if (localStorage) localStorage.setItem('theme', theme)
+      }
     }
     if (COLOR_OPTIONS.includes(color)) {
-      if (localStorage) localStorage.setItem('color', color)
+      if (checkIfClient() && localStorage) localStorage.setItem('color', color)
     }
   }, [theme, color])
   useEffect(() => {
+    let timer
     if (checkIfClient()) {
       const willPreventScroll = (
         // Prevent scroll after changing Works page filter
@@ -83,7 +86,7 @@ function Controller (props) {
         const target = document.body.querySelector(`[data-section="${window.location.hash.substring(1)}"]`)
         if (target) {
           // Timeout prevents the jumpy feeling
-          const timer = setTimeout(() => {
+          timer = setTimeout(() => {
             document.body.scrollTo({
               top: target.offsetTop - 3.5 * getBaseFontSize(), // Navigation height is 3.5rem
               behavior: 'smooth'
@@ -94,9 +97,11 @@ function Controller (props) {
               window.location.href.split('#')[0]
             )
           }, 500)
-          return () => clearTimeout(timer)
         }
       }
+    }
+    return () => {
+      if (checkIfClient()) clearTimeout(timer)
     }
   }, [pages])
 
