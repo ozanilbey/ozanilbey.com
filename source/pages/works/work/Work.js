@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 // Components
-import Container from '~/components/layout/container/Container'
 import Page from '~/components/layout/page/Page'
-import Link from '~/components/interface/link/Link'
 import WorkBrand from '~/components/content/work-brand/WorkBrand'
 import WorkCover from '~/components/content/work-cover/WorkCover'
 
@@ -14,6 +12,7 @@ import Meta from '~/content/meta/Meta'
 import WorkSummary from '~/content/work-summary/WorkSummary'
 
 // Subcontent
+import Excerpt from './content/excerpt/Excerpt'
 import Preview from './content/preview/Preview'
 import Options from './content/options/Options'
 
@@ -33,39 +32,6 @@ import './Work.less'
 function Work (props) {
   // State
   const [isDisplayingHeader, setIsDisplayingHeader] = useState(false)
-
-  // Methods
-  function getExcerpt () {
-    const excerpt = {
-      year: typeof props.data.year === 'number' ? props.data.year : props.data.year.join('–'),
-      tags: props.data.tags.join(', ')
-    }
-    if (props.data.client) {
-      excerpt.client = props.data.client.fullName || props.data.client.name
-      if (props.data.client.link) excerpt.client = <Link type="external" href={`//${props.data.client.link}`}>{excerpt.client}</Link>
-    }
-    return (
-      <ul>
-        {Object.keys(excerpt).map(key =>
-          <li key={key}>
-            <strong>{key}</strong>
-            {excerpt[key]}
-          </li>
-        )}
-        {props.data.isLive &&
-          <li>
-            <strong>demo</strong>
-            <Link
-              type="external"
-              className="live"
-              href={`//${props.data.link}`}>
-              See it live
-            </Link>
-          </li>
-        }
-      </ul>
-    )
-  }
 
   useEffect(() => {
     setIsDisplayingHeader(true)
@@ -93,11 +59,7 @@ function Work (props) {
         </Preview>
         : <p>Loading</p>
       }
-      <Page.Section name="excerpt">
-        <Container isBlockLayout>
-          {getExcerpt()}
-        </Container>
-      </Page.Section>
+      <Excerpt data={props.data} />
       <WorkSummary identifier={props.data.slug} />
       <Options
         label={`${getWorkTitle(props.data)} by ozanilbey`}
