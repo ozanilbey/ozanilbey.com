@@ -35,7 +35,11 @@ function Works () {
   // Data
   const { push } = useHistory()
   const { workOrFilter } = useParams()
-  const workData = useWork(getWorkIndex(workOrFilter) > -1 ? workOrFilter : null)
+  const workData = useWork(
+    works.map(work => work.slug).indexOf(workOrFilter) > -1
+      ? workOrFilter
+      : null
+  )
   const selectedWorksLabel = WORK_FILTERS[0]
   const filter = getFilter()
 
@@ -45,14 +49,6 @@ function Works () {
   // Methods
   function getFilterIndex (filter) {
     return WORK_FILTERS.map(filter => slug(filter)).indexOf(filter)
-  }
-  function getWorkIndex (work) {
-    return works.map(work => work.slug).indexOf(work)
-  }
-  function filterWorks (option) {
-    let target = '/works'
-    target += `/${slug(option)}`
-    push(target)
   }
   function getFilter () {
     const index = getFilterIndex(workOrFilter)
@@ -71,14 +67,14 @@ function Works () {
       setWorkSet(SELECTED_WORKS)
     } else {
       const index = getFilterIndex(workOrFilter)
-      if (index < 0) {
-        if (works.map(work => work.slug).indexOf(workOrFilter) < 0) push('/works')
-      } else {
+      if (index > -1) {
         setWorkSet(
           works
             .filter(work => work.tags.map(tag => slug(tag)).includes(workOrFilter))
             .map(work => work.slug)
         )
+      } else {
+        if (works.map(work => work.slug).indexOf(workOrFilter) < 0) push('/works')
       }
     }
   }, [workOrFilter, selectedWorksLabel, push])
@@ -86,7 +82,6 @@ function Works () {
   // Render
   return workData
     ? <Work
-      slug={workOrFilter}
       data={workData}
       next={getRecommendation()} />
     : <Page name="works">
@@ -96,8 +91,6 @@ function Works () {
       <Introduction />
       <Portfolio
         filter={filter}
-        filters={WORK_FILTERS}
-        onFilter={filterWorks}
         works={
           workSet.length > 0
             ? works

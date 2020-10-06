@@ -1,6 +1,7 @@
 // Modules
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useHistory } from 'react-router-dom'
 
 // Components
 import Headline from '~/components/model/headline/Headline'
@@ -10,11 +11,27 @@ import Dropdown from '~/components/interface/dropdown/Dropdown'
 import Heading from '~/components/type/heading/Heading'
 import Showcase from '~/components/content/showcase/Showcase'
 
+// Utilities
+import { slug } from '~/utilities/format'
+
+// Constants
+import { WORK_FILTERS } from '~/constants/content'
+
 // Style
 import './Portfolio.less'
 
 // Subcontent: Works > Portfolio
 function Portfolio (props) {
+  // Data
+  const { push } = useHistory()
+
+  // Methods
+  function filterWorks (option) {
+    let target = '/works'
+    target += `/${slug(option)}`
+    push(target)
+  }
+
   // Render
   return (
     <Page.Section
@@ -37,9 +54,9 @@ function Portfolio (props) {
           Currently displaying:
           <Dropdown
             side="right"
-            options={props.filters}
+            options={WORK_FILTERS}
             defaultValue={props.filter}
-            onChange={props.onFilter} />
+            onChange={filterWorks} />
         </div>
       </Container>
       <Container>
@@ -55,8 +72,6 @@ function Portfolio (props) {
 
 Portfolio.propTypes = {
   filter: PropTypes.string,
-  filters: PropTypes.array,
-  onFilter: PropTypes.func,
   works: PropTypes.array
 }
 

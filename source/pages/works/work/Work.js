@@ -41,11 +41,11 @@ function Work (props) {
   if (!props.data) return null
   return (
     <Page
-      name={props.slug}
+      name={props.data.slug}
       parentName="works">
       <Meta
         page="works"
-        subpage={props.slug}
+        subpage={props.data.slug}
         article={getWorkTitle(props.data)}
         description={props.data.description || null}
         keywords={props.data.keywords}
@@ -70,8 +70,7 @@ function Work (props) {
 
 Work.propTypes = {
   data: PropTypes.object,
-  next: PropTypes.object,
-  slug: PropTypes.string
+  next: PropTypes.object
 }
 
 // Export
