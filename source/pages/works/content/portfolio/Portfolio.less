@@ -1,0 +1,43 @@
+[data-content="portfolio"] {
+  [data-interface="dropdown"] {
+    display: inline;
+    position: relative;
+    z-index: 2;
+    line-height: inherit;
+    & > [data-interface="button"] {
+      height: auto;
+      margin-left: .375rem;
+      padding-left: 0;
+      padding-right: 1.75rem;
+      color: var(--figure-color);
+      font-size: inherit;
+      font-weight: 500;
+      line-height: inherit;
+      letter-spacing: inherit;
+      text-transform: none;
+      border: none !important;
+      background-color: transparent;
+      &:after {
+        opacity: 1;
+        color: var(--primary-color);
+        font-size: 1rem;
+      }
+    }
+    & > .content {
+      top: 2rem;
+      color: white;
+      background-color: var(--primary-color);
+      & > ul {
+        & > li {
+          border-bottom: 1px solid fade(black, 10%);
+          &:last-child {
+            border-bottom: none;
+          }
+          &:hover {
+            background-color: hsla(var(--figure-color-hsl), .1);
+          }
+        }
+      }
+    }
+  }
+}
