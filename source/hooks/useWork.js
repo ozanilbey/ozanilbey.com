@@ -30,7 +30,7 @@ function useWork (slug) {
     const data = works.find(work => work.slug === slug)
     setWork(data || null)
   }, [slug])
-  useLayoutEffect(() => {
+  useEffect(() => {
     let controller
     let navigation
     function setColors ({ primary, secondary }) {
