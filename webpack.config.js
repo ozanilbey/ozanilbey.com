@@ -82,7 +82,7 @@ module.exports = ({ base }) => {
         new TerserPlugin({
           parallel: true,
           sourceMap: true,
-          extractComments: true
+          extractComments: isClient
         })
       ]
     },
