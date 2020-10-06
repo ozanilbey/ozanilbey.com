@@ -46,6 +46,11 @@ body {
         padding-bottom: 0;
       }
     }
+    & + * {
+      .color {
+        display: none;
+      }
+    }
   }
   & > * {
     position: relative;
@@ -66,11 +71,10 @@ body {
       border-bottom: 1px solid var(--shade-color);
       box-shadow: 0 0 0.5rem var(--shade-color);
     }
-    [data-type="heading"] {
+    & > [data-type="heading"] {
       &.dim {
-        & + [data-model="headline"] {
-          margin-bottom: .375em;
-        }
+        margin-bottom: .375em;
+        user-select: none;
       }
     }
   }
@@ -84,13 +88,23 @@ body {
       line-height: 120%;
     }
   }
-}
-
-// Connector
-[data-content="connector"] {
-  [data-interface="icon"] {
-    & > * {
-      fill: var(--figure-color);
+  [data-section] {
+    & > [data-layout="container"] {
+      & > .note {
+        display: flex;
+        margin-top: 1.5rem;
+        padding: 0 .25rem;
+        mark {
+          margin-right: .25rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 80%;
+          user-select: none;
+        }
+        .detail {
+          margin-top: .075rem;
+        }
+      }
     }
   }
 }
