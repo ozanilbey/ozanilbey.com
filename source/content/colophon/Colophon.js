@@ -68,7 +68,7 @@ function Colophon (props) {
             sizeS={12}
             sizeM={6}>
             <p>This website is an online portfolio showcasing works of <strong>Ozan İlbey Yılmaz</strong>. It is entirely open source. You can browse, modify, and use <Link type="external" href="//github.com/ozanilbey/ozanilbey.com">the code</Link>. You can even make it yours if you want to.</p>
-            <p>It is built on <Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link>, an isomorphic JavaScript web application boilerplate, which is also <strong>open source</strong>, and from the author.</p>
+            <p>It is built on <Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link>, an <strong>open source</strong> isomorphic JavaScript web application boilerplate. It is also developed by the author.</p>
             <div className={getClassName('credits', { visible: isDisplayingCredits })}>
               <strong onClick={toggleCredits}>{'Made on a Mac with  {'}</strong>
               {
