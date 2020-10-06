@@ -1,5 +1,5 @@
 // Modules
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
@@ -17,32 +17,32 @@ import WorkSummary from '~/content/work-summary/WorkSummary'
 import Preview from './content/preview/Preview'
 import Options from './content/options/Options'
 
-// Hooks
-import useWork from '~/hooks/useWork'
-
 // Helpers
 import { getWorkTitle } from '~/helpers/content'
 
 // Utilities
 import { slug } from '~/utilities/format'
 
+// Constants
+import { MEDIA_ENDPOINT } from '~/constants/settings'
+
 // Style
 import './Work.less'
 
 // Page: Works > Work
 function Work (props) {
-  // Data
-  const work = useWork(props.slug)
+  // State
+  const [isDisplayingHeader, setIsDisplayingHeader] = useState(false)
 
   // Methods
   function getExcerpt () {
     const excerpt = {
-      year: typeof work.year === 'number' ? work.year : work.year.join('–'),
-      tags: work.tags.join(', ')
+      year: typeof props.data.year === 'number' ? props.data.year : props.data.year.join('–'),
+      tags: props.data.tags.join(', ')
     }
-    if (work.client) {
-      excerpt.client = work.client.fullName || work.client.name
-      if (work.client.link) excerpt.client = <Link type="external" href={`//${work.client.link}`}>{excerpt.client}</Link>
+    if (props.data.client) {
+      excerpt.client = props.data.client.fullName || props.data.client.name
+      if (props.data.client.link) excerpt.client = <Link type="external" href={`//${props.data.client.link}`}>{excerpt.client}</Link>
     }
     return (
       <ul>
@@ -52,13 +52,13 @@ function Work (props) {
             {excerpt[key]}
           </li>
         )}
-        {work.isLive &&
+        {props.data.isLive &&
           <li>
             <strong>demo</strong>
             <Link
               type="external"
               className="live"
-              href={`//${work.link}`}>
+              href={`//${props.data.link}`}>
               See it live
             </Link>
           </li>
@@ -67,8 +67,12 @@ function Work (props) {
     )
   }
 
+  useEffect(() => {
+    setIsDisplayingHeader(true)
+  }, [])
+
   // Render
-  if (!work) return null
+  if (!props.data) return null
   return (
     <Page
       name={props.slug}
@@ -76,27 +80,30 @@ function Work (props) {
       <Helmet>
         <title>{getWorkTitle(work)} | ozanilbey:works</title>
       </Helmet>
-      <Preview data={work}>
-        <WorkBrand data={work} />
-        <WorkCover
-          data={work}
-          types={work.preview.map(item => slug(item))} />
-      </Preview>
+      {isDisplayingHeader
+        ? <Preview data={props.data}>
+          <WorkBrand data={props.data} />
+          <WorkCover
+            data={props.data}
+            types={props.data.preview.map(item => slug(item))} />
+        </Preview>
+        : <p>Loading</p>
+      }
       <Page.Section name="excerpt">
         <Container isBlockLayout>
           {getExcerpt()}
         </Container>
       </Page.Section>
-      <WorkSummary identifier={work.slug} />
-      <Promotion />
+      <WorkSummary identifier={props.data.slug} />
       <Options
-        label={`${getWorkTitle(work)} by ozanilbey`}
+        label={`${getWorkTitle(props.data)} by ozanilbey`}
         recommendation={props.next} />
     </Page>
   )
 }
 
 Work.propTypes = {
+  data: PropTypes.object,
   next: PropTypes.object,
   slug: PropTypes.string
 }

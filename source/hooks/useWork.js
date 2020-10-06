@@ -12,8 +12,11 @@ import works from '~/data/works'
 
 // Hook: useWork
 function useWork (slug) {
+  // Data
+  const initialState = works.find(work => work.slug === slug)
+
   // State
-  const [work, setWork] = useState(null)
+  const [work, setWork] = useState(initialState)
 
   // Methods
   function checkColorExtremity (rgb) {
@@ -25,8 +28,7 @@ function useWork (slug) {
   // Effects
   useEffect(() => {
     const data = works.find(work => work.slug === slug)
-    if (!data) return
-    setWork(data)
+    setWork(data || null)
   }, [slug])
   useLayoutEffect(() => {
     let controller
