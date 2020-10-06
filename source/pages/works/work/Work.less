@@ -1,35 +1,11 @@
 [data-parent="works"] {
   text-align: center;
-  [data-section] {
-    &[data-section="excerpt"] {
-      padding: 1.5rem;
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 200vh; // High enough to cover upper side
-        background-color: var(--ground-alternative-color);
-      }
-      ul {
-        li {
-          display: inline-block;
-          position: relative;
-          margin-right: 2rem;
-          &:last-child {
-            margin-right: 0;
-          }
-          strong {
-            opacity: .25;
-            display: block;
-            font-size: .8rem;
-            font-weight: 700;
-            text-align: left;
-            text-transform: uppercase;
-          }
-        }
-      }
+  [data-header] {
+    [data-content="work-cover"] {
+      display: block;
+      width: calc(100% / 6 * 5);
+      margin: 0 auto;
+      margin-top: 2.5rem;
     }
   }
 }
