@@ -1,12 +1,14 @@
 // Modules
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 
 // Components
 import Container from '~/components/layout/container/Container'
 import Heading from '~/components/type/heading/Heading'
 import Page from '~/components/layout/page/Page'
+
+// Content
+import Meta from '~/content/meta/Meta'
 
 // Style
 import './Error.less'
@@ -19,9 +21,7 @@ function Error () {
   // Render
   return (
     <Page name="error">
-      <Helmet>
-        <title>ozanilbey</title>
-      </Helmet>
+      <Meta page="error" />
       <Page.Header
         isFullScreen
         name="introduction">

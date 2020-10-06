@@ -1,5 +1,4 @@
 // Modules
-import { Helmet } from 'react-helmet'
 import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 
@@ -7,6 +6,9 @@ import { useParams, useHistory } from 'react-router-dom'
 import Container from '~/components/layout/container/Container'
 import Heading from '~/components/type/heading/Heading'
 import Page from '~/components/layout/page/Page'
+
+// Content
+import Meta from '~/content/meta/Meta'
 
 // Subpages
 import Work from './work/Work'
@@ -85,9 +87,9 @@ function Works () {
       data={workData}
       next={getRecommendation()} />
     : <Page name="works">
-      <Helmet>
-        <title>ozanilbey:works</title>
-      </Helmet>
+      <Meta
+        page="works"
+        category={getFilter() === selectedWorksLabel ? null : getFilter()} />
       <Page.Header name="introduction">
         <Container>
           <Heading displaySize="big">Works</Heading>

@@ -4,6 +4,9 @@ import React from 'react'
 // Components
 import Page from '~/components/layout/page/Page'
 
+// Content
+import Meta from '~/content/meta/Meta'
+
 // Subcontent
 import Introduction from './content/introduction/Introduction'
 import Personality from './content/personality/Personality'
@@ -19,6 +22,7 @@ function Profile () {
   // Render
   return (
     <Page name="profile">
+      <Meta page="profile" />
       <Introduction />
       <Personality />
       <ProfessionalSkills />

@@ -7,6 +7,7 @@ import nodemailer from 'nodemailer'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 // React application
 import App from '~/App.js'
@@ -51,7 +52,7 @@ app.get('*.css', (request, response, next) => {
 })
 
 // Serve static files
-app.use('/', express.static('public'))
+app.get('*.*', express.static('public'))
 
 // Handle emails
 app.use('/email', express.json())
@@ -117,13 +118,14 @@ app.use((request, response) => {
     response.writeHead(301, { Location: context.url })
     response.end()
   } else {
+    const helmet = Helmet.renderStatic()
     // Serve generated HTML within the template
     response.write(
-      // Replace root element with the generated HTML string
-      template.replace(
-        /<div id="root"><\/div>/,
-        `<div id="root">${html}</div>`
-      )
+      // Replace template HTML with generated data
+      template
+        .replace(/<title>.*<\/title>/, helmet.title.toString())
+        .replace('</head>', helmet.link.toString() + helmet.meta.toString() + '</head>')
+        .replace(/<div id="root"><\/div>/, `<div id="root">${html}</div>`)
     )
     response.end()
   }

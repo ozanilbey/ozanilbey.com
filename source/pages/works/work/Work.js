@@ -1,7 +1,6 @@
 // Modules
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
 
 // Components
 import Container from '~/components/layout/container/Container'
@@ -11,6 +10,7 @@ import WorkBrand from '~/components/content/work-brand/WorkBrand'
 import WorkCover from '~/components/content/work-cover/WorkCover'
 
 // Content
+import Meta from '~/content/meta/Meta'
 import WorkSummary from '~/content/work-summary/WorkSummary'
 
 // Subcontent
@@ -77,9 +77,13 @@ function Work (props) {
     <Page
       name={props.slug}
       parentName="works">
-      <Helmet>
-        <title>{getWorkTitle(work)} | ozanilbey:works</title>
-      </Helmet>
+      <Meta
+        page="works"
+        subpage={props.slug}
+        article={getWorkTitle(props.data)}
+        description={props.data.description || null}
+        keywords={props.data.keywords}
+        preview={`${MEDIA_ENDPOINT}/${props.data.slug}/cover.png`} />
       {isDisplayingHeader
         ? <Preview data={props.data}>
           <WorkBrand data={props.data} />

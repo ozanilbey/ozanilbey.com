@@ -22,6 +22,7 @@ function Home () {
   // Render
   return (
     <Page name="home">
+      <Meta page="home" />
       <Welcome />
       <Profile />
       <Portfolio />
