@@ -36,11 +36,9 @@ function Dropdown (props) {
 
   // Effects
   useEffect(() => {
-    if (value === undefined) {
-      if (props.defaultValue) setValue(props.defaultValue)
-      else if (props.options && props.options.length > 0) setValue(props.options[0])
-    }
-  }, [props.options, props.defaultValue, value])
+    if (props.defaultValue) setValue(props.defaultValue)
+    else if (props.options && props.options.length > 0) setValue(props.options[0])
+  }, [props.defaultValue, props.options])
 
   // Effects
   useEffect(() => {
