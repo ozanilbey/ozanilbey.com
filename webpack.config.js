@@ -38,7 +38,7 @@ module.exports = ({ base }) => {
       extensions: ['.js', '.jsx', '.less', '.json', '.gql']
     },
     target: isClient ? 'web' : 'node',
-    externals: isClient ? {} : [nodeExternals()],
+    externals: isClient ? {} : [nodeExternals(), 'react-helmet'],
     module: {
       rules: [
         {
