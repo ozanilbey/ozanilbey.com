@@ -133,38 +133,10 @@ p, span, small, ul, ol {
 
 // Responsive
 
-/* Window Width < 320 */
-@media only screen and (max-width: @breakpoints[xxsmall-limit-superior]) {
+/* 1440 ≤ Window Width */
+@media only screen and (min-width: @breakpoints[xxlarge-limit-inferior]) {
   html {
-    font-size: 14px;
-  }
-}
-
-/* 320 ≤ Window Width < 480 */
-@media only screen and (min-width: @breakpoints[xsmall-limit-inferior]) and (max-width: @breakpoints[xsmall-limit-superior]) {
-  html {
-    font-size: 15px;
-  }
-}
-
-/* 480 ≤ Window Width < 768 */
-@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
-  html {
-    font-size: 16px;
-  }
-}
-
-/* 768 ≤ Window Width < 1024 */
-@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
-  html {
-    font-size: 17px;
-  }
-}
-
-/* 1024 ≤ Window Width < 1280 */
-@media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
-  html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -175,9 +147,37 @@ p, span, small, ul, ol {
   }
 }
 
-/* 1440 ≤ Window Width */
-@media only screen and (min-width: @breakpoints[xxlarge-limit-inferior]) {
+/* 1024 ≤ Window Width < 1280 */
+@media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
   html {
-    font-size: 20px;
+    font-size: 18px;
+  }
+}
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  html {
+    font-size: 17px;
+  }
+}
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* 320 ≤ Window Width < 480 */
+@media only screen and (min-width: @breakpoints[xsmall-limit-inferior]) and (max-width: @breakpoints[xsmall-limit-superior]) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Window Width < 320 */
+@media only screen and (max-width: @breakpoints[xxsmall-limit-superior]) {
+  html {
+    font-size: 14px;
   }
 }
