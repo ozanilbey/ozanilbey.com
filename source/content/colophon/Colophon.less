@@ -205,3 +205,70 @@
     }
   }
 }
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  [data-content="colophon"] {
+    font-size: .9rem;
+    [data-layout="container"] > {
+      flex-direction: column;
+      & > * {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+    .about {
+      margin-top: 1em;
+    }
+  }
+}
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
+  [data-content="colophon"] {
+    font-size: .9rem;
+    [data-layout="container"] > {
+      flex-direction: column;
+      & > * {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+    .about {
+      margin-top: 1em;
+    }
+  }
+}
+
+/* Window Width < 480 */
+@media only screen and (max-width: @breakpoints[xsmall-limit-superior]) {
+  [data-content="colophon"] {
+    padding: 2rem 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+    [data-layout="container"] > {
+      flex-direction: column;
+      & > * {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+    .options {
+      font-size: 1rem;
+      [data-layout="stack"] {
+        flex-wrap: wrap;
+        & > * {
+          margin-bottom: .5em;
+        }
+      }
+    }
+    .about {
+      margin-top: 1.5rem;
+      font-size: .9rem;
+    }
+  }
+}
