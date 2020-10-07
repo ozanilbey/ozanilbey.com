@@ -62,171 +62,190 @@ function Colophon (props) {
       ref={colophon}
       data-content="colophon">
       <Container>
-        <Stack>
-          <Stack.Item
-            name="About"
-            sizeS={12}
-            sizeM={6}>
-            <p>This website is an online portfolio showcasing works of <strong>Ozan İlbey Yılmaz</strong>. It is entirely open source. You can browse, modify, and use <Link type="external" href="//github.com/ozanilbey/ozanilbey.com">the code</Link>. You can even make it yours if you want to.</p>
-            <p>It is built on <Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link>, an <strong>open source</strong> isomorphic JavaScript web application boilerplate. It is also developed by the author.</p>
-            <div className={getClassName('credits', { visible: isDisplayingCredits })}>
-              <strong onClick={toggleCredits}>{'Made on a Mac with  {'}</strong>
-              {
-                isDisplayingCredits
-                  ? <ul>
-                    <li data-key="technology">
-                      <ul data-type="array">
-                        <li>
-                          <p>HTML</p>
-                        </li>
-                        <li>
-                          <p>CSS</p>
-                        </li>
-                        <li>
-                          <p>JavaScript</p>
-                        </li>
-                      </ul>
-                    </li>
-                    <li data-key="stack">
-                      <ul data-type="array">
-                        <li>
-                          <p data-type="string"><Link type="external" href="//nodejs.org">Node.js</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//expressjs.com">Express</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//webpack.js.org">Webpack</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//babeljs.io">Babel</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//reactjs.org">React (Hooks)</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//reactrouter.com">React Router</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//github.com/nfl/react-helmet">React Helmet</Link></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//lesscss.org">LESS</Link></p>
-                        </li>
-                      </ul>
-                    </li>
-                    <li data-key="boilerplate">
-                      <p data-type="string"><Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link></p>
-                    </li>
-                    <li data-key="fonts">
-                      <ul data-type="array">
-                        <li>
-                          <p data-type="string"><Link type="external" href="//fonts.google.com/specimen/Inter">Inter</Link> <small>by <Link type="external" href="//rsms.me">Rasmus Andersson</Link></small></p>
-                        </li>
-                        <li>
-                          <p data-type="string"><Link type="external" href="//fonts.google.com/specimen/Montserrat">Montserrat</Link></p>
-                        </li>
-                      </ul>
-                    </li>
-                    <li data-key="devTools">
-                      <ul data-type="array">
-                        <li>
-                          <p><Link type="external" href="//git-scm.org">Git</Link> <small>by <Link type="external" href="//www.linkedin.com/in/linustorvalds">Linus Torvalds</Link></small></p>
-                        </li>
-                        <li>
-                          <p><Link type="external" href="//standardjs.com">Standard</Link> <small>by <Link type="external" href="//feross.org">Feross Aboukhadijeh</Link></small></p>
-                        </li>
-                      </ul>
-                    </li>
-                    <li data-key="codeEditor">
-                      <p data-type="string"><Link type="external" href="//atom.io">Atom</Link> <small>by <Link type="external" href="//github.com">GitHub</Link></small></p>
-                    </li>
-                    <li data-key="hosting">
-                      <ul data-type="object">
-                        <li data-key="code">
-                          <p data-type="string"><Link type="external" href="//github.com">GitHub</Link></p>
-                        </li>
-                        <li data-key="image">
-                          <p data-type="string"><Link type="external" href="//cloudinary.com">Coludinary</Link></p>
-                        </li>
-                        <li data-key="file">
-                          <p data-type="string"><Link type="external" href="//digitalocean.com">DigitalOcean</Link></p>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  : <strong
-                    title="Click to expand"
-                    onClick={toggleCredits}>
-                    ···
-                  </strong>
-              }
-              <strong onClick={toggleCredits}>{'}'}</strong>
-            </div>
-          </Stack.Item>
-          <Stack.Item name="Pages">
-            <ul className="links">
-              {PAGES_MENU_OPTIONS.map(option =>
-                <li key={option}>
-                  <Link to={`/${option === 'home' ? '' : option}`}>
-                    {upperCaseFirstLetter(option)}
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </Stack.Item>
-          <Stack.Item name="Social">
-            <ul className="links">
-              {
-                [...socialAccounts]
-                  .sort(sortByNameLength)
-                  .map(account =>
-                    <li key={account.name}>
-                      <Link
-                        type="external"
-                        href={`//${account.link}`}>
-                        {account.name}
-                      </Link>
-                    </li>
-                  )
-              }
-            </ul>
-          </Stack.Item>
-          <Stack.Item name="Pro">
-            <ul className="links">
-              {
-                [...professionalAccounts]
-                  .sort(sortByNameLength)
-                  .map(account =>
-                    <li key={account.name}>
-                      <Link
-                        type="external"
-                        href={`//${account.link}`}>
-                        {account.name}
-                      </Link>
-                    </li>
-                  )
-              }
-            </ul>
-          </Stack.Item>
-          <Stack.Item name="Contact">
-            <ul className="links">
-              {
-                [...contactOptions]
-                  .sort(sortByNameLength)
-                  .map(option =>
-                    <li key={option.name}>
-                      <Link
-                        type="external"
-                        href={option.link}>
-                        {option.name}
-                      </Link>
-                    </li>
-                  )
-              }
-            </ul>
-          </Stack.Item>
-        </Stack>
+        <div className="options">
+          <Stack>
+            <Stack.Item
+              size={6}
+              sizeS={3}>
+              <ul
+                data-label="Pages"
+                className="links">
+                {PAGES_MENU_OPTIONS.map(option =>
+                  <li key={option}>
+                    <Link to={`/${option === 'home' ? '' : option}`}>
+                      {upperCaseFirstLetter(option)}
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </Stack.Item>
+            <Stack.Item
+              size={6}
+              sizeS={3}>
+              <ul
+                data-label="Social"
+                className="links">
+                {
+                  [...socialAccounts]
+                    .sort(sortByNameLength)
+                    .map(account =>
+                      <li key={account.name}>
+                        <Link
+                          type="external"
+                          href={`//${account.link}`}>
+                          {account.name}
+                        </Link>
+                      </li>
+                    )
+                }
+              </ul>
+            </Stack.Item>
+            <Stack.Item
+              size={6}
+              sizeS={3}>
+              <ul
+                data-label="Pro"
+                className="links">
+                {
+                  [...professionalAccounts]
+                    .sort(sortByNameLength)
+                    .map(account =>
+                      <li key={account.name}>
+                        <Link
+                          type="external"
+                          href={`//${account.link}`}>
+                          {account.name}
+                        </Link>
+                      </li>
+                    )
+                }
+              </ul>
+            </Stack.Item>
+            <Stack.Item
+              size={6}
+              sizeS={3}>
+              <ul
+                data-label="Contact"
+                className="links">
+                {
+                  [...contactOptions]
+                    .sort(sortByNameLength)
+                    .map(option =>
+                      <li key={option.name}>
+                        <Link
+                          type="external"
+                          href={option.link}>
+                          {option.name}
+                        </Link>
+                      </li>
+                    )
+                }
+              </ul>
+            </Stack.Item>
+          </Stack>
+        </div>
+        <div
+          data-label="about"
+          className="about">
+          <div className="website">This website is an online portfolio showcasing works of <strong>Ozan İlbey Yılmaz</strong>. It is entirely open source. You can browse, modify, and use <Link type="external" href="//github.com/ozanilbey/ozanilbey.com">the code</Link>. You can even make it yours.</div>
+          <div className="isomorphic">It is built on <Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link>, an <strong>open source</strong> isomorphic JavaScript web application boilerplate. It is also developed by the author.</div>
+          <div className={getClassName('credits', { visible: isDisplayingCredits })}>
+            <strong onClick={toggleCredits}>{'Made on a Mac with  {'}</strong>
+            {
+              isDisplayingCredits
+                ? <ul>
+                  <li data-key="technology">
+                    <ul data-type="array">
+                      <li>
+                        <p>HTML</p>
+                      </li>
+                      <li>
+                        <p>CSS</p>
+                      </li>
+                      <li>
+                        <p>JavaScript</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-key="stack">
+                    <ul data-type="array">
+                      <li>
+                        <p data-type="string"><Link type="external" href="//nodejs.org">Node.js</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//expressjs.com">Express</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//webpack.js.org">Webpack</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//babeljs.io">Babel</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//reactjs.org">React (Hooks)</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//reactrouter.com">React Router</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//github.com/nfl/react-helmet">React Helmet</Link></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//lesscss.org">LESS</Link></p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-key="boilerplate">
+                    <p data-type="string"><Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link></p>
+                  </li>
+                  <li data-key="fonts">
+                    <ul data-type="array">
+                      <li>
+                        <p data-type="string"><Link type="external" href="//fonts.google.com/specimen/Inter">Inter</Link> <small>by <Link type="external" href="//rsms.me">Rasmus Andersson</Link></small></p>
+                      </li>
+                      <li>
+                        <p data-type="string"><Link type="external" href="//fonts.google.com/specimen/Montserrat">Montserrat</Link></p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-key="devTools">
+                    <ul data-type="array">
+                      <li>
+                        <p><Link type="external" href="//git-scm.org">Git</Link> <small>by <Link type="external" href="//www.linkedin.com/in/linustorvalds">Linus Torvalds</Link></small></p>
+                      </li>
+                      <li>
+                        <p><Link type="external" href="//standardjs.com">Standard</Link> <small>by <Link type="external" href="//feross.org">Feross Aboukhadijeh</Link></small></p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-key="codeEditor">
+                    <p data-type="string"><Link type="external" href="//atom.io">Atom</Link> <small>by <Link type="external" href="//github.com">GitHub</Link></small></p>
+                  </li>
+                  <li data-key="hosting">
+                    <ul data-type="object">
+                      <li data-key="code">
+                        <p data-type="string"><Link type="external" href="//github.com">GitHub</Link></p>
+                      </li>
+                      <li data-key="image">
+                        <p data-type="string"><Link type="external" href="//cloudinary.com">Coludinary</Link></p>
+                      </li>
+                      <li data-key="file">
+                        <p data-type="string"><Link type="external" href="//digitalocean.com">DigitalOcean</Link></p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                : <strong
+                  title="Click to expand"
+                  onClick={toggleCredits}>
+                  ···
+                </strong>
+            }
+            <strong onClick={toggleCredits}>{'}'}</strong>
+          </div>
+        </div>
+      </Container>
+      <Container>
         <ul className="color">
           {COLOR_OPTIONS.map(option =>
             <li
