@@ -17,10 +17,10 @@ import professionalAccounts from '~/data/professionalAccounts'
 import socialAccounts from '~/data/socialAccounts'
 
 // Style
-import './Social.less'
+import './SocialAccounts.less'
 
-// Subcontent: Contact > Social
-function Social () {
+// Subcontent: Contact > SocialAccounts
+function SocialAccounts () {
   // Data
   const accounts = [...professionalAccounts, ...socialAccounts]
 
@@ -33,8 +33,8 @@ function Social () {
   // Render
   return (
     <Page.Section
-      name="social"
-      data-content="social">
+      name="social-accounts"
+      data-content="social-accounts">
       <Container>
         <Heading
           isSingleLine
@@ -55,4 +55,4 @@ function Social () {
 }
 
 // Export
-export default Social
+export default SocialAccounts
