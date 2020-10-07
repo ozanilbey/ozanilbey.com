@@ -1,3 +1,5 @@
+@import '~/styles/media.less';
+
 // Root
 :root {
   &.light {
@@ -24,6 +26,7 @@
 
 // Body
 body {
+  min-width: @breakpoints[xxsmall-limit-inferior];
   &.stationary {
     overflow: hidden;
   }
