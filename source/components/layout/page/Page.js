@@ -16,7 +16,7 @@ function Page (props) {
   // Data
   const className = getClassName(props.className, {
     decoration: props.isZebraStriped ? 'zebra-stripes' : null,
-    screen: 'full'
+    screen: props.isFullScreen ? 'full' : null
   })
 
   // Methods
@@ -44,6 +44,7 @@ function Page (props) {
 Page.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  isFullScreen: PropTypes.bool,
   isZebraStriped: PropTypes.bool,
   name: PropTypes.string,
   parentName: PropTypes.string
