@@ -10,6 +10,7 @@ import WorkCover from '~/components/content/work-cover/WorkCover'
 // Content
 import Meta from '~/content/meta/Meta'
 import WorkSummary from '~/content/work-summary/WorkSummary'
+import Promotion from '~/content/promotion/Promotion'
 
 // Subcontent
 import Excerpt from './content/excerpt/Excerpt'
@@ -61,6 +62,7 @@ function Work (props) {
       }
       <Excerpt data={props.data} />
       <WorkSummary identifier={props.data.slug} />
+      <Promotion />
       <Options
         label={`${getWorkTitle(props.data)} by ozanilbey`}
         recommendation={props.next} />

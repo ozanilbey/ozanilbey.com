@@ -6,6 +6,7 @@ import Page from '~/components/layout/page/Page'
 
 // Content
 import Meta from '~/content/meta/Meta'
+import Promotion from '~/content/promotion/Promotion'
 
 // Subcontent
 import Introduction from './content/introduction/Introduction'
@@ -28,6 +29,7 @@ function Profile () {
       <ProfessionalSkills />
       <Employment />
       <Education />
+      <Promotion />
     </Page>
   )
 }
