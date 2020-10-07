@@ -1,1 +1,23 @@
-[data-page="error"] {}
+[data-page="error"] {
+  text-align: center;
+  mark {
+    display: inline-block;
+    min-width: 7.5rem;
+    margin-bottom: .5rem;
+    padding: .1875em .375em .25em .3125em;
+    font-size: 1.5rem;
+    color: var(--danger-color);
+    font-weight: 500;
+    line-height: 1em;
+    border: 1px solid hsla(var(--danger-color-hsl), .125);
+    border-radius: .25em;
+    background-color: hsla(var(--danger-color-hsl), .125);
+  }
+  .lead {
+    text-align: inherit;
+  }
+  [data-interface="link"] {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+}
