@@ -1,19 +1,6 @@
 @import '~/styles/media.less';
 
 [data-model="controller"] {
-  &[data-page] {
-    &[data-page="works"] {
-      &[data-subpage] {
-        [data-model="navigation"] {
-          .controls {
-            .color {
-              display: none !important;
-            }
-          }
-        }
-      }
-    }
-  }
   &[data-color] {
     --primary-color: hsl(var(--primary-color-hsl));
     &[data-color="green"] {
