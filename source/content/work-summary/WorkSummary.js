@@ -26,8 +26,8 @@ function WorkSummary (props) {
   // Render
   return (
     <Page.Section
-      data-content="work-summary"
-      name="summary">
+      name="work-summary"
+      data-content="work-summary">
       {renderSummary()}
     </Page.Section>
   )
