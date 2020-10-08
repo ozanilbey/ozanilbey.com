@@ -1,5 +1,5 @@
 // Modules
-import React, { useState, useRef, useEffect, useLayoutEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 // Subcomponents
@@ -10,6 +10,9 @@ import GraphicDesign from './types/graphic-design/GraphicDesign'
 import MobileApplication from './types/mobile-application/MobileApplication'
 import ResponsiveWebsite from './types/responsive-website/ResponsiveWebsite'
 import SocialMedia from './types/social-media/SocialMedia'
+
+// Hooks
+import useUnitSize from '~/hooks/useUnitSize'
 
 // Helpers
 import { checkIfClient } from '~/helpers/document'
@@ -28,9 +31,11 @@ function WorkCover (props) {
   // References
   const container = useRef()
 
+  // Data
+  const unitSize = useUnitSize(container, width => width / 48)
+
   // State
   const [index, setIndex] = useState(0)
-  const [unitSize, setUnitSize] = useState(0)
 
   // Data
   const type = props.types[index]
@@ -53,18 +58,6 @@ function WorkCover (props) {
       if (checkIfClient()) clearInterval(timer)
     }
   }, [props.types, props.data])
-  useLayoutEffect(() => {
-    function handleResize () {
-      setUnitSize(container.current.clientWidth / 48)
-    }
-    if (checkIfClient()) {
-      handleResize()
-      window.addEventListener('resize', handleResize)
-    }
-    return () => {
-      if (checkIfClient()) window.removeEventListener('resize', handleResize)
-    }
-  }, [])
 
   // Methods
   function renderElements (type) {
