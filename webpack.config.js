@@ -80,6 +80,7 @@ module.exports = ({ base }) => {
       minimize: true,
       minimizer: [
         new TerserPlugin({
+          cache: true,
           parallel: true,
           sourceMap: true,
           extractComments: isClient
@@ -127,7 +128,10 @@ module.exports = ({ base }) => {
       historyApiFallback: true,
       hot: true,
       progress: true,
-      open: true
+      open: true,
+      stats: {
+        colors: true
+      }
     }
   })
 }
