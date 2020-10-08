@@ -26,7 +26,7 @@
 
 // Body
 body {
-  min-width: @breakpoints[xxsmall-limit-inferior];
+  min-width: @breakpoints[xsmall-limit-inferior];
   &.stationary {
     overflow: hidden;
   }
@@ -57,6 +57,7 @@ body {
   }
   & > * {
     position: relative;
+    padding: 6rem 0;
     background-color: var(--ground-color);
     &:nth-child(2n + 1) {
       z-index: 3;
@@ -88,7 +89,6 @@ body {
     background-color: var(--ground-color);
     [data-model="headline"] {
       margin-bottom: .375em;
-      line-height: 120%;
     }
   }
   [data-section] {
@@ -105,7 +105,7 @@ body {
           user-select: none;
         }
         .detail {
-          margin-top: .075rem;
+          margin-top: -0.25em;
         }
       }
     }
