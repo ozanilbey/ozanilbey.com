@@ -37,7 +37,7 @@ function calculateOpacity (element, options = {}) {
 // Component: Model > Headline
 function Headline (props) {
   // Data
-  const { vertical } = useContext(ControllerContext).scroll
+  const { scroll, dimensions } = useContext(ControllerContext)
 
   // References
   const headline = useRef()
@@ -48,15 +48,18 @@ function Headline (props) {
   // Effects
   useEffect(() => {
     function handleOpacity () {
+      let factor = 1
+      if (dimensions.width > 1024) factor = 2
+      else if (dimensions.width > 768) factor = 1.5
       setOpacity(
         calculateOpacity(
           headline.current, // element
-          { top: 3.5 * getBaseFontSize() + 40, bottom: 40, range: 80, maximum: 1, minimum: 0.5 } // options
+          { top: 3.5 * getBaseFontSize() + factor * getBaseFontSize(), bottom: factor * getBaseFontSize(), range: 2 * factor * getBaseFontSize(), maximum: 1, minimum: 0.5 } // options
         )
       )
     }
     handleOpacity()
-  }, [vertical])
+  }, [scroll.vertical, dimensions.width])
 
   // Render
   return (
