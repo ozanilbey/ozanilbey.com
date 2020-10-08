@@ -48,9 +48,7 @@ function Showcase (props) {
                 data={item} />
             </div>
             <div className="content">
-              <WorkBrand
-                size={90}
-                data={item} />
+              <WorkBrand data={item} />
               <div
                 className="text"
                 style={{ color: item.colors.secondary && rgbColor(item.colors.secondary) }}>
