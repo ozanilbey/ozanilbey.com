@@ -26,3 +26,25 @@
     margin-top: 2.5rem;
   }
 }
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* 1024 ≤ Window Width < 1279 */
+@media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
+  [data-content="preview"] {
+    [data-content="work-brand"] {
+      max-width: 27.5rem;
+    }
+  }
+}
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  [data-content="preview"] {
+    [data-content="work-brand"] {
+      max-width: 25rem;
+    }
+  }
+}
