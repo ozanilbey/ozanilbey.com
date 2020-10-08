@@ -131,3 +131,90 @@
     }
   }
 }
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  [data-content="showcase"] {
+    & > [data-interface="link"] {
+      margin-bottom: 1.5em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & > [data-interface="card"] {
+        &:after {
+          bottom: 0;
+        }
+        & > * {
+          &.visual {
+            top: 1px; // 1px prevents visual discomfort
+            margin-right: 4%;
+          }
+          &.content {
+            top: 0;
+            & > [data-content="work-brand"] {
+              margin-bottom: .5em;
+              & > .label {
+                margin-top: .5em;
+              }
+            }
+            .text {
+              font-size: .875rem;
+              .description {
+                & > * {
+                  display: none;
+                  &[data-label="Year"] {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Window Width < 768 */
+@media only screen and (max-width: @breakpoints[small-limit-superior]) {
+  [data-content="showcase"] {
+    & > [data-interface="link"] {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & > [data-interface="card"] {
+        flex-direction: column-reverse;
+        padding: 10%;
+        &:after {
+          display: none;
+        }
+        & > * {
+          flex-basis: 100%;
+          width: 100%;
+          &.visual {
+            top: 1px; // 1px prevents visual discomfort
+            margin-right: 0;
+          }
+          &.content {
+            top: 0;
+            & > [data-content="work-brand"] {
+              margin-bottom: 1.5em;
+              text-align: center;
+              & > .label {
+                margin-top: .5em;
+              }
+            }
+            .text, .tags {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
