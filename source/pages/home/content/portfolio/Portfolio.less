@@ -3,3 +3,25 @@
     margin-bottom: 2rem;
   }
 }
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
+  [data-content="portfolio"] {
+    [data-content="showcase"] {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+/* Window Width < 480 */
+@media only screen and (max-width: @breakpoints[xsmall-limit-superior]) {
+  [data-content="portfolio"] {
+    [data-content="showcase"] {
+      margin-bottom: 1rem;
+    }
+  }
+}
