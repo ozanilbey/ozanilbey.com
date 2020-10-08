@@ -11,7 +11,7 @@
       overflow: hidden;
       position: relative;
       padding: 4%;
-      padding-bottom: 0;
+      padding-bottom: 0 !important;
       font-size: 1rem;
       word-wrap: break-word;
       transform: scale(1) !important;
@@ -46,13 +46,12 @@
         position: relative;
         transition: top .35s ease;
         &.visual {
+          display: flex;
+          align-items: flex-end;
           position: relative;
           top: 1.25em;
           height: auto;
           margin-right: 4%;
-          border-radius: .25em;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
           & > * {
             width: 100%;
           }
