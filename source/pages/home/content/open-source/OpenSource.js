@@ -36,7 +36,7 @@ function OpenSource () {
         <p className="lead">I like to work on <strong>open source projects</strong>. Sometimes I publish my own on <Link type="external" href="https://github.com/ozanilbey">my GitHub</Link>.</p>
       </Container>
       <Container>
-        <Stack>
+        <Stack willWrap>
           <Stack.Item
             sizeS={12}
             sizeM={6}>
