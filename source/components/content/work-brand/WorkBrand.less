@@ -7,3 +7,43 @@
     letter-spacing: -0.025em;
   }
 }
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* 1024 ≤ Window Width < 1279 */
+@media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
+  [data-content="work-brand"] {
+    & > .label {
+      font-size: 1.125em;
+    }
+  }
+}
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  [data-content="work-brand"] {
+    & > .label {
+      font-size: 1.2em;
+    }
+  }
+}
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
+  [data-content="work-brand"] {
+    & > .label {
+      font-size: 1.25em;
+    }
+  }
+}
+
+/* Window Width < 480 */
+@media only screen and (max-width: @breakpoints[xsmall-limit-superior]) {
+  [data-content="work-brand"] {
+    & > .label {
+      font-size: 1.375em;
+    }
+  }
+}
