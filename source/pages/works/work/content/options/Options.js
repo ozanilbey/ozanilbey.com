@@ -34,7 +34,7 @@ function Options (props) {
           <Stack.Item
             sizeS={12}
             sizeM={props.recommendation ? 6 : 12}>
-            <div>
+            <div className="wrapper">
               <strong className="title">Share project</strong>
               <ul className="content">
                 {sharingOptions.map(option =>
