@@ -1,5 +1,5 @@
 // Modules
-import React from 'react'
+import React, { isValidElement } from 'react'
 import PropTypes from 'prop-types'
 
 // Components
@@ -13,13 +13,20 @@ import './Excerpt.less'
 // Subcontent: Work > Excerpt
 function Excerpt (props) {
   // Data
-  const excerpt = {
-    year: typeof props.data.year === 'number' ? props.data.year : props.data.year.join('–'),
-    tags: props.data.tags.join(', ')
-  }
+  const excerpt = {}
+  if (props.data.year) excerpt.year = typeof props.data.year === 'number' ? props.data.year.toString() : props.data.year.join('–')
+  if (props.data.role) excerpt.role = props.data.role
+  if (props.data.tags) excerpt.tags = props.data.tags
   if (props.data.client) {
     excerpt.client = props.data.client.fullName || props.data.client.name
     if (props.data.client.link) excerpt.client = <Link type="external" href={`//${props.data.client.link}`}>{excerpt.client}</Link>
+  }
+  if (props.data.isLive) excerpt.demo = <Link type="external" href={`//${props.data.link}`}>See it live</Link>
+
+  // Methods
+  function renderValue (data) {
+    if (typeof data === 'string' || isValidElement(data)) return <dd>{data}</dd>
+    return data.map((item, index) => <dd key={index}>{item}</dd>)
   }
 
   // Render
@@ -28,27 +35,14 @@ function Excerpt (props) {
       name="excerpt"
       data-content="excerpt">
       <Container isBlockLayout>
-        <ul>
-          {Object.keys(excerpt).map(key =>
-            <li
-              key={key}
-              className={key}>
-              <strong>{key}</strong>
-              {excerpt[key]}
-            </li>
-          )}
-          {props.data.isLive &&
-            <li>
-              <strong>demo</strong>
-              <Link
-                type="external"
-                className="live"
-                href={`//${props.data.link}`}>
-                See it live
-              </Link>
-            </li>
-          }
-        </ul>
+        {Object.keys(excerpt).map(key =>
+          <dl
+            key={key}
+            className={key}>
+            <dt>{key}</dt>
+            {renderValue(excerpt[key])}
+          </dl>
+        )}
       </Container>
     </Page.Section>
   )
