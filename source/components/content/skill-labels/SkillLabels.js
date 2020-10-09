@@ -15,17 +15,18 @@ function SkillLabels (props) {
     <div data-content="skill-labels">
       <ul className="labels">
         {props.data.map((skill, index) =>
-          <li key={index}>
-            <dl>
-              <dt>{skill.name}</dt>
+          <li
+            key={index}
+            data-label={skill.name}>
+            <div className="items">
               {skill.items && skill.items.map((item, index) =>
-                <dd
+                <span
                   key={index}
                   data-level={LEVEL_OPTIONS[item.level]}>
                   {item.name}
-                </dd>
+                </span>
               )}
-            </dl>
+            </div>
           </li>
         )}
       </ul>

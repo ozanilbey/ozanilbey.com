@@ -2,11 +2,11 @@
   display: block;
   & > .labels {
     & > li {
-      display: inline-block;
+      display: inline-flex;
       margin-right: .5rem;
       margin-bottom: .5rem;
-      padding: .5em;
-      font-size: .9rem;
+      padding: .5rem;
+      font-weight: 500;
       line-height: 1rem;
       vertical-align: middle;
       border-radius: .5rem;
@@ -14,30 +14,25 @@
       background-color: var(--foreground-color);
       cursor: default;
       &:before {
-        display: none;
-      }
-      & > dl {
-        display: block;
+        content: attr(data-label);
+        display: inline-block;
         width: auto;
-        height: 1rem;
-        font-weight: 500;
-        line-height: 1rem;
-        & > dt {
-          display: inline-block;
-          width: auto;
-          height: inherit;
-          vertical-align: top;
-          & + dd {
-            margin-left: 10px;
-          }
-        }
-        & > dd {
+        height: inherit;
+        font-size: .875rem;
+        vertical-align: top;
+        white-space: pre;
+      }
+      & > .items {
+        font-size: .75rem;
+        margin-left: .375rem;
+        margin-bottom: -.25rem;
+        & > span {
           display: inline-block;
           width: auto;
           height: 1rem;
-          margin-right: .15rem;
+          margin-right: .25rem;
+          margin-bottom: .25rem;
           padding: 0 .1875rem;
-          font-size: .75rem;
           line-height: 1rem;
           vertical-align: top;
           border-radius: .1rem;
