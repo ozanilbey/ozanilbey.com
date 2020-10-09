@@ -1,5 +1,5 @@
 [data-content="excerpt"] {
-  padding: 1.5rem 0 !important;
+  padding: 1rem 0 !important;
   &:before {
     content: "";
     position: absolute;
@@ -9,27 +9,61 @@
     height: 200vh; // High enough to cover upper side
     background-color: var(--ground-alternative-color);
   }
-  ul {
-    li {
-      display: inline-block;
-      position: relative;
-      margin-right: 2rem;
+  dl {
+    display: inline-block;
+    position: relative;
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 125%;
+    text-align: left;
+    vertical-align: top;
+    &:last-child {
+      margin-right: 0;
+    }
+    dt {
+      opacity: .375;
+      display: block;
+      font-size: .75em;
+      font-weight: 700;
       text-align: left;
-      vertical-align: top;
-      &:last-child {
-        margin-right: 0;
-      }
-      &.tags {
-        max-width: 40%;
-      }
-      strong {
-        opacity: .25;
-        display: block;
-        font-size: .8rem;
-        font-weight: 700;
-        text-align: left;
-        text-transform: uppercase;
-      }
+      text-transform: uppercase;
+    }
+    dd {
+      font-size: .875em;
+    }
+  }
+}
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
+  [data-content="excerpt"] {
+    dl {
+      margin: .875rem;
+      font-size: .975rem;
+    }
+  }
+}
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
+  [data-content="excerpt"] {
+    dl {
+      margin: .75rem;
+      font-size: .95rem;
+    }
+  }
+}
+
+/* Window Width < 480 */
+@media only screen and (max-width: @breakpoints[xsmall-limit-superior]) {
+  [data-content="excerpt"] {
+    dl {
+      margin: .625rem;
+      font-size: .925rem;
     }
   }
 }
