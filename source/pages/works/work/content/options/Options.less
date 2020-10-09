@@ -56,3 +56,45 @@
     }
   }
 }
+
+// Responsive
+
+@import '~/styles/media.less';
+
+/* Window Width < 768 */
+@media only screen and (max-width: @breakpoints[small-limit-superior]) {
+  [data-content="options"] {
+    padding: 1.5rem 0 !important;
+    [data-layout="stack"] {
+      & > [data-layout="stack-item"] {
+        margin-bottom: .5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        & > * {
+          margin: 0 auto;
+          text-align: center !important;
+          &:last-child {
+            padding: 0;
+            &:before, &:after {
+              display: none;
+            }
+            & > .content {
+              right: unset;
+              margin-top: .375rem;
+              [data-interface="link"] {
+                [data-interface="icon"] {
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  &[data-icon="linkedin"] {
+                    width: 1.375rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
