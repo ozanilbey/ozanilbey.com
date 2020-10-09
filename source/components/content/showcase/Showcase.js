@@ -53,12 +53,8 @@ function Showcase (props) {
                 className="text"
                 style={{ color: item.colors.secondary && rgbColor(item.colors.secondary) }}>
                 <ul className="description">
-                  {item.type === 'project'
-                    ? <li data-label="Description">{item.description}</li>
-                    : <li data-label="Client">
-                      {item.type === 'work' ? item.client.name : 'Various Clients'}
-                    </li>
-                  }
+                  {item.type === 'project' && <li data-label="Description">{item.description}</li>}
+                  {item.client && <li data-label="Client">{item.client.fullName || item.client.name}</li>}
                   <li data-label="Year">
                     {typeof item.year === 'number' ? item.year : item.year.join('–')}
                   </li>
