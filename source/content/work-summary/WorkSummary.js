@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Page from '~/components/layout/page/Page'
 
 // Subcontent
+import Brush from './items/Brush'
 import Cardz from './items/Cardz'
 import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
@@ -19,6 +20,8 @@ function WorkSummary (props) {
   // Methods
   function renderSummary () {
     switch (props.identifier) {
+      case 'brush':
+        return <Brush />
       case 'cardz':
         return <Cardz />
       case 'favogue':
