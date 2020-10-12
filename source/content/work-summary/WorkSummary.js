@@ -30,6 +30,7 @@ import MegaPosters from './items/MegaPosters'
 import ODTUGGTCorporateIdentity from './items/ODTUGGTCorporateIdentity'
 import OkeyExtraAdsHacivatKaragoz from './items/OkeyExtraAdsHacivatKaragoz'
 import OkeyExtraAdsHandDrawn from './items/OkeyExtraAdsHandDrawn'
+import OkeyExtraAdsReactions from './items/OkeyExtraAdsReactions'
 import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApplication'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
@@ -94,6 +95,8 @@ function WorkSummary (props) {
         return <OkeyExtraAdsHacivatKaragoz />
       case 'okey-extra-ads-hand-drawn':
         return <OkeyExtraAdsHandDrawn />
+      case 'okey-extra-ads-reactions':
+        return <OkeyExtraAdsReactions />
       case 'ottoman-music-archive-web-application':
         return <OttomanMusicArchiveWebApplication />
       case 'piccture':
