@@ -38,6 +38,7 @@ import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApp
 import Piccture from './items/Piccture'
 import PokerExtraAdsMixed from './items/PokerExtraAdsMixed'
 import PosterCollection from './items/PosterCollection'
+import RakkipFacebookPage from './items/RakkipFacebookPage'
 import RockSenligiVisuals from './items/RockSenligiVisuals'
 import TekelOkeyFacebookPage from './items/TekelOkeyFacebookPage'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
@@ -116,6 +117,8 @@ function WorkSummary (props) {
         return <PokerExtraAdsMixed />
       case 'poster-collection':
         return <PosterCollection />
+      case 'rakkip-facebook-page':
+        return <RakkipFacebookPage />
       case 'rock-senligi-visuals':
         return <RockSenligiVisuals />
       case 'tekel-okey-facebook-page':
