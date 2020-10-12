@@ -8,6 +8,7 @@ import Page from '~/components/layout/page/Page'
 // Subcontent
 import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
+import Piccture from './items/Piccture'
 
 // Style
 import './WorkSummary.less'
@@ -21,6 +22,8 @@ function WorkSummary (props) {
         return <Favogue />
       case 'fihrist':
         return <Fihrist />
+      case 'piccture':
+        return <Piccture />
       default:
         return null
     }
