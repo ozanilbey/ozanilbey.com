@@ -13,6 +13,7 @@ import Fihrist from './items/Fihrist'
 import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
+import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApplication'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
@@ -41,6 +42,8 @@ function WorkSummary (props) {
         return <InvportWebApplication />
       case 'logo-collection':
         return <LogoCollection />
+      case 'ottoman-music-archive-web-application':
+        return <OttomanMusicArchiveWebApplication />
       case 'piccture':
         return <Piccture />
       case 'poster-collection':
