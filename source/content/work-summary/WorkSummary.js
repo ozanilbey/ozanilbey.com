@@ -10,6 +10,7 @@ import Brush from './items/Brush'
 import Cardz from './items/Cardz'
 import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
+import LogoCollection from './items/LogoCollection'
 import Piccture from './items/Piccture'
 
 // Style
@@ -28,6 +29,8 @@ function WorkSummary (props) {
         return <Favogue />
       case 'fihrist':
         return <Fihrist />
+      case 'logo-collection':
+        return <LogoCollection />
       case 'piccture':
         return <Piccture />
       default:
