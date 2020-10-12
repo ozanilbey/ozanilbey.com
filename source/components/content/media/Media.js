@@ -24,7 +24,7 @@ function Media (props) {
   // Methods
   function getFilters () {
     const filters = []
-    if (props.width || props.height) filters.push('c_limit')
+    if (props.width || props.height) filters.push(props.willCrop ? 'c_lfill,g_north' : 'c_limit')
     if (props.width) filters.push(`w_${props.width}`)
     if (props.height) filters.push(`h_${props.height}`)
     return filters.length > 0 ? `${filters.join(',')}` : ''
@@ -57,7 +57,8 @@ Media.propTypes = {
   height: PropTypes.number,
   source: PropTypes.string,
   type: PropTypes.oneOf(MEDIA_TYPE_OPTIONS),
-  width: PropTypes.number
+  width: PropTypes.number,
+  willCrop: PropTypes.bool
 }
 
 // Export
