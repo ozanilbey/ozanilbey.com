@@ -29,6 +29,7 @@ import MarufCorporateIdentity from './items/MarufCorporateIdentity'
 import MegaPosters from './items/MegaPosters'
 import ODTUGGTCorporateIdentity from './items/ODTUGGTCorporateIdentity'
 import OkeyExtraAdsHacivatKaragoz from './items/OkeyExtraAdsHacivatKaragoz'
+import OkeyExtraAdsHandDrawn from './items/OkeyExtraAdsHandDrawn'
 import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApplication'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
@@ -91,6 +92,8 @@ function WorkSummary (props) {
         return <ODTUGGTCorporateIdentity />
       case 'okey-extra-ads-hacivat-karagoz':
         return <OkeyExtraAdsHacivatKaragoz />
+      case 'okey-extra-ads-hand-drawn':
+        return <OkeyExtraAdsHandDrawn />
       case 'ottoman-music-archive-web-application':
         return <OttomanMusicArchiveWebApplication />
       case 'piccture':
