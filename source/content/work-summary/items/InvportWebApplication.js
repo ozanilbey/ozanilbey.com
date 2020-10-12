@@ -12,7 +12,7 @@ const InvportWebApplication = () => (
     <Container isBlockLayout>
       <Media type="image" width={864} source="/invport-web-application/teaser.png" />
       <p className="lead">invport is an <strong>idea crowdsourcing platform</strong> aiming to start and develop innovative industrial projects. It is built with the purpose of unveiling the advantages of university-industry collaboration.</p>
-      <p className="lead">I had designed <strong>a clean and responsive user interface</strong> and build an HTML, CSS, and jQuery front end for invport <strong>in 2017</strong>. I had also provided icon sets representing each industry.</p>
+      <p className="lead">I had designed <strong>a clean and responsive user interface</strong> and build an HTML, CSS, and jQuery frontend for invport <strong>in 2017</strong>. I had also provided icon sets representing each industry.</p>
     </Container>
     <Container isBlockLayout>
       <Heading rank={2}>Desktop Screens</Heading>

@@ -13,7 +13,7 @@ const WaplogWebApplication = () => (
     <Container isBlockLayout>
       <Media type="image" width={864} source="/waplog-web-application/teaser.png" />
       <p className="lead">Waplog is a <strong>dating platform</strong> for people who are on a quest to find their soulmate. It has <strong>over 90 million members</strong> from more than 50 countries. It provides over 20 universal languages.</p>
-      <p className="lead">I had designed an attractive user interface and crafted the front end for Waplog Web <strong>in 2012</strong>.</p>
+      <p className="lead">I had designed an attractive user interface and crafted a frontend for Waplog Web <strong>in 2012</strong>.</p>
       <p className="lead">I had also worked on user interface design of <Link type="regular" to="/works/waplog-mobile-application">Waplog Mobile</Link> (mobile website + iOS app + Android app) in 2010.</p>
     </Container>
     <Container isBlockLayout>

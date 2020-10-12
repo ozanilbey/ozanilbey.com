@@ -12,7 +12,7 @@ const OttomanMusicArchiveWebApplication = () => (
     <Container isBlockLayout>
       <Media type="image" width={864} source="/ottoman-music-archive-web-application/teaser.png" />
       <p className="lead">TRT Külliyat is an <strong>online note archive</strong> of Ottoman music, owned and operated by TRT (Turkish National Television).</p>
-      <p className="lead">I had designed a user interface for the project <strong>in 2012</strong>. The interface includes many oriental design details to reflect the Ottoman Culture properly. I had also developed the front end of the web application.</p>
+      <p className="lead">I had designed a user interface for the project <strong>in 2012</strong>. The interface includes many oriental design details to reflect the Ottoman Culture properly. I had also developed the frontend of the web application.</p>
     </Container>
     <Container isBlockLayout>
       <Heading rank={2}>Screens</Heading>
