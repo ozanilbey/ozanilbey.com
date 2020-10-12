@@ -32,6 +32,7 @@ import ODTUGGTCorporateIdentity from './items/ODTUGGTCorporateIdentity'
 import OkeyExtraAdsHacivatKaragoz from './items/OkeyExtraAdsHacivatKaragoz'
 import OkeyExtraAdsHandDrawn from './items/OkeyExtraAdsHandDrawn'
 import OkeyExtraAdsReactions from './items/OkeyExtraAdsReactions'
+import OkeyExtraFacebookPage from './items/OkeyExtraFacebookPage'
 import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApplication'
 import Piccture from './items/Piccture'
 import PokerExtraAdsMixed from './items/PokerExtraAdsMixed'
@@ -101,6 +102,8 @@ function WorkSummary (props) {
         return <OkeyExtraAdsHandDrawn />
       case 'okey-extra-ads-reactions':
         return <OkeyExtraAdsReactions />
+      case 'okey-extra-facebook-page':
+        return <OkeyExtraFacebookPage />
       case 'ottoman-music-archive-web-application':
         return <OttomanMusicArchiveWebApplication />
       case 'piccture':
