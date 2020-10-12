@@ -13,6 +13,7 @@ import Fihrist from './items/Fihrist'
 import LogoCollection from './items/LogoCollection'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
+import WebsiteCollection from './items/WebsiteCollection'
 
 // Style
 import './WorkSummary.less'
@@ -36,6 +37,8 @@ function WorkSummary (props) {
         return <Piccture />
       case 'poster-collection':
         return <PosterCollection />
+      case 'website-collection':
+        return <WebsiteCollection />
       default:
         return null
     }
