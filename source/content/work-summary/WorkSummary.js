@@ -16,6 +16,7 @@ import AtomWebsite from './items/AtomWebsite'
 import BoraCorporateIdentity from './items/BoraCorporateIdentity'
 import Brush from './items/Brush'
 import CanOkeyAdsYourMove from './items/CanOkeyAdsYourMove'
+import CanOkeyFacebookPage from './items/CanOkeyFacebookPage'
 import Cardz from './items/Cardz'
 import EsetronCorporateIdentity from './items/EsetronCorporateIdentity'
 import Favogue from './items/Favogue'
@@ -70,6 +71,8 @@ function WorkSummary (props) {
         return <Brush />
       case 'can-okey-ads-your-move':
         return <CanOkeyAdsYourMove />
+      case 'can-okey-facebook-page':
+        return <CanOkeyFacebookPage />
       case 'cardz':
         return <Cardz />
       case 'esetron-corporate-identity':
