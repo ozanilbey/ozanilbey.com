@@ -8,6 +8,7 @@ import Page from '~/components/layout/page/Page'
 // Subcontent
 import _101ExtraAdsGlow from './items/101ExtraAdsGlow'
 import _101ExtraAdsMixed from './items/101ExtraAdsMixed'
+import _101ExtraAdsPicker from './items/101ExtraAdsPicker'
 import AlkaProjeWebsite from './items/AlkaProjeWebsite'
 import AtomWebsite from './items/AtomWebsite'
 import BoraCorporateIdentity from './items/BoraCorporateIdentity'
@@ -45,6 +46,8 @@ function WorkSummary (props) {
         return <_101ExtraAdsGlow />
       case '101-extra-ads-mixed':
         return <_101ExtraAdsMixed />
+      case '101-extra-ads-picker':
+        return <_101ExtraAdsPicker />
       case 'alka-proje-website':
         return <AlkaProjeWebsite />
       case 'atom-website':
