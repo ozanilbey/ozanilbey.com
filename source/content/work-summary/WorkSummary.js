@@ -14,6 +14,7 @@ import AlkaProjeWebsite from './items/AlkaProjeWebsite'
 import AtomWebsite from './items/AtomWebsite'
 import BoraCorporateIdentity from './items/BoraCorporateIdentity'
 import Brush from './items/Brush'
+import CanOkeyAdsYourMove from './items/CanOkeyAdsYourMove'
 import Cardz from './items/Cardz'
 import EsetronCorporateIdentity from './items/EsetronCorporateIdentity'
 import Favogue from './items/Favogue'
@@ -59,6 +60,8 @@ function WorkSummary (props) {
         return <BoraCorporateIdentity />
       case 'brush':
         return <Brush />
+      case 'can-okey-ads-your-move':
+        return <CanOkeyAdsYourMove />
       case 'cardz':
         return <Cardz />
       case 'esetron-corporate-identity':
