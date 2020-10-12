@@ -48,7 +48,8 @@ function useWork (slug) {
     }
     if (checkIfClient()) {
       controller = document.querySelector('[data-model="controller"]')
-      navigation = document.querySelector('[data-model="navigation"]')
+      navigation = document.querySelector('[data-model="navigation"] .base')
+
       if (work && controller && navigation) setColors(work.colors)
     }
     return () => {
