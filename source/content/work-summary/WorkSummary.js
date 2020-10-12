@@ -11,6 +11,7 @@ import AtomWebsite from './items/AtomWebsite'
 import BoraCorporateIdentity from './items/BoraCorporateIdentity'
 import Brush from './items/Brush'
 import Cardz from './items/Cardz'
+import EsetronCorporateIdentity from './items/EsetronCorporateIdentity'
 import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
 import FlashtechWebApplicationUI from './items/FlashtechWebApplicationUI'
@@ -42,6 +43,8 @@ function WorkSummary (props) {
         return <Brush />
       case 'cardz':
         return <Cardz />
+      case 'esetron-corporate-identity':
+        return <EsetronCorporateIdentity />
       case 'favogue':
         return <Favogue />
       case 'fihrist':
