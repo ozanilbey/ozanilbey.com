@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Page from '~/components/layout/page/Page'
 
 // Subcontent
+import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
 
 // Style
@@ -16,6 +17,8 @@ function WorkSummary (props) {
   // Methods
   function renderSummary () {
     switch (props.identifier) {
+      case 'favogue':
+        return <Favogue />
       case 'fihrist':
         return <Fihrist />
       default:
