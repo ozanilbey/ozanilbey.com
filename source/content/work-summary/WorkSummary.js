@@ -25,6 +25,7 @@ import ODTUGGTCorporateIdentity from './items/ODTUGGTCorporateIdentity'
 import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApplication'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
+import RockSenligiVisuals from './items/RockSenligiVisuals'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
 import WaplogWebApplication from './items/WaplogWebApplication'
 import WebsiteCollection from './items/WebsiteCollection'
@@ -75,6 +76,8 @@ function WorkSummary (props) {
         return <Piccture />
       case 'poster-collection':
         return <PosterCollection />
+      case 'rock-senligi-visuals':
+        return <RockSenligiVisuals />
       case 'waplog-mobile-application':
         return <WaplogMobileApplication />
       case 'waplog-web-application':
