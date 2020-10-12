@@ -1,5 +1,5 @@
 // Modules
-import React, { useState, useEffect, cloneElement } from 'react'
+import React, { useState, useEffect, cloneElement, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 // Sub-components
@@ -16,7 +16,7 @@ import { INPUT_TYPE_OPTIONS } from '~/constants/options'
 import './Form.less'
 
 // Component: Interface > Form
-const Form = props => {
+const Form = forwardRef((props, ref) => {
   // Data
   const attributes = getAttributes(props, ['style', 'data', 'aria'])
 
@@ -56,9 +56,9 @@ const Form = props => {
       if (props.onSubmit) {
         props.onSubmit(values, (error, response) => {
           setIsLoading(false)
-          error && setErrors([response])
           if (error) {
-            if (props.onError) props.onError(response)
+            setErrors([response])
+            props.onError && props.onError([response])
             if (props.onSubmitError) props.onSubmitError(response)
           } else {
             if (props.onSubmitSuccess) props.onSubmitSuccess(response)
@@ -88,7 +88,7 @@ const Form = props => {
     }
     React.Children.map(props.children, iterateValidator)
     setErrors(formValidationErrors)
-    props.onError && props.onError(formValidationErrors)
+    formValidationErrors.length > 0 && props.onError && props.onError(formValidationErrors)
     return isFormValidated
   }
   function evaluateInput (reference, value, validator) {
@@ -178,6 +178,7 @@ const Form = props => {
     <form
       {...attributes}
       noValidate
+      ref={ref}
       data-interface="form"
       disabled={props.isDisabled}
       onSubmit={handleSubmit}
@@ -200,7 +201,7 @@ const Form = props => {
       <div className="content">{renderChildren(props.children)}</div>
     </form>
   )
-}
+})
 
 // Properties
 Form.propTypes = {
@@ -226,6 +227,7 @@ Form.defaultProps = {
   isLabelAllowed: true,
   timeoutBeforeReset: 0
 }
+Form.displayName = 'Form'
 Form.Field = Field
 Form.Field.displayName = 'Form.Field'
 Form.Input = Input
