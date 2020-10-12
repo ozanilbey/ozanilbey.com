@@ -20,8 +20,8 @@ function useWork (slug) {
 
   // Methods
   function checkColorExtremity (rgb) {
-    const lightness = rgb.reduce((a, b) => a + b) / (255 * 3)
-    if (lightness < 0.25) return 'dark'
+    const lightness = rgb.reduce((x, y) => x + y) / (255 * 3)
+    if (lightness < 0.225) return 'dark'
     else if (lightness > 0.75) return 'light'
   }
 
