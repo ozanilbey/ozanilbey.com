@@ -15,6 +15,7 @@ import EsetronCorporateIdentity from './items/EsetronCorporateIdentity'
 import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
 import FlashtechWebApplicationUI from './items/FlashtechWebApplicationUI'
+import FraktalProjeCorporateIdentity from './items/FraktalProjeCorporateIdentity'
 import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
@@ -53,6 +54,8 @@ function WorkSummary (props) {
         return <Fihrist />
       case 'flashtech-web-application-ui':
         return <FlashtechWebApplicationUI />
+      case 'fraktal-proje-corporate-identity':
+        return <FraktalProjeCorporateIdentity />
       case 'ikort-mobile-application':
         return <IkortMobileApplication />
       case 'invport-web-application':
