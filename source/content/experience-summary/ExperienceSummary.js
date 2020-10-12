@@ -8,6 +8,7 @@ import MiddleEastTechnicalUniversity from './items/education/MiddleEastTechnical
 import DigitoyGames from './items/employment/DigitoyGames'
 import FraktalProje from './items/employment/FraktalProje'
 import Freelance from './items/employment/Freelance'
+import Groups from './items/employment/Groups'
 import LabrisNetworks from './items/employment/LabrisNetworks'
 import Kodobur from './items/employment/Kodobur'
 import Semantica from './items/employment/Semantica'
@@ -49,6 +50,8 @@ function ExperienceSummary (props) {
         return <FraktalProje />
       case 'freelance':
         return <Freelance />
+      case 'grou-ps':
+        return <Groups />
       case 'kodobur':
         return <Kodobur />
       case 'labris-networks':
