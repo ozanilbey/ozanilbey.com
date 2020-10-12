@@ -8,6 +8,7 @@ import Page from '~/components/layout/page/Page'
 // Subcontent
 import AlkaProjeWebsite from './items/AlkaProjeWebsite'
 import AtomWebsite from './items/AtomWebsite'
+import BoraCorporateIdentity from './items/BoraCorporateIdentity'
 import Brush from './items/Brush'
 import Cardz from './items/Cardz'
 import Favogue from './items/Favogue'
@@ -35,6 +36,8 @@ function WorkSummary (props) {
         return <AlkaProjeWebsite />
       case 'atom-website':
         return <AtomWebsite />
+      case 'bora-corporate-identity':
+        return <BoraCorporateIdentity />
       case 'brush':
         return <Brush />
       case 'cardz':
