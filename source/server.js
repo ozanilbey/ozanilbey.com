@@ -138,4 +138,6 @@ const port = process.env.PORT || 8000
 server.listen(port, '0.0.0.0', () => {
   // Log that the application is up and running
   console.log(`\nAvailable at :${port}\n`)
+  // Ping application every 25 minutes
+  setInterval(() => http.get('https://ozanilbey-com.herokuapp.com'), 1500000)
 })
