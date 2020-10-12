@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Page from '~/components/layout/page/Page'
 
 // Subcontent
+import AlkaProjeWebsite from './items/AlkaProjeWebsite'
 import AtomWebsite from './items/AtomWebsite'
 import Brush from './items/Brush'
 import Cardz from './items/Cardz'
@@ -30,6 +31,8 @@ function WorkSummary (props) {
   // Methods
   function renderSummary () {
     switch (props.identifier) {
+      case 'alka-proje-website':
+        return <AlkaProjeWebsite />
       case 'atom-website':
         return <AtomWebsite />
       case 'brush':
