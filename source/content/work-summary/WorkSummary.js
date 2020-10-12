@@ -39,6 +39,7 @@ import Piccture from './items/Piccture'
 import PokerExtraAdsMixed from './items/PokerExtraAdsMixed'
 import PosterCollection from './items/PosterCollection'
 import RockSenligiVisuals from './items/RockSenligiVisuals'
+import TekelOkeyFacebookPage from './items/TekelOkeyFacebookPage'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
 import WaplogWebApplication from './items/WaplogWebApplication'
 import WebsiteCollection from './items/WebsiteCollection'
@@ -117,6 +118,8 @@ function WorkSummary (props) {
         return <PosterCollection />
       case 'rock-senligi-visuals':
         return <RockSenligiVisuals />
+      case 'tekel-okey-facebook-page':
+        return <TekelOkeyFacebookPage />
       case 'waplog-mobile-application':
         return <WaplogMobileApplication />
       case 'waplog-web-application':
