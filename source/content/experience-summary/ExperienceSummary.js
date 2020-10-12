@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import AnadoluUniversity from './items/education/AnadoluUniversity'
 import MiddleEastTechnicalUniversity from './items/education/MiddleEastTechnicalUniversity'
 import DigitoyGames from './items/employment/DigitoyGames'
+import DocuAI from './items/employment/DocuAI'
 import FraktalProje from './items/employment/FraktalProje'
 import Freelance from './items/employment/Freelance'
 import Groups from './items/employment/Groups'
@@ -46,6 +47,8 @@ function ExperienceSummary (props) {
     switch (props.identifier) {
       case 'digitoy-games':
         return <DigitoyGames />
+      case 'docu-ai':
+        return <DocuAI />
       case 'fraktal-proje':
         return <FraktalProje />
       case 'freelance':
