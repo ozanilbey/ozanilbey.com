@@ -14,6 +14,7 @@ import LogoCollection from './items/LogoCollection'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
+import WaplogWebApplication from './items/WaplogWebApplication'
 import WebsiteCollection from './items/WebsiteCollection'
 
 // Style
@@ -40,6 +41,8 @@ function WorkSummary (props) {
         return <PosterCollection />
       case 'waplog-mobile-application':
         return <WaplogMobileApplication />
+      case 'waplog-web-application':
+        return <WaplogWebApplication />
       case 'website-collection':
         return <WebsiteCollection />
       default:
