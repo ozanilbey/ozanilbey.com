@@ -12,6 +12,7 @@ import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
 import LogoCollection from './items/LogoCollection'
 import Piccture from './items/Piccture'
+import PosterCollection from './items/PosterCollection'
 
 // Style
 import './WorkSummary.less'
@@ -33,6 +34,8 @@ function WorkSummary (props) {
         return <LogoCollection />
       case 'piccture':
         return <Piccture />
+      case 'poster-collection':
+        return <PosterCollection />
       default:
         return null
     }
