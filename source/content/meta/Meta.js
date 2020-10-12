@@ -48,8 +48,6 @@ function Meta (props) {
       <title>{title}</title>
       {/* URL */}
       <link rel="canonical" href={url} />
-      {/* Favicon */}
-      <link rel="icon" type="image/png" href="/images/identity/icon.png" />
       {/* Default meta data */}
       <meta name="author" content="Ozan İlbey Yılmaz" />
       <meta name="description" content={description} />
