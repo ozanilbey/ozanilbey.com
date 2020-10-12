@@ -18,6 +18,7 @@ import FlashtechWebApplicationUI from './items/FlashtechWebApplicationUI'
 import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
+import MarufCorporateIdentity from './items/MarufCorporateIdentity'
 import OttomanMusicArchiveWebApplication from './items/OttomanMusicArchiveWebApplication'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
@@ -57,6 +58,8 @@ function WorkSummary (props) {
         return <InvportWebApplication />
       case 'logo-collection':
         return <LogoCollection />
+      case 'maruf-corporate-identity':
+        return <MarufCorporateIdentity />
       case 'ottoman-music-archive-web-application':
         return <OttomanMusicArchiveWebApplication />
       case 'piccture':
