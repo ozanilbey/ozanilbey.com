@@ -10,6 +10,7 @@ import Brush from './items/Brush'
 import Cardz from './items/Cardz'
 import Favogue from './items/Favogue'
 import Fihrist from './items/Fihrist'
+import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
 import Piccture from './items/Piccture'
@@ -34,6 +35,8 @@ function WorkSummary (props) {
         return <Favogue />
       case 'fihrist':
         return <Fihrist />
+      case 'ikort-mobile-application':
+        return <IkortMobileApplication />
       case 'invport-web-application':
         return <InvportWebApplication />
       case 'logo-collection':
