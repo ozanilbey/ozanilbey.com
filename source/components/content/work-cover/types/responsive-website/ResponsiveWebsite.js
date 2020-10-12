@@ -17,9 +17,11 @@ const ResponsiveWebsite = props => (
       </div>
       <div className="screen">
         <Media
+          willCrop
           type="image"
           width={Math.ceil(35 * props.unitSize)}
-          source={`/${props.data.slug}/cover/01.png`} />
+          height={Math.ceil(23 * props.unitSize)}
+          source={`/${props.data.slug}/cover/responsive-website-desktop.png`} />
       </div>
     </div>
     <div className="tablet">
@@ -33,9 +35,11 @@ const ResponsiveWebsite = props => (
       </div>
       <div className="screen">
         <Media
+          willCrop
           type="image"
           width={Math.ceil(23 * props.unitSize)}
-          source={`/${props.data.slug}/cover/02.png`} />
+          height={Math.ceil(27.5 * props.unitSize)}
+          source={`/${props.data.slug}/cover/responsive-website-tablet.png`} />
       </div>
     </div>
     <div className="phone">
@@ -49,9 +53,11 @@ const ResponsiveWebsite = props => (
       </div>
       <div className="screen">
         <Media
+          willCrop
           type="image"
           width={Math.ceil(12.5 * props.unitSize)}
-          source={`/${props.data.slug}/cover/03.png`} />
+          height={Math.ceil(18.5 * props.unitSize)}
+          source={`/${props.data.slug}/cover/responsive-website-phone.png`} />
       </div>
     </div>
   </>

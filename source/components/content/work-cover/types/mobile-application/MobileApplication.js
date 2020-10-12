@@ -4,14 +4,13 @@ import PropTypes from 'prop-types'
 
 // Components
 import Media from '~/components/content/media/Media'
-
 // Style
 import './MobileApplication.less'
 
 // Component: Content > Work Cover > Mobile Application (Type)
 const MobileApplication = props => (
   <>
-    {['center', 'left', 'right'].map((position, index) =>
+    {['left', 'center', 'right'].map(position =>
       <div
         key={position}
         className={`${position} phone`}>
@@ -25,9 +24,11 @@ const MobileApplication = props => (
         </div>
         <div className="screen">
           <Media
+            willCrop
             type="image"
             width={Math.ceil(19 * props.unitSize)}
-            source={`/${props.data.slug}/cover/0${index + 1}.png`} />
+            height={Math.ceil(28 * props.unitSize)}
+            source={`/${props.data.slug}/cover/mobile-application-${position}.png`} />
         </div>
       </div>
     )}

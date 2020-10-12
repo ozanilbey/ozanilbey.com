@@ -29,9 +29,11 @@ const SocialMedia = props => (
       </div>
       <div className="content">
         <Media
+          willCrop
           type="image"
           width={Math.ceil(45.5 * props.unitSize)}
-          source={`/${props.data.slug}/cover/01.png`} />
+          height={Math.ceil(25 * props.unitSize)}
+          source={`/${props.data.slug}/cover/social-media.png`} />
       </div>
     </div>
   </>

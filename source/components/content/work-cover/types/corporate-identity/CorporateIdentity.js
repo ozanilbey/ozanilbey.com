@@ -13,29 +13,33 @@ const CorporateIdentity = props => (
   <>
     <div className="letterhead">
       <Media
+        willCrop
         type="image"
         width={Math.ceil(24 * props.unitSize)}
-        source={`/${props.data.slug}/cover/01.png`} />
+        height={Math.ceil(30 * props.unitSize)}
+        source={`/${props.data.slug}/cover/corporate-identity-letterhead.png`} />
     </div>
     <div className="folder">
       <Media
+        willCrop
         type="image"
         width={Math.ceil(24 * props.unitSize)}
-        source={`/${props.data.slug}/cover/02.png`} />
+        height={Math.ceil(27 * props.unitSize)}
+        source={`/${props.data.slug}/cover/corporate-identity-folder.png`} />
     </div>
     <div className="others">
       <Media
         type="image"
         width={Math.ceil(24 * props.unitSize)}
-        source={`/${props.data.slug}/cover/03.png`} />
+        source={`/${props.data.slug}/cover/corporate-identity-card.png`} />
       <Media
         type="image"
         width={Math.ceil(24 * props.unitSize)}
-        source={`/${props.data.slug}/cover/04.png`} />
+        source={`/${props.data.slug}/cover/corporate-identity-envelope.png`} />
       <Media
         type="image"
         width={Math.ceil(24 * props.unitSize)}
-        source={`/${props.data.slug}/cover/05.png`} />
+        source={`/${props.data.slug}/cover/corporate-identity-other.png`} />
     </div>
   </>
 )

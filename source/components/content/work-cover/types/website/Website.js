@@ -23,9 +23,11 @@ const Website = props => (
       </div>
       <div className="site">
         <Media
+          willCrop
           type="image"
           width={Math.ceil(47.75 * props.unitSize)}
-          source={`/${props.data.slug}/cover/01.png`} />
+          height={Math.ceil(28 * props.unitSize)}
+          source={`/${props.data.slug}/cover/website.png`} />
       </div>
     </div>
   </>
