@@ -13,6 +13,7 @@ import Fihrist from './items/Fihrist'
 import LogoCollection from './items/LogoCollection'
 import Piccture from './items/Piccture'
 import PosterCollection from './items/PosterCollection'
+import WaplogMobileApplication from './items/WaplogMobileApplication'
 import WebsiteCollection from './items/WebsiteCollection'
 
 // Style
@@ -37,6 +38,8 @@ function WorkSummary (props) {
         return <Piccture />
       case 'poster-collection':
         return <PosterCollection />
+      case 'waplog-mobile-application':
+        return <WaplogMobileApplication />
       case 'website-collection':
         return <WebsiteCollection />
       default:
