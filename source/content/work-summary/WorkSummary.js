@@ -10,6 +10,7 @@ import _101ExtraAdsGlow from './items/101ExtraAdsGlow'
 import _101ExtraAdsMixed from './items/101ExtraAdsMixed'
 import _101ExtraAdsPicker from './items/101ExtraAdsPicker'
 import _101ExtraAdsRamadan from './items/101ExtraAdsRamadan'
+import _101ExtraFacebookPage from './items/101ExtraFacebookPage'
 import AlkaProjeWebsite from './items/AlkaProjeWebsite'
 import AtomWebsite from './items/AtomWebsite'
 import BoraCorporateIdentity from './items/BoraCorporateIdentity'
@@ -56,6 +57,8 @@ function WorkSummary (props) {
         return <_101ExtraAdsPicker />
       case '101-extra-ads-ramadan':
         return <_101ExtraAdsRamadan />
+      case '101-extra-facebook-page':
+        return <_101ExtraFacebookPage />
       case 'alka-proje-website':
         return <AlkaProjeWebsite />
       case 'atom-website':
