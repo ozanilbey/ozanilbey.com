@@ -1,5 +1,5 @@
 // Modules
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // Components
 import Page from '~/components/layout/page/Page'
@@ -9,7 +9,7 @@ import Form from '~/components/interface/form/Form'
 import Heading from '~/components/type/heading/Heading'
 
 // Helpers
-import { checkIfClient } from '~/helpers/document'
+import { checkIfClient, getBaseFontSize } from '~/helpers/document'
 
 // Constants
 import { EMAIL_PATTERN } from '~/constants/patterns'
@@ -19,8 +19,12 @@ import './ContactForm.less'
 
 // Subcontent: Contact > ContactForm
 function ContactForm () {
+  // References
+  const form = useRef()
+
   // State
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+  const [willDisplayError, setWillDisplayError] = useState(false)
 
   // Methods
   function submitEmail (values, callback) {
@@ -39,19 +43,31 @@ function ContactForm () {
         .then(response => callback(error, response))
     }
   }
-  function scrollToErrors () {
-    // Scroll to error
-  }
 
   // Effects
   useEffect(() => {
-    const duration = 250
-    const timer = setTimeout(
-      () => isFormSubmitted && setIsFormSubmitted(false),
-      duration
-    )
+    let timer
+    if (isFormSubmitted) timer = setTimeout(() => setIsFormSubmitted(false), 250)
     return () => clearTimeout(timer)
   }, [isFormSubmitted])
+  useEffect(() => {
+    let timer
+    function handleErrors () {
+      if (checkIfClient() && form.current) {
+        setWillDisplayError(false)
+        const navigationHeight = (window.innerWidth > 1440 ? 5 : 3.5) * getBaseFontSize()
+        const topPosition = form.current.getBoundingClientRect().top
+        if (topPosition < navigationHeight) {
+          window.scrollTo({
+            top: Math.ceil(document.documentElement.scrollTop + topPosition - 1.5 * navigationHeight),
+            behavior: 'smooth'
+          })
+        }
+      }
+    }
+    if (willDisplayError) timer = setTimeout(handleErrors, 50)
+    return () => clearTimeout(timer)
+  }, [willDisplayError])
 
   // Render
   return (
@@ -74,6 +90,7 @@ function ContactForm () {
       </Container>
       <Container>
         <Form
+          ref={form}
           willResetAfter
           isDisabled={isFormSubmitted}
           timeoutBeforeReset={250}
@@ -81,7 +98,7 @@ function ContactForm () {
           onSubmitSuccess={() => {
             setIsFormSubmitted(true)
           }}
-          onError={scrollToErrors}>
+          onError={() => setWillDisplayError(true)}>
           <Form.Field label="Your name">
             <Form.Input
               name="name"
