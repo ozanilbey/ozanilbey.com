@@ -53,7 +53,7 @@ function Preview (props) {
       data-content="preview"
       style={{
         borderRadius: `${factor / 100}rem`,
-        transform: `perspective(400px) translateZ(-${factor}px)`,
+        transform: `scale(${1 - (factor / 500)})`,
         ...getColorStyles()
       }}>
       <Container isBlockLayout>
