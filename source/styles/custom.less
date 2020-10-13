@@ -11,6 +11,15 @@
         --primary-color: hsla(var(--figure-color-hsl), 0.5) !important;
       }
     }
+    .monocolor {
+      filter: invert(100%)
+              invert(22%)
+              sepia(15%)
+              saturate(760%)
+              hue-rotate(167deg)
+              brightness(91%)
+              contrast(90%);
+    }
   }
   &.dark {
     [data-extreme="dark"] {
