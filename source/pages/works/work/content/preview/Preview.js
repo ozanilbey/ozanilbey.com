@@ -34,7 +34,9 @@ function Preview (props) {
   // Effects
   useLayoutEffect(() => {
     function handleScroll () {
-      if (window.scrollY <= 100) setFactor(window.scrollY)
+      if (window.scrollY <= 0) setFactor(0)
+      else if (window.scrollY > 0 && window.scrollY <= 100) setFactor(window.scrollY)
+      else { setFactor(100) }
     }
     if (checkIfClient()) {
       window.addEventListener('scroll', handleScroll)
