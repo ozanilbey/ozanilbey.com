@@ -32,7 +32,7 @@ function WorkBrand (props) {
       {unitSize > 0 && props.data.type !== 'collection' &&
         <ColorFill
           width={Math.floor(2.25 * unitSize)}
-          color={props.data.colors?.secondary ? rgbColor(props.data.colors.secondary) : null}>
+          color={props.data.colors?.secondary}>
           <Media
             type="image"
             width={Math.floor(2.25 * unitSize)}

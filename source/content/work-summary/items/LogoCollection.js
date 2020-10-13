@@ -2,7 +2,6 @@
 import React, { useContext } from 'react'
 
 // Components
-import ColorFill from '~/components/model/color-fill/ColorFill'
 import Container from '~/components/layout/container/Container'
 import Heading from '~/components/type/heading/Heading'
 import Media from '~/components/content/media/Media'
@@ -19,11 +18,11 @@ const LogoCollection = () => {
   const renderLogo = id => {
     const width = Math.min(dimensions.width, 1280) * 0.9
     return (
-      <ColorFill
+      <Media
+        type="image"
+        className="monocolor"
         width={width}
-        color="var(--figure-color)">
-        <Media type="image" width={width} source={`/logo-collection/logo-${id}.png`} />
-      </ColorFill>
+        source={`/logo-collection/logo-${id}.png`} />
     )
   }
 
