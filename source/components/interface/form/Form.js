@@ -136,7 +136,7 @@ const Form = forwardRef((props, ref) => {
   function renderChildren (children) {
     return React.Children.map(children, child => {
       let properties = {}
-      if (!child.props) return child
+      if (!child || !child.props) return child
       else if (child.props.isHidden) return null
       else if (child.type?.displayName === 'Form.Input' && INPUT_TYPE_OPTIONS.includes(child.props.type)) {
         if (child.props.type !== 'submit') {
@@ -161,6 +161,7 @@ const Form = forwardRef((props, ref) => {
       React.Children.map(
         props.children,
         child => {
+          if (!child || !child.props) return child
           if (INPUT_TYPE_OPTIONS.includes(child.props.type)) {
             setValues(values => ({
               ...values,
