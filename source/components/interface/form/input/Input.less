@@ -20,8 +20,7 @@
   &[data-form-input="email"],
   &[data-form-input="password"] {
     opacity: .9;
-    background-color: var(--foreground-color);
-    box-shadow: 0 0 1em .125em var(--shade-color);
+    background-color: hsla(var(--figure-color-hsl), .0875);
     transform: scale(1);
     transition-property: opacity, box-shadow, transform;
     transition-duration: .25s;
@@ -32,7 +31,7 @@
       transform: scale(1.02);
     }
     &::placeholder {
-      opacity: .25;
+      opacity: .375;
       color: inherit;
     }
   }

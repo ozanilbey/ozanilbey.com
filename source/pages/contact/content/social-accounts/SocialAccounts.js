@@ -42,7 +42,11 @@ function SocialAccounts () {
           rank={4}>
           I feel social today,
         </Heading>
-        <Headline displaySize="big">let’s be friends</Headline>
+        <Headline
+          isSingleLine
+          displaySize="big">
+          let’s be friends
+        </Headline>
         <p className="lead">You can add me on {renderLink('linkedin')} and follow my {renderLink('github')}.</p>
       </Container>
       <Container>
