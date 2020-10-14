@@ -1,15 +1,25 @@
 [data-content="contact-form"] {
-  [data-interface="form"] {
+  .form {
     width: 50%;
-    [data-interface="form-input"] {
-      &[data-form-input="submit"] {
-        margin-top: .5rem;
+    .successful {
+      margin-bottom: 1.5rem;
+      padding: .375rem .5rem;
+      color: var(--success-color);
+      font-size: .875rem;
+      text-align: center;
+      border: 1px solid hsla(var(--success-color-hsl), .25);
+      border-radius: .5rem;
+      background-color: hsla(var(--success-color-hsl), .25);
+    }
+    [data-interface="form"] {
+      [data-interface="form-input"] {
+        &[data-form-input="submit"] {
+          margin-top: .5rem;
+        }
       }
     }
   }
 }
-
-
 
 // Responsive
 
@@ -18,7 +28,7 @@
 /* 480 ≤ Window Width < 768 */
 @media only screen and (min-width: @breakpoints[small-limit-inferior]) and (max-width: @breakpoints[small-limit-superior]) {
   [data-content="contact-form"] {
-    [data-interface="form"] {
+    .form {
       width: 75%;
     }
   }
@@ -27,7 +37,7 @@
 /* Window Width < 480 */
 @media only screen and (max-width: @breakpoints[xsmall-limit-superior]) {
   [data-content="contact-form"] {
-    [data-interface="form"] {
+    .form {
       width: 100%;
     }
   }

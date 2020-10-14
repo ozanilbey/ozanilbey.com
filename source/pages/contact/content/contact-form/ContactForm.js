@@ -23,8 +23,7 @@ function ContactForm () {
   const form = useRef()
 
   // State
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
-  const [willDisplayError, setWillDisplayError] = useState(false)
+  const [formResponse, setFormResponse] = useState(null)
 
   // Methods
   function submitEmail (values, callback) {
@@ -47,27 +46,22 @@ function ContactForm () {
   // Effects
   useEffect(() => {
     let timer
-    if (isFormSubmitted) timer = setTimeout(() => setIsFormSubmitted(false), 250)
-    return () => clearTimeout(timer)
-  }, [isFormSubmitted])
-  useEffect(() => {
-    let timer
-    function handleErrors () {
+    function handleResponse (responseType) {
       if (checkIfClient() && form.current) {
-        setWillDisplayError(false)
-        const navigationHeight = (window.innerWidth > 1440 ? 5 : 3.5) * getBaseFontSize()
+        timer = setTimeout(() => setFormResponse(null), responseType === 'error' ? 50 : 2500)
+        const upperLimit = (window.innerWidth > 1440 ? 5 : 3.5) * getBaseFontSize()
         const topPosition = form.current.getBoundingClientRect().top
-        if (topPosition < navigationHeight) {
+        if (topPosition < upperLimit) {
           window.scrollTo({
-            top: Math.ceil(document.documentElement.scrollTop + topPosition - 1.5 * navigationHeight),
+            top: Math.ceil(document.documentElement.scrollTop + topPosition - 1.5 * upperLimit),
             behavior: 'smooth'
           })
         }
       }
     }
-    if (willDisplayError) timer = setTimeout(handleErrors, 50)
+    if (formResponse) handleResponse(formResponse)
     return () => clearTimeout(timer)
-  }, [willDisplayError])
+  }, [formResponse])
 
   // Render
   return (
@@ -89,48 +83,50 @@ function ContactForm () {
         <p className="lead">I will get back to you as soon as possible.</p>
       </Container>
       <Container>
-        <Form
+        <div
           ref={form}
-          willResetAfter
-          isDisabled={isFormSubmitted}
-          timeoutBeforeReset={250}
-          onSubmit={submitEmail}
-          onSubmitSuccess={() => {
-            setIsFormSubmitted(true)
-          }}
-          onError={() => setWillDisplayError(true)}>
-          <Form.Field label="Your name">
-            <Form.Input
-              name="name"
-              type="text"
-              reference="Name"
-              validator={{ minimumLength: 1 }}
-              placeholder="John Doe" />
-          </Form.Field>
-          <Form.Field label="Your email">
-            <Form.Input
-              name="address"
-              type="email"
-              reference="Email address"
-              validator={{ pattern: EMAIL_PATTERN }}
-              placeholder="john@doe.com" />
-          </Form.Field>
-          <Form.Field label="Your message">
-            <Form.Input
-              isMultiLine
-              name="message"
-              type="text"
-              reference="Message"
-              validator={{ minimumLength: 10 }}
-              placeholder="We need you on this project."
-              lineCount={4} />
-          </Form.Field>
-          <Form.Field>
-            <Form.Input
-              type="submit"
-              value="Send Message" />
-          </Form.Field>
-        </Form>
+          className="form">
+          {formResponse === 'success' && <p className="successful">Your message has been sent.</p>}
+          <Form
+            willResetAfter
+            isDisabled={formResponse === 'success'}
+            timeoutBeforeReset={250}
+            onSubmit={submitEmail}
+            onSubmitSuccess={() => setFormResponse('success')}
+            onError={() => setFormResponse('error')}>
+            <Form.Field label="Your name">
+              <Form.Input
+                name="name"
+                type="text"
+                reference="Name"
+                validator={{ minimumLength: 1 }}
+                placeholder="John Doe" />
+            </Form.Field>
+            <Form.Field label="Your email">
+              <Form.Input
+                name="address"
+                type="email"
+                reference="Email address"
+                validator={{ pattern: EMAIL_PATTERN }}
+                placeholder="john@doe.com" />
+            </Form.Field>
+            <Form.Field label="Your message">
+              <Form.Input
+                isMultiLine
+                name="message"
+                type="text"
+                reference="Message"
+                validator={{ minimumLength: 10 }}
+                placeholder="We need you on this project."
+                lineCount={4} />
+            </Form.Field>
+            <Form.Field>
+              <Form.Input
+                type="submit"
+                value="Send Message" />
+            </Form.Field>
+          </Form>
+        </div>
       </Container>
     </Page.Section>
   )
