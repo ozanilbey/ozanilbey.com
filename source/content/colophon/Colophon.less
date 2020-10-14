@@ -210,6 +210,15 @@
 
 @import '~/styles/media.less';
 
+/* 1024 ≤ Window Width < 1280 */
+@media only screen and (min-width: @breakpoints[large-limit-inferior]) and (max-width: @breakpoints[large-limit-superior]) {
+  [data-content="colophon"] {
+    .color {
+      margin-bottom: 1em;
+    }
+  }
+}
+
 /* 768 ≤ Window Width < 1024 */
 @media only screen and (min-width: @breakpoints[medium-limit-inferior]) and (max-width: @breakpoints[medium-limit-superior]) {
   [data-content="colophon"] {
@@ -223,6 +232,9 @@
     }
     .about {
       margin-top: 1em;
+    }
+    .color {
+      margin-bottom: 1em;
     }
   }
 }
@@ -240,6 +252,9 @@
     }
     .about {
       margin-top: 1em;
+    }
+    .color {
+      margin-bottom: 1em;
     }
   }
 }
@@ -269,6 +284,9 @@
     .about {
       margin-top: 1.5rem;
       font-size: .9rem;
+    }
+    .color {
+      margin-bottom: 1em;
     }
   }
 }
