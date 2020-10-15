@@ -44,7 +44,7 @@ function Employment () {
           displaySize="big">
           experience
         </Headline>
-        <p className="lead">I’ve been working with/for companies to design & develop digital products and <strong>delivering significant results</strong> since 2007. My freelance web design work starts even before that.{/* Don’t forget to <Link type="download" href="/files/resume.pdf" download={`ozanilbey-resume_${new Date().getTime()}`}>download my resume</Link> for a clear explanation. */}</p>
+        <p className="lead">I’ve been working with/for companies to design & develop digital products and <strong>delivering significant results</strong> since 2007. My freelance web design work starts even before that.</p>
       </Container>
       <Container>
         <SlidingBox>
