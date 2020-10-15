@@ -21,7 +21,7 @@ function Link (props) {
     arrow: props.isArrowHidden ? 'hidden' : null,
     'text-line': props.isSingleLine ? 'single' : 'auto'
   })
-  const attributes = getAttributes(props, ['style', 'href', 'to', 'target', 'rel', 'onClick', 'data', 'aria'])
+  const attributes = getAttributes(props, ['style', 'href', 'to', 'target', 'rel', 'download', 'onClick', 'data', 'aria'])
   const additionalAttributes = props.type === 'external'
     ? {
       target: '_blank',
