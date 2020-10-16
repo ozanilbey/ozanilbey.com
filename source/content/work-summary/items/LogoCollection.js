@@ -30,7 +30,7 @@ const LogoCollection = () => {
   return (
     <>
       <Container isBlockLayout>
-        <p className="lead">I started designing logos as I was getting curious about it, back <strong>in 2007</strong>. After years of practice, I learned a lot about logo design and symbolism. I learned to convey the message through form instead of words. However, the logos I like the most are the strictly typographic ones.</p>
+        <p className="lead">I started designing logos as I was getting curious about it, back <strong>in 2007</strong>. After years of practice, I learned a lot about logo design and symbolism. I learned to convey the message through form instead of words. However, the logos I like the most are strictly typographic ones.</p>
         <p className="lead">Here are some of my works.</p>
       </Container>
       <Container isBlockLayout>

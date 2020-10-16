@@ -37,7 +37,7 @@ function Profile () {
           <mark>+</mark>
           developer
         </Headline>
-        <p className="lead">I have a wide range of design experience, from <strong>branding</strong> to <strong>animation</strong>, even <strong>printmaking</strong>. Plus, I’m able to create <strong>functional UIs</strong>, and develop <strong>full-stack JavaScript applications</strong> on Node with GraphQL APIs and React (Native) mobile/web clients. <Link type="cta" to="/profile">Read more</Link></p>
+        <p className="lead">Although my design work is mostly focused on <strong>UX</strong>/<strong>UI</strong>/<strong>IxD</strong>, I have a wide range of design experience, from <strong>branding</strong> to <strong>animation</strong>, even <strong>printmaking</strong>. Plus, I’m able to create <strong>functional UI prototypes</strong>, and develop <strong>full-stack JavaScript applications</strong> on Node with GraphQL APIs and React (Native) mobile/web clients. <Link type="cta" to="/profile">Read more</Link></p>
       </Container>
       <Container>
         <SlidingBox>
