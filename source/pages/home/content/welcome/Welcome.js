@@ -55,7 +55,7 @@ function Welcome () {
             <Icon name="audio" />
           </a>
         </p>
-        <p className="lead">I’ve been designing, developing, and managing digital products for <strong>15+ years</strong>. Previously, I’ve founded Semantica and created <Link type="regular" to="/works/piccture">Piccture</Link>, <Link type="regular" to="/works/cardz">Cardz</Link>, and <Link type="regular" to="/works/favogue">Favogue</Link>.</p>
+        <p className="lead">I’ve been designing, developing, and managing digital products for <strong>15+ years</strong>. Previously, I had founded Semantica and created <Link type="regular" to="/works/piccture">Piccture</Link>, <Link type="regular" to="/works/cardz">Cardz</Link>, and <Link type="regular" to="/works/favogue">Favogue</Link>.</p>
         <audio ref={pronunciation}>
           <source src="/audios/ozan.mp3" type="audio/mpeg" />
           <source src="/audios/ozan.ogg" type="audio/ogg" />

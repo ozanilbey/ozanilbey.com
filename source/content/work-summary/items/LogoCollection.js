@@ -16,12 +16,13 @@ const LogoCollection = () => {
 
   // Methods
   const renderLogo = id => {
-    const width = Math.min(dimensions.width, 1280) * 0.9
+    const size = Math.min(dimensions.width / 3 * 2, 360)
     return (
       <Media
         type="image"
         className="monocolor"
-        width={width}
+        width={Math.ceil(size)}
+        height={Math.ceil(size / 5 * 3)}
         source={`/logo-collection/logo-${id}.png`} />
     )
   }
@@ -30,10 +31,98 @@ const LogoCollection = () => {
   return (
     <>
       <Container isBlockLayout>
-        <p className="lead">I started designing logos as I was getting curious about it, back <strong>in 2007</strong>. After years of practice, I learned a lot about logo design and symbolism. I learned to convey the message through form instead of words. However, the logos I like the most are the strictly typographic ones.</p>
+        <p className="lead">I started designing logos as I was getting curious about it, back <strong>in 2007</strong>. After years of practice, I learned a lot about logo design and symbolism. I learned to convey the message through form instead of words. However, the logos I like the most are strictly typographic ones.</p>
         <p className="lead">Here are some of my works.</p>
       </Container>
       <Container isBlockLayout>
+        <Heading rank={2}>2020</Heading>
+        {renderLogo('go4pilates')}
+        <small>
+          GO4Pilates
+          <i>Pilates Studio</i>
+        </small>
+        {renderLogo('xlstudio')}
+        <small>
+          XL Studio
+          <i>Social Media Studio</i>
+        </small>
+        {renderLogo('filmxl')}
+        {renderLogo('sozlukxl')}
+        {renderLogo('takvimxl')}
+        <small>
+          XL
+          <i>Social Accounts Family</i>
+        </small>
+        {renderLogo('socradar')}
+        <small>
+          SOCRadar (Revision)
+          <i>Digital Risk Platform</i>
+        </small>
+        {renderLogo('mudavim')}
+        <small>
+          Müdavim
+          <i>Customer Loyalty Application</i>
+        </small>
+        {renderLogo('base64ai')}
+        <small>
+          Base64.ai
+          <i>Document Processing Platform</i>
+        </small>
+        <Heading rank={2}>2019</Heading>
+        {renderLogo('docuai')}
+        <small>
+          Docu.ai
+          <i>AI-powered Data Extraction</i>
+        </small>
+        {renderLogo('indexify')}
+        <small>
+          Indexify (x<sub>i</sub>)
+          <i>Journal Organizer</i>
+        </small>
+        <Heading rank={2}>2018</Heading>
+        {renderLogo('groups')}
+        <small>
+          Grou.ps
+          <i>Privacy-focused Social Platform</i>
+        </small>
+        {renderLogo('graphjs')}
+        {renderLogo('graphbuild')}
+        {renderLogo('graphpress')}
+        <small>
+          Graph
+          <i>Product Family</i>
+        </small>
+        <Heading rank={2}>2017</Heading>
+        {renderLogo('monoevent')}
+        <small>
+          Mono Event
+          <i>Event Planning Company</i>
+        </small>
+        {renderLogo('postmatik')}
+        <small>
+          Postmatik
+          <i>Social Media Management Tool</i>
+        </small>
+        {renderLogo('fihrist')}
+        <small>
+          Fihrist
+          <i>Text-only Reading Experience</i>
+        </small>
+        {renderLogo('brush')}
+        <small>
+          Brush
+          <i>Product Marketplace for Artworks</i>
+        </small>
+        {renderLogo('earlybird')}
+        <small>
+          earlybird
+          <i>Early-stage Product Announcements</i>
+        </small>
+        {renderLogo('popsouls')}
+        <small>
+          POPSouls
+          <i>Online Celebrity Magazine</i>
+        </small>
         <Heading rank={2}>2016</Heading>
         {renderLogo('flashtech')}
         <small>
@@ -44,11 +133,6 @@ const LogoCollection = () => {
         <small>
           SprintVPN
           <i>Pay-as-you-go VPN Service</i>
-        </small>
-        {renderLogo('sbc')}
-        <small>
-          SBC
-          <i>Skateboard Company</i>
         </small>
       </Container>
       <Container isBlockLayout>
@@ -68,11 +152,6 @@ const LogoCollection = () => {
           MoyBox
           <i>Home Networking Device</i>
         </small>
-        {renderLogo('watchandlearn')}
-        <small>
-          Watch and Learn
-          <i>Unsupervised Semantic Parsing of Video Collections</i>
-        </small>
       </Container>
       <Container isBlockLayout>
         <Heading rank={2}>2014</Heading>
@@ -84,6 +163,11 @@ const LogoCollection = () => {
       </Container>
       <Container isBlockLayout>
         <Heading rank={2}>2013</Heading>
+        {renderLogo('semantica')}
+        <small>
+          Semantica
+          <i>Tech Company</i>
+        </small>
         {renderLogo('cardz')}
         <small>
           Cardz
@@ -132,7 +216,7 @@ const LogoCollection = () => {
         </small>
         {renderLogo('ggt')}
         <small>
-          ODTÜ GGT (Redesign)
+          ODTÜ GGT (Revision)
           <i>Young Entrepreneurs Society</i>
         </small>
         {renderLogo('toplumicinsehircilik')}
@@ -150,12 +234,12 @@ const LogoCollection = () => {
         <Heading rank={2}>2010</Heading>
         {renderLogo('pmum')}
         <small>
-          PMUM
+          PMUM (Revision)
           <i>Energy Exchange Market</i>
         </small>
         {renderLogo('waplog')}
         <small>
-          Waplog (You and I)
+          Waplog (U+I - You and I)
           <i>Online Dating Platform</i>
         </small>
       </Container>

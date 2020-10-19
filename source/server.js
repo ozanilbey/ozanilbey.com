@@ -125,7 +125,7 @@ app.use((request, response) => {
       template
         .replace(/<title>.*<\/title>/, helmet.title.toString())
         .replace('</head>', helmet.link.toString() + helmet.meta.toString() + '</head>')
-        .replace('ANALYTICS_ID', process.env.ANALYTICS_ID)
+        .replace(/ANALYTICS_ID/g, process.env.ANALYTICS_ID)
         .replace(/<div id="root"><\/div>/, `<div id="root">${html}</div>`)
     )
     response.end()
