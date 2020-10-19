@@ -16,12 +16,13 @@ const LogoCollection = () => {
 
   // Methods
   const renderLogo = id => {
-    const width = Math.min(dimensions.width, 1280) * 0.9
+    const size = Math.min(dimensions.width / 3 * 2, 360)
     return (
       <Media
         type="image"
         className="monocolor"
-        width={width}
+        width={Math.ceil(size)}
+        height={Math.ceil(size / 5 * 3)}
         source={`/logo-collection/logo-${id}.png`} />
     )
   }
