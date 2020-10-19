@@ -35,6 +35,94 @@ const LogoCollection = () => {
         <p className="lead">Here are some of my works.</p>
       </Container>
       <Container isBlockLayout>
+        <Heading rank={2}>2020</Heading>
+        {renderLogo('go4pilates')}
+        <small>
+          GO4Pilates
+          <i>Pilates Studio</i>
+        </small>
+        {renderLogo('xlstudio')}
+        <small>
+          XL Studio
+          <i>Social Media Studio</i>
+        </small>
+        {renderLogo('filmxl')}
+        {renderLogo('sozlukxl')}
+        {renderLogo('takvimxl')}
+        <small>
+          XL
+          <i>Social Accounts Family</i>
+        </small>
+        {renderLogo('socradar')}
+        <small>
+          SOCRadar (Revision)
+          <i>Digital Risk Platform</i>
+        </small>
+        {renderLogo('mudavim')}
+        <small>
+          Müdavim
+          <i>Customer Loyalty Application</i>
+        </small>
+        {renderLogo('base64ai')}
+        <small>
+          Base64.ai
+          <i>Document Processing Platform</i>
+        </small>
+        <Heading rank={2}>2019</Heading>
+        {renderLogo('docuai')}
+        <small>
+          Docu.ai
+          <i>AI-powered Data Extraction</i>
+        </small>
+        {renderLogo('indexify')}
+        <small>
+          Indexify (x<sub>i</sub>)
+          <i>Journal Organizer</i>
+        </small>
+        <Heading rank={2}>2018</Heading>
+        {renderLogo('groups')}
+        <small>
+          Grou.ps
+          <i>Privacy-focused Social Platform</i>
+        </small>
+        {renderLogo('graphjs')}
+        {renderLogo('graphbuild')}
+        {renderLogo('graphpress')}
+        <small>
+          Graph
+          <i>Product Family</i>
+        </small>
+        <Heading rank={2}>2017</Heading>
+        {renderLogo('monoevent')}
+        <small>
+          Mono Event
+          <i>Event Planning Company</i>
+        </small>
+        {renderLogo('postmatik')}
+        <small>
+          Postmatik
+          <i>Social Media Management Tool</i>
+        </small>
+        {renderLogo('fihrist')}
+        <small>
+          Fihrist
+          <i>Text-only Reading Experience</i>
+        </small>
+        {renderLogo('brush')}
+        <small>
+          Brush
+          <i>Product Marketplace for Artworks</i>
+        </small>
+        {renderLogo('earlybird')}
+        <small>
+          earlybird
+          <i>Early-stage Product Announcements</i>
+        </small>
+        {renderLogo('popsouls')}
+        <small>
+          POPSouls
+          <i>Online Celebrity Magazine</i>
+        </small>
         <Heading rank={2}>2016</Heading>
         {renderLogo('flashtech')}
         <small>
@@ -45,11 +133,6 @@ const LogoCollection = () => {
         <small>
           SprintVPN
           <i>Pay-as-you-go VPN Service</i>
-        </small>
-        {renderLogo('sbc')}
-        <small>
-          SBC
-          <i>Skateboard Company</i>
         </small>
       </Container>
       <Container isBlockLayout>
@@ -69,11 +152,6 @@ const LogoCollection = () => {
           MoyBox
           <i>Home Networking Device</i>
         </small>
-        {renderLogo('watchandlearn')}
-        <small>
-          Watch and Learn
-          <i>Unsupervised Semantic Parsing of Video Collections</i>
-        </small>
       </Container>
       <Container isBlockLayout>
         <Heading rank={2}>2014</Heading>
@@ -85,6 +163,11 @@ const LogoCollection = () => {
       </Container>
       <Container isBlockLayout>
         <Heading rank={2}>2013</Heading>
+        {renderLogo('semantica')}
+        <small>
+          Semantica
+          <i>Tech Company</i>
+        </small>
         {renderLogo('cardz')}
         <small>
           Cardz
@@ -133,7 +216,7 @@ const LogoCollection = () => {
         </small>
         {renderLogo('ggt')}
         <small>
-          ODTÜ GGT (Redesign)
+          ODTÜ GGT (Revision)
           <i>Young Entrepreneurs Society</i>
         </small>
         {renderLogo('toplumicinsehircilik')}
@@ -151,12 +234,12 @@ const LogoCollection = () => {
         <Heading rank={2}>2010</Heading>
         {renderLogo('pmum')}
         <small>
-          PMUM
+          PMUM (Revision)
           <i>Energy Exchange Market</i>
         </small>
         {renderLogo('waplog')}
         <small>
-          Waplog (You and I)
+          Waplog (U+I - You and I)
           <i>Online Dating Platform</i>
         </small>
       </Container>
