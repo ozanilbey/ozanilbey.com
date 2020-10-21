@@ -32,11 +32,14 @@ function App () {
     let theme
     if (localStorage) theme = localStorage.getItem('theme')
     if (!THEME_OPTIONS.includes(theme)) {
+      theme = DEFAULT_THEME
+      /* Removed option to select theme based on preferred system theme
       if (checkIfClient()) {
         const otherTheme = THEME_OPTIONS.find(option => option !== DEFAULT_THEME)
         const isOtherThemePreferred = window.matchMedia(`(prefers-color-scheme: ${otherTheme})`).matches
         theme = isOtherThemePreferred ? otherTheme : DEFAULT_THEME
       } else { theme = DEFAULT_THEME }
+      */
     }
     let color
     if (localStorage) color = localStorage.getItem('color')
