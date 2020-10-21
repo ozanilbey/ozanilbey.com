@@ -414,6 +414,24 @@
   },
   {
     "type": "work",
+    "slug": "siberest-posters",
+    "brand": "Siberest",
+    "output": "Promotional Posters",
+    "client": {
+      "name": "Siberest",
+      "link": "siberest.com"
+    },
+    "year": 2015,
+    "colors": {
+      "primary": [225, 93, 41],
+      "secondary": [26, 25, 25]
+    },
+    "preview": ["Graphic Design"],
+    "role": ["Graphic Designer"],
+    "tags": ["Graphic Design"]
+  },
+  {
+    "type": "work",
     "slug": "ikort-mobile-application",
     "brand": "i-kort",
     "output": "Mobile Application",
