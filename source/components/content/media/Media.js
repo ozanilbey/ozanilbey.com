@@ -31,7 +31,7 @@ function Media (props) {
   }
   function getURL () {
     const filters = getFilters()
-    return `${MEDIA_ENDPOINT}/${filters}${props.source}`
+    return `${MEDIA_ENDPOINT}/${filters}/v1${props.source}`
   }
 
   // Render
