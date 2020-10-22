@@ -24,6 +24,7 @@ import Fihrist from './items/Fihrist'
 import FlashtechWebApplicationUI from './items/FlashtechWebApplicationUI'
 import FraktalProjeCorporateIdentity from './items/FraktalProjeCorporateIdentity'
 import GirisimcilikKongresiVisuals from './items/GirisimcilikKongresiVisuals'
+import GraphJS from './items/GraphJS'
 import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
@@ -90,6 +91,8 @@ function WorkSummary (props) {
         return <FraktalProjeCorporateIdentity />
       case 'girisimcilik-kongresi-visuals':
         return <GirisimcilikKongresiVisuals />
+      case 'graphjs':
+        return <GraphJS />
       case 'ikort-mobile-application':
         return <IkortMobileApplication />
       case 'invport-web-application':
