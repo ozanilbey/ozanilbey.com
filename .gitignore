@@ -12,6 +12,7 @@ server.bundle.js
 public/index.html
 public/scripts
 public/styles
+public/content
 
 # Miscellaneous
 todo.md
