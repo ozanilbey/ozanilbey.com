@@ -1,6 +1,23 @@
 [
   {
     "type": "project",
+    "slug": "graphbuild",
+    "brand": "GraphBuild",
+    "description": "GraphBuild is a simple, visual graph application builder.",
+    "output": "Web Application",
+    "repository": "github.com/phonetworks/gapp-build",
+    "year": 2018,
+    "colors": {
+      "primary": [93, 60, 246],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Website"],
+    "role": ["UI Designer", "Frontend Developer"],
+    "tags": ["UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "project",
     "slug": "graphjs",
     "brand": "GraphJS",
     "label": "Social widgets for static websites",
