@@ -150,7 +150,7 @@ function Colophon (props) {
           <div className="website">This website is an online portfolio showcasing works of <strong>Ozan İlbey Yılmaz</strong>. It is entirely open source. You can browse, modify, and use <Link type="external" href="//github.com/ozanilbey/ozanilbey.com">the code</Link>. You can even make it yours.</div>
           <div className="isomorphic">It is built on <Link type="external" href="//github.com/ozanilbey/isomorphic">Isomorphic</Link>, an <strong>open source</strong> isomorphic JavaScript web application boilerplate. It is also developed by the author.</div>
           <div className={getClassName('credits', { visible: isDisplayingCredits })}>
-            <strong onClick={toggleCredits}>{'Made on a Mac with  {'}</strong>
+            <strong onClick={toggleCredits}>{'Made with  {'}</strong>
             {
               isDisplayingCredits
                 ? <ul>
