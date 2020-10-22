@@ -24,6 +24,8 @@ import Fihrist from './items/Fihrist'
 import FlashtechWebApplicationUI from './items/FlashtechWebApplicationUI'
 import FraktalProjeCorporateIdentity from './items/FraktalProjeCorporateIdentity'
 import GirisimcilikKongresiVisuals from './items/GirisimcilikKongresiVisuals'
+import GraphBuild from './items/GraphBuild'
+import GraphJS from './items/GraphJS'
 import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
@@ -40,6 +42,7 @@ import PokerExtraAdsMixed from './items/PokerExtraAdsMixed'
 import PosterCollection from './items/PosterCollection'
 import RakkipFacebookPage from './items/RakkipFacebookPage'
 import RockSenligiVisuals from './items/RockSenligiVisuals'
+import SiberestPosters from './items/SiberestPosters'
 import TekelOkeyFacebookPage from './items/TekelOkeyFacebookPage'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
 import WaplogWebApplication from './items/WaplogWebApplication'
@@ -89,6 +92,10 @@ function WorkSummary (props) {
         return <FraktalProjeCorporateIdentity />
       case 'girisimcilik-kongresi-visuals':
         return <GirisimcilikKongresiVisuals />
+      case 'graphbuild':
+        return <GraphBuild />
+      case 'graphjs':
+        return <GraphJS />
       case 'ikort-mobile-application':
         return <IkortMobileApplication />
       case 'invport-web-application':
@@ -121,6 +128,8 @@ function WorkSummary (props) {
         return <RakkipFacebookPage />
       case 'rock-senligi-visuals':
         return <RockSenligiVisuals />
+      case 'siberest-posters':
+        return <SiberestPosters />
       case 'tekel-okey-facebook-page':
         return <TekelOkeyFacebookPage />
       case 'waplog-mobile-application':

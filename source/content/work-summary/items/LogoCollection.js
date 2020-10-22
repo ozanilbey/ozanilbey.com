@@ -191,6 +191,11 @@ const LogoCollection = () => {
       </Container>
       <Container isBlockLayout>
         <Heading rank={2}>2012</Heading>
+        {renderLogo('orion')}
+        <small>
+          Orion
+          <i>Art History Magazine</i>
+        </small>
         {renderLogo('bora')}
         <small>
           Bora

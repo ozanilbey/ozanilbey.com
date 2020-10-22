@@ -21,6 +21,11 @@ const PosterCollection = () => (
       <small>Let There Be More Light</small>
     </Container>
     <Container isBlockLayout>
+      <Heading rank={2}>2015</Heading>
+      <Media type="image" width={1152} source="/poster-collection/poster-siberest.png" />
+      <small>Siberest Promo</small>
+    </Container>
+    <Container isBlockLayout>
       <Heading rank={2}>2014</Heading>
       <Media type="image" width={1152} source="/poster-collection/poster-buildmore.png" />
       <small>Keep Calm and Build More</small>

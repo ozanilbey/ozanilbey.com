@@ -61,9 +61,7 @@ function Showcase (props) {
                 </ul>
               </div>
               {item.tags &&
-                <ul
-                  className="tags"
-                  style={{ color: rgbColor(item.colors.primary) }}>
+                <ul className="tags">
                   {item.tags.map((tag, index) =>
                     <li key={index}>{tag}</li>
                   )}
