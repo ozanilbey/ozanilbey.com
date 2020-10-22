@@ -21,7 +21,14 @@ function Excerpt (props) {
     excerpt.client = props.data.client.fullName || props.data.client.name
     if (props.data.client.link) excerpt.client = <Link type="external" href={`//${props.data.client.link}`}>{excerpt.client}</Link>
   }
-  if (props.data.isLive) excerpt.demo = <Link type="external" href={`//${props.data.link}`}>See it live</Link>
+  if (props.data.isLive) {
+    excerpt.demo = (
+      <>
+        {props.data.link && <Link type="external" href={`//${props.data.link}`}>See it live</Link>}
+        {props.data.repository && <Link type="external" href={`//${props.data.repository}`}>View repository</Link>}
+      </>
+    )
+  }
 
   // Methods
   function renderValue (data) {
