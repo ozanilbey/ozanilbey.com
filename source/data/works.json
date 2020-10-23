@@ -37,6 +37,24 @@
   },
   {
     "type": "project",
+    "slug": "graphjs-website",
+    "brand": "GraphJS",
+    "attribute": "Administration Panel",
+    "description": "GraphJS website is a playground and admin panel for creating/managing GraphJS instances",
+    "output": "Website",
+    "link": "graphjs.com",
+    "year": [2018, 2019],
+    "colors": {
+      "primary": [93, 60, 246],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD", "Frontend", "Marketing", "Documentation"]
+  },
+  {
+    "type": "project",
     "slug": "fihrist",
     "brand": "Fihrist",
     "label": "Text-only reading experience",

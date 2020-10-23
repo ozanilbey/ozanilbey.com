@@ -16,9 +16,7 @@ const GraphJS = () => (
       <Media type="image" width={864} source="/graphjs/teaser.png" />
       <p className="lead">GraphJS (formerly “Graph.js“) is an amazing tool for <strong>making any website social</strong> with just a few lines of code. It’s an <strong>open source client-side JavaScript library</strong>. It helps you to easily add authentication, comments, messages, forum, groups, profiles and many more to static web pages.</p>
       <p className="lead">I had created the “Graph.js“ brand, designed all user interface components, and written <strong>more than 90% of its codebase</strong>, using Riot.js and LESS in <strong>2018–2019</strong>.</p>
-      {/*
-      <Information>I had also designed <Link type="regular" to="/works/graphjs-website">GraphJS Website</Link>, and created <Link type="regular" to="/works/groups-v2">Grou.ps v2</Link> frontend using powerful features of GraphJS.</Information>
-      */}
+      <Information>I had also designed <Link type="regular" to="/works/graphjs-website">GraphJS Website</Link>{/*, and created <Link type="regular" to="/works/groups-v2">Grou.ps v2</Link> frontend using powerful features of GraphJS */}.</Information>
     </Container>
     <Container isBlockLayout>
       <Heading rank={2}>Authentication</Heading>

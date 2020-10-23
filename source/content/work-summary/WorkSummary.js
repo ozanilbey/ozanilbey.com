@@ -26,6 +26,7 @@ import FraktalProjeCorporateIdentity from './items/FraktalProjeCorporateIdentity
 import GirisimcilikKongresiVisuals from './items/GirisimcilikKongresiVisuals'
 import GraphBuild from './items/GraphBuild'
 import GraphJS from './items/GraphJS'
+import GraphJSWebsite from './items/GraphJSWebsite'
 import IkortMobileApplication from './items/IkortMobileApplication'
 import InvportWebApplication from './items/InvportWebApplication'
 import LogoCollection from './items/LogoCollection'
@@ -96,6 +97,8 @@ function WorkSummary (props) {
         return <GraphBuild />
       case 'graphjs':
         return <GraphJS />
+      case 'graphjs-website':
+        return <GraphJSWebsite />
       case 'ikort-mobile-application':
         return <IkortMobileApplication />
       case 'invport-web-application':
