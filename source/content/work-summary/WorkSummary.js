@@ -44,6 +44,7 @@ import PosterCollection from './items/PosterCollection'
 import RakkipFacebookPage from './items/RakkipFacebookPage'
 import RockSenligiVisuals from './items/RockSenligiVisuals'
 import SiberestPosters from './items/SiberestPosters'
+import SOCRadarBranding from './items/SOCRadarBranding'
 import TekelOkeyFacebookPage from './items/TekelOkeyFacebookPage'
 import WaplogMobileApplication from './items/WaplogMobileApplication'
 import WaplogWebApplication from './items/WaplogWebApplication'
@@ -133,6 +134,8 @@ function WorkSummary (props) {
         return <RockSenligiVisuals />
       case 'siberest-posters':
         return <SiberestPosters />
+      case 'socradar-branding':
+        return <SOCRadarBranding />
       case 'tekel-okey-facebook-page':
         return <TekelOkeyFacebookPage />
       case 'waplog-mobile-application':
