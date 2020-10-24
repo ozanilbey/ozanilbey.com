@@ -1,6 +1,48 @@
 [
   {
     "type": "project",
+    "slug": "socradar-branding",
+    "brand": "SOCRadar",
+    "description": "SOCRadar is a digital risk protection platform providing contextualized intelligence.",
+    "output": "Branding",
+    "client": {
+      "name": "SOCRadar",
+      "link": "socradar.io"
+    },
+    "link": "socradar.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 84, 98],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Branding", "Responsive Website"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD"]
+  },
+  {
+    "type": "project",
+    "slug": "socradar-website",
+    "brand": "SOCRadar",
+    "description": "SOCRadar is a digital risk protection platform providing contextualized intelligence.",
+    "output": "Website",
+    "client": {
+      "name": "SOCRadar",
+      "link": "socradar.io"
+    },
+    "link": "socradar.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 84, 98],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "project",
     "slug": "graphbuild",
     "brand": "GraphBuild",
     "description": "GraphBuild is a simple, visual graph application builder.",

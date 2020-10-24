@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 // Subcomponents
+import Branding from './types/branding/Branding'
 import Collection from './types/collection/Collection'
 import CorporateIdentity from './types/corporate-identity/CorporateIdentity'
 import Website from './types/website/Website'
@@ -62,6 +63,8 @@ function WorkCover (props) {
   // Methods
   function renderElements (type) {
     switch (type) {
+      case 'branding':
+        return <Branding {...elementProps} />
       case 'collection':
         return <Collection {...elementProps} />
       case 'corporate-identity':

@@ -1,0 +1,37 @@
+[data-work-cover="branding"] {
+  .paper {
+    width: 48em;
+    height: 30em;
+    padding: 2em 6em 0 2em;
+    background-color: white;
+  }
+  .grid {
+    position: relative;
+    width: 40em;
+    height: 28em;
+    background-repeat: repeat;
+    background-position: left top;
+    background-size: calc(100% / 10) calc(100% / 7);
+    & > * {
+      overflow: hidden;
+      position: absolute;
+      &.typography {
+        top: 4rem;
+        right: 4em;
+        height: 8rem;
+        max-width: 32em;
+      }
+      &.logo {
+        left: 4rem;
+        bottom: 4em;
+        max-height: 10rem;
+        max-width: 24em;
+      }
+      &.colors {
+        right: -4em;
+        width: 2rem;
+        max-height: 28em;
+      }
+    }
+  }
+}

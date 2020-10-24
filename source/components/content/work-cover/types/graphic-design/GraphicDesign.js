@@ -10,18 +10,16 @@ import './GraphicDesign.less'
 
 // Component: Content > Work Cover > Graphic Design (Type)
 const GraphicDesign = props => (
-  <>
-    <div className="frame">
-      <div className="design">
-        <Media
-          willCrop
-          type="image"
-          width={Math.ceil(42 * props.unitSize)}
-          height={Math.ceil(28.75 * props.unitSize)}
-          source={`/${props.data.slug}/cover/graphic-design.png`} />
-      </div>
+  <div className="frame">
+    <div className="design">
+      <Media
+        willCrop
+        type="image"
+        width={Math.ceil(42 * props.unitSize)}
+        height={Math.ceil(28.75 * props.unitSize)}
+        source={`/${props.data.slug}/cover/graphic-design.png`} />
     </div>
-  </>
+  </div>
 )
 
 // Properties

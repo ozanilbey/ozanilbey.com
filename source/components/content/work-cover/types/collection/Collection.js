@@ -7,13 +7,11 @@ import './Collection.less'
 
 // Component: Content > Work Cover > Collection (Type)
 const Collection = props => (
-  <>
-    <div className="binder">
-      <div className="label">
-        {props.data.attribute}
-      </div>
+  <div className="binder">
+    <div className="label">
+      {props.data.attribute}
     </div>
-  </>
+  </div>
 )
 
 // Properties
