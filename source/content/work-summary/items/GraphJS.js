@@ -91,7 +91,7 @@ const GraphJS = () => (
       <Media type="image" width={1152} source="/graphjs/22.png" />
     </Container>
     <Container isBlockLayout>
-      <Heading rank={2}>It’s helpful.</Heading>
+      <Heading rank={2}>It’s useful.</Heading>
       <small>It’s easy to measure user engagement.</small>
       <Media type="image" width={1152} source="/graphjs/23.png" />
     </Container>
