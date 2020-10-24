@@ -1,4 +1,4 @@
-export const WORK_COVER_TYPES = ['Collection', 'Corporate Identity', 'Graphic Design', 'Mobile Application', 'Responsive Website', 'Social Media', 'Website']
+export const WORK_COVER_TYPES = ['Branding', 'Collection', 'Corporate Identity', 'Graphic Design', 'Mobile Application', 'Responsive Website', 'Social Media', 'Website']
 export const EXPERIENCE_SUMMARY_TYPES = ['employment', 'education']
 export const FEATURED_WORKS = ['docu', 'graphjs', 'graphjs-website', 'base64', 'favogue', 'piccture', 'cardz']
 export const SELECTED_WORKS = [...FEATURED_WORKS, 'brush', 'fihrist', 'groups']
