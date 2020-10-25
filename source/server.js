@@ -9,6 +9,9 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
+// Sitemap
+import Sitemap from '~/content/sitemap/Sitemap.js'
+
 // React application
 import App from '~/App.js'
 
@@ -31,6 +34,13 @@ const mailer = nodemailer.createTransport({
     user: process.env.EMAIL_ADDRESS,
     pass: process.env.EMAIL_PASSWORD
   }
+})
+
+// Serve Sitemap
+app.get('/sitemap.xml', (request, response) => {
+  const declaration = '<?xml version="1.0" encoding="UTF-8"?>'
+  response.write(declaration + '\n' + renderToString(<Sitemap />))
+  response.end()
 })
 
 // Serve JavaScript files
