@@ -93,6 +93,8 @@ function Meta (props) {
       <link rel="apple-touch-icon" href="/images/identity/icon-touch.png" />
       {/* Safari pinned tab icon */}
       <link rel="mask-icon" href="/images/icon.svg" color="#2dd27d" />
+      {/* Hierarchical index */}
+      {props.article && <link rel="index" href={`https://ozanilbey.com/${props.page}/`} />}
     </Helmet>
 }
 
