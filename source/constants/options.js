@@ -1,4 +1,5 @@
-export const PAGES_MENU_OPTIONS = ['home', 'profile', 'works', 'contact']
+export const PAGE_OPTIONS = ['home', 'profile', 'works', 'contact']
+export const PAGES_MENU_OPTIONS = [...PAGE_OPTIONS]
 export const NETWORKS_MENU_OPTIONS = ['github', 'behance', 'dribbble', 'linkedin']
 export const THEME_OPTIONS = ['light', 'dark']
 export const COLOR_OPTIONS = ['green', 'yellow', 'pink', 'purple', 'blue']
