@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { getAttributes } from '~/helpers/component'
 
 // Constants
-import { MEDIA_ENDPOINT } from '~/constants/settings'
+import { MEDIA_URL } from '~/constants/settings'
 import { MEDIA_TYPE_OPTIONS } from '~/constants/options'
 
 // Style
@@ -31,7 +31,7 @@ function Media (props) {
   }
   function getURL () {
     const filters = getFilters()
-    return `${MEDIA_ENDPOINT}/${filters}/v1${props.source}`
+    return `${MEDIA_URL}/${filters}/v1${props.source}`
   }
 
   // Render
