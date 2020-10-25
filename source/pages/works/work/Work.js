@@ -24,7 +24,7 @@ import { getWorkTitle } from '~/helpers/content'
 import { slug } from '~/utilities/format'
 
 // Constants
-import { MEDIA_ENDPOINT } from '~/constants/settings'
+import { MEDIA_URL } from '~/constants/settings'
 
 // Style
 import './Work.less'
@@ -50,7 +50,7 @@ function Work (props) {
         article={getWorkTitle(props.data)}
         description={props.data.description}
         keywords={props.data.keywords}
-        preview={`${MEDIA_ENDPOINT}/v1/${props.data.slug}/thumbnail.png`} />
+        preview={`${MEDIA_URL}/v1/${props.data.slug}/thumbnail.png`} />
       {isDisplayingHeader
         ? <Preview data={props.data}>
           <WorkBrand data={props.data} />
