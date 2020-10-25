@@ -50,7 +50,7 @@ function Work (props) {
         article={getWorkTitle(props.data)}
         description={props.data.description}
         keywords={props.data.keywords}
-        preview={`${MEDIA_ENDPOINT}/${props.data.slug}/thumbnail.png`} />
+        preview={`${MEDIA_ENDPOINT}/v1/${props.data.slug}/thumbnail.png`} />
       {isDisplayingHeader
         ? <Preview data={props.data}>
           <WorkBrand data={props.data} />
