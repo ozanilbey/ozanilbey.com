@@ -15,7 +15,7 @@ const SOCRadarBranding = () => (
       <Media type="image" width={864} source="/socradar-website/teaser.png" />
       <p className="lead">SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
       <p className="lead">I had created <strong>a fresh brand image</strong> for SOCRadar with <Link type="external" to="https://cerenmurgan.com">Ceren</Link> to properly express the company’s dynamic yet stable nature.</p>
-      <Information>We had also worked on <Link type="regular" to="/works/socradar-website">SOCRadar Branding</Link>{/* and created <Link type="regular" to="/works/socradar-docs">SOCRadar Docs</Link> */}.</Information>
+      <Information>We had also worked on <Link type="regular" to="/works/socradar-website">SOCRadar Website</Link>{/* and created <Link type="regular" to="/works/socradar-docs">SOCRadar Docs</Link> */}.</Information>
     </Container>
     <Container isBlockLayout>
       <Heading rank={2}>Logo</Heading>
