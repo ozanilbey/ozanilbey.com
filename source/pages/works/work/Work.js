@@ -48,7 +48,7 @@ function Work (props) {
         page="works"
         subpage={props.data.slug}
         article={getWorkTitle(props.data)}
-        description={props.data.description || null}
+        description={props.data.description}
         keywords={props.data.keywords}
         preview={`${MEDIA_ENDPOINT}/${props.data.slug}/cover.png`} />
       {isDisplayingHeader
