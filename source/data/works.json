@@ -81,9 +81,8 @@
     "type": "project",
     "slug": "graphjs-website",
     "brand": "GraphJS",
-    "attribute": "Administration Panel",
     "description": "GraphJS website is a playground and admin panel for creating/managing GraphJS instances",
-    "output": "Website",
+    "output": "Website + Administration Panel",
     "link": "graphjs.com",
     "year": [2018, 2019],
     "colors": {
