@@ -119,7 +119,7 @@ app.use((request, response) => {
   const html = renderToString(
     // Use the app within Static Router
     <StaticRouter location={request.url} context={context}>
-      <App/>
+      <App />
     </StaticRouter>
   )
   // Check if context.url exists
