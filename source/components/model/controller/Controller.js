@@ -87,7 +87,7 @@ function Controller (props) {
         if (target) {
           // Timeout prevents the jumpy feeling
           timer = setTimeout(() => {
-            document.body.scrollTo({
+            window.scrollTo({
               top: target.offsetTop - 3.5 * getBaseFontSize(), // Navigation height is 3.5rem
               behavior: 'smooth'
             })

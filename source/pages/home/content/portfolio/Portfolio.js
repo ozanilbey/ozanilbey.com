@@ -37,7 +37,7 @@ function Portfolio () {
           displaySize="big">
           design portfolio
         </Headline>
-        <p className="lead">Having worked on <strong>a wide variety of projects</strong>, I gained valuable <Link type="regular" to="/profile#professional-skills">skills</Link> and <Link type="regular" to="/profile#experience">experience</Link>. Consequently, as a <strong>senior multidisciplinary designer</strong>, I have an extensive design portfolio. Below are some of my finest works. If you’d like to see all, <Link type="cta" to="/works">browse my portfolio</Link>.</p>
+        <p className="lead">Having worked on <strong>a wide variety of projects</strong>, I gained valuable <Link type="regular" to="/profile#professional-skills">skills</Link> and <Link type="regular" to="/profile#employment">experience</Link>. Consequently, as a <strong>senior multidisciplinary designer</strong>, I have an extensive design portfolio. Below are some of my finest works. If you’d like to see all, <Link type="cta" to="/works">browse my portfolio</Link>.</p>
       </Container>
       <Container>
         <Showcase data={

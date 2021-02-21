@@ -46,16 +46,31 @@ function Media (props) {
     case 'video':
       return null
     case 'document':
-      return null
+      return (
+        <span
+          {...attributes}
+          style={{
+            ...(props.style || {}),
+            ...(props.documentAspectRatio ? { paddingBottom: `${props.documentAspectRatio * 100}%` } : {})
+          }}>
+          <object
+            type="application/pdf"
+            data={`${getURL()}?#pagemode=none&scrollbar=0&toolbar=0&statusbar=0&navpanes=0&view=FitB`}>
+            <embed src={`https://drive.google.com/viewerng/viewer?embedded=true&url=${getURL()}`} />
+          </object>
+        </span>
+      )
   }
 }
 
 // Properties
 Media.propTypes = {
   className: PropTypes.string,
+  documentAspectRatio: PropTypes.number,
   filters: PropTypes.object,
   height: PropTypes.number,
   source: PropTypes.string,
+  style: PropTypes.object,
   type: PropTypes.oneOf(MEDIA_TYPE_OPTIONS),
   width: PropTypes.number,
   willCrop: PropTypes.bool
