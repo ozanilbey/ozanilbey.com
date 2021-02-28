@@ -1,5 +1,68 @@
 [
   {
+    "type": "work",
+    "slug": "secfusion-branding",
+    "brand": "SecFusion",
+    "description": "SecFusion is a unified vulnerability management platform providing vulnerability management automation solutions.",
+    "output": "Branding",
+    "client": {
+      "name": "SecFusion",
+      "link": "secfusion.io"
+    },
+    "link": "secfusion.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 32, 0],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Branding", "Responsive Website", "Document"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["Logo Design", "Visual Design", "UI/UX/IxD", "Marketing", "Printmaking"]
+  },
+  {
+    "type": "work",
+    "slug": "secfusion-website",
+    "brand": "SecFusion",
+    "description": "SecFusion is a unified vulnerability management platform providing vulnerability management automation solutions.",
+    "output": "Website",
+    "client": {
+      "name": "SecFusion",
+      "link": "secfusion.io"
+    },
+    "link": "secfusion.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 32, 0],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "work",
+    "slug": "secfusion-brochure",
+    "brand": "SecFusion",
+    "description": "SecFusion is a unified vulnerability management platform providing vulnerability management automation solutions.",
+    "output": "Brochure",
+    "client": {
+      "name": "SecFusion",
+      "link": "secfusion.io"
+    },
+    "link": "secfusion.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 32, 0],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Document"],
+    "role": ["Brand Designer", "Marketing Designer"],
+    "tags": ["Visual Design", "Marketing", "Printmaking"]
+  },
+  {
     "type": "project",
     "slug": "socradar-branding",
     "brand": "SOCRadar",
