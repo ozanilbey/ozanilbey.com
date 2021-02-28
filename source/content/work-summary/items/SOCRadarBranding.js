@@ -34,7 +34,7 @@ const SOCRadarBranding = () => (
     </Container>
     <Container isBlockLayout>
       <Heading rank={2}>Typography</Heading>
-      <Media type="image" width={864} source="/socradar-branding/05.png" />
+      <Media className="monocolor" type="image" width={864} source="/socradar-branding/05.png" />
     </Container>
     <Container isBlockLayout>
       <Heading rank={2}>Icons</Heading>
