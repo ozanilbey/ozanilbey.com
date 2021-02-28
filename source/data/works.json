@@ -81,7 +81,7 @@
     "isLive": true,
     "preview": ["Branding", "Responsive Website"],
     "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
-    "tags": ["Branding", "Visual Design", "UI/UX/IxD"]
+    "tags": ["Logo Design", "Branding", "Visual Design", "UI/UX/IxD"]
   },
   {
     "type": "project",
@@ -531,7 +531,7 @@
     "isLive": false,
     "preview": ["Website"],
     "role": ["Logo Designer", "UI Designer", "Frontend Developer"],
-    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+    "tags": ["UI/UX/IxD", "Frontend", "Web Design", "Logo Design"]
   },
   {
     "type": "project",
@@ -750,8 +750,8 @@
     },
     "isLive": false,
     "preview": ["Website"],
-    "role": ["UI Designer", "Frontend Developer"],
-    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+    "role": ["Logo Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Logo Design", "UI/UX/IxD", "Frontend", "Web Design"]
   },
   {
     "type": "work",
@@ -842,7 +842,7 @@
     "isLive": false,
     "preview": ["Mobile Application"],
     "role": ["Logo Designer", "UI Designer"],
-    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+    "tags": ["Logo Design", "UI/UX/IxD", "Frontend", "Web Design"]
   },
   {
     "type": "collection",
