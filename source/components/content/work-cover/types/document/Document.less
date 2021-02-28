@@ -1,0 +1,106 @@
+[data-work-cover="document"] {
+  .editor {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30em;
+    padding: 2em;
+    border-top-left-radius: .125em;
+    border-top-right-radius: .125em;
+    background-color: white;
+    & > * {
+      &.guideline, &.ruler {
+        position: absolute;
+        &.top {
+          top: 0;
+          left: calc(100% - 2rem);
+          height: 44rem;
+          transform: rotate(90deg);
+          transform-origin: top left;
+        }
+        &.left, &.right {
+          top: 2rem;
+          height: 28rem;
+        }
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+      &.guideline {
+        z-index: 2;
+        width: 2rem;
+        border-width: 0;
+        border-right: .1rem solid blue;
+        &.top {
+          top: .05rem !important;
+          left: 100%;
+          height: 48rem;
+        }
+        &.left, &.right {
+          top: 0;
+          height: 30rem;
+        }
+        &.left {
+          left: .05rem !important;
+        }
+        &.right {
+          right: .05rem !important;
+        }
+      }
+      &.ruler {
+        z-index: 1;
+        width: 1rem;
+        background-image: repeating-linear-gradient(
+          #ddd 0,
+          #ddd .05em,
+          transparent .05em,
+          transparent 1.95em,
+          #ddd 1.95em,
+          #ddd 2em
+        );
+        background-repeat: repeat;
+        &:before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 0;
+        }
+        &:before {
+          z-index: 1;
+          width: calc(1rem * 2 / 3);
+          height: inherit;
+          background-image: repeating-linear-gradient(
+            #ddd 0,
+            #ddd .05em,
+            transparent .05em,
+            transparent .35em,
+            #ddd .35em,
+            #ddd .4em
+          );
+        }
+      }
+      &.site {
+        overflow: hidden;
+        position: relative;
+        height: 28em;
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset 0 0 .25em fade(black, 7.5%);
+        }
+        & > [data-content="media"] {
+          min-width: 100%;
+          min-height: 28em;
+          margin-left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

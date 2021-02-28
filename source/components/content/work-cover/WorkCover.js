@@ -6,11 +6,12 @@ import PropTypes from 'prop-types'
 import Branding from './types/branding/Branding'
 import Collection from './types/collection/Collection'
 import CorporateIdentity from './types/corporate-identity/CorporateIdentity'
-import Website from './types/website/Website'
+import Document from './types/document/Document'
 import GraphicDesign from './types/graphic-design/GraphicDesign'
 import MobileApplication from './types/mobile-application/MobileApplication'
 import ResponsiveWebsite from './types/responsive-website/ResponsiveWebsite'
 import SocialMedia from './types/social-media/SocialMedia'
+import Website from './types/website/Website'
 
 // Hooks
 import useUnitSize from '~/hooks/useUnitSize'
@@ -67,6 +68,8 @@ function WorkCover (props) {
         return <Branding {...elementProps} />
       case 'collection':
         return <Collection {...elementProps} />
+      case 'document':
+        return <Document {...elementProps} />
       case 'corporate-identity':
         return <CorporateIdentity {...elementProps} />
       case 'graphic-design':
