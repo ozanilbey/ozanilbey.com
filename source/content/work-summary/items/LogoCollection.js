@@ -36,6 +36,16 @@ const LogoCollection = () => {
       </Container>
       <Container isBlockLayout>
         <Heading rank={2}>2020</Heading>
+        {renderLogo('secfusion')}
+        <small>
+          SecFusion
+          <i>Unified Vulnerability Platform</i>
+        </small>
+        {renderLogo('agcurate')}
+        <small>
+          Agcurate
+          <i>Rural Intelligence Platform</i>
+        </small>
         {renderLogo('go4pilates')}
         <small>
           GO4Pilates
