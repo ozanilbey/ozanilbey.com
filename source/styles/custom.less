@@ -12,7 +12,7 @@
       }
     }
     .monocolor {
-      filter: invert(100%)
+      filter: brightness(0%)
               invert(22%)
               sepia(15%)
               saturate(760%)
@@ -29,6 +29,10 @@
       [data-content="colophon"] {
         --primary-color: hsla(var(--figure-color-hsl), 0.5) !important;
       }
+    }
+    .monocolor {
+      filter: brightness(0%)
+              invert(100%);
     }
   }
 }
