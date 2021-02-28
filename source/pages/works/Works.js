@@ -36,7 +36,7 @@ function Works () {
   const { push } = useHistory()
   const { workOrFilter } = useParams()
   const workData = useWork(
-    works.map(work => work.slug).indexOf(workOrFilter) > -1
+    getWorkIndex(workOrFilter) > -1
       ? workOrFilter
       : null
   )
@@ -49,6 +49,9 @@ function Works () {
   // Methods
   function getFilterIndex (filter) {
     return WORK_FILTERS.map(filter => slug(filter)).indexOf(filter)
+  }
+  function getWorkIndex (work) {
+    return works.map(work => work.slug).indexOf(work)
   }
   function getFilter () {
     const index = getFilterIndex(workOrFilter)
@@ -63,20 +66,15 @@ function Works () {
 
   // Effects
   useEffect(() => {
-    if (!workOrFilter || workOrFilter === slug(selectedWorksLabel)) {
-      setWorkSet(SELECTED_WORKS)
-    } else {
-      const index = getFilterIndex(workOrFilter)
-      if (index > -1) {
-        setWorkSet(
-          works
-            .filter(work => work.tags.map(tag => slug(tag)).includes(workOrFilter))
-            .map(work => work.slug)
-        )
-      } else {
-        if (works.map(work => work.slug).indexOf(workOrFilter) < 0) push('/works')
-      }
-    }
+    if (!workOrFilter || workOrFilter === slug(selectedWorksLabel)) setWorkSet(SELECTED_WORKS)
+    else if (getFilterIndex(workOrFilter) > -1) {
+      setWorkSet(
+        works
+          .filter(work => work.tags.map(tag => slug(tag)).includes(workOrFilter))
+          .map(work => work.slug)
+      )
+    } else if (getWorkIndex(workOrFilter) > -1) setWorkSet(SELECTED_WORKS)
+    else push('/works')
   }, [workOrFilter, selectedWorksLabel, push])
 
   // Render

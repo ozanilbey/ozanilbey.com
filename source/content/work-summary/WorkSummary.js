@@ -43,6 +43,9 @@ import PokerExtraAdsMixed from './items/PokerExtraAdsMixed'
 import PosterCollection from './items/PosterCollection'
 import RakkipFacebookPage from './items/RakkipFacebookPage'
 import RockSenligiVisuals from './items/RockSenligiVisuals'
+import SecFusionBranding from './items/SecFusionBranding'
+import SecFusionBrochure from './items/SecFusionBrochure'
+import SecFusionWebsite from './items/SecFusionWebsite'
 import SiberestPosters from './items/SiberestPosters'
 import SOCRadarBranding from './items/SOCRadarBranding'
 import SOCRadarWebsite from './items/SOCRadarWebsite'
@@ -133,6 +136,12 @@ function WorkSummary (props) {
         return <RakkipFacebookPage />
       case 'rock-senligi-visuals':
         return <RockSenligiVisuals />
+      case 'secfusion-branding':
+        return <SecFusionBranding />
+      case 'secfusion-brochure':
+        return <SecFusionBrochure />
+      case 'secfusion-website':
+        return <SecFusionWebsite />
       case 'siberest-posters':
         return <SiberestPosters />
       case 'socradar-branding':
