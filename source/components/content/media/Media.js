@@ -27,11 +27,11 @@ function Media (props) {
     if (props.width || props.height) filters.push(props.willCrop ? 'c_lfill,g_north' : 'c_limit')
     if (props.width) filters.push(`w_${props.width}`)
     if (props.height) filters.push(`h_${props.height}`)
-    return filters.length > 0 ? `${filters.join(',')}` : ''
+    return filters.length > 0 ? `/${filters.join(',')}` : ''
   }
-  function getURL () {
+  function getURL (type) {
     const filters = getFilters()
-    return `${MEDIA_URL}/${filters}/v1${props.source}`
+    return MEDIA_URL + (type === 'video' ? '/video/upload' : '') + filters + props.source
   }
 
   // Render
@@ -44,13 +44,23 @@ function Media (props) {
           src={getURL()} />
       )
     case 'video':
-      return null
+      return (
+        <video
+          {...attributes}
+          autoPlay={props.willAutoplay}
+          controls={!props.willHideControls}
+          loop={props.willLoop}>
+          <source
+            src={getURL('video')}
+            type="video/mp4" />
+        </video>
+      )
     case 'document':
       return (
         <span
           {...attributes}
           style={{
-            ...(props.style || {}),
+            ...props.style,
             ...(props.documentAspectRatio ? { paddingBottom: `${props.documentAspectRatio * 100}%` } : {})
           }}>
           <object
@@ -73,7 +83,13 @@ Media.propTypes = {
   style: PropTypes.object,
   type: PropTypes.oneOf(MEDIA_TYPE_OPTIONS),
   width: PropTypes.number,
-  willCrop: PropTypes.bool
+  willAutoplay: PropTypes.bool,
+  willCrop: PropTypes.bool,
+  willHideControls: PropTypes.bool,
+  willLoop: PropTypes.bool
+}
+Media.defaultProps = {
+  style: {}
 }
 
 // Export

@@ -1,5 +1,5 @@
 export const WORK_COVER_TYPES = ['Branding', 'Collection', 'Corporate Identity', 'Graphic Design', 'Mobile Application', 'Responsive Website', 'Social Media', 'Website']
 export const EXPERIENCE_SUMMARY_TYPES = ['employment', 'education']
-export const FEATURED_WORKS = ['docu', 'graphjs', 'graphjs-website', 'socradar-branding', 'base64', 'favogue', 'piccture', 'cardz']
+export const FEATURED_WORKS = ['graphjs', 'graphjs-website', 'socradar-branding', 'base64-ai-branding', 'favogue', 'cardz', 'piccture', 'brush']
 export const SELECTED_WORKS = [...FEATURED_WORKS, 'brush', 'fihrist', 'groups']
 export const WORK_FILTERS = ['Selected Works', 'UI/UX/IxD', 'Graphic Design', 'Social Media', 'Corporate Identity', 'Collections']

@@ -43,7 +43,7 @@ const SecFusionBranding = () => (
     <Container isBlockLayout>
       <Heading rank={2}>Visuals</Heading>
       <Media type="image" width={640} source="/secfusion-branding/07.png" />
-      <small>Sharing Preview</small>
+      <small>Sharing preview</small>
       <Media type="image" width={960} source="/secfusion-branding/08.png" />
       <small>Banner</small>
     </Container>

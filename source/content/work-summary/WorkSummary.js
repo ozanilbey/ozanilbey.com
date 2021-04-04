@@ -13,6 +13,9 @@ import _101ExtraAdsRamadan from './items/101ExtraAdsRamadan'
 import _101ExtraFacebookPage from './items/101ExtraFacebookPage'
 import AlkaProjeWebsite from './items/AlkaProjeWebsite'
 import AtomWebsite from './items/AtomWebsite'
+import Base64AIPlatform from './items/Base64AIPlatform'
+import Base64AIBranding from './items/Base64AIBranding'
+import Base64AIWebsite from './items/Base64AIWebsite'
 import BoraCorporateIdentity from './items/BoraCorporateIdentity'
 import Brush from './items/Brush'
 import CanOkeyAdsYourMove from './items/CanOkeyAdsYourMove'
@@ -76,6 +79,12 @@ function WorkSummary (props) {
         return <AlkaProjeWebsite />
       case 'atom-website':
         return <AtomWebsite />
+      case 'base64-ai-platform':
+        return <Base64AIPlatform />
+      case 'base64-ai-branding':
+        return <Base64AIBranding />
+      case 'base64-ai-website':
+        return <Base64AIWebsite />
       case 'bora-corporate-identity':
         return <BoraCorporateIdentity />
       case 'brush':
