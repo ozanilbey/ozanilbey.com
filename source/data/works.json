@@ -106,6 +106,58 @@
   },
   {
     "type": "project",
+    "slug": "base64-ai-website",
+    "brand": "Base64.ai",
+    "description": "Base64.ai is a real-time AI-powered end-to-end automated document processing solution.",
+    "output": "Website",
+    "link": "base64.ai",
+    "year": 2020,
+    "colors": {
+      "primary": [15, 151, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer", "Backend Developer"],
+    "tags": ["UI/UX/IxD", "Frontend", "Backend", "Visual Design", "Animation"]
+  },
+  {
+    "type": "project",
+    "slug": "base64-ai-platform",
+    "brand": "Base64.ai",
+    "label": "Document processing platform",
+    "description": "Base64.ai is a real-time AI-powered end-to-end automated document processing solution.",
+    "output": "Web Application",
+    "link": "base64.ai",
+    "year": 2020,
+    "colors": {
+      "primary": [15, 151, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website", "Mobile Application"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer", "Backend Developer"],
+    "tags": ["UI/UX/IxD", "Frontend", "Backend", "Data Extraction"]
+  },
+  {
+    "type": "project",
+    "slug": "base64-ai-branding",
+    "brand": "Base64.ai",
+    "description": "Base64.ai is a real-time AI-powered end-to-end automated document processing solution.",
+    "output": "Branding",
+    "link": "base64.ai",
+    "year": 2020,
+    "colors": {
+      "primary": [15, 151, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Branding", "Responsive Website", "Mobile Application"],
+    "role": ["Brand Designer", "Web Designer", "UI Designer"],
+    "tags": ["Logo Design", "Branding", "Visual Design", "UI/UX/IxD", "Animation", "Printmaking"]
+  },
+  {
+    "type": "project",
     "slug": "graphbuild",
     "brand": "GraphBuild",
     "description": "GraphBuild is a simple, visual graph application builder.",
