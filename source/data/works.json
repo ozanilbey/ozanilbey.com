@@ -60,10 +60,10 @@
     "isLive": true,
     "preview": ["Document"],
     "role": ["Brand Designer", "Marketing Designer"],
-    "tags": ["Visual Design", "Marketing", "Printmaking"]
+    "tags": ["Graphic Design", "Marketing", "Printmaking"]
   },
   {
-    "type": "project",
+    "type": "work",
     "slug": "socradar-branding",
     "brand": "SOCRadar",
     "description": "SOCRadar is a digital risk protection platform providing contextualized intelligence.",
@@ -84,7 +84,7 @@
     "tags": ["Logo Design", "Branding", "Visual Design", "UI/UX/IxD"]
   },
   {
-    "type": "project",
+    "type": "work",
     "slug": "socradar-website",
     "brand": "SOCRadar",
     "description": "SOCRadar is a digital risk protection platform providing contextualized intelligence.",
