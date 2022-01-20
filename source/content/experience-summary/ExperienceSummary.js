@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import AnadoluUniversity from './items/education/AnadoluUniversity'
 import MiddleEastTechnicalUniversity from './items/education/MiddleEastTechnicalUniversity'
 import Base64AI from './items/employment/Base64AI'
+import BlackKite from './items/employment/BlackKite'
 import DigitoyGames from './items/employment/DigitoyGames'
 import DocuAI from './items/employment/DocuAI'
 import FraktalProje from './items/employment/FraktalProje'
@@ -49,6 +50,8 @@ function ExperienceSummary (props) {
     switch (props.identifier) {
       case 'base64-ai':
         return <Base64AI />
+      case 'black-kite':
+        return <BlackKite />
       case 'digitoy-games':
         return <DigitoyGames />
       case 'docu-ai':

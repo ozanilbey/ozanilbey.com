@@ -127,6 +127,17 @@
     "isRemote": true
   },
   {
+    "for": "Black Kite",
+    "role": "Web Developer + Designer",
+    "link": "blackkite.com",
+    "start": {
+      "year": 2021,
+      "month": 3
+    },
+    "location": "Boston",
+    "isRemote": true
+  },
+  {
     "for": "Freelance",
     "role": "Designer + Developer",
     "start": {
