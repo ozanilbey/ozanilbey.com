@@ -14,6 +14,7 @@ import Groups from './items/employment/Groups'
 import LabrisNetworks from './items/employment/LabrisNetworks'
 import Kodobur from './items/employment/Kodobur'
 import Semantica from './items/employment/Semantica'
+import Validato from './items/employment/Validato'
 
 // Constants
 import { EXPERIENCE_SUMMARY_TYPES } from '~/constants/content'
@@ -64,6 +65,8 @@ function ExperienceSummary (props) {
         return <LabrisNetworks />
       case 'semantica':
         return <Semantica />
+      case 'validato':
+        return <Validato />
       default:
         return null
     }

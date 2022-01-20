@@ -116,6 +116,17 @@
     "isRemote": true
   },
   {
+    "for": "Validato",
+    "role": "Frontend Developer + Designer",
+    "link": "validato.io",
+    "start": {
+      "year": 2020,
+      "month": 11
+    },
+    "location": "London",
+    "isRemote": true
+  },
+  {
     "for": "Freelance",
     "role": "Designer + Developer",
     "start": {
