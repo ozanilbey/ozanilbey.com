@@ -46,9 +46,9 @@ function ProfessionalSkills () {
         <List data ={[
           'An understanding of basic design principles and Gestalt theory',
           'Expertise on user experience design and user research',
-          'Using design patterns in semantically correct way',
           'A strong recognition of visual identity',
-          'Technical knowledge to create media for diverse platforms'
+          'Technical knowledge to create media for diverse platforms',
+          'Proficiency in writing reusable and performant code'
         ]} />
       </Container>
       <Container>
