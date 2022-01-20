@@ -1,7 +1,7 @@
 [
   {
     "for": "Labris Networks",
-    "role": "User Interface Designer",
+    "role": "User Interface Designer + Developer",
     "link": "labrisnetworks.com",
     "start": {
       "year": 2008,
@@ -15,7 +15,7 @@
   },
   {
     "for": "Kodobur",
-    "role": "User Interface Designer",
+    "role": "User Interface Designer + Developer",
     "link": "kodobur.com",
     "start": {
       "year": 2010,
@@ -113,6 +113,28 @@
       "month": 4
     },
     "location": "New York",
+    "isRemote": true
+  },
+  {
+    "for": "Validato",
+    "role": "Frontend Developer + Designer",
+    "link": "validato.io",
+    "start": {
+      "year": 2020,
+      "month": 11
+    },
+    "location": "London",
+    "isRemote": true
+  },
+  {
+    "for": "Black Kite",
+    "role": "Web Developer + Designer",
+    "link": "blackkite.com",
+    "start": {
+      "year": 2021,
+      "month": 3
+    },
+    "location": "Boston",
     "isRemote": true
   },
   {
