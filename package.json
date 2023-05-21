@@ -57,6 +57,7 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "@vercel/node": "^2.14.3",
     "babel-eslint": "^10.1.0",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
