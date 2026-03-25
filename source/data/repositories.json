@@ -1,0 +1,27 @@
+[
+  {
+    "id": "aixplain/aixplain",
+    "description": "aiXplain is an SDK to build and deploy autonomous AI agents on production-grade infrastructure, instantly.",
+    "link": "github.com/aixplain/aixplain"
+  },
+  {
+    "id": "graphjs/graphjs",
+    "description": "GraphJS is a JavaScript client-side library to help developers easily enable social features on their web sites.",
+    "link": "github.com/graphjs/graphjs"
+  },
+  {
+    "id": "graphjs/groups-v2",
+    "description": "Grou.ps v2 is a micro-social-networking platform generator for online social groups.",
+    "link": "github.com/graphjs/groups-v2"
+  },
+  {
+    "id": "ozanilbey/isomorphic",
+    "description": "Isomorphic is a boilerplate Webpack bundler to create isomorphic JavaScript web applications on Node, using React.",
+    "link": "github.com/ozanilbey/isomorphic"
+  },
+  {
+    "id": "ozanilbey/codenames",
+    "description": "Codenames is a word-based party game, an online adaptation of the original game designed by Vlaada Chvátil.",
+    "link": "github.com/ozanilbey/codenames"
+  }
+]

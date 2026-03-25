@@ -1,0 +1,118 @@
+// Style: Interface > Link (Main)
+[data-interface="link"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .125em;
+  position: relative;
+  color: var(--brand-color);
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  &[disabled] {
+    color: var(--figure-inactive-color);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &.variant-classic {
+    font-weight: 450;
+    &:hover {
+      &:before {
+        opacity: 1;
+        bottom: .0625em;
+        border-style: solid;
+      }
+    }
+    &:before {
+      content: "";
+      opacity: .375;
+      position: absolute;
+      left: 0;
+      bottom: .1875em;
+      width: 100%;
+      height: 1px;
+      border-width: 0;
+      border-style: dashed;
+      border-color: inherit;
+      border-bottom-width: 1px;
+      transition: opacity .125s ease,
+                  bottom .125s ease;
+    }
+  }
+  &.reversed {
+    flex-direction: row-reverse;
+  }
+  &[class^="arrow"] {
+    &:after {
+      content: "→";
+      display: inline-block;
+      position: relative;
+      font-family: "Inter",
+                   -apple-system,
+                   BlinkMacSystemFont,
+                   "Segoe UI",
+                   Roboto,
+                   Oxygen-Sans,
+                   Ubuntu,
+                   Cantarell,
+                   "Helvetica Neue",
+                   Helvetica,
+                   Arial,
+                   sans-serif,
+                   "Apple Color Emoji",
+                   "Segoe UI Emoji",
+                   "Segoe UI Symbol";
+      font-weight: 700;
+      transition: top .125s ease,
+                  left .125s ease,
+                  right .125s ease;
+    }
+  }
+  &.arrow-right {
+    &:after {
+      right: -.05em;
+    }
+    &:hover {
+      &:after {
+        right: -.175em;
+      }
+    }
+  }
+  &.arrow-upright {
+    &:after {
+      top: .05em;
+      right: .05em;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      &:after {
+        top: -.05em;
+        right: -.05em;
+      }
+    }
+  }
+  &.arrow-down {
+    &:after {
+      top: -.025em;
+      right: -.05em;
+      transform: rotate(90deg);
+    }
+    &:hover {
+      &:after {
+        top: .125em;
+      }
+    }
+  }
+  &.arrow-left {
+    &:after {
+      left: -.05em;
+      transform: scaleX(-1);
+    }
+    &:hover {
+      &:after {
+        left: -.175em;
+      }
+    }
+  }
+}

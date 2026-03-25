@@ -1,0 +1,245 @@
+[
+  {
+    "for": "Labris Networks",
+    "role": "Frontend Engineer + Designer",
+    "link": "labrisnetworks.com",
+    "start": {
+      "year": 2008,
+      "month": 8
+    },
+    "end": {
+      "year": 2009,
+      "month": 5
+    },
+    "location": "Ankara",
+    "mode": "onsite",
+    "contract": "employment",
+    "schedule": "part-time"
+  },
+  {
+    "for": "Kodobur",
+    "role": "Frontend Engineer + Designer",
+    "link": "kodobur.com",
+    "start": {
+      "year": 2010,
+      "month": 10 
+    },
+    "end": {
+      "year": 2012,
+      "month": 8
+    },
+    "location": "Ankara",
+    "mode": "remote",
+    "contract": "employment",
+    "schedule": "part-time"
+  },
+  {
+    "for": "Fraktal Proje",
+    "role": "Cofounder",
+    "link": "fraktalproje.com",
+    "start": {
+      "year": 2013,
+      "month": 1
+    },
+    "end": {
+      "year": 2013,
+      "month": 9
+    },
+    "location": "Ankara",
+    "mode": "onsite",
+    "contract": "employment",
+    "schedule": "full-time",
+    "qualification": "Cofounder"
+  },
+  {
+    "for": "Semantica",
+    "role": "CEO + CTO",
+    "start": {
+      "year": 2013,
+      "month": 12
+    },
+    "end": {
+      "year": 2016,
+      "month": 4
+    },
+    "location": "San Francisco",
+    "mode": "onsite",
+    "contract": "employment",
+    "schedule": "full-time",
+    "qualification": "Founder",
+    "description": "Founded the company to create better social feedback tools. Hired and managed a team of four after my startup raised a seed investment. Designed, developed, and shipped three products called Piccture, Cardz, and Favogue."
+  },
+  {
+    "for": "Digitoy Games",
+    "role": "Social Media Marketing Consultant",
+    "link": "digitoy.games",
+    "start": {
+      "year": 2016,
+      "month": 11
+    },
+    "end": {
+      "year": 2019,
+      "month": 2
+    },
+    "location": "Izmir",
+    "mode": "remote",
+    "contract": "consultancy",
+    "schedule": "part-time"
+  },
+  {
+    "for": "Grou.ps",
+    "role": "Senior Full-Stack Engineer + Designer",
+    "link": "groups-inc.com",
+    "start": {
+      "year": 2018,
+      "month": 2
+    },
+    "end": {
+      "year": 2019,
+      "month": 4
+    },
+    "location": "Reno",
+    "mode": "remote",
+    "contract": "employment",
+    "schedule": "full-time",
+    "qualification": "Cofounder (GraphJS)",
+    "description": "Hired to develop GraphJS, a client-side library for enabling social features (messaging, following, etc.) on any website. Designed and developed it in its entirety, and also the customer-facing web application to create, edit, customize all social components."
+  },
+  {
+    "for": "Docu.ai",
+    "role": "Senior Full-Stack Engineer + Designer",
+    "link": "docu.ai",
+    "start": {
+      "year": 2019,
+      "month": 4
+    },
+    "end": {
+      "year": 2020,
+      "month": 1
+    },
+    "location": "San Francisco",
+    "mode": "remote",
+    "contract": "employment",
+    "schedule": "full-time",
+    "qualification": "Employee #1",
+    "description": "Hired to develop an OCR-based document classification and data extraction AI product. Designed and developed customer-facing web application, and also tools for mass document processing, data correction, and dataset creation+management."
+  },
+  {
+    "for": "Base64.ai",
+    "role": "Senior Full-Stack Engineer + Designer",
+    "link": "base64.ai",
+    "start": {
+      "year": 2020,
+      "month": 1
+    },
+    "end": {
+      "year": 2020,
+      "month": 4
+    },
+    "location": "New York",
+    "mode": "remote",
+    "contract": "employment",
+    "schedule": "full-time",
+    "qualification": "Employee #1",
+    "description": "Hired to develop a document understanding AI product. Worked on the data extraction technology and its API on the backend. Designed and developed customer-facing web application, and also its mobile applications for both Android and iOS platforms."
+  },
+  {
+    "for": "Validato",
+    "role": "Senior Frontend Engineer + Designer",
+    "link": "validato.io",
+    "start": {
+      "year": 2020,
+      "month": 11
+    },
+    "end": {
+      "year": 2022,
+      "month": 1
+    },
+    "location": "London",
+    "mode": "remote",
+    "contract": "employment",
+    "schedule": "ad-hoc",
+    "description": "Hired to work on a highly complex cybersecurity breach and attack simulator AI product. Designed and developed customer-facing web application, and also its admin panel and the email alert system."
+  },
+  {
+    "for": "Black Kite",
+    "role": "Web Strategy Consultant",
+    "link": "blackkite.com",
+    "start": {
+      "year": 2021,
+      "month": 3
+    },
+    "end": {
+      "year": 2023,
+      "month": 11
+    },
+    "location": "Boston",
+    "mode": "remote",
+    "contract": "consultancy",
+    "schedule": "ad-hoc"
+  },
+  {
+    "for": "aiXplain",
+    "link": "aixplain.com",
+    "role": "Frontend Team Lead",
+    "start": {
+      "year": 2022,
+      "month": 2
+    },
+    "end": {
+      "year": 2023,
+      "month": 3
+    },
+    "location": "San Jose",
+    "mode": "remote",
+    "contract": "employment",
+    "schedule": "full-time",
+    "description": "Managed frontend team. Designed and developed the no-code product suite: Discover (AI asset marketplace), Benchmark (model evaluation),  FineTune (model fine-tuning),  Design (AI pipeline builder), AutoMode (model ensembler)."
+  },
+  {
+    "for": "aiXplain",
+    "link": "aixplain.com",
+    "role": "Head of Engineering, UX",
+    "start": {
+      "year": 2023,
+      "month": 3
+    },
+    "end": {
+      "year": 2024,
+      "month": 11
+    },
+    "location": "San Jose",
+    "mode": "hybrid",
+    "contract": "employment",
+    "schedule": "full-time",
+    "description": "Managed UX team, a hybrid of product and frontend teams. Designed and developed Bel Esprit, the AI assistant that plans, builds, and auto-deploys AI pipelines."
+  },
+  {
+    "for": "aiXplain",
+    "link": "aixplain.com",
+    "role": "Head of Engineering",
+    "start": {
+      "year": 2024,
+      "month": 11
+    },
+    "location": "San Jose",
+    "mode": "hybrid",
+    "contract": "employment",
+    "schedule": "full-time",
+    "description": "Managed engineering teams (frontend, backend, and DevOp/MLOps). Designed and developed the next generation of the product suite: Studio (no-code agent builder), Store (marketplace for agentic AI applications), and Console (account hub)."
+  },
+  {
+    "for": "Freelance",
+    "role": "Designer + Developer",
+    "start": {
+      "year": 2003,
+      "month": 6
+    },
+    "end": {
+      "year": 2022,
+      "month": 2
+    },
+    "contract": "independent",
+    "description": "Helped 50+ clients make their product amazing. Most of my major clients also chose to work with me on their rebranding."
+  }
+]

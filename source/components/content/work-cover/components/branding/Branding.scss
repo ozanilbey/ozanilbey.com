@@ -1,0 +1,47 @@
+// Style: Content > Work cover > Branding (Main)
+[data-content="work-cover"] {
+  [data-component="branding"] {
+    & > .paper {
+      width: 48em;
+      height: 30em;
+      padding: 2em 6em 0 2em;
+      background-color: white;
+      & > .grid {
+        --grid-padding: 1px;
+        position: relative;
+        width: 40em;
+        height: 28em;
+        background-repeat: repeat;
+        background-position: left top;
+        background-size: calc(100% / 10) calc(100% / 7);
+        & > * {
+          overflow: hidden;
+          position: absolute;
+          &.typography {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            top: calc(4em + var(--grid-padding));
+            right: calc(4em + var(--grid-padding));
+            height: 8em;
+            max-width: 32em;
+          }
+          &.logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            left: calc(4em + var(--grid-padding));
+            bottom: calc(4em + var(--grid-padding));
+            height: 8em;
+            width: 32em;
+          }
+          &.colors {
+            right: -4em;
+            width: 2em;
+            max-height: 28em;
+          }
+        }
+      }
+    }
+  }
+}

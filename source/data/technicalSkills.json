@@ -1,0 +1,109 @@
+[
+  {
+    "name": "Programming",
+    "items": [
+      { "name": "JavaScript", "level": 2 },
+      { "name": "TypeScript", "level": 2 },
+      { "name": "PHP", "level": 1 },
+      { "name": "Swift", "level": 1 }
+    ]
+  },
+  {
+    "name": "Backend development",
+    "items": [
+      { "name": "Node", "level": 2 },
+      { "name": "Express", "level": 2 },
+      { "name": "GraphQL", "level": 2 },
+      { "name": "REST", "level": 2 },
+      { "name": "Mongo", "level": 1 },
+      { "name": "SQL", "level": 0 }
+    ]
+  },
+  {
+    "name": "Web development",
+    "items": [
+      { "name": "React", "level": 2 },
+      { "name": "Web APIs", "level": 2 },
+      { "name": "DOM", "level": 2 },
+      { "name": "HTML", "level": 2 },
+      { "name": "CSS", "level": 2 },
+      { "name": "Sass", "level": 2 },
+      { "name": "Tailwind", "level": 2 }
+    ]
+  },
+  {
+    "name": "Mobile development",
+    "items": [
+      { "name": "React Native", "level": 2 },
+      { "name": "Expo", "level": 2 },
+      { "name": "SwiftUI", "level": 1 },
+      { "name": "iOS SDKs", "level": 0 }
+    ]
+  },
+  {
+    "name": "Developer tools",
+    "items": [
+      { "name": "Vite", "level": 2 },
+      { "name": "Webpack", "level": 2 },
+      { "name": "DevTools", "level": 2 },
+      { "name": "CLIs", "level": 2 },
+      { "name": "SDKs", "level": 2 },
+      { "name": "Git", "level": 2 }
+    ]
+  },
+  {
+    "name": "Artificial intelligence",
+    "items": [
+      { "name": "LLMs", "level": 2 },
+      { "name": "Agents", "level": 2 },
+      { "name": "Workflows", "level": 2 },
+      { "name": "Monitoring", "level": 2 },
+      { "name": "Orchestration", "level": 1 }
+    ]
+  },
+  {
+    "name": "User experience",
+    "items": [
+      { "name": "Usability", "level": 2 },
+      { "name": "Wireframing", "level": 2 },
+      { "name": "Storyboarding", "level": 2 },
+      { "name": "User research", "level": 2 }
+    ]
+  },
+  {
+    "name": "User interface design",
+    "items": [
+      { "name": "Prototyping", "level": 2 },
+      { "name": "Design systems", "level": 2 },
+      { "name": "Interaction design", "level": 2 }
+    ]
+  },
+  {
+    "name": "Web design",
+    "items": [
+      { "name": "Responsive design", "level": 2 },
+      { "name": "Compatibility", "level": 2 },
+      { "name": "Animations", "level": 2 },
+      { "name": "Accessibility", "level": 1 },
+      { "name": "SEO", "level": 1 }
+    ]
+  },
+  {
+    "name": "Graphic design",
+    "items": [
+      { "name": "Branding", "level": 2 },
+      { "name": "Typography", "level": 2 },
+      { "name": "Print design", "level": 2 },
+      { "name": "Data visualization", "level": 2 }
+    ]
+  },
+  {
+    "name": "Graphic software",
+    "items": [
+      { "name": "Sketch", "level": 2 },
+      { "name": "Figma", "level": 2 },
+      { "name": "Photoshop", "level": 2 },
+      { "name": "Illustrator", "level": 2 }
+    ]
+  }
+]

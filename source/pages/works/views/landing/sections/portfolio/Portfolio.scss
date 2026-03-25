@@ -1,0 +1,10 @@
+// Style: Works > Landing > Portfolio (Main)
+[data-page="works"] {
+  [data-view="landing"] {
+    [data-section="portfolio"] {
+      .showcase {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

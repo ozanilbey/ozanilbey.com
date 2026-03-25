@@ -1,0 +1,161 @@
+// Style: Application > Layout (Main)
+:root {
+  // Measurements
+  --breakpoint: 1152px;
+  // Application
+  --application-width: 100dvw;
+  --application-height-minimum: 100dvh;
+  // Generic
+  --inner-width: min(var(--breakpoint), var(--application-width));
+  --inner-width-maximum: var(--breakpoint);
+  // Navigation
+  --navigation-unit: 1.25rem;
+  --navigation-width: var(--inner-width);
+  --navigation-height: var(--navigation-height-minimum);
+  --navigation-height-minimum: calc(var(--navigation-base-height) + var(--navigation-menu-height-minimum));
+  --navigation-height-maximum: calc(var(--navigation-base-height) + var(--navigation-menu-height-maximum));
+  --navigation-base-height: calc(3 * var(--navigation-unit));
+  --navigation-base-radius: var(--navigation-unit);
+  --navigation-menu-height: var(--navigation-menu-height-minimum);
+  --navigation-menu-height-maximum: calc(4 * var(--navigation-unit));
+  --navigation-menu-height-minimum: var(--navigation-unit);
+  --navigation-animation-duration: .5s;
+  // Page
+  --page-width: var(--inner-width);
+  // Conditional
+  &:not([data-application-ready]) {
+    * {
+      transition: none !important; // Prevents premature transitions
+    }
+  }
+  &[data-menu-active] {
+    overflow: hidden;
+    --navigation-height: var(--navigation-height-maximum);
+    #navigation {
+      & > .base {
+        box-shadow: 0 0 0 1px var(--tone-strong-color);
+      }
+      & > .menu {
+        height: var(--navigation-menu-height-maximum);
+        & > * {
+          opacity: 1;
+          transform: translateY(calc(var(--navigation-unit) / 2));
+          transition-duration: calc(var(--navigation-animation-duration) / 2);
+          transition-delay: calc(var(--navigation-animation-duration) / 2);
+        }
+      }
+    }
+    #page, #colophon {
+      opacity: .0625;
+      pointer-events: none;
+    }
+    #page {
+      & > * {
+        & > * {
+          filter: blur(2px) grayscale(100%);
+        }
+      }
+    }
+    #colophon {
+      filter: blur(2px) grayscale(100%);
+    }
+  }
+  #application {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    width: var(--application-width);
+    min-height: var(--application-height-minimum);
+    padding-top: var(--navigation-height);
+    transition: padding-top var(--navigation-animation-duration) ease;
+    &:before {
+      content: "";
+      opacity: 5%;
+      position: absolute;
+      bottom: 0;
+      aspect-ratio: 8;
+      width: 100%;
+      background-image: radial-gradient(ellipse at bottom, var(--brand-color) 0%, transparent 50%);
+    }
+    & > * {
+      width: var(--inner-width);
+      max-width: var(--inner-width-maximum);
+      margin: 0 auto;
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  #navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: var(--navigation-width);
+    height: var(--navigation-height);
+    & > * {
+      flex-grow: 0;
+      flex-shrink: 0;
+      position: relative;
+      padding: 0 var(--navigation-unit);
+    }
+    & > .base {
+      border-radius: var(--navigation-base-radius);
+      height: var(--navigation-base-height);
+      box-shadow: 0 0 0 1px transparent;
+      transition: box-shadow .5s ease;
+    }
+    & > .menu {
+      display: flex;
+      align-items: center;
+      height: var(--navigation-menu-height-minimum);
+      background-color: var(--ground-color);
+      transition: height .5s ease;
+      & > * {
+        opacity: 0;
+        transform: translateY(calc(-1 * var(--navigation-unit) / 2));
+        transition-property: opacity, transform;
+        transition-duration: .25s;
+        transition-delay: 0s;
+        transition-timing-function: ease;
+      }
+    }
+  }
+  #page {
+    opacity: 1;
+    flex-grow: 1;
+    position: relative;
+    width: var(--page-width);
+    padding: 0 var(--navigation-unit);
+    transition: opacity .25s ease;
+    & > * {
+      & > * {
+        transition: filter .25s ease;
+      }
+    }
+  }
+  #colophon {
+    opacity: 1;
+    margin-top: 1.5rem;
+    padding: var(--navigation-unit);
+    transition-property: opacity, filter;
+    transition-duration: .25s;
+    transition-timing-function: ease;
+  }
+}
+
+// Style: Application > Layout (< 1280px)
+@media (max-width: 1279.98px) {
+  :root {
+    --navigation-base-radius: 0px;
+    --navigation-menu-height-maximum: calc(4 * var(--navigation-unit));
+    --navigation-menu-height-minimum: 0px;
+  }
+}

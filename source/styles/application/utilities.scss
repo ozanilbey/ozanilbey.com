@@ -1,0 +1,125 @@
+// Style: Application > Utilities (Main)
+[data-text-label] {
+  &:before {
+    content: attr(data-text-label) ': ';
+    font-weight: 500;
+  }
+}
+[role="button"] {
+  --offset-distance: 0;
+  --shadow-length: 3px;
+  --shine-opacity: .09375;
+  --shine-color-hsl: var(--theme-light-extreme-color-hsl);
+  display: inline-flex;
+  gap: .5rem;
+  position: relative;
+  z-index: 1;
+  height: 2.5rem;
+  padding: 0 1.125rem;
+  line-height: 2.5rem;
+  border-radius: .5rem;
+  color: var(--theme-light-extreme-color);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 550;
+  line-height: inherit;
+  text-shadow: 0 1px 2px var(--shade-strong-color);
+  outline: none;
+  border: none;
+  background-color: var(--brand-color);
+  background-image: radial-gradient(ellipse, hsla(var(--shine-color-hsl), var(--shine-opacity)) 25%, transparent 50%, transparent 100%);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 250% 200%;
+  box-shadow: 0 var(--shadow-length) 0 0 var(--shade-strong-color),
+              0 var(--shadow-length) 0 0 var(--shade-strong-color),
+              0 var(--shadow-length) 0 0 var(--brand-color);
+  transform: translateY(var(--offset-distance)) !important;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: .125s;
+  transition-timing-function: ease;
+  will-change: background-color, box-shadow, transform;
+  touch-action: manipulation;
+  user-select: none;
+  appearance: none;
+  cursor: pointer;
+  &:hover {
+    --offset-distance: 0;
+    --shine-opacity: .1875;
+    &:active {
+      --offset-distance: 3px;
+    }
+  }
+  &:active {
+    --shadow-length: 1.5px;
+    --shine-opacity: .03125;
+    --shine-color-hsl: var(--theme-dark-extreme-color-hsl);
+  }
+  &:before {
+    content: "";
+    opacity: .125;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: 0 calc(var(--shadow-length) * 2) var(--shadow-length) 0 var(--brand-color);
+  }
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+  &.loading {
+    pointer-events: none;
+    background-image: linear-gradient(
+            -45deg, transparent 25%,
+            fade(white, 12.5%) 25%,
+            fade(white, 12.5%) 50%,
+            transparent 50%,
+            transparent 75%,
+            fade(white, 12.5%) 75%
+          );
+          background-size: 3rem;
+          animation: loading-stripes 10s infinite linear;
+    @keyframes loading-stripes {
+      from {
+        background-position: 0%;
+      }
+      to {
+        background-position: 100%;
+      }
+    }
+  }
+}
+.dim {
+  color: var(--figure-inactive-color);
+}
+.text-line-single {
+  max-width: 100%;
+  line-height: 83%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-justified {
+  text-align: justify;
+}
+
+// Style: Application > Utilities (Extreme)
+[data-extreme="light"] {
+  [role="button"] {
+    &:before {
+      background-color: var(--theme-dark-color);
+    }
+  }
+}

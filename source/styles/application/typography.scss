@@ -1,0 +1,176 @@
+// Style: Application > Typography (Main)
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  font-size: 20px;
+}
+body {
+  font-family: "Inter",
+               -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Oxygen-Sans,
+               Ubuntu,
+               Cantarell,
+               "Helvetica Neue",
+               Helvetica,
+               Arial,
+               sans-serif,
+               "Apple Color Emoji",
+               "Segoe UI Emoji",
+               "Segoe UI Symbol";
+  font-weight: 300;
+  line-height: 150%;
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+  color: var(--figure-strong-color);
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 112.5%;
+  letter-spacing: -.0125em;
+}
+h1, h2 {
+  margin-bottom: .5em;
+  font-weight: 700;
+}
+h3, h4 {
+  margin-bottom: .375em;
+  font-weight: 600;
+}
+h5, h6, strong, b {
+  margin-bottom: .25em;
+  font-weight: 500;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1.25rem;
+}
+p {
+  text-align: left;
+  line-height: 150%;
+  margin-bottom: .5em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+a {
+  text-decoration: none;
+}
+i {
+  font-style: italic;
+}
+strong {
+  color: var(--figure-strong-color);
+  font-weight: 450;
+}
+mark {
+  padding: 0 .0625em;
+  color: var(--brand-color);
+  font-weight: 600;
+  line-height: 87.5%;
+  user-select: none;
+}
+code {
+  font-family: monospace;
+  letter-spacing: 0;
+  white-space: pre;
+}
+sub {
+  font-size: .75em;
+  vertical-align: sub;
+}
+input, textarea {
+  letter-spacing: -0.02em;
+}
+
+// Style: Application > Typography (< 1440px)
+@media (max-width: 1439.98px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+// Style: Application > Typography (< 1280px)
+@media (max-width: 1279.98px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+// Style: Application > Typography (< 1024px)
+@media (max-width: 1023.98px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+// Style: Application > Typography (< 768px)
+@media (max-width: 767.98px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    letter-spacing: -.0125em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .4375em;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5, h6 {
+    font-size: 1.25rem;
+  }
+}
+
+// Style: Application > Typography (< 480px)
+@media (max-width: 479.98px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    letter-spacing: -.006125em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .375em;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4, h5, h6 {
+    font-size: 1.25rem;
+  }
+}

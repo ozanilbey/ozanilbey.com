@@ -1,0 +1,17 @@
+# Environment
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Miscellaneous
+.DS_Store
+
+# Node
+/node_modules
+package-lock.json
+
+# Production
+/build
+/build-ssr

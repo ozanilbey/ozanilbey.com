@@ -1,0 +1,68 @@
+// Style: Works > Work > Body (Main)
+[data-page="works"] {
+  [data-view="work"] {
+    [data-section="body"] {
+      text-align: center;
+      & > * {
+        &:first-child {
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+          .media {
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+            border-radius: 1rem;
+          }
+        }
+      }
+      .title {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+      }
+      .media {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        border-radius: .125rem;
+        filter: drop-shadow(0 0 1px var(--shade-strong-color));
+        &.weak {
+          opacity: 87.5%;
+        }
+        &.spaced {
+          margin-top: 4rem;
+        }
+      }
+      .information {
+        margin-top: 1.5rem;
+      }
+      .note {
+        margin-top: 1rem;
+        font-weight: 450;
+        .detail {
+          font-size: .875em;
+          font-weight: 300;
+        }
+      }
+      .detail {
+        display: block;
+        color: var(--brand-color);
+      }
+    }
+  }
+}
+
+// Style: Works > Work > Body (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-page="works"] {
+    [data-view="work"] {
+      [data-section="body"] {
+        & > * {
+          &:first-child {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+// Style: Layout > Navigation (Main)
+[data-layout="navigation"] {
+  user-select: none;
+  & > .base {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    position: relative;
+    height: var(--navigation-base-height);
+    color: var(--figure-strong-color);
+    line-height: var(--navigation-base-height);
+    &:before {
+      opacity: 1 !important;
+      background-image: linear-gradient(
+        hsla(var(--ground-color-hsl), 1) 0%,
+        hsla(var(--ground-color-hsl), .9375) 37.5%,
+        hsla(var(--ground-color-hsl), .875) 62.5%,
+        hsla(var(--ground-color-hsl), .8125) 78.125%,
+        hsla(var(--ground-color-hsl), .75) 87.5%,
+        hsla(var(--ground-color-hsl), .6875) 93.75%,
+        hsla(var(--ground-color-hsl), .625) 96.875%,
+        hsla(var(--ground-color-hsl), .5625) 100%
+      );
+    }
+    & > * {
+      display: inline-flex;
+      align-items: center;
+      z-index: 1;
+    }
+    & > .identity {
+      height: .875rem;
+      margin-right: auto;
+      & > * {
+        display: inline-flex;
+        align-items: center;
+        & > .logo {
+          height: .875rem;
+        }
+      }
+      & > .label {
+        --label-width: 6rem;
+        --label-separator-width: .8125rem;
+        overflow: hidden;
+        display: inline-block;
+        width: var(--label-width);
+        height: inherit;
+        color: var(--figure-inactive-color);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: .75rem;
+        letter-spacing: .0625em;
+        text-align: left;
+        text-transform: uppercase;
+        text-indent: calc(-1 * var(--label-width));
+        text-shadow: 0 0 .5px currentColor;
+        transition-property: color, text-indent;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        &:before {
+          content: ":";
+          display: inline-block;
+          width: var(--label-separator-width);
+          height: inherit;
+          margin-right: -.0625rem;
+          font-size: 1.25em;
+          font-weight: 550;
+          line-height: inherit;
+          letter-spacing: 0;
+          text-align: center;
+          transform: translateY(-4.6875%);
+        }
+        &:hover {
+          color: var(--figure-weak-color);
+        }
+        &.target-home, &.target-error {
+          visibility: hidden;
+          width: 1px;
+        }
+        &.visible {
+          text-indent: 0;
+        }
+      }
+    }
+  }
+  & > .menu {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: height .25s ease;
+    & > .links {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      margin-top: .25rem; // Makes it closer to the base
+      &.pages {
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: left;
+        & > * {
+          color: var(--figure-weak-color);
+          &:has(.active) {
+            color: var(--figure-strong-color);
+            & > * {
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      &.accounts {
+        justify-content: flex-end;
+        flex-grow: 0;
+        flex-shrink: 0;
+        gap: 1rem;
+        text-align: right;
+      }
+      & > * {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .link {
+    color: currentColor;
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    &.interactive {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: -.375rem;
+        left: -.375rem;
+        right: -.375rem;
+        bottom: -.375rem;
+        border-radius: .375rem;
+        background-color: transparent;
+        transition: background-color .25s ease;
+      }
+      &:hover {
+        &:before {
+          background-color: var(--tone-weak-color);
+        }
+      }
+      & > * {
+        position: relative;
+        z-index: 1;
+      }
+      & > .icon {
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+        pointer-events: none;
+        &.icon-exit {
+          transform: scale(.75); // Fixes optical disturbance
+        }
+      }
+    }
+  }
+}
+
+// Style: Layout > Navigation (< 480px)
+@media (max-width: 479.98px) {
+  [data-layout="navigation"] {
+    & > .menu {
+      & > .links {
+        &.pages {
+          gap: 1rem;
+        }
+      }
+    }
+    .link {
+      font-size: .875rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// Style: Works > Work > Preview (Main)
+[data-page="works"] {
+  [data-view="work"] {
+    [data-header="preview"] {
+      & > * {
+        overflow: hidden;
+        position: relative;
+        padding-top: 3rem;
+        text-align: center;
+        border-radius: 1rem;
+        transform-origin: bottom;
+        & > * {
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .brand {
+        width: 100%;
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+      .cover {
+        display: block;
+        width: 100%;
+        max-width: 62.5%;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+// Style: Works > Work > Preview (< 1280px)
+@media (max-width: 1279.98px) {
+  [data-page="works"] {
+    [data-view="work"] {
+      [data-header="preview"] {
+        & > * {
+          padding-top: 3rem;
+        }
+        .brand {
+          max-width: 27.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Style: Works > Work > Preview (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-page="works"] {
+    [data-view="work"] {
+      [data-header="preview"] {
+        .brand {
+          max-width: 25rem;
+        }
+        .cover {
+          max-width: 72.5%;
+        }
+      }
+    }
+  }
+}
+
+// Style: Works > Work > Preview (< 480px)
+@media (max-width: 479.98px) {
+  [data-page="works"] {
+    [data-view="work"] {
+      [data-header="preview"] {
+        .cover {
+          max-width: 82.5%;
+        }
+      }
+    }
+  }
+}

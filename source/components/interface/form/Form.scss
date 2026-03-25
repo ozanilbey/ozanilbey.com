@@ -1,0 +1,40 @@
+// Style: Interface > Form (Main)
+[data-interface="form"] {
+  opacity: 1;
+  font-size: .875em;
+  transition: opacity .25s ease;
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+  & > .notice {
+    margin-bottom: 1.5rem;
+    & > * {
+      display: block;
+      margin-bottom: .5rem;
+      padding: .375rem .5rem;
+      color: var(--intent-danger-color);
+      font-size: .75rem;
+      line-height: .5rem;
+      text-align: center;
+      border: 1px solid hsla(var(--intent-danger-color-hsl), .25);
+      border-radius: .75rem;
+      background-color: hsla(var(--intent-danger-color-hsl), .1);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  & > .content {
+    & > * {
+      width: 100%;
+      margin-bottom: 1em;
+      &:first-child {
+        margin-top: 0;
+      }
+      &.label, & > .label {
+        margin-left: .125em;
+      }
+    }
+  }
+}

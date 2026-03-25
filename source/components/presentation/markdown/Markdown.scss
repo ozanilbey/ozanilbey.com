@@ -1,0 +1,115 @@
+// Style: Presentation > Markdown (Main)
+[data-presentation="markdown"] {
+  font-weight: 300;
+  & > * {
+    margin-top: .5em;
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  & > div {
+    margin: .75rem 0 !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    * {
+      color: inherit;
+      font-weight: inherit;
+    }
+  }
+  h1, h2, h3 {
+    color: var(--figure-strong-color);
+  }
+  h1 {
+    font-size: 1.125em;
+  }
+  h2 {
+    font-size: 1.0625em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4, h5, h6 {
+    color: var(--figure-color);
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: .9375em;
+  }
+  h6 {
+    font-size: .875em;
+  }
+  p {
+    font-size: 1em;
+  }
+  strong, b, em {
+    font-weight: 500;
+  }
+  ul, ol {
+    padding-left: 1.25em;
+    list-style: outside;
+    ul, ol {
+      margin-bottom: .125rem;
+    }
+    li {
+      &::marker {
+        font-weight: inherit;
+      }
+    }
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  code {
+    margin: .25rem 0 !important;
+    padding: .375rem .625rem;
+    font-size: .75rem;
+    line-height: 1rem;
+    border-radius: .125rem;
+    background-color: var(--tone-weak-color);
+    .token {
+      white-space: normal;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  table {
+    margin: .75rem 0 !important;
+    font-size: .75rem;
+    border-radius: .125rem;
+    background-color: var(--tone-weak-color);
+    thead {
+      font-weight: 500;
+    }
+    tbody {
+      tr {
+        &:last-child {
+          border-bottom: unset;
+        }
+      }
+    }
+    tr {
+      border-bottom: 1px solid var(--tone-color);
+      th, td {
+        padding: .25em 1em;
+        border-right: 1px solid var(--tone-color);
+        &:last-child {
+          border-right: unset;
+        }
+      }
+    }
+  }
+  hr {
+    margin: .75rem 0;
+    border: none;
+    border-top: 2px dotted var(--ground-color);
+  }
+}

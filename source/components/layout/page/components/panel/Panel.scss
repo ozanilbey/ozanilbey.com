@@ -1,0 +1,27 @@
+// Style: Layout > Page > Panel (Main)
+[data-layout="page"] {
+  [data-component="panel"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100dvh;
+    min-width: 360px;
+    padding: 1rem;
+    background-color: var(--ground-alternative-color);
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    &.active {
+      transform: translateX(0);
+    }
+    &:not(.spacing) {
+      padding: 0;
+    }
+  }
+}

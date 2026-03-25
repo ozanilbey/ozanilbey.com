@@ -1,0 +1,18 @@
+// Style: Model > Headline (Main)
+[data-model="headline"] {
+  font-weight: 700;
+  & > .main {
+    & > .after, & > .before {
+      display: block;
+      margin-bottom: 0;
+      font-size: .625em !important;
+      font-weight: inherit !important;
+    }
+    & > .after {
+      margin-top: .0625em;
+    }
+    & > .before {
+      margin-bottom: .0625em;
+    }
+  }
+}

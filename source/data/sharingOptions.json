@@ -1,0 +1,50 @@
+[
+  {
+    "id": "x",
+    "name": "X",
+    "link": "https://x.com/intent/tweet/?url=LINK&text=MESSAGE",
+    "color": [0, 0, 0]
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/shareArticle?mini=true&url=LINK&text=MESSAGE",
+    "color": [10, 102, 194]
+  },
+  {
+    "id": "reddit",
+    "name": "Reddit",
+    "link": "https://reddit.com/submit?url=LINK&title=MESSAGE",
+    "color": [255, 69, 0]
+  },
+  {
+    "id": "facebook",
+    "name": "Facebook",
+    "link": "https://facebook.com/sharer/sharer.php?u=LINK",
+    "color": [24, 119, 242]
+  },
+  {
+    "id": "messenger",
+    "name": "Messenger",
+    "link": "fb-messenger://share/?link=LINK&app_id=FACEBOOK_APPLICATION_IDENTIFIER",
+    "color": [29, 161, 242]
+  },
+  {
+    "id": "whatsapp",
+    "name": "WhatsApp",
+    "link": "whatsapp://send?text=MESSAGE%20LINK",
+    "color": [37, 211, 102]
+  },
+  {
+    "id": "message",
+    "name": "Message",
+    "link": "sms:?body=MESSAGE%20LINK",
+    "color": [0, 0, 0]
+  },
+  {
+    "id": "email",
+    "name": "Email",
+    "link": "mailto:?body=LINK&subject=MESSAGE",
+    "color": [0, 0, 0]
+  }
+]

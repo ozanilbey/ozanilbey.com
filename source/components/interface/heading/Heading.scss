@@ -1,0 +1,37 @@
+// Style: Interface > Heading (Main)
+[data-interface="heading"] {
+  --heading-size-base: 2.5rem;
+  --heading-size-increment: .5rem;
+  &.heading-size-big {
+    font-size: calc(var(--heading-size-base) + var(--heading-size-increment));
+  }
+  &.heading-size-bigger {
+    font-size: calc(var(--heading-size-base) + 1.5 * var(--heading-size-increment));
+  }
+  &.heading-size-biggest {
+    font-size: calc(var(--heading-size-base) + 2 * var(--heading-size-increment));
+  }
+}
+
+// Style: Interface > Heading (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-interface="heading"] {
+    --heading-size-increment: .25rem;
+  }
+}
+
+// Style: Interface > Heading (< 768px)
+@media (max-width: 767.98px) {
+  [data-interface="heading"] {
+    --heading-size-base: 2.25rem;
+    --heading-size-increment: .125rem;
+  }
+}
+
+// Style: Interface > Heading (< 480px)
+@media (max-width: 479.98px) {
+  [data-interface="heading"] {
+    --heading-size-base: 2rem;
+    --heading-size-increment: .0625rem;
+  }
+}

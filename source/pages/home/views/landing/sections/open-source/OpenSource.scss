@@ -1,0 +1,18 @@
+// Style: Home > Landing > Open source (Main)
+[data-page="home"] {
+  [data-view="landing"] {
+    [data-section="open-source"] {
+      .repositories {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        & > .repository {
+          width: 100%;
+          & > .link {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

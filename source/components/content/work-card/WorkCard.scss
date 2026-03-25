@@ -1,0 +1,166 @@
+// Style: Content > Work card (Main)
+[data-content="work-card"] {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  padding-bottom: 0 !important;
+  color: var(--figure-color);
+  font-size: .9rem;
+  font-weight: 300;
+  word-wrap: break-word;
+  border-radius: 1rem;
+  will-change: transform, border-radius;
+  transform-origin: top center;
+  transition: box-shadow .25s ease;
+  cursor: pointer;
+  &:hover {
+    &:after {
+      bottom: 0;
+    }
+    & > .visual, & > .content {
+      top: 0;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: -2.5em;
+    height: 2.5em;
+    background-color: var(--shade-color);
+    background-image: linear-gradient(transparent, var(--shade-strong-color));
+    transition: bottom .375s ease;
+  }
+  & > * {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    min-width: 0;
+    transition: top .375s ease;
+  }
+  & > .visual {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 1.25em;
+    height: auto;
+    & > * {
+      width: 100%;
+    }
+    & > .carousel {
+      flex-direction: column;
+    }
+  }
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2.5em;
+    text-align: left;
+    & > .summary {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      text-align: left;
+      margin-top: 1em;
+      & > * {
+        display: block;
+        margin: 0;
+        line-height: calc(4em / 3);
+        white-space: normal;
+      }
+      & > .description {
+        margin-bottom: .5em;
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+    & > .tags {
+      opacity: .625;
+      overflow: hidden;
+      height: 2.5em;
+      margin-top: 2em;
+      font-weight: 700;
+      line-height: 2.5em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      user-select: none;
+      text-shadow: inset 0 0 1px var(--shade-strong-color);
+      & > * {
+        display: inline-block;
+        margin-top: 0;
+        font-size: .75em;
+        &:before {
+          content: "\00b7";
+          display: inline-block;
+          margin: 0 .25em;
+        }
+        &:first-child {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  img {
+    vertical-align: top;
+  }
+}
+
+// Style: Content > Work card (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-content="work-card"] {
+    & > .content {
+      & > .summary {
+        & > .description {
+          font-size: .875em;
+        }
+      }
+    }
+  }
+}
+
+// Style: Content > Work card (< 768px)
+@media (max-width: 767.98px) {
+  [data-content="work-card"] {
+    flex-direction: column-reverse;
+    align-items: center;
+    & > .visual {
+      top: 0;
+      width: 62.5%;
+    }
+    & > .content {
+      top: .5rem;
+      width: 87.5%;
+      text-align: center;
+      & > .summary {
+        display: none;
+      }
+      & > .tags {
+        display: none;
+      }
+    }
+  }
+}
+
+// Style: Content > Work card (< 480px)
+@media (max-width: 479.98px) {
+  [data-content="work-card"] {
+    gap: 1.5rem;
+    & > .visual {
+      width: 100%;
+    }
+    & > .content {
+      width: 100%;
+    }
+  }
+}

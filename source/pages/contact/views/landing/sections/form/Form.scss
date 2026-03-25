@@ -1,0 +1,53 @@
+// Style: Contact > Landing > Form (Main)
+[data-page="contact"] {
+  [data-view="landing"] {
+    [data-section="form"] {
+      .container {
+        width: 50%;
+        & > .success {
+          margin-bottom: 1.5rem;
+          padding: .375rem .5rem;
+          color: var(--intent-success-color);
+          font-size: .875rem;
+          text-align: center;
+          border: 1px solid hsla(var(--intent-success-color-hsl), .25);
+          border-radius: .5rem;
+          background-color: hsla(var(--intent-success-color-hsl), .25);
+        }
+        & > .form {
+          .input {
+            &.submit {
+              margin-top: .25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Style: Contact > Landing > Form (< 768px)
+@media (max-width: 767.98px) {
+  [data-page="contact"] {
+    [data-view="landing"] {
+      [data-section="form"] {
+        .container {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+// Style: Contact > Landing > Form (< 480px)
+@media (max-width: 479.98px) {
+  [data-page="contact"] {
+    [data-view="landing"] {
+      [data-section="form"] {
+        .container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

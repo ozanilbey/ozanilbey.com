@@ -1,0 +1,214 @@
+// Style: Application > Color (Main)
+:root {
+  color-scheme: light dark;
+
+  // Variables (Hue & saturation)
+  --base-hue: 210;
+  --base-saturation: 15%;
+
+  // HSL values (Brand)
+  --brand-green-hsl: 149, 65%, 50%;
+  --brand-yellow-hsl: 43, 100%, 50%;
+  --brand-pink-hsl: 345, 100%, 62%;
+  --brand-purple-hsl: 253, 100%, 70%;
+  --brand-blue-hsl: 195, 100%, 50%;
+  --brand-color-hsl: var(--brand-green-hsl);
+
+  // HSL values (Theme)
+  --theme-common-color-hsl: var(--base-hue), var(--base-saturation), 45%;
+  --theme-dark-color-hsl: var(--base-hue), var(--base-saturation), 15%;
+  --theme-dark-alternative-color-hsl: var(--base-hue), var(--base-saturation), 20%;
+  --theme-dark-extreme-color-hsl: var(--base-hue), var(--base-saturation), 0%;
+  --theme-light-color-hsl: var(--base-hue), var(--base-saturation), 100%;
+  --theme-light-alternative-color-hsl: var(--base-hue), var(--base-saturation), 95%;
+  --theme-light-extreme-color-hsl: var(--base-hue), var(--base-saturation), 100%;
+
+  // HSL values (Figure - Dark)
+  --figure-dark-strong-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 0);
+  --figure-dark-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 1);
+  --figure-dark-weak-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 2);
+  --figure-dark-inactive-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 3);
+
+  // HSL values (Figure - Light)
+  --figure-light-strong-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 0);
+  --figure-light-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 1);
+  --figure-light-weak-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 2);
+  --figure-light-inactive-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 3);
+
+  // HSL values (Ground - Dark)
+  --ground-dark-color-hsl: var(--base-hue), var(--base-saturation), 12.5%;
+  --ground-dark-accent-color-hsl: var(--base-hue), var(--base-saturation), 11.25%;
+  --ground-dark-alternative-color-hsl: var(--base-hue), var(--base-saturation), 10%;
+  --ground-dark-inactive-color-hsl: var(--base-hue), var(--base-saturation), 40%;
+
+  // HSL values (Ground - Light)
+  --ground-light-color-hsl: var(--base-hue), var(--base-saturation), 100%;
+  --ground-light-accent-color-hsl: var(--base-hue), var(--base-saturation), 96.25%;
+  --ground-light-alternative-color-hsl: var(--base-hue), var(--base-saturation), 92.5%;
+  --ground-light-inactive-color-hsl: var(--base-hue), var(--base-saturation), 70%;
+
+  // HSL values (Intent)
+  --intent-information-color-hsl: var(--brand-blue-hsl);
+  --intent-success-color-hsl: var(--brand-green-hsl);
+  --intent-warning-color-hsl: var(--brand-yellow-hsl);
+  --intent-danger-color-hsl: var(--brand-pink-hsl);
+
+  // HSL values (Overlay)
+  --overlay-color-hsl: var(--theme-dark-extreme-color-hsl);
+
+  // HSL values (Shine)
+  --shine-color-hsl: var(--theme-light-extreme-color-hsl);
+
+  // HSL values (Shade)
+  --shade-color-hsl: var(--theme-dark-extreme-color-hsl);
+
+  // HSL values (Tone)
+  --tone-color-hsl: var(--theme-common-color-hsl);
+
+  // Colors (Brand)
+  --brand-green-color: hsl(var(--brand-green-hsl));
+  --brand-yellow-color: hsl(var(--brand-yellow-hsl));
+  --brand-pink-color: hsl(var(--brand-pink-hsl));
+  --brand-purple-color: hsl(var(--brand-purple-hsl));
+  --brand-blue-color: hsl(var(--brand-blue-hsl));
+  --brand-color: hsl(var(--brand-color-hsl));
+
+  // Colors (Common)
+  --theme-common-color: hsl(var(--theme-common-color-hsl));
+  --theme-dark-color: hsl(var(--theme-dark-color-hsl));
+  --theme-dark-alternative-color: hsl(var(--theme-dark-alternative-color-hsl));
+  --theme-dark-extreme-color: hsl(var(--theme-dark-extreme-color-hsl));
+  --theme-light-color: hsl(var(--theme-light-color-hsl));
+  --theme-light-alternative-color: hsl(var(--theme-light-alternative-color-hsl));
+  --theme-light-extreme-color: hsl(var(--theme-light-extreme-color-hsl));
+
+  // Colors (Intent)
+  --intent-information-color: hsl(var(--intent-information-color-hsl));
+  --intent-success-color: hsl(var(--intent-success-color-hsl));
+  --intent-warning-color: hsl(var(--intent-warning-color-hsl));
+  --intent-danger-color: hsl(var(--intent-danger-color-hsl));
+
+  // Colors (Overlay)
+  --overlay-color: hsla(var(--overlay-color-hsl), .75);
+
+  // Colors (Tone)
+  --tone-color: hsla(var(--tone-color-hsl), .09375);
+  --tone-strong-color: hsla(var(--tone-color-hsl), .125);
+  --tone-weak-color: hsla(var(--tone-color-hsl), .0625);
+  --tone-brand-color: hsla(var(--brand-color-hsl), .09375);
+  --tone-information-color: hsla(var(--intent-information-color-hsl), .09375);
+  --tone-success-color: hsla(var(--intent-success-color-hsl), .09375);
+  --tone-warning-color: hsla(var(--intent-warning-color-hsl), .09375);
+  --tone-danger-color: hsla(var(--intent-danger-color-hsl), .09375);
+}
+
+// Style: Application > Color (Green)
+[data-color="green"] {
+  --brand-color-hsl: var(--brand-green-hsl);
+}
+
+// Style: Application > Color (Yellow)
+[data-color="yellow"] {
+  --brand-color-hsl: var(--brand-yellow-hsl);
+}
+
+// Style: Application > Color (Pink)
+[data-color="pink"] {
+  --brand-color-hsl: var(--brand-pink-hsl);
+}
+
+// Style: Application > Color (Purple)
+[data-color="purple"] {
+  --brand-color-hsl: var(--brand-purple-hsl);
+}
+
+// Style: Application > Color (Blue)
+[data-color="blue"] {
+  --brand-color-hsl: var(--brand-blue-hsl);
+}
+
+// Style: Application > Color (Dark)
+[data-theme="dark"] {
+  // HSL values (Figure)
+  --figure-color-hsl: var(--figure-light-color-hsl);
+  --figure-inactive-color-hsl: var(--figure-light-inactive-color-hsl);
+  --figure-strong-color-hsl: var(--figure-light-strong-color-hsl);
+  --figure-weak-color-hsl: var(--figure-light-weak-color-hsl);
+
+  // HSL values (Ground)
+  --ground-color-hsl: var(--ground-dark-color-hsl);
+  --ground-accent-color-hsl: var(--ground-dark-accent-color-hsl);
+  --ground-alternative-color-hsl: var(--ground-dark-alternative-color-hsl);
+  --ground-inactive-color-hsl: var(--ground-dark-inactive-color-hsl);
+
+  // Colors (Figure)
+  --figure-color: hsl(var(--figure-light-color-hsl));
+  --figure-inactive-color: hsl(var(--figure-light-inactive-color-hsl));
+  --figure-strong-color: hsl(var(--figure-light-strong-color-hsl));
+  --figure-weak-color: hsl(var(--figure-light-weak-color-hsl));
+
+  // Colors (Ground)
+  --ground-color: hsl(var(--ground-dark-color-hsl));
+  --ground-accent-color: hsl(var(--ground-dark-accent-color-hsl));
+  --ground-alternative-color: hsl(var(--ground-dark-alternative-color-hsl));
+  --ground-inactive-color: hsl(var(--ground-dark-inactive-color-hsl));
+
+  // Colors (Shine)
+  --shine-color: hsla(var(--shine-color-hsl), .09375);
+  --shine-strong-color: hsla(var(--shine-color-hsl), .125);
+  --shine-weak-color: hsla(var(--shine-color-hsl), .0625);
+
+  // Colors (Shade)
+  --shade-color: hsla(var(--shade-color-hsl), .09375);
+  --shade-strong-color: hsla(var(--shade-color-hsl), .125);
+  --shade-weak-color: hsla(var(--shade-color-hsl), .0625);
+
+  // Use case (Extreme)
+  &[data-extreme="dark"] {
+    // HSL values (Brand)
+    --brand-color-hsl: var(--figure-weak-color-hsl);
+  }
+}
+
+// Style: Application > Color (Light)
+[data-theme="light"] {
+  // HSL values (Figure)
+  --figure-color-hsl: var(--figure-dark-color-hsl);
+  --figure-inactive-color-hsl: var(--figure-dark-inactive-color-hsl);
+  --figure-strong-color-hsl: var(--figure-dark-strong-color-hsl);
+  --figure-weak-color-hsl: var(--figure-dark-weak-color-hsl);
+
+  // HSL values (Ground)
+  --ground-color-hsl: var(--ground-light-color-hsl);
+  --ground-accent-color-hsl: var(--ground-light-accent-color-hsl);
+  --ground-alternative-color-hsl: var(--ground-light-alternative-color-hsl);
+  --ground-inactive-color-hsl: var(--ground-light-inactive-color-hsl);
+
+  // Colors (Figure)
+  --figure-color: hsl(var(--figure-dark-color-hsl));
+  --figure-inactive-color: hsl(var(--figure-dark-inactive-color-hsl));
+  --figure-strong-color: hsl(var(--figure-dark-strong-color-hsl));
+  --figure-weak-color: hsl(var(--figure-dark-weak-color-hsl));
+
+  // Colors (Ground)
+  --ground-color: hsl(var(--ground-light-color-hsl));
+  --ground-accent-color: hsl(var(--ground-light-accent-color-hsl));
+  --ground-alternative-color: hsl(var(--ground-light-alternative-color-hsl));
+  --ground-inactive-color: hsl(var(--ground-light-inactive-color-hsl));
+
+  // Colors (Shine)
+  --shine-color: hsla(var(--shine-color-hsl), .375);
+  --shine-strong-color: hsla(var(--shine-color-hsl), .5);
+  --shine-weak-color: hsla(var(--shine-color-hsl), .25);
+
+  // Colors (Shade)
+  --shade-color: hsla(var(--shade-color-hsl), .0625);
+  --shade-strong-color: hsla(var(--shade-color-hsl), .09375);
+  --shade-weak-color: hsla(var(--shade-color-hsl), .03125);
+
+  // Use case (Extreme)
+  &[data-extreme="light"] {
+    // HSL values (Brand)
+    --brand-color-hsl: var(--figure-weak-color-hsl);
+  }
+}

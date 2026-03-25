@@ -1,0 +1,88 @@
+[data-content="work-cover"] {
+  [data-component="document"] {
+    & > .canvas {
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30em;
+      padding: 2em;
+      border-top-left-radius: .125em;
+      border-top-right-radius: .125em;
+      background-color: var(--theme-light-extreme-color);
+      & > .guideline, & > .ruler {
+        position: absolute;
+        &.top {
+          top: 0;
+          left: calc(100% - 2em);
+          height: 44em;
+          transform: rotate(90deg);
+          transform-origin: top left;
+        }
+        &.left, &.right {
+          top: 2em;
+          height: 28em;
+        }
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+      & > .guideline {
+        z-index: 2;
+        width: 2em;
+        border-width: 0;
+        border-right: .1em solid cyan;
+        &.top {
+          top: .05em !important;
+          left: 100%;
+          height: 48em;
+        }
+        &.left, &.right {
+          top: 0;
+          height: 30em;
+        }
+        &.left {
+          left: .05em !important;
+        }
+        &.right {
+          right: .05em !important;
+        }
+      }
+      & > .ruler {
+        --ruler-brightness: .875;
+        --ruler-tick-color: var(--theme-light-extreme-color);
+        z-index: 1;
+        width: 1em;
+        background-image: repeating-linear-gradient(
+          var(--ruler-tick-color) 0,
+          var(--ruler-tick-color) .05em,
+          transparent .05em,
+          transparent 1.95em,
+          var(--ruler-tick-color) 1.95em,
+          var(--ruler-tick-color) 2em
+        );
+        background-repeat: repeat;
+        filter: brightness(var(--ruler-brightness));
+        &:before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 0;
+        }
+        &:before {
+          z-index: 1;
+          width: calc(1em * 2 / 3);
+          height: inherit;
+          background-image: repeating-linear-gradient(
+            var(--ruler-tick-color) 0,
+            var(--ruler-tick-color) .05em,
+            transparent .05em,
+            transparent .35em,
+            var(--ruler-tick-color) .35em,
+            var(--ruler-tick-color) .4em
+          );
+        }
+      }
+    }
+  }
+}

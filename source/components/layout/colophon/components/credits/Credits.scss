@@ -1,0 +1,127 @@
+// Style: Layout > Colophon > Credits (Main)
+[data-layout="colophon"] {
+  [data-component="credits"] {
+    overflow: hidden;
+    color: var(--figure-color);
+    text-align: left;
+    user-select: none;
+    &.visible {
+      & > strong {
+        &:last-child {
+          &:after {
+            content: "▲"
+          }
+        }
+      }
+    }
+    & > .wrapper, & > .ellipsis {
+      cursor: pointer;
+      white-space: pre;
+    }
+    & > .wrapper {
+      color: var(--figure-strong-color);
+      &:last-child {
+        &:after {
+          content: "▼";
+          margin-left: .25rem;
+          color: var(--figure-inactive-color);
+          font-size: .5em;
+          vertical-align: middle;
+        }
+      }
+    }
+    & > .ellipsis {
+      color: var(--brand-color);
+    }
+    & > .root {
+      padding-right: 1rem;
+      font-family: monospace;
+      font-size: .8125rem;
+      line-height: 1.5em;
+      .by {
+        &:before, &:after {
+          content: " ";
+        }
+      }
+      small {
+        color: var(--figure-weak-color);
+        font-size: .875em;
+        & > .link {
+          color: var(--figure-weak-color);
+        }
+      }
+      li {
+        &:last-child {
+          & > p {
+            &:after {
+              content: "\"";
+            }
+          }
+        }
+        & > p {
+          display: inline;
+          &:before {
+            content: "\"";
+          }
+          &:after {
+            content: "\",";
+          }
+        }
+      }
+      & > * {
+        position: relative;
+        left: .75rem;
+        &:before {
+          content: "\"" attr(data-key) "\": ";
+          color: var(--brand-color);
+        }
+        &:after {
+          content: ",";
+          color: inherit;
+        }
+        &:last-child {
+          &:after {
+            content: ""
+          }
+        }
+        & > * {
+          display: inline;
+        }
+        & > .string {
+          &:before, &:after {
+            content: "\"";
+          }
+        }
+        & > .array {
+          &:before {
+            content: "[";
+          }
+          &:after {
+            content: "]";
+          }
+        }
+        & > .object {
+          &:before {
+            content: "{";
+          }
+          &:after {
+            content: "}";
+          }
+          & > li {
+            &:before {
+              content: "\"" attr(data-key) "\": ";
+              color: var(--brand-color);
+            }
+          }
+        }
+        & > ul {
+          & > li {
+            position: relative;
+            left: .75rem;
+            white-space: pre;
+          }
+        }
+      }
+    }
+  }
+}

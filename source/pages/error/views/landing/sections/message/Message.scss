@@ -1,0 +1,29 @@
+// Style: Error > Landing > Message (Main)
+[data-page="error"] {
+  [data-view="landing"] {
+    [data-header="message"] {
+      text-align: center;
+      .visual {
+        max-width: min(50%, 15rem);
+      }
+      .title {
+        margin-bottom: .75em;
+        font-size: 1.5rem;
+      }
+      .path {
+        display: inline-block;
+        padding: .5em .625em;
+        color: var(--intent-danger-color);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: .75em;
+        border: 1px solid hsla(var(--intent-danger-color-hsl), .125);
+        border-radius: .25em;
+        background-color: hsla(var(--intent-danger-color-hsl), .125);
+      }
+      .actions {
+        margin-top: .5rem;
+      }
+    }
+  }
+}

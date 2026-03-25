@@ -1,0 +1,36 @@
+// Style: Presentation > Code (Main)
+[data-presentation="code"] {
+  & > .label {
+    display: block;
+    margin-bottom: 1rem;
+    padding: .125rem 0;
+    font-size: .75rem;
+    line-height: .75rem;
+  }
+  & > .code {
+    overflow: auto;
+    padding: 0 !important;
+    border-left: 2px solid var(--tone-weak-color);
+    border-radius: 0 !important;
+    filter: brightness(1.125)
+            contrast(1.125)
+            hue-rotate(-15deg)
+            saturate(0.625);
+    &, & > * {
+      white-space: pre !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Style: Presentation > Code (Dark)
+[data-theme="dark"] {
+  [data-presentation="code"] {
+    & > .code {
+      filter: brightness(1.25)
+              contrast(1.125)
+              hue-rotate(45deg)
+              saturate(0.875);
+    }
+  }
+}

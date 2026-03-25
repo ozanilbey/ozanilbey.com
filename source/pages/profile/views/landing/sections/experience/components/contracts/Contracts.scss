@@ -1,0 +1,57 @@
+// Component: Profile > Landing > Experience > Contracts (Main)
+[data-page="profile"] {
+  [data-view="landing"] {
+    [data-section="experience"] {
+      [data-component="contracts"] {
+        & > .contract {
+          margin-bottom: 1.5rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          & > .name {
+            margin-bottom: .25rem;
+            & > .link {
+              color: var(--figure-strong-color);
+              &:after {
+                opacity: .5;
+                color: var(--figure-inactive-color);
+              }
+            }
+          }
+          & > .position {
+            margin-bottom: .125rem;
+            color: var(--brand-color);
+            font-size: 1.0625rem;
+            font-weight: 500;
+          }
+          & > .description {
+            margin-top: .5rem;
+            line-height: 137.5%;
+          }
+          & > .details {
+            margin-bottom: .5rem;
+            color: var(--figure-weak-color);
+            font-size: .75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            & > .location, & > .qualification {
+              &:before {
+                content: "\2002·\2002";
+              }
+            }
+            & > .location {
+              & > .mode {
+                &:before {
+                  content: " (";
+                }
+                &:after {
+                  content: ")";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

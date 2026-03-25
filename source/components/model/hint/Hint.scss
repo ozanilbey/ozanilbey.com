@@ -1,0 +1,90 @@
+// Style: Model > Hint (Main)
+[data-model="hint"] {
+  --hint-unit-size: .75em;
+  --hint-switch-size: var(--hint-unit-size);
+  position: relative;
+  &.active {
+    & > .wrapper {
+      & > .switch {
+        &:before {
+          display: block;
+        }
+      }
+      & > .text {
+        display: block;
+      }
+    }
+  }
+  & > .wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--hint-unit-size);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: var(--hint-unit-size);
+    color: var(--figure-weak-color);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: var(--hint-unit-size);
+    white-space: nowrap;
+    user-select: none;
+    transform: translate(calc(var(--hint-unit-size) / 2), calc(-1.5 * var(--hint-unit-size) / 2));
+    & > .switch {
+      position: relative;
+      width: var(--hint-switch-size);
+      height: var(--hint-switch-size);
+      cursor: pointer;
+      transform: translateY(-25%);
+      &:before {
+        content: "";
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: var(--hint-unit-size);
+        height: calc(var(--hint-unit-size) / 1);
+        border: calc(var(--hint-unit-size) / 4) solid var(--figure-inactive-color);
+        border-left: none;
+        border-bottom: none;
+        border-top-right-radius: .25em;
+        transform: translate(calc(-50% + var(--hint-unit-size) / 8), calc(-100% + 1px));
+      }
+      & > * {
+        width: inherit;
+        height: inherit;
+        color: var(--figure-inactive-color);
+        vertical-align: top;
+      }
+    }
+    & > .text {
+      display: none;
+      position: relative;
+      font-size: calc(var(--hint-unit-size) * 1.375);
+      transform: translateY(calc(-1.5 * var(--hint-unit-size)));
+    }
+  }
+}
+
+// Style: Interface > Hint (< 768px)
+@media (max-width: 767.98px) {
+  [data-model="hint"] {
+    & > .wrapper {
+      & > .switch {
+        transform: translate(25%, -25%);
+      }
+    }
+  }
+}
+
+// Style: Interface > Hint (< 480px)
+@media (max-width: 479.98px) {
+  [data-model="hint"] {
+    & > .wrapper {
+      & > .switch {
+        display: none;
+      }
+    }
+  }
+}

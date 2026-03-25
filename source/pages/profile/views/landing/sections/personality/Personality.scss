@@ -1,0 +1,17 @@
+// Style: Profile > Landing > Personality (Main)
+[data-page="profile"] {
+  [data-view="landing"] {
+    [data-section="personality"] {
+      .redacted {
+        text-decoration-color: var(--brand-color);
+        & + .explanation {
+          margin-left: .25em;
+          color: var(--brand-color);
+          font-size: .8em;
+          font-weight: 500;
+          line-height: 1.25em;
+        }
+      }
+    }
+  }
+}

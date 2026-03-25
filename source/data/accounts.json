@@ -1,0 +1,14 @@
+[
+  {
+    "id": "github",
+    "name": "GitHub",
+    "link": "github.com/ozanilbey",
+    "color": [36, 41, 46]
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "link": "linkedin.com/in/ozanilbey",
+    "color": [10, 102, 194]
+  }
+]

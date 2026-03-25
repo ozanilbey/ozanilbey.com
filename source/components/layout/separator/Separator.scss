@@ -1,0 +1,93 @@
+// Style: Layout > Separator (Main)
+[data-layout="separator"] {
+  overflow: visible;
+  position: relative;
+  height: 2px;
+  border: none;
+  &.lined {
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      left: -1rem;
+      right: -1rem;
+      height: 1px;
+      mask-image: linear-gradient(to right, transparent 0%, black 2rem, black calc(100% - 2rem), transparent 100%);
+    }
+    &:before {
+      top: 0;
+      background-color: var(--theme-dark-extreme-color);
+    }
+    &:after {
+      bottom: 0;
+      background-color: var(--theme-light-extreme-color);
+    }
+  }
+  &.spacing-none {
+    margin: 0;
+  }
+  &.spacing-xsmall {
+    margin: .5rem 0;
+  }
+  &.spacing-small {
+    margin: .75rem 0;
+  }
+  &.spacing-medium {
+    margin: 1rem 0;
+  }
+  &.spacing-large {
+    margin: 1.25rem 0;
+  }
+  &.spacing-xlarge {
+    margin: 1.5rem 0;
+  }
+}
+
+// Style: Layout > Separator (Dark)
+[data-theme="dark"] {
+  [data-layout="separator"] {
+    &.lined {
+      &:before {
+        opacity: .50;
+      }
+      &:after {
+        opacity: .0625;
+      }
+    }
+  }
+}
+
+// Style: Layout > Separator (Light)
+[data-theme="light"] {
+  [data-layout="separator"] {
+    &.lined {
+      &:before {
+        opacity: .125;
+      }
+      &:after {
+        background-color: var(--theme-dark-extreme-color);
+        opacity: .0625;
+      }
+    }
+  }
+}
+
+// Style: Layout > Separator (< 768px)
+@media (max-width: 767.98px) {
+  [data-layout="separator"] {
+    &.spacing-xsmall {
+      margin: .25rem 0;
+    }
+    &.spacing-small {
+      margin: .375rem 0;
+    }
+    &.spacing-medium {
+      margin: .5rem 0;
+    }
+    &.spacing-large {
+      margin: .625rem 0;
+    }
+    &.spacing-xlarge {
+      margin: .75rem 0;
+    }
+  }
+}

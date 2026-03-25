@@ -1,0 +1,11 @@
+// Style: Model > Sliding box (Main)
+[data-model="sliding-box"] {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  .slider {
+    display: inline-block;
+    position: relative;
+    min-width: 100%;
+  }
+}

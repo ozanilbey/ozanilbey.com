@@ -1,0 +1,17 @@
+// Style: Works > Work (Main)
+[data-page="works"] {
+  [data-view="work"] {
+    text-align: center;
+  }
+}
+
+// Style: Works > Work (External)
+[data-page="works"] {
+  &:has([data-view="work"]) {
+    & + * {
+      .color {
+        display: none;
+      }
+    }
+  }
+}

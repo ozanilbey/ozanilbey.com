@@ -1,0 +1,947 @@
+[
+  {
+    "type": "work",
+    "slug": "secfusion-branding",
+    "brand": "SecFusion",
+    "description": "SecFusion is a unified vulnerability management platform providing vulnerability management automation solutions.",
+    "output": "Branding",
+    "client": {
+      "name": "SecFusion",
+      "link": "secfusion.io"
+    },
+    "link": "secfusion.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 32, 0],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Branding", "Responsive Website", "Document"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD", "Marketing", "Printmaking"]
+  },
+  {
+    "type": "work",
+    "slug": "secfusion-website",
+    "brand": "SecFusion",
+    "description": "SecFusion is a unified vulnerability management platform providing vulnerability management automation solutions.",
+    "output": "Website",
+    "client": {
+      "name": "SecFusion",
+      "link": "secfusion.io"
+    },
+    "link": "secfusion.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 32, 0],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "work",
+    "slug": "secfusion-brochure",
+    "brand": "SecFusion",
+    "description": "SecFusion is a unified vulnerability management platform providing vulnerability management automation solutions.",
+    "output": "Brochure",
+    "client": {
+      "name": "SecFusion",
+      "link": "secfusion.io"
+    },
+    "link": "secfusion.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 32, 0],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Document"],
+    "role": ["Brand Designer", "Marketing Designer"],
+    "tags": ["Branding", "Graphic Design", "Marketing", "Printmaking"]
+  },
+  {
+    "type": "work",
+    "slug": "socradar-branding",
+    "brand": "SOCRadar",
+    "description": "SOCRadar is a digital risk protection platform providing contextualized intelligence.",
+    "output": "Branding",
+    "client": {
+      "name": "SOCRadar",
+      "link": "socradar.io"
+    },
+    "link": "socradar.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 84, 98],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Branding", "Responsive Website"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD"]
+  },
+  {
+    "type": "work",
+    "slug": "socradar-website",
+    "brand": "SOCRadar",
+    "description": "SOCRadar is a digital risk protection platform providing contextualized intelligence.",
+    "output": "Website",
+    "client": {
+      "name": "SOCRadar",
+      "link": "socradar.io"
+    },
+    "link": "socradar.io",
+    "year": 2020,
+    "colors": {
+      "primary": [255, 84, 98],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "Web Designer", "Marketing Designer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "project",
+    "slug": "base64-ai-website",
+    "brand": "Base64.ai",
+    "description": "Base64.ai is a real-time AI-powered end-to-end automated document processing solution.",
+    "output": "Website",
+    "link": "base64.ai",
+    "year": 2020,
+    "colors": {
+      "primary": [15, 151, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer", "Backend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend", "Backend", "Visual Design", "Animation"]
+  },
+  {
+    "type": "project",
+    "slug": "base64-ai-platform",
+    "brand": "Base64.ai",
+    "label": "Document processing platform",
+    "description": "Base64.ai is a real-time AI-powered end-to-end automated document processing solution.",
+    "output": "Web Application",
+    "link": "base64.ai",
+    "year": 2020,
+    "colors": {
+      "primary": [15, 151, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website", "Mobile Application"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer", "Backend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend", "Backend", "Data Extraction"]
+  },
+  {
+    "type": "project",
+    "slug": "base64-ai-branding",
+    "brand": "Base64.ai",
+    "description": "Base64.ai is a real-time AI-powered end-to-end automated document processing solution.",
+    "output": "Branding",
+    "link": "base64.ai",
+    "year": 2020,
+    "colors": {
+      "primary": [15, 151, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Branding", "Responsive Website", "Mobile Application"],
+    "role": ["Brand Designer", "Web Designer", "UI Designer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD", "Animation", "Printmaking"]
+  },
+  {
+    "type": "project",
+    "slug": "graphbuild",
+    "brand": "GraphBuild",
+    "description": "GraphBuild is a simple, visual graph application builder.",
+    "output": "Web Application",
+    "repository": "github.com/phonetworks/gapp-build",
+    "year": 2018,
+    "colors": {
+      "primary": [93, 60, 246],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Website"],
+    "role": ["UI Designer", "Frontend Developer"],
+    "tags": ["UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "project",
+    "slug": "graphjs",
+    "brand": "GraphJS",
+    "label": "Social widgets for static websites",
+    "description": "GraphJS is a JavaScript client-side library to easily enable social features on their web sites.",
+    "output": "Software Library",
+    "link": "graphjs.com",
+    "repository": "github.com/graphjs/graphjs",
+    "year": [2018, 2019],
+    "colors": {
+      "primary": [34, 133, 248],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer", "Product Manager"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "project",
+    "slug": "graphjs-website",
+    "brand": "GraphJS",
+    "description": "GraphJS website is a playground and admin panel for creating/managing GraphJS instances",
+    "output": "Website + Administration Panel",
+    "link": "graphjs.com",
+    "year": [2018, 2019],
+    "colors": {
+      "primary": [93, 60, 246],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD", "Frontend", "Marketing", "Documentation"]
+  },
+  {
+    "type": "project",
+    "slug": "fihrist",
+    "brand": "Fihrist",
+    "label": "Text-only reading experience",
+    "description": "Fihrist is a publishing platform with the purpose of creating text-only reading experience.",
+    "output": "Web Application",
+    "year": 2017,
+    "colors": {
+      "primary": [255, 255, 99],
+      "secondary": [0, 0, 0]
+    },
+    "isLive": false,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "work",
+    "slug": "invport-web-application",
+    "brand": "invport",
+    "output": "Web Application",
+    "link": "invport.com",
+    "client": {
+      "name": "Osmangazi University",
+      "link": "osmangazi.edu.tr"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 66, 169],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Website"],
+    "role": ["UI Designer", "Frontend Developer"],
+    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "project",
+    "slug": "brush",
+    "brand": "Brush",
+    "label": "Product marketplace for artworks",
+    "description": "Brush is a campaign-based e-commerce platform for limited edition artworks.",
+    "output": "Web Application",
+    "year": 2017,
+    "colors": {
+      "primary": [102, 61, 172],
+      "secondary": [0, 0, 0]
+    },
+    "isLive": false,
+    "preview": ["Responsive Website"],
+    "role": ["Brand Designer", "Graphic Designer", "Frontend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "work",
+    "slug": "poker-extra-ads-mixed",
+    "brand": "Poker Extra",
+    "attribute": "Mixed",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [242, 48, 20],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "okey-extra-ads-hacivat-karagoz",
+    "brand": "Okey Extra",
+    "attribute": "Hacivat & Karagöz",
+    "output": "Online Advertisement",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 124, 64],
+      "secondary": [248, 238, 164]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "101-extra-ads-ramadan",
+    "brand": "101 Extra",
+    "attribute": "Ramadan",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 153, 255],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "can-okey-ads-your-move",
+    "brand": "Can Okey",
+    "attribute": "“Your Move”",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [236, 64, 60],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "okey-extra-ads-hand-drawn",
+    "brand": "Okey Extra",
+    "attribute": "Hand-drawn",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 124, 64],
+      "secondary": [248, 238, 164]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "101-extra-ads-picker",
+    "brand": "101 Extra",
+    "attribute": "Picker",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 153, 255],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "101-extra-ads-glow",
+    "brand": "101 Extra",
+    "attribute": "Glow",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 153, 255],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "okey-extra-ads-reactions",
+    "brand": "Okey Extra",
+    "attribute": "Reactions",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2017,
+    "colors": {
+      "primary": [0, 124, 64],
+      "secondary": [248, 238, 164]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "can-okey-facebook-page",
+    "brand": "Can Okey",
+    "output": "Facebook Page",
+    "platform": "Facebook",
+    "link": "facebook.com/0keycan",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [236, 64, 60],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Marketing", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "tekel-okey-facebook-page",
+    "brand": "Tekel Okey",
+    "output": "Facebook Page",
+    "platform": "Facebook",
+    "link": "facebook.com/tekelokey",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [255, 191, 0],
+      "secondary": [113, 77, 52]
+    },
+    "isLive": true,
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Marketing", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "rakkip-facebook-page",
+    "brand": "Rakkip",
+    "output": "Facebook Page",
+    "platform": "Facebook",
+    "link": "facebook.com/Rakkip-443897108982420",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [77, 73, 117],
+      "secondary": [255, 94, 91]
+    },
+    "isLive": true,
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Marketing", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "101-extra-facebook-page",
+    "brand": "101 Extra",
+    "output": "Facebook Page",
+    "platform": "Facebook",
+    "link": "facebook.com/101extraokey",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [0, 153, 255],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Marketing", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "okey-extra-facebook-page",
+    "brand": "Okey Extra",
+    "output": "Facebook Page",
+    "platform": "Facebook",
+    "link": "facebook.com/okeyexxtra",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [0, 124, 64],
+      "secondary": [248, 238, 164]
+    },
+    "isLive": true,
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Marketing", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "101-extra-ads-mixed",
+    "brand": "101 Extra",
+    "attribute": "Mixed",
+    "output": "Online Advertisements",
+    "platform": "Facebook",
+    "client": {
+      "name": "Digitoy Games",
+      "link": "digitoygames.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [0, 153, 255],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Social Media"],
+    "role": ["Graphic Designer", "Media Consultant"],
+    "tags": ["Social Media", "Advertisement", "Visual Design"]
+  },
+  {
+    "type": "work",
+    "slug": "mega-posters",
+    "brand": "MEGA",
+    "output": "Promotional Posters",
+    "client": {
+      "name": "MEGA Industries",
+      "link": "megaendustri.com.tr"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [0, 145, 146],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Graphic Design"],
+    "role": ["Graphic Designer"],
+    "tags": ["Graphic Design"]
+  },
+  {
+    "type": "work",
+    "slug": "flashtech-web-application-ui",
+    "brand": "Flashtech",
+    "output": "UI Kit",
+    "client": {
+      "name": "MEGA Industries",
+      "link": "megaendustri.com.tr"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [136, 160, 167],
+      "secondary": [42, 54, 59]
+    },
+    "isLive": false,
+    "preview": ["Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "project",
+    "slug": "favogue",
+    "brand": "Favogue",
+    "label": "Fashion-oriented social platform",
+    "description": "Favogue is a photo-sharing platform focused on daily fashion inspiration.",
+    "output": "Platform",
+    "year": [2014, 2016],
+    "colors": {
+      "primary": [229, 188, 63],
+      "secondary": [47, 48, 48]
+    },
+    "isLive": false,
+    "preview": ["Website", "Mobile Application", "Graphic Design", "Social Media"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "work",
+    "slug": "alka-proje-website",
+    "brand": "Alka Proje",
+    "output": "Website",
+    "link": "alkaproje.com",
+    "client": {
+      "name": "Alka Proje",
+      "link": "alkaproje.com"
+    },
+    "year": 2016,
+    "colors": {
+      "primary": [230, 35, 50],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": true,
+    "preview": ["Website"],
+    "role": ["Web Designer"],
+    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "work",
+    "slug": "siberest-posters",
+    "brand": "Siberest",
+    "output": "Promotional Posters",
+    "client": {
+      "name": "Siberest",
+      "link": "siberest.com"
+    },
+    "year": 2015,
+    "colors": {
+      "primary": [225, 93, 41],
+      "secondary": [26, 25, 25]
+    },
+    "preview": ["Graphic Design"],
+    "role": ["Graphic Designer"],
+    "tags": ["Graphic Design"]
+  },
+  {
+    "type": "work",
+    "slug": "ikort-mobile-application",
+    "brand": "i-kort",
+    "output": "Mobile Application",
+    "client": {
+      "name": "TTF",
+      "fullName": "Turkish Tennis Federation",
+      "link": "www.ttf.org.tr"
+    },
+    "year": 2015,
+    "colors": {
+      "primary": [18, 141, 87],
+      "secondary": [195, 255, 1]
+    },
+    "isLive": false,
+    "preview": ["Mobile Application"],
+    "role": ["Brand Designer", "UI Designer"],
+    "tags": ["Branding", "UI/UX/IxD"]
+  },
+  {
+    "type": "project",
+    "slug": "cardz",
+    "brand": "Cardz",
+    "label": "Web-linked social business cards",
+    "description": "Cardz is a network of instantly-generated online profiles linked to a pack of business cards.",
+    "output": "Web Application",
+    "year": 2014,
+    "colors": {
+      "primary": [239, 63, 35],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": false,
+    "preview": ["Responsive Website", "Graphic Design"],
+    "role": ["Brand Designer", "Graphic Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Visual Design", "Printmaking", "Icon Design"]
+  },
+  {
+    "type": "project",
+    "slug": "piccture",
+    "brand": "Piccture",
+    "label": "Social feedback tool for designers",
+    "description": "Piccture is a visual feedback tool and a social platform tailored for visual arts and design.",
+    "output": "Web Application",
+    "year": [2011, 2014],
+    "colors": {
+      "primary": [0, 158, 176],
+      "secondary": [255, 255, 255]
+    },
+    "isLive": false,
+    "preview": ["Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer", "Product Manager"],
+    "tags": ["Branding", "Visual Design", "UI/UX/IxD", "Frontend"]
+  },
+  {
+    "type": "work",
+    "slug": "fraktal-proje-corporate-identity",
+    "brand": "Fraktal Proje",
+    "output": "Corporate Identity",
+    "client": {
+      "name": "Fraktal Proje"
+    },
+    "year": 2013,
+    "colors": {
+      "primary": [167, 56, 91],
+      "secondary": [198, 200, 202]
+    },
+    "preview": ["Corporate Identity"],
+    "role": ["Brand Designer", "Graphic Designer"],
+    "tags": ["Corporate Identity"]
+  },
+  {
+    "type": "work",
+    "slug": "bora-corporate-identity",
+    "brand": "Bora",
+    "output": "Corporate Identity",
+    "client": {
+      "name": "Bora Grup",
+      "link": "boragrup.com.tr"
+    },
+    "year": 2012,
+    "colors": {
+      "primary": [31, 123, 166],
+      "secondary": [237, 245, 248]
+    },
+    "preview": ["Corporate Identity"],
+    "role": ["Brand Designer", "Graphic Designer"],
+    "tags": ["Logo Design", "Corporate Identity"]
+  },
+  {
+    "type": "work",
+    "slug": "girisimcilik-kongresi-visuals",
+    "brand": "Girişimcilik Kongresi",
+    "output": "Promotional Visuals",
+    "client": {
+      "name": "ODTÜ GGT",
+      "link": "odtuggt.org"
+    },
+    "year": 2012,
+    "colors": {
+      "primary": [84, 197, 208],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Graphic Design"],
+    "role": ["Graphic Designer"],
+    "tags": ["Graphic Design"]
+  },
+  {
+    "type": "work",
+    "slug": "ottoman-music-archive-web-application",
+    "brand": "TRT Külliyat",
+    "attribute": "Ottoman Music Archive",
+    "output": "Web Application",
+    "client": {
+      "name": "TRT",
+      "fullName": "Turkish National Television",
+      "link": "trt.net.tr"
+    },
+    "year": 2012,
+    "colors": {
+      "primary": [192, 145, 108],
+      "secondary": [67, 19, 17]
+    },
+    "isLive": false,
+    "preview": ["Website"],
+    "role": ["UI Designer", "Frontend Developer"],
+    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "work",
+    "slug": "esetron-corporate-identity",
+    "brand": "Esetron",
+    "output": "Corporate Identity",
+    "client": {
+      "name": "Esetron",
+      "link": "esetron.com"
+    },
+    "year": 2012,
+    "colors": {
+      "primary": [0, 145, 192],
+      "secondary": [225, 234, 238]
+    },
+    "preview": ["Corporate Identity"],
+    "role": ["Brand Designer", "Graphic Designer"],
+    "tags": ["Corporate Identity"]
+  },
+  {
+    "type": "work",
+    "slug": "waplog-web-application",
+    "brand": "Waplog",
+    "output": "Web Application",
+    "client": {
+      "name": "VLMedia",
+      "link": "vlmedia.com.tr"
+    },
+    "year": 2012,
+    "colors": {
+      "primary": [204, 70, 123],
+      "secondary": [237, 198, 213]
+    },
+    "isLive": false,
+    "preview": ["Website"],
+    "role": ["Brand Designer", "UI Designer", "Frontend Developer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "work",
+    "slug": "odtu-ggt-corporate-identity",
+    "brand": "ODTÜ GGT",
+    "output": "Corporate Identity",
+    "client": {
+      "name": "ODTÜ GGT",
+      "link": "odtuggt.org"
+    },
+    "year": 2011,
+    "colors": {
+      "primary": [248, 154, 16],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Corporate Identity", "Website"],
+    "role": ["Brand Designer", "Graphic Designer", "Web Designer"],
+    "tags": ["Corporate Identity", "Web Design"]
+  },
+  {
+    "type": "work",
+    "slug": "maruf-corporate-identity",
+    "brand": "Maruf",
+    "output": "Corporate Identity",
+    "client": {
+      "name": "Maruf YMM"
+    },
+    "year": 2011,
+    "colors": {
+      "primary": [0, 118, 168],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Corporate Identity", "Website"],
+    "role": ["Brand Designer", "Graphic Designer", "Web Designer"],
+    "tags": ["Corporate Identity", "Web Design"]
+  },
+  {
+    "type": "work",
+    "slug": "rock-senligi-visuals",
+    "brand": "Rock Sengligi",
+    "output": "Promotional Visuals",
+    "client": {
+      "name": "ODTÜ MT",
+      "link": "mt.metu.edu.tr"
+    },
+    "year": 2011,
+    "colors": {
+      "primary": [232, 205, 0],
+      "secondary": [0, 0, 0]
+    },
+    "preview": ["Graphic Design"],
+    "role": ["Graphic Designer"],
+    "tags": ["Graphic Design"]
+  },
+  {
+    "type": "work",
+    "slug": "atom-website",
+    "brand": "ATOM",
+    "output": "Website",
+    "client": {
+      "name": "ODTÜ TEKNOKENT",
+      "link": "atom.org.tr"
+    },
+    "year": 2011,
+    "colors": {
+      "primary": [123, 177, 211],
+      "secondary": [26, 58, 98]
+    },
+    "isLive": false,
+    "preview": ["Website"],
+    "role": ["Web Designer"],
+    "tags": ["UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "work",
+    "slug": "waplog-mobile-application",
+    "brand": "Waplog",
+    "output": "Mobile Application",
+    "client": {
+      "name": "VLMedia",
+      "link": "vlmedia.com.tr"
+    },
+    "year": 2010,
+    "colors": {
+      "primary": [204, 70, 123],
+      "secondary": [237, 198, 213]
+    },
+    "isLive": false,
+    "preview": ["Mobile Application"],
+    "role": ["Brand Designer", "UI Designer"],
+    "tags": ["Branding", "UI/UX/IxD", "Frontend", "Web Design"]
+  },
+  {
+    "type": "collection",
+    "slug": "website-collection",
+    "attribute": "Website",
+    "output": "Collection",
+    "client": {
+      "name": "Various clients"
+    },
+    "year": [2003, 2017],
+    "colors": {
+      "primary": [255, 173, 44],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Collection"],
+    "tags": ["UI/UX/IxD", "Frontend", "Web Design", "Collections"]
+  },
+  {
+    "type": "collection",
+    "slug": "logo-collection",
+    "attribute": "Logo",
+    "output": "Collection",
+    "client": {
+      "name": "Various clients"
+    },
+    "year": [2007, 2016],
+    "colors": {
+      "primary": [234, 30, 88],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Collection"],
+    "tags": ["Graphic Design", "Logo Design", "Collections"]
+  },
+  {
+    "type": "collection",
+    "slug": "poster-collection",
+    "attribute": "Poster",
+    "output": "Collection",
+    "client": {
+      "name": "Various clients"
+    },
+    "year": [2008, 2016],
+    "colors": {
+      "primary": [13, 222, 151],
+      "secondary": [255, 255, 255]
+    },
+    "preview": ["Collection"],
+    "tags": ["Graphic Design", "Collections"]
+  }
+]

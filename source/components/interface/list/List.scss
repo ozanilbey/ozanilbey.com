@@ -1,0 +1,12 @@
+// Style: Interface > List (Main)
+[data-interface="list"] {
+  & > * {
+    &:before {
+      content: "•";
+      margin-right: .5em;
+      color: var(--brand-color);
+      font-size: 1.25em;
+      font-weight: 700;
+    }
+  }
+}

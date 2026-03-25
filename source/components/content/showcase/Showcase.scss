@@ -1,0 +1,15 @@
+// Style: Content > Showcase (Main)
+[data-content="showcase"] {
+  --showcase-spacing: 1.5rem;
+  & > .notice {
+    margin-bottom: var(--showcase-spacing);
+  }
+  & > .link {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--showcase-spacing);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

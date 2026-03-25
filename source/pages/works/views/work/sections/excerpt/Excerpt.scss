@@ -1,0 +1,33 @@
+// Style: Works > Work > Excerpt (Main)
+[data-page="works"] {
+  [data-view="work"] {
+    [data-section="excerpt"] {
+      & > * {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: left;
+      }
+      .block {
+        position: relative;
+        padding: 1em;
+        font-size: 1rem;
+        line-height: 125%;
+        & > .label {
+          margin-bottom: .1875em;
+          color: var(--figure-inactive-color);
+          font-size: .75em;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        & > .item {
+          font-size: .875em;
+          & > .link {
+            display: table;
+          }
+        }
+      }
+    }
+  }
+}

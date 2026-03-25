@@ -1,0 +1,70 @@
+// Style: Interface > Card (Main)
+[data-interface="card"] {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 1.25rem;
+  color: var(--figure-color);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.125em;
+  text-align: left;
+  white-space: normal;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px var(--tone-color),
+              inset 0 -.25rem .25rem -.25rem var(--brand-color);
+  transition-property: box-shadow, top;
+  transition-duration: .375s;
+  transition-timing-function: ease;
+  &:active {
+    top: 0;
+  }
+  &:hover {
+    top: -.1875rem;
+  }
+  &.layout-horizontal {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    & > .icon {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+    & > .text {
+      min-width: 0;
+    }
+  }
+  &.layout-vertical {
+    flex-direction: column;
+    align-items: center;
+    & > .text {
+      & > .title {
+        text-align: center;
+      }
+    }
+  }
+  & > .icon {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 2.25em;
+    height: 2.25em;
+    color: var(--figure-strong-color);
+  }
+  & > .text {
+    display: flex;
+    flex-direction: column;
+    gap: .125em;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+    & > .title {
+      font-weight: 700;
+    }
+    & > .description {
+      font-size: .875em;
+    }
+  }
+}

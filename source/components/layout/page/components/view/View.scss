@@ -1,0 +1,8 @@
+// Component: Layout > Page > View (Main)
+[data-layout="page"] {
+  [data-component="view"] {
+    &.centered {
+      margin: auto 0;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+// Style: Layout > Colophon (Main)
+[data-layout="colophon"] {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  font-size: .875rem;
+  & > .separator {
+    position: relative;
+    height: .75rem;
+    margin-bottom: 1rem;
+    color: var(--figure-weak-color);
+    &:before {
+      content: "";
+      opacity: .5;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1.5px;
+      background-image: repeating-linear-gradient(
+        to right,
+        transparent 0,
+        transparent 5px,
+        currentColor 5px,
+        currentColor 10px
+      );
+      transform: translateY(-50%);
+    }
+    & > * {
+      position: relative;
+      z-index: 2;
+      width: auto;
+      height: inherit;
+      margin-left: -.5rem;
+      vertical-align: top;
+    }
+  }
+  & > .information {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    & > .about {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .25rem;
+      flex-basis: calc(100% / 3 * 2);
+      & > * {
+        line-height: 1.25rem;
+        &:last-child {
+          margin-top: .25rem;
+        }
+      }
+      & > .paragraph {
+        line-height: 1.375em;
+        text-align: inherit;
+        margin-bottom: 0;
+      }
+    }
+    & > .links {
+      flex-basis: calc(100% / 3);
+    }
+  }
+  & > .settings {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2.5rem;
+    .color {
+      overflow: hidden;
+      width: 100%;
+      height: 4em;
+      padding: 1.5em 0;
+      font-size: .5rem;
+      text-align: center;
+      cursor: pointer;
+      & > * {
+        position: relative;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 1em;
+        vertical-align: top;
+        border-width: .25em;
+        border-style: solid;
+        border-radius: .5em;
+        transform: scale(1);
+        transition: transform .125s ease;
+        &:hover {
+          transform: scale(1.25);
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &:not(.active) {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+  .link {
+    color: var(--figure-color);
+    font-size: inherit;
+    font-weight: 400;
+    &:after {
+      color: var(--brand-color);
+      font-size: .875em;
+    }
+  }
+  [data-label] {
+    &:before {
+      content: attr(data-label);
+      display: inline-block;
+      width: 100%;
+      height: 1.5rem;
+      color: var(--brand-color);
+      font-size: .8em;
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      vertical-align: top;
+    }
+  }
+}
+
+// Style: Layout > Colophon (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-layout="colophon"] {
+    & > .information {
+      & > .about {
+        flex-basis: 60% !important;
+      }
+      & > .links {
+        flex-basis: 40% !important;
+      }
+    }
+  }
+}
+
+// Style: Layout > Colophon (< 768px)
+@media (max-width: 767.98px) {
+  [data-layout="colophon"] {
+    & > .information {
+      & > .about, & > .links {
+        flex-basis: 50% !important;
+      }
+    }
+  }
+}
+
+// Style: Layout > Colophon (< 640px)
+@media (max-width: 639.98px) {
+  [data-layout="colophon"] {
+    & > .information {
+      flex-direction: column;
+      text-align: center;
+      & > .about {
+        align-items: center;
+      }
+      & > .links {
+        & > .categories {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

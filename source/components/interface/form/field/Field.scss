@@ -1,0 +1,28 @@
+// Style: Interface > Form > Field (Main)
+[data-interface="form"] {
+  [data-component="field"] {
+    display: block;
+    width: 100%;
+    & + & {
+      margin-top: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    & > .label {
+      display: block;
+      height: 1em;
+      margin-bottom: .5em;
+      padding-left: .375em;
+      color: var(--figure-inactive-color);
+      font-size: .75em;
+      line-height: .75em;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color .25s ease;
+      &:has(+ :focus) {
+        color: var(--figure-weak-color);
+      }
+    }
+  }
+}

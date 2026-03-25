@@ -1,0 +1,50 @@
+// Style: Application > Elements (Main)
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+  &::selection {
+    background-color: hsla(var(--figure-color-hsl), .1);
+  }
+}
+html, body {
+  background-color: var(--ground-color);
+}
+body {
+  color: var(--figure-color);
+}
+a, button {
+  cursor: pointer;
+}
+strong, b {
+  color: var(--figure-strong-color);
+}
+del {
+  color: var(--figure-inactive-color);
+}
+br {
+  user-select: none;
+}
+img {
+  user-select: none;
+}
+svg {
+  fill: currentColor;
+  pointer-events: none;
+  user-select: none;
+}
+textarea {
+  font-family: inherit;
+  resize: none;
+}
+ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+code {
+  display: inline-block;
+}
+mark {
+  background-color: transparent;
+}

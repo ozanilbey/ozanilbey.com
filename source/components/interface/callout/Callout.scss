@@ -1,0 +1,85 @@
+// Style: Interface > Callout (Main)
+[data-interface="callout"] {
+  --callout-color: var(--theme-common-color);
+  --callout-tone-color: var(--tone-color);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .5em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .75em .875em;
+  font-size: .875em;
+  text-align: left;
+  border: 1px solid var(--callout-tone-color);
+  border-radius: 1em;
+  background-color: var(--callout-tone-color);
+  &.ghost {
+    padding: 0;
+    background-color: unset;
+    border: none;
+  }
+  &.intent-danger {
+    --callout-color: var(--intent-danger-color);
+    --callout-tone-color: var(--tone-danger-color);
+  }
+  &.intent-information {
+    --callout-color: var(--intent-information-color);
+    --callout-tone-color: var(--tone-information-color);
+  }
+  &.intent-success {
+    --callout-color: var(--intent-success-color);
+    --callout-tone-color: var(--tone-success-color);
+  }
+  &.intent-warning {
+    --callout-color: var(--intent-warning-color);
+    --callout-tone-color: var(--tone-warning-color);
+  }
+  &.size-xsmall {
+    font-size: .75em;
+  }
+  &.size-small {
+    font-size: .8125em;
+  }
+  &.size-medium {
+    font-size: .875em;
+  }
+  &.size-large {
+    font-size: .9375em;
+  }
+  &.size-xlarge {
+    font-size: 1em;
+  }
+  &.wide {
+    width: 100%;
+  }
+  & > .icon {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: .125em;
+    color: var(--callout-color);
+  }
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    & > .title {
+      margin-bottom: 0;
+      padding: .0625em 0;
+      color: var(--callout-color);
+      font-size: 1.125em;
+      font-weight: 500;
+      line-height: 1em;
+    }
+    & > .body {
+      color: var(--figure-color);
+      font-weight: 300;
+      line-height: 1.3125em;
+    }
+  }
+  a {
+    color: var(--callout-color) !important;
+  }
+}

@@ -1,0 +1,24 @@
+// Style: Home > Landing > Portfolio (Main)
+[data-page="home"] {
+  [data-view="landing"] {
+    [data-section="portfolio"] {}
+  }
+}
+
+// Style: Home > Landing > Portfolio (< 768px)
+@media (max-width: 767.98px) {
+  [data-page="home"] {
+    [data-view="landing"] {
+      [data-section="portfolio"] {}
+    }
+  }
+}
+
+// Style: Home > Landing > Portfolio (< 480px)
+@media (max-width: 479.98px) {
+  [data-page="home"] {
+    [data-view="landing"] {
+      [data-section="portfolio"] {}
+    }
+  }
+}

@@ -1,0 +1,83 @@
+// Style: Layout > Content (Main)
+[data-layout="content"] {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 1152px; // 1280px × 90%
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  font-size: 1em;
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+  &.block {
+    display: block;
+  }
+  &.wide {
+    max-width: unset;
+  }
+  &.alignment-center {
+    align-items: center;
+  }
+  &.alignment-left {
+    align-items: flex-start;
+  }
+  &.alignment-right {
+    align-items: flex-end;
+  }
+  &.alignment-stretch {
+    align-items: stretch;
+  }
+  & > .actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1rem; // Fixes the font size of the actions
+    & > .action {
+      &.secondary {
+        --brand-color: var(--figure-weak-color);
+      }
+    }
+  }
+  & > .detail {
+    font-size: .9375em;
+    font-style: italic;
+    line-height: 150%;
+    letter-spacing: -.0125em;
+  }
+  & > .lead {
+    font-size: 1.125em;
+    line-height: 150%;
+    letter-spacing: -.0125em;
+  }
+  & > .note {
+    font-size: .9375em;
+    margin-top: 1.5rem;
+  }
+}
+
+// Style: Layout > Content (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-layout="content"] {
+    margin-bottom: 2.5rem;
+  }
+}
+
+// Style: Layout > Content (< 768px)
+@media (max-width: 767.98px) {
+  [data-layout="content"] {
+    margin-bottom: 2.25rem;
+  }
+}
+
+// Style: Layout > Content (< 480px)
+@media (max-width: 479.98px) {
+  [data-layout="content"] {
+    margin-bottom: 1.75rem;
+    font-size: .8125em;
+  }
+}

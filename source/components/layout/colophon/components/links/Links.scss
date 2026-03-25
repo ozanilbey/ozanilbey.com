@@ -1,0 +1,16 @@
+// Style: Layout > Colophon > Links (Main)
+[data-layout="colophon"] {
+  [data-component="links"] {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: calc(100% / 3);
+    gap: 1.5rem;
+    & > .category {
+      & > .options {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

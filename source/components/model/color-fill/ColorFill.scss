@@ -1,0 +1,15 @@
+// Style: Model > Color fill (Main)
+[data-model="color-fill"] {
+  display: inline-block;
+  position: relative;
+  & > * {
+    position: relative;
+    display: flex;
+    & > * {
+      position: relative;
+    }
+  }
+  & > .filter {
+    display: none;
+  }
+}

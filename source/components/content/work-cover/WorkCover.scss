@@ -1,0 +1,43 @@
+// Style: Content > Work cover (Main)
+[data-content="work-cover"] {
+  position: relative;
+  width: 100%;
+  & > * {
+    position: relative;
+  }
+  & > .indicator {
+    opacity: .1875;
+    position: absolute;
+    left: -1.1875rem;
+    bottom: 2.75rem;
+    width: .5rem;
+    & > * {
+      position: relative;
+      width: .5rem;
+      height: .5rem;
+      margin-bottom: .25rem;
+      vertical-align: top;
+      border-radius: .25rem;
+      background-color: var(--theme-dark-extreme-color);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:not(.active) {
+        opacity: .75;
+        border: .25rem solid var(--theme-dark-extreme-color);
+        background-color: transparent;
+      }
+    }
+  }
+  & > .content {
+    overflow: hidden;
+    height: 30em;
+    & > * {
+      position: relative;
+      & > * {
+        filter: drop-shadow(0 0 .125rem var(--shade-strong-color))
+                drop-shadow(0 0 1px var(--shade-strong-color));
+      }
+    }
+  }
+}

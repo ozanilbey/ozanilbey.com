@@ -1,0 +1,104 @@
+// Style: Presets (Main)
+.colored {
+  --brand-active-color: var(--brand-original-color, var(--brand-color));
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(to top, var(--brand-active-color) 0%, transparent 150%),
+                    linear-gradient(to top, var(--brand-active-color) 0%, transparent 100%);
+  box-shadow: inset 0 1px 0 1.5px var(--shine-strong-color),
+              inset 0 0 1rem 0 var(--shine-strong-color),
+              inset 0 0 0 1px var(--shine-weak-color),
+              0 0 0 1px var(--shade-weak-color),
+              0 0 .125rem .0625rem var(--shade-weak-color);
+  &:before {
+    content: "";
+    opacity: .5;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--brand-active-color);
+    background-image: radial-gradient(ellipse, transparent 0%, hsla(var(--theme-light-extreme-color-hsl), .25) 25%, transparent 50%, transparent 100%);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 200% 250%;
+    box-shadow: inset 0 0 2rem 0 var(--brand-active-color);
+  }
+  & > * {
+    z-index: 2;
+  }
+}
+.blurred {
+  backdrop-filter: blur(.375rem);
+  &:before {
+    content: "";
+    opacity: .25;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.loader {
+  --loader-color: var(--theme-common-color);
+  position: relative;
+  aspect-ratio: 1;
+  width: .75em;
+  border-radius: 50%;
+  background-color: var(--loader-color);
+  box-shadow: 0 0 0 0 var(--loader-color);
+  animation: pulse 3s infinite ease-in-out;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 var(--loader-color);
+    animation: inherit;
+    animation-delay: -1s;
+  }
+  &:after {
+    animation-delay: -2s;
+  }
+  @keyframes pulse {
+    100% {
+      box-shadow: 0 0 0 1.5em transparent;
+    }
+  }
+}
+.monocolor {
+  filter: brightness(0%)
+          invert(22%)
+          sepia(15%)
+          saturate(760%)
+          hue-rotate(167deg)
+          brightness(91%)
+          contrast(90%);
+}
+
+// Style: Presets (Dark)
+[data-theme="dark"] {
+  .monocolor {
+    filter: brightness(0%)
+            invert(100%);
+  }
+}
+
+// Style: Presets (Light)
+[data-theme="light"] {
+  .monocolor {
+    filter: brightness(0%)
+            invert(22%)
+            sepia(15%)
+            saturate(760%)
+            hue-rotate(167deg)
+            brightness(70%)
+            contrast(90%);
+  }
+}
