@@ -7,6 +7,9 @@ import Link from '@source/components/interface/link/Link'
 import Notice from './components/notice/Notice'
 import WorkCard from '@source/components/content/work-card/WorkCard'
 
+// Hooks
+import useDimensions from '@source/hooks/useDimensions'
+
 // Helpers
 import { getAttributes } from '@source/helpers/component'
 
@@ -28,6 +31,7 @@ function Showcase ({ className, data, reference, style, ...rest }) {
   const [list, setList] = useState(getSortedList(data))
 
   // Data
+  const { isDesktop } = useDimensions()
   const attributes = getAttributes(rest, ['aria', 'data'])
 
   // Effects
@@ -55,7 +59,7 @@ function Showcase ({ className, data, reference, style, ...rest }) {
               index={index}
               layout="horizontal"
               className="work-card"
-              willFade={index < list.length - 1} />
+              willFade={isDesktop && index < list.length - 1} />
           </Link>
         )
         : <p>There isn't any work matching the criteria.</p>

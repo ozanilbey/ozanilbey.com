@@ -5,6 +5,9 @@ import Headline from '@source/components/model/headline/Headline'
 import Link from '@source/components/interface/link/Link'
 import Page from '@source/components/layout/page/Page'
 
+// Hooks
+import useDimensions from '@source/hooks/useDimensions'
+
 // Data
 import repositories from '@source/data/repositories'
 
@@ -13,6 +16,9 @@ import './OpenSource.scss'
 
 // Section: Home > Landing > Open source
 function OpenSource () {
+  // Data
+  const { isDesktop } = useDimensions()
+
   // Functions
   function renderGitHubLink () {
     return (
@@ -65,7 +71,7 @@ function OpenSource () {
                   className="card"
                   title={repository.id}
                   description={repository.description}
-                  willFade={repositoryIndex < repositories.length - 1}
+                  willFade={isDesktop && repositoryIndex < repositories.length - 1}
                   style={{ '--brand-color': 'var(--tone-weak-color)' }} />
               </Link>
             </li>
