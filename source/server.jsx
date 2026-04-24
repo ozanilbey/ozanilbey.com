@@ -2,6 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import http from 'http'
+import https from 'https'
 import express from 'express'
 import { renderToPipeableStream, renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
@@ -183,4 +184,11 @@ application.use(async (request, response) => {
 server.listen(PORT, '0.0.0.0', () => {
   // Log that the application is up and running
   console.info(`\nAvailable at :${PORT}\n`)
+  // Self-ping health endpoint every 10 minutes
+  setInterval(() => {
+    https.get(
+      `${process.env.RENDER_EXTERNAL_URL}/health`,
+      response => response.resume()
+    ).on('error', error => console.error('Failed to ping health endpoint:', error))
+  }, 10 * 60 * 1000)
 })
