@@ -3,13 +3,14 @@ import { useMemo } from 'react'
 
 // Hooks
 import useDimensions from '@source/hooks/useDimensions'
+import useDocument from '@source/hooks/useDocument'
 import useScroll from '@source/hooks/useScroll'
 
 // Helpers
 import { checkIfClient } from '@source/helpers/document'
 
 // Functions (Local)
-function calculateFadeLimit (width) {
+function calculateFadeLimit () {
   let navigationHeight = 100
   if (checkIfClient()) navigationHeight = document.getElementById('navigation')?.offsetHeight || navigationHeight
   return 1.25 * navigationHeight
@@ -26,16 +27,13 @@ function getFadingStyles (element, limit) {
 // Hook: Fade
 function useFade (element) {
   // Data
-  const { width } = useDimensions()
+  const { width: windowWidth } = useDimensions()
+  const { vertical: verticalScroll } = useScroll()
+  const { isReady: isDocumentReady } = useDocument()
 
   // Data (Memoized)
-  const limit = useMemo(() => calculateFadeLimit(width), [width])
-
-  // Operations
-  useScroll() // Triggers re-render every scroll event
-
-  // Data
-  const styles = getFadingStyles(element, limit)
+  const limit = useMemo(() => calculateFadeLimit(), [isDocumentReady, windowWidth]) // Recalculates on layout change
+  const styles = useMemo(() => getFadingStyles(element, limit), [element, limit, verticalScroll]) // Recalculates on related changes
 
   // Response
   return { styles }
