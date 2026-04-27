@@ -2,7 +2,6 @@
 import Routes from './routes/Main'
 
 // Components
-import Meta from '@source/components/utility/meta/Meta'
 import Page from '@source/components/layout/page/Page'
 
 // Styles
@@ -13,7 +12,6 @@ function Contact () {
   // Render
   return (
     <Page name="contact">
-      <Meta page="contact" />
       <Routes />
     </Page>
   )

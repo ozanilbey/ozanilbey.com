@@ -36,7 +36,6 @@ function Work ({ category, className, data, next, style, ...rest }) {
   useEffect(() => {
     if (!data) navigate('/works', { replace: true })
   }, [data, navigate])
-
   // Render
   if (!data) return null
   return (
@@ -52,7 +51,8 @@ function Work ({ category, className, data, next, style, ...rest }) {
         view={data.slug}
         keywords={data.tags || []}
         description={data.description}
-        previewImageURL={previewImageURL} />
+        previewImageURL={previewImageURL}
+        recommendation={next?.slug ? `/works/${next.slug}` : null} />
       <Preview data={data} />
       <Excerpt data={data} />
       <Body identifier={data.slug} />

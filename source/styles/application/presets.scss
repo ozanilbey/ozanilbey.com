@@ -1,4 +1,4 @@
-// Style: Presets (Main)
+// Style: Application > Presets (Main)
 .colored {
   --brand-active-color: var(--brand-original-color, var(--brand-color));
   overflow: hidden;
@@ -82,7 +82,7 @@
           contrast(90%);
 }
 
-// Style: Presets (Dark)
+// Style: Application > Presets (Dark)
 [data-theme="dark"] {
   .monocolor {
     filter: brightness(0%)
@@ -90,7 +90,7 @@
   }
 }
 
-// Style: Presets (Light)
+// Style: Application > Presets (Light)
 [data-theme="light"] {
   .monocolor {
     filter: brightness(0%)

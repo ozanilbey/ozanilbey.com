@@ -1,4 +1,4 @@
-// Style: Application > Color (Main)
+// Style: Application > Colors (Main)
 :root {
   color-scheme: light dark;
 
@@ -102,32 +102,32 @@
   --tone-danger-color: hsla(var(--intent-danger-color-hsl), .09375);
 }
 
-// Style: Application > Color (Green)
+// Style: Application > Colors (Green)
 [data-color="green"] {
   --brand-color-hsl: var(--brand-green-hsl);
 }
 
-// Style: Application > Color (Yellow)
+// Style: Application > Colors (Yellow)
 [data-color="yellow"] {
   --brand-color-hsl: var(--brand-yellow-hsl);
 }
 
-// Style: Application > Color (Pink)
+// Style: Application > Colors (Pink)
 [data-color="pink"] {
   --brand-color-hsl: var(--brand-pink-hsl);
 }
 
-// Style: Application > Color (Purple)
+// Style: Application > Colors (Purple)
 [data-color="purple"] {
   --brand-color-hsl: var(--brand-purple-hsl);
 }
 
-// Style: Application > Color (Blue)
+// Style: Application > Colors (Blue)
 [data-color="blue"] {
   --brand-color-hsl: var(--brand-blue-hsl);
 }
 
-// Style: Application > Color (Dark)
+// Style: Application > Colors (Dark)
 [data-theme="dark"] {
   // HSL values (Figure)
   --figure-color-hsl: var(--figure-light-color-hsl);
@@ -170,7 +170,7 @@
   }
 }
 
-// Style: Application > Color (Light)
+// Style: Application > Colors (Light)
 [data-theme="light"] {
   // HSL values (Figure)
   --figure-color-hsl: var(--figure-dark-color-hsl);
