@@ -163,10 +163,7 @@ application.use(async (request, response) => {
         },
         onShellReady: () => {
           // Set the content type header
-          response.setHeader('content-type', 'text/html')
-          // Write the declaration
-          response.write('<!DOCTYPE html>')
-          // Pipe the response
+          response.setHeader('content-type', 'text/html; charset=utf-8')
           pipe(response)
         }
       }
