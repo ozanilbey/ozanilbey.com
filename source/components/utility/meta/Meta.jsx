@@ -65,7 +65,7 @@ const ACCOUNTS = {
 }
 
 // Component: Utility > Meta
-function Meta ({ article, category, description = SITE.description, keywords = SITE.keywords, page, previewImageURL = BRAND.images.preview.default.url, view }) {
+function Meta ({ article, category, description = SITE.description, keywords = SITE.keywords, page, previewImageURL = BRAND.images.preview.default.url, recommendation, view, willIndex = true }) {
   // Functions
   function getType () {
     if (page === 'profile') return 'profile'
@@ -116,21 +116,10 @@ function Meta ({ article, category, description = SITE.description, keywords = S
   // Render
   return (
     <>
-      {page === 'error'
+      {/* Title */}
+      {renderTitle(title)}
+      {willIndex
         ? <>
-          {/* Title */}
-          {renderTitle(title)}
-          {/* Indexing */}
-          <meta
-            name="robots"
-            content="noindex, nofollow" />
-          <meta
-            name="googlebot"
-            content="noindex" />
-        </>
-        : <>
-          {/* Title */}
-          {renderTitle(title)}
           {/* URL */}
           <link
             href={url}
@@ -198,6 +187,11 @@ function Meta ({ article, category, description = SITE.description, keywords = S
           <meta
             property="og:image:alt"
             content={previewImageDescription} />
+          {recommendation &&
+            <meta
+              property="og:see_also"
+              content={`${BASE_URL}${recommendation}`} />
+          }
           {/* Article information */}
           {article &&
             <meta
@@ -296,6 +290,15 @@ function Meta ({ article, category, description = SITE.description, keywords = S
             rel="mask-icon"
             color={SITE.color}
             href={BRAND.images.icons.mask.url} />
+        </>
+        : <>
+          {/* Bots */}
+          <meta
+            name="robots"
+            content="noindex, nofollow" />
+          <meta
+            name="googlebot"
+            content="noindex" />
         </>
       }
     </>

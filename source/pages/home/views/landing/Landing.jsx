@@ -5,6 +5,7 @@ import Portfolio from './sections/portfolio/Portfolio'
 import Promotion from '@source/sections/promotion/Promotion'
 
 // Components
+import Meta from '@source/components/utility/meta/Meta'
 import Page from '@source/components/layout/page/Page'
 
 // Styles
@@ -15,6 +16,7 @@ function Landing () {
   // Render
   return (
     <Page.View name="landing">
+      <Meta page="home" />
       <Introduction />
       <Portfolio />
       <OpenSource />

@@ -2,6 +2,7 @@
 import Message from './sections/message/Message'
 
 // Components
+import Meta from '@source/components/utility/meta/Meta'
 import Page from '@source/components/layout/page/Page'
 
 // Styles
@@ -14,6 +15,9 @@ function Landing () {
     <Page.View
       isCentered
       name="landing">
+      <Meta
+        page="error"
+        willIndex={false} />
       <Message />
     </Page.View>
   )

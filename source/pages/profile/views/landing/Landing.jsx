@@ -6,6 +6,7 @@ import Promotion from '@source/sections/promotion/Promotion'
 import Skills from './sections/skills/Skills'
 
 // Components
+import Meta from '@source/components/utility/meta/Meta'
 import Page from '@source/components/layout/page/Page'
 
 // Styles
@@ -16,6 +17,7 @@ function Landing () {
   // Render
   return (
     <Page.View name="landing">
+      <Meta page="profile" />
       <Introduction />
       <Personality />
       <Skills />

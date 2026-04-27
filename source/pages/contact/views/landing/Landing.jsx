@@ -9,6 +9,7 @@ import Form from './sections/form/Form'
 import Calendar from './panels/calendar/Calendar'
 
 // Components
+import Meta from '@source/components/utility/meta/Meta'
 import Page from '@source/components/layout/page/Page'
 
 // Styles
@@ -25,6 +26,7 @@ function Landing () {
   // Render
   return (
     <Page.View name="landing">
+      <Meta page="contact" />
       <Booking
         isActive={isBooking}
         onStart={() => setIsBooking(true)} />
