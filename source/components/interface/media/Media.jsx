@@ -12,13 +12,22 @@ import { MEDIA_TYPES } from '@source/constants/options'
 // Styles
 import './Media.scss'
 
+// Functions (Local)
+function getDescription (path) {
+  return path
+    .replace(/^\//, '')
+    .replace(/\..+$/, '')
+    .replace(/[-/]/g, ' ')
+    .trim()
+}
+
 // Component: Content > Media
-function Media ({ className, documentAspectRatio, height, isAdaptive, source, style, type, width, willAutoplay, willCrop, willHideControls, willLoop, ...rest }) {
+function Media ({ className, description, documentAspectRatio, height, isAdaptive, source, style, type, width, willAutoplay, willCrop, willHideControls, willLoop, ...rest }) {
   // State
   const [imageSourceSet, setImageSourceSet] = useState(null)
 
   // Data
-  const attributes = getAttributes(rest, ['alt', 'aria', 'data', 'title'])
+  const attributes = getAttributes(rest, ['aria', 'data', 'title'])
 
   // Functions
   function getDocumentStyle () {
@@ -32,7 +41,8 @@ function Media ({ className, documentAspectRatio, height, isAdaptive, source, st
           <img
             src={getURL('image')}
             srcSet={imageSourceSet}
-            className={isAdaptive ? 'monocolor' : ''} />
+            className={isAdaptive ? 'monocolor' : ''}
+            alt={description || getDescription(source)} />
         )
       case 'video':
         return (
@@ -110,6 +120,7 @@ function Media ({ className, documentAspectRatio, height, isAdaptive, source, st
 // Properties
 Media.propTypes = {
   className: PropTypes.string,
+  description: PropTypes.string,
   documentAspectRatio: PropTypes.number,
   height: PropTypes.number,
   isAdaptive: PropTypes.bool,

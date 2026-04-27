@@ -18,6 +18,21 @@ const LINK_TYPE_ELEMENT_MAPPING = Object.freeze({
   router: RouterLink
 })
 
+// Functions (Local)
+function getDescription (pathOrURL) {
+  if (!pathOrURL) return 'link'
+  return pathOrURL
+    .replace(/^(https?:)?\/\//, '')
+    .replace(/^www\./, '')
+    .replace(/^\//, '')
+    .replace(/\.[a-z0-9]+/gi, '')
+    .replace(/\?.*/g, '')
+    .replace(/#.*/, '')
+    .replace(/\/$/, '')
+    .replace(/\-/g, ' ')
+    .trim()
+}
+
 // Component: Interface > Link
 function Link ({ arrow, children, className, href, isDisabled = false, isExact = false, isExternal = false, isReverse = false, onClick, style, to, variant = 'default', ...rest }) {
   // Data
@@ -25,6 +40,7 @@ function Link ({ arrow, children, className, href, isDisabled = false, isExact =
     ? 'anchor'
     : typeof isExact === 'boolean' ? 'navigation' : 'router'
   const Element = LINK_TYPE_ELEMENT_MAPPING[type]
+  const description = getDescription(href || to)
   const attributes = getAttributes(rest, ['aria', 'data', 'download', 'title'])
   const properties = {
     ...((type === 'anchor' && !isDisabled) ? { href } : { to }),
@@ -40,6 +56,7 @@ function Link ({ arrow, children, className, href, isDisabled = false, isExact =
       {...properties}
       disabled={isDisabled}
       data-interface="link"
+      aria-label={attributes['aria-label'] || description}
       className={getClassName(className, { arrow, reversed: isReverse, type, variant })}
       onClick={onClick}
       style={style}>
