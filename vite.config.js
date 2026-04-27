@@ -7,7 +7,8 @@ import react from '@vitejs/plugin-react-swc'
 const configuration = defineConfig({
   build: {
     manifest: true,
-    rollupOptions: { input: './source/client.jsx' }
+    rollupOptions: { input: './source/client.jsx' },
+    sourcemap: 'hidden'
   },
   css: { devSourcemap: true },
   plugins: [react({ jsxRuntime: 'automatic' })],
