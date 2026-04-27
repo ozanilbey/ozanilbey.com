@@ -87,10 +87,10 @@ function Navigation ({ className, style, ...rest }) {
           {pages.map(page =>
             <li key={page.name}>
               <Link
+                to={page.path}
                 isExact={false}
                 className={getClassName('link', { interactive: true })}
-                onClick={event => handlePageChange(event, page.path)}
-                to={page.path}>
+                onClick={event => handlePageChange(event, page.path)}>
                 {page.name}
               </Link>
             </li>
@@ -101,8 +101,8 @@ function Navigation ({ className, style, ...rest }) {
             <li key={account.name}>
               <Link
                 isExternal
-                className={getClassName('link', { interactive: true })}
-                href={`//${account.link}`}>
+                to={`//${account.link}`}
+                className={getClassName('link', { interactive: true })}>
                 <Icon
                   className="icon"
                   name={slug(account.name)} />

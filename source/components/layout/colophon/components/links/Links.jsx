@@ -39,8 +39,8 @@ function Links ({ className, style, ...rest }) {
               className="option"
               key={page.name}>
               <Link
-                className="link"
-                to={page.path}>
+                to={page.path}
+                className="link">
                 {page.label}
               </Link>
             </li>
@@ -54,7 +54,7 @@ function Links ({ className, style, ...rest }) {
           <li className="option">
             <Link
               className="link"
-              to="works/featured#portfolio">
+              to="/works/featured#portfolio">
               Featured
             </Link>
           </li>
@@ -85,7 +85,7 @@ function Links ({ className, style, ...rest }) {
               <Link
                 isExternal
                 className="link"
-                href={`//${account.link}`}>
+                to={`//${account.link}`}>
                 {account.name}
               </Link>
             </li>
@@ -93,14 +93,14 @@ function Links ({ className, style, ...rest }) {
           <li className="option">
             <Link
               className="link"
-              href="/contact#form">
+              to="/contact#form">
               Message
             </Link>
           </li>
           <li className="option">
             <Link
               className="link"
-              href="/contact#booking">
+              to="/contact#booking">
               Book a call
             </Link>
           </li>

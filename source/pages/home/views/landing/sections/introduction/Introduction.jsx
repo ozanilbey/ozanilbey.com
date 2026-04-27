@@ -86,9 +86,9 @@ function Introduction () {
           </li>
           <li className="action secondary">
             <Link
-              arrow="right"
-              to="/profile">
-              Learn more
+              to="/profile"
+              arrow="right">
+              Discover skills
             </Link>
           </li>
         </ul>

@@ -25,8 +25,8 @@ function Promotion () {
         <ul className="actions">
           <li className="action primary">
             <Link
-              arrow="right"
               to="/contact"
+              arrow="right"
               variant="button"
               className="link">
               Get in touch

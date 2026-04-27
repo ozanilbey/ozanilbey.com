@@ -116,7 +116,7 @@ function Cardz () {
           className="title">
           Story of the project
         </Heading>
-        <p className="lead">Cardz was <strong>entirely designed and developed in 48 hours</strong> at <strong>LAUNCH Hackathon 2014</strong>, by <strong>Ozan Yilmaz</strong> and <Link isExternal arrow="upright" href="//volkan.io">Volkan Özçelik</Link>.</p>
+        <p className="lead">Cardz was <strong>entirely designed and developed in 48 hours</strong> at <strong>LAUNCH Hackathon 2014</strong>, by <strong>Ozan Yilmaz</strong> and <Link isExternal arrow="upright" to="//volkan.io">Volkan Özçelik</Link>.</p>
         <p>Ozan, having had 5 years of experience on branding at the time, came up with the idea of <strong>easy-to-have, branded-looking, socially consumable business cards</strong>. Compared to ordinary business cards, the main distinguishing factor of Cardz concept is that <strong>it democratizes having business cards</strong> by making it <strong>simple and cheaper</strong>.</p>
         <Media
           width={1152}

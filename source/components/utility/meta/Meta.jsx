@@ -101,8 +101,8 @@ function Meta ({ article, category, description = SITE.description, keywords = S
     return normalizedURLs.map(url =>
       types.map(type =>
         <link
+          to={url}
           rel={type}
-          href={url}
           key={`${type}-${url}`} />
       )
     )

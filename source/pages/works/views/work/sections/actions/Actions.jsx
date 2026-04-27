@@ -62,12 +62,12 @@ function Actions ({ category, className, label, recommendation, style, ...rest }
                   <Link
                     isExternal
                     className="link"
-                    href={
+                    to={
                       option.link
                         .replace('LINK', url)
                         .replace('MESSAGE', label)
                         .replace('FACEBOOK_APPLICATION_IDENTIFIER', FACEBOOK_ACCOUNT_DATA.applicationIdentifier)
-                      }>
+                    }>
                     <Icon
                       name={option.id}
                       className={getClassName('icon', { [option.id]: true, monocolor: !!calculateColorExtremity(option.color) })}

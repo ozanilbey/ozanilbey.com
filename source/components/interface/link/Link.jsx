@@ -20,17 +20,16 @@ const LINK_TYPE_ELEMENT_MAPPING = Object.freeze({
 
 // Functions (Local)
 function getDescription (pathOrURL) {
-  if (!pathOrURL) return 'link'
-  return pathOrURL
-    .replace(/^(https?:)?\/\//, '')
-    .replace(/^www\./, '')
-    .replace(/^\//, '')
-    .replace(/\.[a-z0-9]+/gi, '')
-    .replace(/\?.*/g, '')
-    .replace(/#.*/, '')
-    .replace(/\/$/, '')
-    .replace(/\-/g, ' ')
-    .trim()
+  const description = (
+    pathOrURL
+      ?.replace(/^(https?:)?\/\//, '') // Removes protocol
+      ?.replace(/^www\./, '') // Removes www
+      ?.replace(/\.[a-z0-9]+/gi, '') // Removes TLD
+      ?.replace(/[\-\/\?\#\=]/g, ' ') // Replaces special URL characters with space
+      ?.toLowerCase()
+      ?.trim()
+  )
+  return description || 'link'
 }
 
 // Component: Interface > Link
@@ -43,10 +42,10 @@ function Link ({ arrow, children, className, href, isDisabled = false, isExact =
   const description = getDescription(href || to)
   const attributes = getAttributes(rest, ['aria', 'data', 'download', 'title'])
   const properties = {
-    ...((type === 'anchor' && !isDisabled) ? { href } : { to }),
+    ...(variant === 'button' && { role: 'button' }),
     ...(type === 'navigation' && { end: isExact }),
-    ...(isExternal && { rel: 'noopener noreferrer', target: '_blank' }),
-    ...(variant === 'button' && { role: 'button' })
+    ...(!isDisabled && (type === 'anchor' ? { href: to } : { to })),
+    ...(isExternal && { rel: 'noopener noreferrer', target: '_blank' })
   }
 
   // Render

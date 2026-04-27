@@ -63,7 +63,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//cursor.com">
+                    to="//cursor.com">
                     Cursor
                   </Link>
                   <small>
@@ -72,7 +72,7 @@ function Credits ({ className, style, ...rest }) {
                       isExternal
                       arrow="upright"
                       className="link"
-                      href="//anysphere.inc">
+                      to="//anysphere.inc">
                       Anysphere, Inc.
                     </Link>
                   </small>
@@ -82,18 +82,18 @@ function Credits ({ className, style, ...rest }) {
                 <p className="string">
                   <Link
                     isExternal
+                    to="//grok.com"
                     arrow="upright"
-                    className="link"
-                    href="//grok.com">
+                    className="link">
                     Grok
                   </Link>
                   <small>
                     <span className="by">by</span>
                     <Link
                       isExternal
+                      to="//x.ai"
                       arrow="upright"
-                      className="link"
-                      href="//x.ai">
+                      className="link">
                       xAI, Corp.
                     </Link>
                   </small>
@@ -107,7 +107,7 @@ function Credits ({ className, style, ...rest }) {
                 isExternal
                 arrow="upright"
                 className="link"
-                href="//render.com">
+                to="//render.com">
                 Render
               </Link>
             </p>
@@ -120,7 +120,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//git-scm.org">
+                    to="//git-scm.org">
                     Git
                   </Link>
                   <small>
@@ -129,7 +129,7 @@ function Credits ({ className, style, ...rest }) {
                       isExternal
                       arrow="upright"
                       className="link"
-                      href="//www.linkedin.com/in/linustorvalds">
+                      to="//www.linkedin.com/in/linustorvalds">
                       Linus Torvalds
                     </Link>
                   </small>
@@ -138,10 +138,10 @@ function Credits ({ className, style, ...rest }) {
               <li>
                 <p className="string">
                   <Link
-                    isExternal
+                    isExternal 
+                    to="//vite.dev"
                     arrow="upright"
-                    className="link" 
-                    href="//vite.dev">
+                    className="link">
                     Vite
                   </Link>
                   <small>
@@ -150,7 +150,7 @@ function Credits ({ className, style, ...rest }) {
                       isExternal
                       arrow="upright"
                       className="link"
-                      href="//voidzero.dev">
+                      to="//voidzero.dev">
                       VoidZero, Inc.
                     </Link>
                   </small>
@@ -162,7 +162,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//eslint.org">
+                    to="//eslint.org">
                     ESLint
                   </Link>
                   <small>
@@ -171,7 +171,7 @@ function Credits ({ className, style, ...rest }) {
                       isExternal
                       arrow="upright"
                       className="link"
-                      href="//openjsf.org/">
+                      to="//openjsf.org">
                       OpenJS Foundation
                     </Link>
                   </small>
@@ -185,16 +185,16 @@ function Credits ({ className, style, ...rest }) {
                 isExternal
                 arrow="upright"
                 className="link"
-                href="//fonts.google.com/specimen/Inter">
+                to="//fonts.google.com/specimen/Inter">
                 Inter
               </Link>
               <small>
                 <span className="by">by</span>
                 <Link
                   isExternal
+                  to="//rsms.me"
                   arrow="upright"
-                  className="link"
-                  href="//rsms.me">
+                  className="link">
                   Rasmus Andersson
                 </Link>
               </small>
@@ -208,7 +208,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//github.com">
+                    to="//github.com">
                     GitHub
                   </Link>
                 </p>
@@ -219,7 +219,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//cloudinary.com">
+                    to="//cloudinary.com">
                     Cloudinary
                   </Link>
                 </p>
@@ -234,7 +234,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//reactrouter.com">
+                    to="//reactrouter.com">
                     React Router
                   </Link>
                 </p>
@@ -245,7 +245,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//github.com/nfl/react-helmet">
+                    to="//github.com/nfl/react-helmet">
                     React Helmet
                   </Link>
                 </p>
@@ -260,7 +260,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//nodejs.org">
+                    to="//nodejs.org">
                     Node.js
                   </Link>
                 </p>
@@ -271,7 +271,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//expressjs.com">
+                    to="//expressjs.com">
                     Express
                   </Link>
                 </p>
@@ -282,7 +282,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//reactjs.org">
+                    to="//reactjs.org">
                     React
                   </Link>
                 </p>
@@ -293,7 +293,7 @@ function Credits ({ className, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href="//sass-lang.com">
+                    to="//sass-lang.com">
                     Sass
                   </Link>
                 </p>

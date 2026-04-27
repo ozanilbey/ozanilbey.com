@@ -26,7 +26,7 @@ function OpenSource () {
         isExternal
         arrow="upright"
         className="link"
-        href="https://github.com/ozanilbey">
+        to="https://github.com/ozanilbey">
         my GitHub
       </Link>
     )
@@ -37,7 +37,7 @@ function OpenSource () {
         isExternal
         arrow="upright"
         className="link"
-        href="https://github.com/ozanilbey/ozanilbey.com">
+        to="https://github.com/ozanilbey/ozanilbey.com">
         source code
       </Link>
     )
@@ -65,7 +65,7 @@ function OpenSource () {
               <Link
                 isExternal
                 className="link"
-                href={`//${repository.link}`}>
+                to={`//${repository.link}`}>
                 <Card
                   icon="github"
                   className="card"

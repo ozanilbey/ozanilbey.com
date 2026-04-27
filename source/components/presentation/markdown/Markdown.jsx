@@ -34,8 +34,8 @@ function Markdown ({ children, className, style, ...rest }) {
     const isInternal = !checkIfURL(href)
     return (
       <Link
-        {...properties}
         to={href}
+        {...properties}
         isExternal={!isInternal}>
         {children}
       </Link>

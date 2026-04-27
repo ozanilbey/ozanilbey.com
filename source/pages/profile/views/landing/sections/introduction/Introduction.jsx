@@ -26,14 +26,14 @@ function Introduction () {
               isExternal
               arrow="down"
               variant="button"
-              href="/documents/resume.pdf">
+              to="/documents/resume.pdf">
               Download resume
             </Link>
           </li>
           <li className="action secondary">
             <Link
-              arrow="right"
-              to="/contact">
+              to="/contact"
+              arrow="right">
               Book a meeting
             </Link>
           </li>

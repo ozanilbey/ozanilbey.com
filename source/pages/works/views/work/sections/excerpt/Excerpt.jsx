@@ -69,9 +69,9 @@ function Excerpt ({ className, data, style, ...rest }) {
     return (
       <Link
         isExternal
+        to={`//${url}`}
         arrow="upright"
-        className="link"
-        href={`//${url}`}>
+        className="link">
         {text}
       </Link>
     )

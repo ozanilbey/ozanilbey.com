@@ -49,7 +49,7 @@ function Colophon ({ className, style, ...rest }) {
               isExternal
               arrow="upright"
               className="link"
-              href="//github.com/ozanilbey/ozanilbey.com">
+              to="//github.com/ozanilbey/ozanilbey.com">
               The code
             </Link>
             {' is entirely open source. You can browse, use, and modify it. If you want, you can even make it completely yours.'}

@@ -48,7 +48,7 @@ function Contracts ({ className, type, style, ...rest }) {
                     isExternal
                     arrow="upright"
                     className="link"
-                    href={`//${item.link}`}>
+                    to={`//${item.link}`}>
                     {item.for}
                   </Link>
                   : item.for
