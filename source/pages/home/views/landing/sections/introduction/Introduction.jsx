@@ -61,7 +61,7 @@ function Introduction () {
         </Headline>
         <p className="greeting lead">
           <strong>Hi, my name is Ozan</strong>
-          <a
+          <span
             data-text="/oʊ'zɑ:n/"
             className={getClassName('pronunciation', { active: isPlayingAudio })}
             onClick={handlePronunciation}
@@ -69,7 +69,7 @@ function Introduction () {
             <Icon
               name="audio"
               className="icon" />
-          </a>
+          </span>
           <audio ref={pronunciation}>
             <source src="/audios/ozan.mp3" type="audio/mpeg" />
             <source src="/audios/ozan.ogg" type="audio/ogg" />
