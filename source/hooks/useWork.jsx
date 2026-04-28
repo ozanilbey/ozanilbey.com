@@ -66,7 +66,7 @@ function useWork (identifier) {
   useEffect(() => {
     if (current) {
       const extremity = calculateColorExtremity(current.colors.primary)
-      document.documentElement.setAttribute('data-extreme', extremity)
+      if (extremity) document.documentElement.setAttribute('data-extreme', extremity)
       if (extremity === theme) {
         document.documentElement.style.setProperty('--brand-original-color', rgbColor(current.colors.primary))
       } else document.documentElement.style.setProperty('--brand-color', rgbColor(current.colors.primary))
