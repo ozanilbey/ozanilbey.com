@@ -16,6 +16,11 @@ const tree = (
   </BrowserRouter>
 )
 
+// Functions (Local)
+function logHydrationError (error) {
+  console.error('Recoverable hydration error:', error?.message)
+}
+
 // Operations
 if (ENVIRONMENT === 'development') createRoot(root).render(tree)
-else hydrateRoot(root, tree)
+else hydrateRoot(root, tree, { onRecoverableError: logHydrationError })
