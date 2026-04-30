@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > SecFusion website
 function SecFusionWebsite () {
@@ -11,10 +11,10 @@ function SecFusionWebsite () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-website/teaser.png" />
+          path="/secfusion-website/teaser.png" />
         <p className="lead">SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
         <p className="lead">I designed and developed a clean, multilingual, and responsive website for SecFusion in <strong>2020</strong>.</p>
         <Callout
@@ -35,25 +35,25 @@ function SecFusionWebsite () {
           width={1152}
           type="image"
           className="media"
-          source="/secfusion-website/01.png" />
+          path="/secfusion-website/01.png" />
         <small className="note">Home</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/secfusion-website/02.png" />
+          path="/secfusion-website/02.png" />
         <small className="note">Platform</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/secfusion-website/03.png" />
+          path="/secfusion-website/03.png" />
         <small className="note">Feature</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/secfusion-website/04.png" />
+          path="/secfusion-website/04.png" />
         <small className="note">Contact</small>
       </Content>
       <Content>
@@ -63,34 +63,34 @@ function SecFusionWebsite () {
           Mobile Screens
         </Heading>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/secfusion-website/05.png" />
+          path="/secfusion-website/05.png" />
         <small className="note">Home</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/secfusion-website/06.png" />
+          path="/secfusion-website/06.png" />
         <small className="note">Mobile Menu</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/secfusion-website/07.png" />
+          path="/secfusion-website/07.png" />
         <small className="note">Platform</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/secfusion-website/08.png" />
+          path="/secfusion-website/08.png" />
         <small className="note">Feature</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/secfusion-website/09.png" />
+          path="/secfusion-website/09.png" />
         <small className="note">Contact</small>
       </Content>
     </>

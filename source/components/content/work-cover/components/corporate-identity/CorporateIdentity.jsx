@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Helpers
 import { getAttributes } from '@source/helpers/component'
@@ -29,7 +29,7 @@ function CorporateIdentity ({ className, data, style, unitSize, ...rest }) {
           className="media"
           width={Math.ceil(24 * unitSize)}
           height={Math.ceil(30 * unitSize)}
-          source={`/${data.slug}/cover/corporate-identity-letterhead.png`} />
+          path={`/${data.slug}/cover/corporate-identity-letterhead.png`} />
       </div>
       <div className="folder">
         <Media
@@ -38,24 +38,24 @@ function CorporateIdentity ({ className, data, style, unitSize, ...rest }) {
           className="media"
           width={Math.ceil(24 * unitSize)}
           height={Math.ceil(27 * unitSize)}
-          source={`/${data.slug}/cover/corporate-identity-folder.png`} />
+          path={`/${data.slug}/cover/corporate-identity-folder.png`} />
       </div>
       <div className="others">
         <Media
           type="image"
           className="media"
           width={Math.ceil(24 * unitSize)}
-          source={`/${data.slug}/cover/corporate-identity-card.png`} />
+          path={`/${data.slug}/cover/corporate-identity-card.png`} />
         <Media
           type="image"
           className="media"
           width={Math.ceil(24 * unitSize)}
-          source={`/${data.slug}/cover/corporate-identity-envelope.png`} />
+          path={`/${data.slug}/cover/corporate-identity-envelope.png`} />
         <Media
           type="image"
           className="media"
           width={Math.ceil(24 * unitSize)}
-          source={`/${data.slug}/cover/corporate-identity-other.png`} />
+          path={`/${data.slug}/cover/corporate-identity-other.png`} />
       </div>
     </div>
   )

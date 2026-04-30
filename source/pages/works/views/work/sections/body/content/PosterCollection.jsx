@@ -1,11 +1,29 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 import Separator from '@source/components/layout/separator/Separator'
+
+// Constants
+const POSTER_SIZE_WIDTH_MAPPING = {
+  large: 1152,
+  medium: 896,
+  small: 640
+}
 
 // Content: Works > Work > Body > Poster collection
 function PosterCollection () {
+  // Functions
+  function renderPoster (id, size = 'small') {
+    return (
+      <Media
+        width={POSTER_SIZE_WIDTH_MAPPING[size]}
+        type="image"
+        className="media"
+        path={`/poster-collection/poster-${id}.png`} />
+    )
+  }
+  // Render
   return (
     <>
       <Content>
@@ -18,17 +36,9 @@ function PosterCollection () {
           className="title">
           2016
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-mega.png" />
+        {renderPoster('mega')}
         <small className="note">Mega Quote</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-lettherebemorelight.png" />
+        {renderPoster('lettherebemorelight', 'medium')}
         <small className="note">Let There Be More Light</small>
       </Content>
       <Separator spacing="large" />
@@ -38,11 +48,7 @@ function PosterCollection () {
           className="title">
           2015
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-siberest.png" />
+        {renderPoster('siberest')}
         <small className="note">Siberest Promo</small>
       </Content>
       <Separator spacing="large" />
@@ -52,17 +58,9 @@ function PosterCollection () {
           className="title">
           2014
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-buildmore.png" />
+        {renderPoster('buildmore')}
         <small className="note">Keep Calm and Build More</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-favogue.png" />
+        {renderPoster('favogue')}
         <small className="note">Favogue</small>
       </Content>
       <Separator spacing="large" />
@@ -72,11 +70,7 @@ function PosterCollection () {
           className="title">
           2013
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-chessgame.png" />
+        {renderPoster('chessgame')}
         <small className="note">ChessGame</small>
       </Content>
       <Separator spacing="large" />
@@ -86,32 +80,16 @@ function PosterCollection () {
           className="title">
           2012
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-sabahliyoruz.png" />
+        {renderPoster('sabahliyoruz')}
         <small className="note">StayAwake Event</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-sabahlayamiyoruz.png" />
+        {renderPoster('sabahlayamiyoruz', 'large')}
         <small className="note">
           StayAwake Event
           <i className="detail">Delay Notice</i>
         </small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-typographyworkshop.png" />
+        {renderPoster('typographyworkshop', 'large')}
         <small className="note">Typography Workshop</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-girisimcilikkongresi.png" />
+        {renderPoster('girisimcilikkongresi')}
         <small className="note">4th Entrepreneurship Congress</small>
       </Content>
       <Separator spacing="large" />
@@ -121,11 +99,7 @@ function PosterCollection () {
           className="title">
           2011
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-rockfestival.png" />
+        {renderPoster('rockfestival')}
         <small className="note">16th METU Rock Festival</small>
       </Content>
       <Separator spacing="large" />
@@ -135,17 +109,9 @@ function PosterCollection () {
           className="title">
           2010
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-photoshop.png" />
+        {renderPoster('photoshop', 'large')}
         <small className="note">Adobe Photoshop Course</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-illustrator.png" />
+        {renderPoster('illustrator', 'large')}
         <small className="note">Adobe Illustrator Course</small>
       </Content>
       <Separator spacing="large" />
@@ -155,23 +121,11 @@ function PosterCollection () {
           className="title">
           2009
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-mimarliktoplulugu.png" />
+        {renderPoster('mimarliktoplulugu')}
         <small className="note">Architecture Club Meeting</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-blender.png" />
+        {renderPoster('blender', 'large')}
         <small className="note">Blender Course</small>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-thefourdevils.png" />
+        {renderPoster('thefourdevils')}
         <small className="note">The Four Devils</small>
       </Content>
       <Separator spacing="large" />
@@ -181,11 +135,7 @@ function PosterCollection () {
           className="title">
           2008
         </Heading>
-        <Media
-          width={1152}
-          type="image"
-          className="media"
-          source="/poster-collection/poster-dortbucuk.png" />
+        {renderPoster('dortbucuk')}
         <small className="note">Poster Design Workshop (4.5 Hours-long)</small>
       </Content>
     </>

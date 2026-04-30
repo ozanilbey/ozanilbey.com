@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 // Hook: Unit size
 function useUnitSize (reference, formula) {
   // State
-  const [unitSize, setUnitSize] = useState(0)
+  const [unitSize, setUnitSize] = useState(formula(0, 0))
 
   // Effects
   useEffect(() => {

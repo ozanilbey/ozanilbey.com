@@ -1,7 +1,7 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Fihrist
 function Fihrist () {
@@ -9,10 +9,10 @@ function Fihrist () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/fihrist/teaser.png" />
+          path="/fihrist/teaser.png" />
         <p className="lead">Fihrist is a platform for reading curated articles. There is no imagery, no ads, no moving items on the article pages to prevent an uncomfortable experience.</p>
       </Content>
       <Content>
@@ -25,37 +25,37 @@ function Fihrist () {
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/01.png" />
+          path="/fihrist/01.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/02.png" />
+          path="/fihrist/02.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/03.png" />
+          path="/fihrist/03.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/04.png" />
+          path="/fihrist/04.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/05.png" />
+          path="/fihrist/05.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/06.png" />
+          path="/fihrist/06.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/fihrist/07.png" />
+          path="/fihrist/07.png" />
       </Content>
       <Content>
         <Heading
@@ -64,45 +64,45 @@ function Fihrist () {
           Mobile Screens
         </Heading>
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/08.png" />
+          path="/fihrist/08.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/09.png" />
+          path="/fihrist/09.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/10.png" />
+          path="/fihrist/10.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/11.png" />
+          path="/fihrist/11.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/12.png" />
+          path="/fihrist/12.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/13.png" />
+          path="/fihrist/13.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/14.png" />
+          path="/fihrist/14.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/fihrist/15.png" />
+          path="/fihrist/15.png" />
       </Content>
     </>
   )

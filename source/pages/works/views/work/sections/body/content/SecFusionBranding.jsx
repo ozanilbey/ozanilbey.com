@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > SecFusion branding
 function SecFusionBranding () {
@@ -11,10 +11,10 @@ function SecFusionBranding () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-branding/teaser.png" />
+          path="/secfusion-branding/teaser.png" />
         <p className="lead">SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
         <p className="lead">I designed <strong>a fresh brand image</strong> for SecFusion in <strong>2020</strong> to express the main aspects of the platform: alertness and unification.</p>
         <Callout
@@ -32,10 +32,10 @@ function SecFusionBranding () {
           Logo
         </Heading>
         <Media
-          width={640}
+          width={512}
           type="image"
           className="media"
-          source="/secfusion-branding/01.png" />
+          path="/secfusion-branding/01.png" />
       </Content>
       <Content>
         <Heading
@@ -44,10 +44,10 @@ function SecFusionBranding () {
           Symbol
         </Heading>
         <Media
-          width={256}
+          width={192}
           type="image"
           className="media"
-          source="/secfusion-branding/02.png" />
+          path="/secfusion-branding/02.png" />
       </Content>
       <Content>
         <Heading
@@ -56,16 +56,16 @@ function SecFusionBranding () {
           Colors
         </Heading>
         <Media
-          width={640}
+          width={512}
           type="image"
           className="media"
-          source="/secfusion-branding/03.png" />
+          path="/secfusion-branding/03.png" />
         <small className="note">Brand colors</small>
         <Media
-          width={256}
+          width={192}
           type="image"
           className="media"
-          source="/secfusion-branding/04.png" />
+          path="/secfusion-branding/04.png" />
         <small className="note">Helper colors</small>
       </Content>
       <Content>
@@ -79,7 +79,7 @@ function SecFusionBranding () {
           width={640}
           type="image"
           className="media"
-          source="/secfusion-branding/05.png" />
+          path="/secfusion-branding/05.png" />
       </Content>
       <Content>
         <Heading
@@ -88,10 +88,10 @@ function SecFusionBranding () {
           Application Icon
         </Heading>
         <Media
-          width={240}
+          width={192}
           type="image"
           className="media"
-          source="/secfusion-branding/06.png" />
+          path="/secfusion-branding/06.png" />
       </Content>
       <Content>
         <Heading
@@ -100,16 +100,16 @@ function SecFusionBranding () {
           Visuals
         </Heading>
         <Media
-          width={640}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-branding/07.png" />
+          path="/secfusion-branding/07.png" />
         <small className="note">Sharing preview</small>
         <Media
-          width={960}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-branding/08.png" />
+          path="/secfusion-branding/08.png" />
         <small className="note">Banner</small>
       </Content>
       <Content>
@@ -122,12 +122,12 @@ function SecFusionBranding () {
           width={640}
           type="image"
           className="media"
-          source="/secfusion-branding/09.png" />
+          path="/secfusion-branding/09.png" />
         <Media
           width={640}
           type="image"
           className="media"
-          source="/secfusion-branding/10.png" />
+          path="/secfusion-branding/10.png" />
       </Content>
       <Content>
         <Heading
@@ -139,7 +139,7 @@ function SecFusionBranding () {
           width={640}
           type="image"
           className="media"
-          source="/secfusion-branding/11.png" />
+          path="/secfusion-branding/11.png" />
       </Content>
       <Content>
         <Heading
@@ -151,7 +151,7 @@ function SecFusionBranding () {
           width={1152}
           type="image"
           className="media"
-          source="/secfusion-branding/12.png" />
+          path="/secfusion-branding/12.png" />
       </Content>
     </>
   )

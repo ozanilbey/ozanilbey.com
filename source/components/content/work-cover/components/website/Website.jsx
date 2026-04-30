@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Helpers
 import { getAttributes } from '@source/helpers/component'
@@ -36,9 +36,9 @@ function Website ({ className, data, style, unitSize, ...rest }) {
             willCrop
             type="image"
             className="media"
-            width={Math.ceil(47.75 * unitSize)}
             height={Math.ceil(28 * unitSize)}
-            source={`/${data.slug}/cover/website.png`} />
+            width={Math.ceil(47.75 * unitSize)}
+            path={`/${data.slug}/cover/website.png`} />
         </div>
       </div>
     </div>

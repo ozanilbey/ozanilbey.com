@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > 101 Extra ads - ramadan
 function _101ExtraAdsRamadan () {
@@ -11,10 +11,10 @@ function _101ExtraAdsRamadan () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-ads-ramadan/teaser.png" />
+          path="/101-extra-ads-ramadan/teaser.png" />
         <p className="lead">101 Extra is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
         <p className="lead">I designed advertisement visuals for 101 Extra <strong>in 2017</strong>. All images are used on Facebook as sponsored content.</p>
         <p className="lead">Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for helping me on this project!</p>
@@ -33,30 +33,30 @@ function _101ExtraAdsRamadan () {
           Facebook Ads
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-ads-ramadan/01.png" />
+          path="/101-extra-ads-ramadan/01.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-ads-ramadan/02.png" />
+          path="/101-extra-ads-ramadan/02.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-ads-ramadan/03.png" />
+          path="/101-extra-ads-ramadan/03.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-ads-ramadan/04.png" />
+          path="/101-extra-ads-ramadan/04.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-ads-ramadan/05.png" />
+          path="/101-extra-ads-ramadan/05.png" />
       </Content>
     </>
   )

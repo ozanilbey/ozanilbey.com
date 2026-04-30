@@ -10,6 +10,12 @@
       border-top-left-radius: .125em;
       border-top-right-radius: .125em;
       background-color: var(--theme-light-extreme-color);
+      & > .frame {
+        & > .media {
+          min-width: 100%;
+          min-height: 100%;
+        }
+      }
       & > .guideline, & > .ruler {
         position: absolute;
         &.top {

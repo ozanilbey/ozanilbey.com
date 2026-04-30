@@ -1,7 +1,7 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Rock Şenliği visuals
 function RockSenligiVisuals () {
@@ -9,10 +9,10 @@ function RockSenligiVisuals () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/teaser.png" />
+          path="/rock-senligi-visuals/teaser.png" />
         <p className="lead">Rock Şenliği is a <strong>Rock Festival</strong> organized by ODTÜ MT (Music Society).</p>
         <p className="lead">I designed a set of promotional visuals for ODTÜ MT <strong>in 2011</strong>: A poster, a handout, and a set of 5 tickets (one per each day).</p>
       </Content>
@@ -23,10 +23,10 @@ function RockSenligiVisuals () {
           Poster
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/01.png" />
+          path="/rock-senligi-visuals/01.png" />
       </Content>
       <Content>
         <Heading
@@ -35,10 +35,10 @@ function RockSenligiVisuals () {
           Handout
         </Heading>
         <Media
-          width={1152}
+          width={896}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/02.png" />
+          path="/rock-senligi-visuals/02.png" />
       </Content>
       <Content>
         <Heading
@@ -50,27 +50,27 @@ function RockSenligiVisuals () {
           width={1152}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/03.png" />
+          path="/rock-senligi-visuals/03.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/04.png" />
+          path="/rock-senligi-visuals/04.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/05.png" />
+          path="/rock-senligi-visuals/05.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/06.png" />
+          path="/rock-senligi-visuals/06.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/rock-senligi-visuals/07.png" />
+          path="/rock-senligi-visuals/07.png" />
       </Content>
     </>
   )

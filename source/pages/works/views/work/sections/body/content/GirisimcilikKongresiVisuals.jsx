@@ -1,7 +1,7 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Girişimcilik Kongresi visuals
 function GirisimcilikKongresiVisuals () {
@@ -9,10 +9,10 @@ function GirisimcilikKongresiVisuals () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/teaser.png" />
+          path="/girisimcilik-kongresi-visuals/teaser.png" />
         <p className="lead">Girişimcilik Kongresi is an <strong>entrepreneurship congress</strong> held by ODTÜ GGT (Young Entrepreneurs Society). Its mission is to make essential conversations happen related to the entrepreneurial ecosystem in Turkey and around the globe.</p>
         <p className="lead">I designed a set of promotional visuals for ODTÜ GGT <strong>in 2012</strong>: A poster, a leaflet, an invitation card, a billboard advertisement, a certificate, a ticket, roll-ups, and staff cards.</p>
       </Content>
@@ -23,10 +23,10 @@ function GirisimcilikKongresiVisuals () {
           Poster
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/01.png" />
+          path="/girisimcilik-kongresi-visuals/01.png" />
       </Content>
       <Content>
         <Heading
@@ -35,18 +35,18 @@ function GirisimcilikKongresiVisuals () {
           Leaflet
         </Heading>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/02.png" />
+          path="/girisimcilik-kongresi-visuals/02.png" />
         <small className="note">Outside</small>
       </Content>
       <Content>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/03.png" />
+          path="/girisimcilik-kongresi-visuals/03.png" />
         <small className="note">Inside</small>
       </Content>
       <Content>
@@ -56,18 +56,18 @@ function GirisimcilikKongresiVisuals () {
           Invitation
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/04.png" />
+          path="/girisimcilik-kongresi-visuals/04.png" />
         <small className="note">Front</small>
       </Content>
       <Content>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/05.png" />
+          path="/girisimcilik-kongresi-visuals/05.png" />
         <small className="note">Back</small>
       </Content>
       <Content>
@@ -80,7 +80,7 @@ function GirisimcilikKongresiVisuals () {
           width={1152}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/06.png" />
+          path="/girisimcilik-kongresi-visuals/06.png" />
       </Content>
       <Content>
         <Heading
@@ -89,10 +89,10 @@ function GirisimcilikKongresiVisuals () {
           Certificate
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/07.png" />
+          path="/girisimcilik-kongresi-visuals/07.png" />
       </Content>
       <Content>
         <Heading
@@ -101,17 +101,17 @@ function GirisimcilikKongresiVisuals () {
           Roll Up
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/08.png" />
+          path="/girisimcilik-kongresi-visuals/08.png" />
       </Content>
       <Content>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/09.png" />
+          path="/girisimcilik-kongresi-visuals/09.png" />
       </Content>
       <Content>
         <Heading
@@ -120,10 +120,10 @@ function GirisimcilikKongresiVisuals () {
           Ticket
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/10.png" />
+          path="/girisimcilik-kongresi-visuals/10.png" />
       </Content>
       <Content>
         <Heading
@@ -132,30 +132,30 @@ function GirisimcilikKongresiVisuals () {
           Staff & Participant Cards
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/11.png" />
+          path="/girisimcilik-kongresi-visuals/11.png" />
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/12.png" />
+          path="/girisimcilik-kongresi-visuals/12.png" />
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/13.png" />
+          path="/girisimcilik-kongresi-visuals/13.png" />
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/14.png" />
+          path="/girisimcilik-kongresi-visuals/14.png" />
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/girisimcilik-kongresi-visuals/15.png" />
+          path="/girisimcilik-kongresi-visuals/15.png" />
       </Content>
     </>
   )

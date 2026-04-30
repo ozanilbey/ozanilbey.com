@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > SOCRadar website
 function SOCRadarWebsite () {
@@ -11,10 +11,10 @@ function SOCRadarWebsite () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-website/teaser.png" />
+          path="/socradar-website/teaser.png" />
         <p className="lead">SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
         <p className="lead">I <strong>designed the SOCRadar website</strong> with <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link>. Then I heavily <strong>customized a WordPress theme</strong> (HTML + CSS + JS + graphics) to match the design and also accommodate the client’s needs.</p>
         <Callout
@@ -35,109 +35,109 @@ function SOCRadarWebsite () {
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/01.png" />
+          path="/socradar-website/01.png" />
         <small className="note">Home</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/02.png" />
+          path="/socradar-website/02.png" />
         <small className="note">Hover/click menu (Products)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/03.png" />
+          path="/socradar-website/03.png" />
         <small className="note">Products (ThreatFusion)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/04.png" />
+          path="/socradar-website/04.png" />
         <small className="note">Modules</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/05.png" />
+          path="/socradar-website/05.png" />
         <small className="note">Modules (Vulnerability Intelligence)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/06.png" />
+          path="/socradar-website/06.png" />
         <small className="note">Hover/click menu (Solutions)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/07.png" />
+          path="/socradar-website/07.png" />
         <small className="note">Solutions (Incident Response)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/08.png" />
+          path="/socradar-website/08.png" />
         <small className="note">Resources</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/09.png" />
+          path="/socradar-website/09.png" />
         <small className="note">Resources (Solution Brief)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/10.png" />
+          path="/socradar-website/10.png" />
         <small className="note">Resources (Blog)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/11.png" />
+          path="/socradar-website/11.png" />
         <small className="note">Contact</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/12.png" />
+          path="/socradar-website/12.png" />
         <small className="note">Cookie notice</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/13.png" />
+          path="/socradar-website/13.png" />
         <small className="note">Community Edition</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/14.png" />
+          path="/socradar-website/14.png" />
         <small className="note">Partners</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/15.png" />
+          path="/socradar-website/15.png" />
         <small className="note">Subscription Plans</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/16.png" />
+          path="/socradar-website/16.png" />
         <small className="note">Webinars</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/17.png" />
+          path="/socradar-website/17.png" />
         <small className="note">Company</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/socradar-website/18.png" />
+          path="/socradar-website/18.png" />
         <small className="note">Demo request page</small>
       </Content>
       <Content>
@@ -147,100 +147,100 @@ function SOCRadarWebsite () {
           Mobile Screens
         </Heading>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/19.png" />
+          path="/socradar-website/19.png" />
         <small className="note">Home</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/20.png" />
+          path="/socradar-website/20.png" />
         <small className="note">Mobile menu</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/21.png" />
+          path="/socradar-website/21.png" />
         <small className="note">Mobile menu (Products)</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/22.png" />
+          path="/socradar-website/22.png" />
         <small className="note">Products (ThreatFusion)</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/23.png" />
+          path="/socradar-website/23.png" />
         <small className="note">Modules</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/24.png" />
+          path="/socradar-website/24.png" />
         <small className="note">Modules (Vulnerability Intelligence)</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/25.png" />
+          path="/socradar-website/25.png" />
         <small className="note">Solutions (Incident Response)</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/26.png" />
+          path="/socradar-website/26.png" />
         <small className="note">Resources</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/27.png" />
+          path="/socradar-website/27.png" />
         <small className="note">Resources (Solution Brief)</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/28.png" />
+          path="/socradar-website/28.png" />
         <small className="note">Resources (Blog)</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/29.png" />
+          path="/socradar-website/29.png" />
         <small className="note">Contact</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/30.png" />
+          path="/socradar-website/30.png" />
         <small className="note">Community Edition</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/31.png" />
+          path="/socradar-website/31.png" />
         <small className="note">Partners</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/32.png" />
+          path="/socradar-website/32.png" />
         <small className="note">Webinars</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/33.png" />
+          path="/socradar-website/33.png" />
         <small className="note">Company</small>
         <Media
-          width={360}
+          width={384}
           type="image"
           className="media"
-          source="/socradar-website/34.png" />
+          path="/socradar-website/34.png" />
         <small className="note">Demo request page</small>
       </Content>
     </>

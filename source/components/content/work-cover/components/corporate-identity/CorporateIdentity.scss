@@ -26,7 +26,7 @@
       width: 24em;
       height: 27em;
       & > .media {
-        min-width: 100%;
+        width: 100%;
         min-height: 27em;
         margin-left: 50%;
         transform: translateX(-50%);
@@ -46,6 +46,7 @@
         width: 20.25em;
         margin-right: .75em;
         margin-top: .75em;
+        max-width: 100%;
         &:first-child {
           margin-top: 0;
         }

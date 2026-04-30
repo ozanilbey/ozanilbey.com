@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Helpers
 import { getAttributes } from '@source/helpers/component'
@@ -29,7 +29,7 @@ function GraphicDesign ({ className, data, style, unitSize, ...rest }) {
           className="media"
           width={Math.ceil(42 * unitSize)}
           height={Math.ceil(28.75 * unitSize)}
-          source={`/${data.slug}/cover/graphic-design.png`} />
+          path={`/${data.slug}/cover/graphic-design.png`} />
       </div>
     </div>
   )

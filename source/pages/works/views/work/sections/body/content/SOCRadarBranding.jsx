@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > SOCRadar branding
 function SOCRadarBranding () {
@@ -11,10 +11,10 @@ function SOCRadarBranding () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-website/teaser.png" />
+          path="/socradar-website/teaser.png" />
         <p className="lead">SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
         <p className="lead">I created <strong>a fresh brand image</strong> for SOCRadar with <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> to properly express the company’s dynamic yet reliable nature.</p>
         <Callout
@@ -32,16 +32,16 @@ function SOCRadarBranding () {
           Logo
         </Heading>
         <Media
-          width={640}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/01.png" />
+          path="/socradar-branding/01.png" />
         <small className="note">Final</small>
         <Media
-          width={1152}
+          width={896}
           type="image"
           className="media"
-          source="/socradar-branding/02.png" />
+          path="/socradar-branding/02.png" />
         <small className="note">Revision</small>
       </Content>
       <Content>
@@ -51,10 +51,10 @@ function SOCRadarBranding () {
           Symbol
         </Heading>
         <Media
-          width={240}
+          width={192}
           type="image"
           className="media"
-          source="/socradar-branding/03.png" />
+          path="/socradar-branding/03.png" />
       </Content>
       <Content>
         <Heading
@@ -63,10 +63,10 @@ function SOCRadarBranding () {
           Colors
         </Heading>
         <Media
-          width={640}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/04.png" />
+          path="/socradar-branding/04.png" />
       </Content>
       <Content>
         <Heading
@@ -76,10 +76,10 @@ function SOCRadarBranding () {
         </Heading>
         <Media
           isAdaptive
-          width={864}
+          width={640}
           type="image"
           className="media"
-          source="/socradar-branding/05.png" />
+          path="/socradar-branding/05.png" />
       </Content>
       <Content>
         <Heading
@@ -91,7 +91,7 @@ function SOCRadarBranding () {
           width={1152}
           type="image"
           className="media"
-          source="/socradar-branding/06.png" />
+          path="/socradar-branding/06.png" />
         <small className="note">Sample icons: Application</small>
       </Content>
       <Content>
@@ -101,16 +101,16 @@ function SOCRadarBranding () {
           Illustrations
         </Heading>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-branding/07.png" />
+          path="/socradar-branding/07.png" />
         <small className="note">2D</small>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-branding/08.png" />
+          path="/socradar-branding/08.png" />
         <small className="note">3D</small>
       </Content>
       <Content>
@@ -120,10 +120,10 @@ function SOCRadarBranding () {
           Product Icons
         </Heading>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-branding/09.png" />
+          path="/socradar-branding/09.png" />
       </Content>
       <Content>
         <Heading
@@ -132,20 +132,20 @@ function SOCRadarBranding () {
           Product Labels
         </Heading>
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/10.png" />
+          path="/socradar-branding/10.png" />
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/11.png" />
+          path="/socradar-branding/11.png" />
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/12.png" />
+          path="/socradar-branding/12.png" />
       </Content>
       <Content>
         <Heading
@@ -154,25 +154,25 @@ function SOCRadarBranding () {
           Product Cards
         </Heading>
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/13.png" />
+          path="/socradar-branding/13.png" />
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/14.png" />
+          path="/socradar-branding/14.png" />
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/15.png" />
+          path="/socradar-branding/15.png" />
         <Media
-          width={480}
+          width={512}
           type="image"
           className="media"
-          source="/socradar-branding/16.png" />
+          path="/socradar-branding/16.png" />
       </Content>
       <Content>
         <Heading
@@ -184,7 +184,7 @@ function SOCRadarBranding () {
           width={1152}
           type="image"
           className="media"
-          source="/socradar-branding/17.png" />
+          path="/socradar-branding/17.png" />
       </Content>
       <Content>
         <Heading
@@ -196,7 +196,7 @@ function SOCRadarBranding () {
           width={1152}
           type="image"
           className="media"
-          source="/socradar-branding/18.png" />
+          path="/socradar-branding/18.png" />
       </Content>
       <Content>
         <Heading
@@ -205,10 +205,10 @@ function SOCRadarBranding () {
           Webinar
         </Heading>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-branding/19.png" />
+          path="/socradar-branding/19.png" />
       </Content>
       <Content>
         <Heading
@@ -217,15 +217,15 @@ function SOCRadarBranding () {
           Documents
         </Heading>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-branding/20.png" />
+          path="/socradar-branding/20.png" />
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/socradar-branding/21.png" />
+          path="/socradar-branding/21.png" />
         <small className="note">Sample document: POV</small>
       </Content>
       <Content>
@@ -238,7 +238,7 @@ function SOCRadarBranding () {
           width={1152}
           type="image"
           className="media"
-          source="/socradar-branding/22.png" />
+          path="/socradar-branding/22.png" />
       </Content>
     </>
   )

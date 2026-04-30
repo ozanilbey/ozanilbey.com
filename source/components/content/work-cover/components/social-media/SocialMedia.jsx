@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 import Icon from '@source/components/interface/icon/Icon'
 
 // Utilities
@@ -44,7 +44,7 @@ function SocialMedia ({ className, data, style, unitSize, ...rest }) {
             className="media"
             width={Math.ceil(45.5 * unitSize)}
             height={Math.ceil(25 * unitSize)}
-            source={`/${data.slug}/cover/social-media.png`} />
+            path={`/${data.slug}/cover/social-media.png`} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Ottoman Music Archive web application
 function OttomanMusicArchiveWebApplication () {
@@ -9,10 +9,10 @@ function OttomanMusicArchiveWebApplication () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/teaser.png" />
+          path="/ottoman-music-archive-web-application/teaser.png" />
         <p className="lead">TRT Külliyat is an <strong>online note archive</strong> of Ottoman music, owned and operated by TRT (Turkish National Television).</p>
         <p className="lead">I designed a user interface for the project <strong>in 2012</strong>. The interface includes many oriental design details to reflect the Ottoman Culture properly. I also developed the frontend of the web application.</p>
       </Content>
@@ -26,47 +26,47 @@ function OttomanMusicArchiveWebApplication () {
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/01.png" />
+          path="/ottoman-music-archive-web-application/01.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/02.png" />
+          path="/ottoman-music-archive-web-application/02.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/03.png" />
+          path="/ottoman-music-archive-web-application/03.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/04.png" />
+          path="/ottoman-music-archive-web-application/04.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/05.png" />
+          path="/ottoman-music-archive-web-application/05.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/06.png" />
+          path="/ottoman-music-archive-web-application/06.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/07.png" />
+          path="/ottoman-music-archive-web-application/07.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/08.png" />
+          path="/ottoman-music-archive-web-application/08.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/ottoman-music-archive-web-application/09.png" />
+          path="/ottoman-music-archive-web-application/09.png" />
       </Content>
     </>
   )

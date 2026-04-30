@@ -1,28 +1,34 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 import Separator from '@source/components/layout/separator/Separator'
 
 // Hooks
 import useDimensions from '@source/hooks/useDimensions'
 
+// Constants
+const LOGO_SIZE_WIDTH_MAPPING = {
+  large: 320,
+  medium: 256,
+  small: 192
+}
+
 // Content: Works > Work > Body > Logo collection
 function LogoCollection () {
   // Data
-  const dimensions = useDimensions()
+  const { isMobile } = useDimensions()
 
   // Functions
-  function renderLogo (id) {
-    const size = Math.min(dimensions.width / 3 * 2, 360)
+  function renderLogo (id, size = 'large') {
     return (
       <Media
         isAdaptive
         type="image"
-        width={Math.ceil(size)}
         className="media weak spaced"
-        height={Math.ceil(size / 5 * 3)}
-        source={`/logo-collection/logo-${id}.png`} />
+        width={LOGO_SIZE_WIDTH_MAPPING[size]}
+        path={`/logo-collection/logo-${id}.png`}
+        style={{ zoom: isMobile ? 0.75 : 1 }} />
     )
   }
 
@@ -54,12 +60,12 @@ function LogoCollection () {
           GO4Pilates
           <i className="detail">Pilates Studio</i>
         </small>
-        {renderLogo('xlstudio')}
+        {renderLogo('xlstudio', 'small')}
         <small className="note">
           XL Studio
           <i className="detail">Social Media Studio</i>
         </small>
-        {renderLogo('filmxl')}
+        {renderLogo('filmxl', 'small')}
         {renderLogo('sozlukxl')}
         {renderLogo('takvimxl')}
         <small className="note">
@@ -71,7 +77,7 @@ function LogoCollection () {
           SOCRadar (Revision)
           <i className="detail">Digital Risk Platform</i>
         </small>
-        {renderLogo('mudavim')}
+        {renderLogo('mudavim', 'small')}
         <small className="note">
           Müdavim
           <i className="detail">Customer Loyalty Application</i>
@@ -94,7 +100,7 @@ function LogoCollection () {
           Docu.ai
           <i className="detail">AI-powered Data Extraction</i>
         </small>
-        {renderLogo('indexify')}
+        {renderLogo('indexify', 'medium')}
         <small className="note">
           Indexify (x<sub>i</sub>)
           <i className="detail">Journal Organizer</i>
@@ -107,12 +113,12 @@ function LogoCollection () {
           className="title">
           2018
         </Heading>
-        {renderLogo('groups')}
+        {renderLogo('groups', 'medium')}
         <small className="note">
           Grou.ps
           <i className="detail">Privacy-focused Social Platform</i>
         </small>
-        {renderLogo('graphjs')}
+        {renderLogo('graphjs', 'medium')}
         {renderLogo('graphbuild')}
         {renderLogo('graphpress')}
         <small className="note">
@@ -127,7 +133,7 @@ function LogoCollection () {
           className="title">
           2017
         </Heading>
-        {renderLogo('monoevent')}
+        {renderLogo('monoevent', 'small')}
         <small className="note">
           Mono Event
           <i className="detail">Event Planning Company</i>
@@ -147,7 +153,7 @@ function LogoCollection () {
           Brush
           <i className="detail">Product Marketplace for Artworks</i>
         </small>
-        {renderLogo('earlybird')}
+        {renderLogo('earlybird', 'medium')}
         <small className="note">
           earlybird
           <i className="detail">Early-stage Product Announcements</i>
@@ -183,7 +189,7 @@ function LogoCollection () {
           className="title">
           2015
         </Heading>
-        {renderLogo('ikort')}
+        {renderLogo('ikort', 'medium')}
         <small className="note">
           i-kort
           <i className="detail">Mobile Sports Application</i>
@@ -219,7 +225,7 @@ function LogoCollection () {
           className="title">
           2013
         </Heading>
-        {renderLogo('semantica')}
+        {renderLogo('semantica', 'small')}
         <small className="note">
           Semantica
           <i className="detail">Tech Company</i>
@@ -290,7 +296,7 @@ function LogoCollection () {
           ODTÜ GGT (Revision)
           <i className="detail">Young Entrepreneurs Society</i>
         </small>
-        {renderLogo('toplumicinsehircilik')}
+        {renderLogo('toplumicinsehircilik', 'small')}
         <small className="note">
           Toplum İçin Şehircilik
           <i className="detail">Urban Studies Society</i>
@@ -313,7 +319,7 @@ function LogoCollection () {
           PMUM (Revision)
           <i className="detail">Energy Exchange Market</i>
         </small>
-        {renderLogo('waplog')}
+        {renderLogo('waplog', 'small')}
         <small className="note">
           Waplog (U+I - You and I)
           <i className="detail">Online Dating Platform</i>

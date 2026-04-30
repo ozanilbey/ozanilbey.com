@@ -1,0 +1,11 @@
+// Style: Model > Media (Main)
+[data-model="media"] {
+  overflow: hidden;
+  display: inline-flex;
+  position: relative;
+  & > * {
+    max-width: inherit;
+    max-height: inherit;
+    vertical-align: sub;
+  }
+}

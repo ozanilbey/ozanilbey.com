@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Base64.ai branding
 function Base64AIBranding () {
@@ -11,10 +11,10 @@ function Base64AIBranding () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/base64-ai-branding/teaser.png" />
+          path="/base64-ai-branding/teaser.png" />
         <p className="lead">Base64.ai is an <strong>document processing AI platform</strong> extracting and interpreting data from more than 500 types of documents.</p>
         <p className="lead">I worked at Base64.ai as <strong>the #1 employee</strong>. I designed <strong>a really simple brand identity</strong> and related brand materials for Base64.ai in <strong>2020</strong>.</p>
         <Callout
@@ -32,10 +32,10 @@ function Base64AIBranding () {
           Logo
         </Heading>
         <Media
-          width={640}
+          width={512}
           type="image"
           className="media"
-          source="/base64-ai-branding/01.png" />
+          path="/base64-ai-branding/01.png" />
       </Content>
       <Content>
         <Heading
@@ -44,10 +44,10 @@ function Base64AIBranding () {
           Symbol
         </Heading>
         <Media
-          width={256}
+          width={192}
           type="image"
           className="media"
-          source="/base64-ai-branding/02.png" />
+          path="/base64-ai-branding/02.png" />
       </Content>
       <Content>
         <Heading
@@ -56,10 +56,10 @@ function Base64AIBranding () {
           Colors
         </Heading>
         <Media
-          width={640}
+          width={512}
           type="image"
           className="media"
-          source="/base64-ai-branding/03.png" />
+          path="/base64-ai-branding/03.png" />
       </Content>
       <Content>
         <Heading
@@ -72,7 +72,7 @@ function Base64AIBranding () {
           width={640}
           type="image"
           className="media"
-          source="/base64-ai-branding/04.png" />
+          path="/base64-ai-branding/04.png" />
       </Content>
       <Content>
         <Heading
@@ -81,10 +81,10 @@ function Base64AIBranding () {
           Business Card
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/base64-ai-branding/05.png" />
+          path="/base64-ai-branding/05.png" />
       </Content>
       <Content>
         <Heading
@@ -93,10 +93,10 @@ function Base64AIBranding () {
           Application Icon
         </Heading>
         <Media
-          width={240}
+          width={192}
           type="image"
           className="media"
-          source="/base64-ai-branding/06.png" />
+          path="/base64-ai-branding/06.png" />
       </Content>
       <Content>
         <Heading
@@ -105,16 +105,16 @@ function Base64AIBranding () {
           Visuals
         </Heading>
         <Media
-          width={960}
+          width={768}
           type="image"
           className="media"
-          source="/base64-ai-branding/07.png" />
+          path="/base64-ai-branding/07.png" />
         <small className="note">Banner</small>
         <Media
-          width={640}
+          width={768}
           type="image"
           className="media"
-          source="/base64-ai-branding/08.png" />
+          path="/base64-ai-branding/08.png" />
         <small className="note">Sharing preview</small>
       </Content>
       <Content>
@@ -125,11 +125,12 @@ function Base64AIBranding () {
         </Heading>
         <Media
           willLoop
-          width={960}
+          width={768}
           type="video"
           willAutoplay
           willHideControls
-          source="/base64-ai-branding/09.mov" />
+          className="media"
+          path="/base64-ai-branding/09.mov" />
       </Content>
       <Content>
         <Heading
@@ -141,13 +142,13 @@ function Base64AIBranding () {
           width={1152}
           type="video"
           className="media"
-          source="/base64-ai-branding/10.mov" />
+          path="/base64-ai-branding/10.mov" />
         <small className="note">Demo</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-branding/11.png" />
+          path="/base64-ai-branding/11.png" />
         <small className="note">Screen</small>
       </Content>
       <Content>
@@ -160,7 +161,7 @@ function Base64AIBranding () {
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-branding/12.png" />
+          path="/base64-ai-branding/12.png" />
       </Content>
       <Content>
         <Heading
@@ -169,16 +170,16 @@ function Base64AIBranding () {
           Mobile Application
         </Heading>
         <Media
-          width={480}
+          width={384}
           type="video"
           className="media"
-          source="/base64-ai-branding/13.mov" />
+          path="/base64-ai-branding/13.mov" />
         <small className="note">Demo</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-branding/14.png" />
+          path="/base64-ai-branding/14.png" />
         <small className="note">Screen</small>
       </Content>
     </>

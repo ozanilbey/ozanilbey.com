@@ -2,7 +2,7 @@
 import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > ODTÜ GGT corporate identity
 function ODTUGGTCorporateIdentity () {
@@ -10,10 +10,10 @@ function ODTUGGTCorporateIdentity () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/teaser.png" />
+          path="/odtu-ggt-corporate-identity/teaser.png" />
         <p className="lead">ODTÜ GGT (Young Entrepreneurs Society) is a <strong>student club</strong> operating at <strong>Middle East Technical University</strong>.</p>
         <p className="lead">I designed <strong>a simple corporate identity with a bright look</strong> for ODTÜ GGT <strong>in 2011</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and email signatures. I also designed and developed the website.</p>
         <Callout
@@ -31,10 +31,10 @@ function ODTUGGTCorporateIdentity () {
           Logo
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/01.png" />
+          path="/odtu-ggt-corporate-identity/01.png" />
         <small className="note">Young Entrepreneurs Society</small>
       </Content>
       <Content>
@@ -44,10 +44,10 @@ function ODTUGGTCorporateIdentity () {
           Letterhead
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/02.png" />
+          path="/odtu-ggt-corporate-identity/02.png" />
       </Content>
       <Content>
         <Heading
@@ -56,10 +56,10 @@ function ODTUGGTCorporateIdentity () {
           Folder
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/03.png" />
+          path="/odtu-ggt-corporate-identity/03.png" />
         <small className="note">“Empowering Your Ideas“</small>
       </Content>
       <Content>
@@ -69,20 +69,20 @@ function ODTUGGTCorporateIdentity () {
           Business Cards
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/04.png" />
+          path="/odtu-ggt-corporate-identity/04.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/05.png" />
+          path="/odtu-ggt-corporate-identity/05.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/06.png" />
+          path="/odtu-ggt-corporate-identity/06.png" />
       </Content>
       <Content>
         <Heading
@@ -94,7 +94,7 @@ function ODTUGGTCorporateIdentity () {
           width={1152}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/07.png" />
+          path="/odtu-ggt-corporate-identity/07.png" />
         <small className="note">odtuggt.org</small>
       </Content>
       <Content>
@@ -104,22 +104,22 @@ function ODTUGGTCorporateIdentity () {
           Slides
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/08.png" />
+          path="/odtu-ggt-corporate-identity/08.png" />
         <small className="note">Meeting</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/09.png" />
+          path="/odtu-ggt-corporate-identity/09.png" />
         <small className="note">Teaching</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/10.png" />
+          path="/odtu-ggt-corporate-identity/10.png" />
         <small className="note">Developing</small>
       </Content>
       <Content>
@@ -129,20 +129,20 @@ function ODTUGGTCorporateIdentity () {
           Email Signatures
         </Heading>
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/11.png" />
+          path="/odtu-ggt-corporate-identity/11.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/12.png" />
+          path="/odtu-ggt-corporate-identity/12.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/13.png" />
+          path="/odtu-ggt-corporate-identity/13.png" />
       </Content>
       <Content>
         <Heading
@@ -151,10 +151,10 @@ function ODTUGGTCorporateIdentity () {
           Academy-G Logo
         </Heading>
         <Media
-          width={1152}
+          width={256}
           type="image"
           className="media"
-          source="/odtu-ggt-corporate-identity/14.png" />
+          path="/odtu-ggt-corporate-identity/14.png" />
       </Content>
     </>
   )

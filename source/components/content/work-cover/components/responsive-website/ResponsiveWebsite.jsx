@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Helpers
 import { getAttributes } from '@source/helpers/component'
@@ -33,7 +33,7 @@ function ResponsiveWebsite ({ className, data, style, unitSize, ...rest }) {
             className="media"
             width={Math.ceil(35 * unitSize)}
             height={Math.ceil(23 * unitSize)}
-            source={`/${data.slug}/cover/responsive-website-desktop.png`} />
+            path={`/${data.slug}/cover/responsive-website-desktop.png`} />
         </div>
       </div>
       <div className="tablet">
@@ -52,7 +52,7 @@ function ResponsiveWebsite ({ className, data, style, unitSize, ...rest }) {
             className="media"
             width={Math.ceil(23 * unitSize)}
             height={Math.ceil(27.5 * unitSize)}
-            source={`/${data.slug}/cover/responsive-website-tablet.png`} />
+            path={`/${data.slug}/cover/responsive-website-tablet.png`} />
         </div>
       </div>
       <div className="phone">
@@ -71,7 +71,7 @@ function ResponsiveWebsite ({ className, data, style, unitSize, ...rest }) {
             className="media"
             width={Math.ceil(12.5 * unitSize)}
             height={Math.ceil(18.5 * unitSize)}
-            source={`/${data.slug}/cover/responsive-website-phone.png`} />
+            path={`/${data.slug}/cover/responsive-website-phone.png`} />
         </div>
       </div>
     </div>

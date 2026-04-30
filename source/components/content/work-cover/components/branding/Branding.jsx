@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Helpers
 import { getAttributes } from '@source/helpers/component'
@@ -32,23 +32,21 @@ function Branding ({ className, data, style, unitSize, ...rest }) {
           <div className="logo">
             <Media
               type="image"
-              width={Math.ceil(32 * unitSize - 2)}
-              height={Math.ceil(8 * unitSize - 2)}
-              source={`/${data.slug}/cover/branding-logo.png`} />
+              path={`/${data.slug}/cover/branding-logo.png`}
+              style={{ maxHeight: Math.ceil(8 * unitSize), maxWidth: Math.ceil(32 * unitSize) }} />
           </div>
           <div className="typography">
             <Media
               type="image"
-              width={Math.ceil(32 * unitSize - 2)}
-              height={Math.ceil(8 * unitSize - 2)}
-              source={`/${data.slug}/cover/branding-typography.png`} />
+              path={`/${data.slug}/cover/branding-typography.png`}
+              style={{ maxHeight: Math.ceil(8 * unitSize - 2), maxWidth: Math.ceil(32 * unitSize - 2) }} />
           </div>
           <div className="colors">
             <Media
               willCrop
               type="image"
               width={Math.ceil(2 * unitSize)}
-              source={`/${data.slug}/cover/branding-colors.png`} />
+              path={`/${data.slug}/cover/branding-colors.png`} />
           </div>
         </div>
       </div>

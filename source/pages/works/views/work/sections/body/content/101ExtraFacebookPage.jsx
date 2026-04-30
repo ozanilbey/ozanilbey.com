@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > 101 Extra Facebook page
 function _101ExtraFacebookPage () {
@@ -11,10 +11,10 @@ function _101ExtraFacebookPage () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/teaser.png" />
+          path="/101-extra-facebook-page/teaser.png" />
         <p className="lead">101 Extra is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
         <p className="lead">I designed 8 different Facebook post templates for 101 Extra <strong>in 2016</strong>. Each of these templates serves different purposes.</p>
         <p className="lead">Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for helping me on this project!</p>
@@ -34,15 +34,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Asking the user’s preference on a subject.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/01.png" />
+          path="/101-extra-facebook-page/01.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/02.png" />
+          path="/101-extra-facebook-page/02.png" />
       </Content>
       <Content>
         <Heading
@@ -52,15 +52,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Testing the user’s knowledge.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/03.png" />
+          path="/101-extra-facebook-page/03.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/04.png" />
+          path="/101-extra-facebook-page/04.png" />
       </Content>
       <Content>
         <Heading
@@ -70,15 +70,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Making the user contribute to the subject.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/05.png" />
+          path="/101-extra-facebook-page/05.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/06.png" />
+          path="/101-extra-facebook-page/06.png" />
       </Content>
       <Content>
         <Heading
@@ -88,15 +88,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Making the user laugh.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/07.png" />
+          path="/101-extra-facebook-page/07.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/08.png" />
+          path="/101-extra-facebook-page/08.png" />
       </Content>
       <Content>
         <Heading
@@ -106,15 +106,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Greeting the user each morning.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/09.png" />
+          path="/101-extra-facebook-page/09.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/10.png" />
+          path="/101-extra-facebook-page/10.png" />
       </Content>
       <Content>
         <Heading
@@ -124,15 +124,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Giving the user interesting information.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/11.png" />
+          path="/101-extra-facebook-page/11.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/12.png" />
+          path="/101-extra-facebook-page/12.png" />
       </Content>
       <Content>
         <Heading
@@ -142,15 +142,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Giving the user free chips to play.</small>
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/13.png" />
+          path="/101-extra-facebook-page/13.png" />
         <Media
-          width={1152}
+          width={640}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/14.png" />
+          path="/101-extra-facebook-page/14.png" />
       </Content>
       <Content>
         <Heading
@@ -160,15 +160,15 @@ function _101ExtraFacebookPage () {
         </Heading>
         <small className="note">Function: Promoting the game.</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/15.png" />
+          path="/101-extra-facebook-page/15.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/101-extra-facebook-page/16.png" />
+          path="/101-extra-facebook-page/16.png" />
       </Content>
     </>
   )

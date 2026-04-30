@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Base64.ai website
 function Base64AIWebsite () {
@@ -11,10 +11,10 @@ function Base64AIWebsite () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/base64-ai-website/teaser.png" />
+          path="/base64-ai-website/teaser.png" />
         <p className="lead">Base64.ai is an <strong>document processing AI platform</strong> extracting and interpreting data from more than 500 types of documents.</p>
         <p className="lead">I worked at Base64.ai as <strong>the #1 employee</strong>. I designed and developed a clean SAAS website including a product demo for Base64.ai in <strong>2020</strong>.</p>
         <Callout
@@ -33,12 +33,12 @@ function Base64AIWebsite () {
         </Heading>
         <Media
           willLoop
-          width={960}
+          width={768}
           type="video"
           willAutoplay
           willHideControls
           className="media"
-          source="/base64-ai-website/01.mov" />
+          path="/base64-ai-website/01.mov" />
       </Content>
       <Content>
         <Heading
@@ -50,73 +50,73 @@ function Base64AIWebsite () {
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/02.png" />
+          path="/base64-ai-website/02.png" />
         <small className="note">Home</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/03.png" />
+          path="/base64-ai-website/03.png" />
         <small className="note">Solutions</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/04.png" />
+          path="/base64-ai-website/04.png" />
         <small className="note">Solution</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/05.png" />
+          path="/base64-ai-website/05.png" />
         <small className="note">Features</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/06.png" />
+          path="/base64-ai-website/06.png" />
         <small className="note">Feature</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/07.png" />
+          path="/base64-ai-website/07.png" />
         <small className="note">Demo</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/08.png" />
+          path="/base64-ai-website/08.png" />
         <small className="note">Demo (filtering)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/09.png" />
+          path="/base64-ai-website/09.png" />
         <small className="note">Demo (processing/results)</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/10.png" />
+          path="/base64-ai-website/10.png" />
         <small className="note">Signup</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/11.png" />
+          path="/base64-ai-website/11.png" />
         <small className="note">Login</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/12.png" />
+          path="/base64-ai-website/12.png" />
         <small className="note">Reset</small>
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/base64-ai-website/13.png" />
+          path="/base64-ai-website/13.png" />
         <small className="note">Error</small>
       </Content>
       <Content>
@@ -126,76 +126,76 @@ function Base64AIWebsite () {
           Mobile Screens
         </Heading>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/14.png" />
+          path="/base64-ai-website/14.png" />
         <small className="note">Home</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/15.png" />
+          path="/base64-ai-website/15.png" />
         <small className="note">Menu</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/16.png" />
+          path="/base64-ai-website/16.png" />
         <small className="note">Solutions</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/17.png" />
+          path="/base64-ai-website/17.png" />
         <small className="note">Solution</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/18.png" />
+          path="/base64-ai-website/18.png" />
         <small className="note">Features</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/19.png" />
+          path="/base64-ai-website/19.png" />
         <small className="note">Feature</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/20.png" />
+          path="/base64-ai-website/20.png" />
         <small className="note">Demo</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/21.png" />
+          path="/base64-ai-website/21.png" />
         <small className="note">Demo (processing)</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/22.png" />
+          path="/base64-ai-website/22.png" />
         <small className="note">Signup</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/23.png" />
+          path="/base64-ai-website/23.png" />
         <small className="note">Login</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/24.png" />
+          path="/base64-ai-website/24.png" />
         <small className="note">Reset</small>
         <Media
-          width={480}
+          width={384}
           type="image"
           className="media"
-          source="/base64-ai-website/25.png" />
+          path="/base64-ai-website/25.png" />
         <small className="note">Error</small>
       </Content>
     </>

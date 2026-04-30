@@ -1,7 +1,7 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Esetron corporate identity
 function EsetronCorporateIdentity () {
@@ -9,10 +9,10 @@ function EsetronCorporateIdentity () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/teaser.png" />
+          path="/esetron-corporate-identity/teaser.png" />
         <p className="lead">Esetron is a <strong>robotics company</strong> located in Ankara, Turkey.</p>
         <p className="lead">I designed <strong>a simple corporate identity</strong> for Esetron <strong>in 2012</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, envelope, and invoice.</p>
       </Content>
@@ -23,10 +23,10 @@ function EsetronCorporateIdentity () {
           Logo
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/01.png" />
+          path="/esetron-corporate-identity/01.png" />
       </Content>
       <Content>
         <Heading
@@ -35,10 +35,10 @@ function EsetronCorporateIdentity () {
           Letterhead
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/02.png" />
+          path="/esetron-corporate-identity/02.png" />
       </Content>
       <Content>
         <Heading
@@ -50,7 +50,7 @@ function EsetronCorporateIdentity () {
           width={1152}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/03.png" />
+          path="/esetron-corporate-identity/03.png" />
       </Content>
       <Content>
         <Heading
@@ -59,10 +59,10 @@ function EsetronCorporateIdentity () {
           Envelope
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/04.png" />
+          path="/esetron-corporate-identity/04.png" />
       </Content>
       <Content>
         <Heading
@@ -71,20 +71,20 @@ function EsetronCorporateIdentity () {
           Business Cards
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/05.png" />
+          path="/esetron-corporate-identity/05.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/06.png" />
+          path="/esetron-corporate-identity/06.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/07.png" />
+          path="/esetron-corporate-identity/07.png" />
       </Content>
       <Content>
         <Heading
@@ -93,10 +93,10 @@ function EsetronCorporateIdentity () {
           Invoice
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/esetron-corporate-identity/08.png" />
+          path="/esetron-corporate-identity/08.png" />
       </Content>
     </>
   )

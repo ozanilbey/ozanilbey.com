@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // Components
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Helpers
 import { getAttributes } from '@source/helpers/component'
@@ -39,7 +39,7 @@ function Document ({ className, data, style, unitSize, ...rest }) {
             className="media"
             width={Math.ceil(44 * unitSize)}
             height={Math.ceil(28 * unitSize)}
-            source={`/${data.slug}/cover/document.png`} />
+            path={`/${data.slug}/cover/document.png`} />
         </div>
       </div>
     </div>

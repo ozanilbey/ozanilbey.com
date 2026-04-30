@@ -3,7 +3,7 @@ import Callout from '@source/components/interface/callout/Callout'
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
 import Link from '@source/components/interface/link/Link'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > SecFusion brochure
 function SecFusionBrochure () {
@@ -11,10 +11,10 @@ function SecFusionBrochure () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-brochure/teaser.png" />
+          path="/secfusion-brochure/teaser.png" />
         <p className="lead">SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
         <p className="lead">I designed a promotional product brochure for SecFusion in <strong>2020</strong>.</p>
         <Callout
@@ -32,28 +32,28 @@ function SecFusionBrochure () {
           Pages
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-brochure/01.png" />
+          path="/secfusion-brochure/01.png" />
         <small className="note">Front</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-brochure/02.png" />
+          path="/secfusion-brochure/02.png" />
         <small className="note">Left</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-brochure/03.png" />
+          path="/secfusion-brochure/03.png" />
         <small className="note">Right</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/secfusion-brochure/04.png" />
+          path="/secfusion-brochure/04.png" />
         <small className="note">Back</small>
       </Content>
       <Content>
@@ -63,10 +63,10 @@ function SecFusionBrochure () {
           All-in-one
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="document"
           className="media"
-          source="/secfusion-brochure/05.pdf" />
+          path="/secfusion-brochure/05.pdf" />
       </Content>
     </>
   )

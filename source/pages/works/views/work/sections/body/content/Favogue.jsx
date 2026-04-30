@@ -1,7 +1,7 @@
 // Components
 import Content from '@source/components/layout/content/Content'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Favogue
 function Favogue () {
@@ -9,10 +9,10 @@ function Favogue () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/favogue/teaser.png" />
+          path="/favogue/teaser.png" />
         <p className="lead">Favogue is a <strong>photo-sharing platform</strong> focused on <strong>daily fashion inspiration</strong>. Favogue redefines “feedback“ by going beyond likes and comments. Give feedback by clicking/tapping on any clothing item you want to “like“, then let Favogue do its job.</p>
         <p className="lead">It is all about giving style feedback and getting suggestions for better clothing combinations. <strong>No irrelevant feedback, no negative reactions, no spam.</strong></p>
       </Content>
@@ -26,17 +26,17 @@ function Favogue () {
           width={1152}
           type="image"
           className="media"
-          source="/favogue/01.png" />
+          path="/favogue/01.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/02.png" />
+          path="/favogue/02.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/03.png" />
+          path="/favogue/03.png" />
       </Content>
       <Content>
         <Heading
@@ -48,57 +48,57 @@ function Favogue () {
           width={1152}
           type="image"
           className="media"
-          source="/favogue/04.png" />
+          path="/favogue/04.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/05.png" />
+          path="/favogue/05.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/06.png" />
+          path="/favogue/06.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/07.png" />
+          path="/favogue/07.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/08.png" />
+          path="/favogue/08.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/09.png" />
+          path="/favogue/09.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/10.png" />
+          path="/favogue/10.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/11.png" />
+          path="/favogue/11.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/12.png" />
+          path="/favogue/12.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/13.png" />
+          path="/favogue/13.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/14.png" />
+          path="/favogue/14.png" />
       </Content>
       <Content>
         <Heading
@@ -110,17 +110,17 @@ function Favogue () {
           width={1152}
           type="image"
           className="media"
-          source="/favogue/15.png" />
+          path="/favogue/15.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/16.png" />
+          path="/favogue/16.png" />
         <Media
           width={1152}
           type="image"
           className="media"
-          source="/favogue/17.png" />
+          path="/favogue/17.png" />
       </Content>
       <Content>
         <Heading
@@ -132,7 +132,7 @@ function Favogue () {
           width={1152}
           type="image"
           className="media"
-          source="/favogue/18.png" />
+          path="/favogue/18.png" />
         <small className="note">VIP Invitation Page</small>
       </Content>
       <Content>
@@ -145,7 +145,7 @@ function Favogue () {
           width={1152}
           type="image"
           className="media"
-          source="/favogue/19.png" />
+          path="/favogue/19.png" />
       </Content>
       <Content>
         <Heading
@@ -154,20 +154,20 @@ function Favogue () {
           iOS Application
         </Heading>
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/favogue/20.png" />
+          path="/favogue/20.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/favogue/21.png" />
+          path="/favogue/21.png" />
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/favogue/22.png" />
+          path="/favogue/22.png" />
       </Content>
       <Content>
         <Heading
@@ -176,10 +176,10 @@ function Favogue () {
           Embedding
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/favogue/23.png" />
+          path="/favogue/23.png" />
         <small className="note">FAME: Favogue Adaptive Media Embedding</small>
       </Content>
       <Content>
@@ -189,10 +189,10 @@ function Favogue () {
           Advertisement
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/favogue/24.png" />
+          path="/favogue/24.png" />
       </Content>
       <Content>
         <Heading
@@ -201,20 +201,20 @@ function Favogue () {
           Business Cards
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/favogue/25.png" />
+          path="/favogue/25.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/favogue/26.png" />
+          path="/favogue/26.png" />
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/favogue/27.png" />
+          path="/favogue/27.png" />
       </Content>
       <Content>
         <Heading
@@ -223,10 +223,10 @@ function Favogue () {
           Poster
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/favogue/28.png" />
+          path="/favogue/28.png" />
       </Content>
     </>
   )

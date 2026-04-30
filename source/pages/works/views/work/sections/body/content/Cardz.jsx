@@ -2,7 +2,7 @@
 import Content from '@source/components/layout/content/Content'
 import Link from '@source/components/interface/link/Link'
 import Heading from '@source/components/interface/heading/Heading'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Content: Works > Work > Body > Cardz
 function Cardz () {
@@ -10,10 +10,10 @@ function Cardz () {
     <>
       <Content>
         <Media
-          width={864}
+          width={768}
           type="image"
           className="media"
-          source="/cardz/teaser.png" />
+          path="/cardz/teaser.png" />
         <p>Cardz is an amazing tool for networking. Buy a pack of Cardz anytime with <strong>any design option</strong> you want. Link your Cardz to your <strong>instantly-generated online profile</strong> by using the QR code on the back of your cards. Then share your information with your network with the help of your <strong>pack of printed cards</strong>. Get social in <strong>the coolest way possible</strong>.</p>
         <p>It’s not a business card. It’s your <strong>persona</strong>. Pick your style, provide your information, then have both a pack of cards and a web page.</p>
         <p className="lead"><strong>Simple as that.</strong></p>
@@ -25,10 +25,10 @@ function Cardz () {
           It’s practical.
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/cardz/01.png" />
+          path="/cardz/01.png" />
       </Content>
       <Content>
         <Heading
@@ -37,10 +37,10 @@ function Cardz () {
           It’s responsive.
         </Heading>
         <Media
-          width={1152}
+          width={512}
           type="image"
           className="media"
-          source="/cardz/02.png" />
+          path="/cardz/02.png" />
       </Content>
       <Content>
         <Heading
@@ -49,10 +49,10 @@ function Cardz () {
           It’s full of options.
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/cardz/03.png" />
+          path="/cardz/03.png" />
       </Content>
       <Content>
         <Heading
@@ -61,10 +61,10 @@ function Cardz () {
           It’s full of colors.
         </Heading>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/cardz/04.png" />
+          path="/cardz/04.png" />
       </Content>
       <Content>
         <Heading
@@ -74,46 +74,47 @@ function Cardz () {
         </Heading>
         <small className="note">UI theme is similar to your choice of print cards.</small>
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/cardz/05.png" />
+          path="/cardz/05.png" />
         <small className="note">Sign-up (Phone)</small>
         <Media
-          width={1152}
+          width={384}
           type="image"
           className="media"
-          source="/cardz/06.png" />
+          path="/cardz/06.png" />
         <small className="note">Profile (Phone)</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/cardz/07.png" />
+          path="/cardz/07.png" />
         <small className="note">Sign-up (Tablet)</small>
         <Media
-          width={1152}
+          width={768}
           type="image"
           className="media"
-          source="/cardz/08.png" />
+          path="/cardz/08.png" />
         <small className="note">Profile (Tablet)</small>
         <Media
-          width={1152}
+          width={1024}
           type="image"
           className="media"
-          source="/cardz/09.png" />
+          path="/cardz/09.png" />
         <small className="note">Sign-up (Desktop)</small>
         <Media
-          width={1152}
+          width={1024}
           type="image"
           className="media"
-          source="/cardz/10.png" />
+          path="/cardz/10.png" />
         <small className="note">Profile (Desktop)</small>
       </Content>
       <Content>
         <Heading
           rank={2}
-          className="title">
+          className="title"
+          style={{ marginBottom: '2rem' }}>
           Story of the project
         </Heading>
         <p className="lead">Cardz was <strong>entirely designed and developed in 48 hours</strong> at <strong>LAUNCH Hackathon 2014</strong>, by <strong>Ozan Yilmaz</strong> and <Link isExternal arrow="upright" to="//volkan.io">Volkan Özçelik</Link>.</p>
@@ -122,7 +123,7 @@ function Cardz () {
           width={1152}
           type="image"
           className="media"
-          source="/cardz/story-picture.png" />
+          path="/cardz/story-picture.png" />
       </Content>
     </>
   )

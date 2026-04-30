@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 // Components
 import ColorFill from '@source/components/model/color-fill/ColorFill'
-import Media from '@source/components/interface/media/Media'
+import Media from '@source/components/model/media/Media'
 
 // Hooks
 import useUnitSize from '@source/hooks/useUnitSize'
@@ -25,7 +25,7 @@ function WorkBrand ({ className, data, isCentered, style, ...rest }) {
 
   // Data
   const attributes = getAttributes(rest, ['aria', 'data'])
-  const unitSize = useUnitSize(container, width => width / 5)
+  const unitSize = useUnitSize(container, width => (width / 5) || 10)
 
   // Render
   return (
@@ -44,9 +44,8 @@ function WorkBrand ({ className, data, isCentered, style, ...rest }) {
           width={Math.floor(2 * unitSize)}>
           <Media
             type="image"
-            height={Math.floor(unitSize / 16 * 9)}
-            width={Math.floor(2 * unitSize)}
-            source={`/${data.slug}/logo.png`} />
+            path={`/${data.slug}/logo.png`}
+            style={{ maxHeight: Math.floor(unitSize / 16 * 9), maxWidth: Math.floor(2 * unitSize) }} />
         </ColorFill>
       }
       <strong
