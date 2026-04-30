@@ -17,7 +17,7 @@ import Website from './components/website/Website'
 import useUnitSize from '@source/hooks/useUnitSize'
 
 // Helpers
-import { getAttributes } from '@source/helpers/component'
+import { getAttributes, getClassName } from '@source/helpers/component'
 
 // Utilities
 import { slug } from '@source/utilities/format'
@@ -47,23 +47,44 @@ function WorkCover ({ className, data, style, types, ...rest }) {
   const container = useRef()
 
   // State
-  const [index, setIndex] = useState(0)
+  const [activeTypeIndex, setActiveTypeIndex] = useState(0)
+  const [activatedTypeIndexes, setActivatedTypeIndexes] = useState([0])
 
   // Data
-  const type = types[index]
+  const type = types[activeTypeIndex]
   const attributes = getAttributes(rest, ['aria', 'data'])
-  const unitSize = useUnitSize(container, width => width / 48)
-  const Element = WORK_COVER_TYPE_ELEMENT_MAPPING[type]
+  const unitSize = useUnitSize(container, width => (width / 48) || 10)
+
+  // Functions
+  function renderType (type, typeIndex) {
+    if (!activatedTypeIndexes.includes(typeIndex)) return null
+    const Element = WORK_COVER_TYPE_ELEMENT_MAPPING[type]
+    if (!Element) return null
+    return (
+      <Element
+        data={data}
+        key={typeIndex}
+        unitSize={unitSize}
+        className={getClassName('type', { [type]: true, active: typeIndex === activeTypeIndex })} />
+    )
+  }
 
   // Effects
   useEffect(() => {
-    setIndex(0)
-    let timer = setInterval(() => setIndex(index => (index + 1) % types.length), 2500)
+    setActiveTypeIndex(0)
+    setActivatedTypeIndexes([0])
+    let timer = setInterval(() => setActiveTypeIndex(activeTypeIndex => (activeTypeIndex + 1) % types.length), 2500)
     return () => clearInterval(timer)
-  }, [data.slug, types.length]) // Restarts when the work changes
+  }, [data.slug, types.length]) // Restarts when data.slug changes
+  useEffect(() => {
+    setActivatedTypeIndexes(activatedTypeIndexes => {
+      if (activatedTypeIndexes.includes(activeTypeIndex)) return activatedTypeIndexes
+      return [...activatedTypeIndexes, activeTypeIndex]
+    })
+  }, [activeTypeIndex, types.length])
 
   // Render
-  if (!Element) return null
+  if (!type) return null
   return (
     <div
       {...attributes}
@@ -76,19 +97,17 @@ function WorkCover ({ className, data, style, types, ...rest }) {
         fontSize: `${unitSize}px`
       }}>
       {types.length > 1 &&
-        <ul className="indicator">
-          {types.map((type, optionIndex) =>
+        <ul className="indicators">
+          {types.map((type, typeIndex) =>
             <li
-              key={optionIndex}
-              className={optionIndex === index ? 'active' : null}>
+              key={typeIndex}
+              className={getClassName('indicator', { active: typeIndex === activeTypeIndex })}>
             </li>
           )}
         </ul>
       }
       <div className="content">
-        <Element
-          data={data}
-          unitSize={unitSize} />
+        {types.map((type, typeIndex) => renderType(type, typeIndex))}
       </div>
     </div>
   )

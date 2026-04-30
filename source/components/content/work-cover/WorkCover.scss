@@ -5,13 +5,13 @@
   & > * {
     position: relative;
   }
-  & > .indicator {
+  & > .indicators {
     opacity: .1875;
     position: absolute;
     left: -1.1875rem;
     bottom: 2.75rem;
     width: .5rem;
-    & > * {
+    & > .indicator {
       position: relative;
       width: .5rem;
       height: .5rem;
@@ -32,8 +32,11 @@
   & > .content {
     overflow: hidden;
     height: 30em;
-    & > * {
+    & > .type {
       position: relative;
+      &:not(.active) {
+        display: none;
+      }
       & > * {
         filter: drop-shadow(0 0 .125rem var(--shade-strong-color))
                 drop-shadow(0 0 1px var(--shade-strong-color));
