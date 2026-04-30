@@ -71,15 +71,6 @@
     min-height: var(--application-height-minimum);
     padding-top: var(--navigation-height);
     transition: padding-top var(--navigation-animation-duration) ease;
-    &:before {
-      content: "";
-      opacity: 5%;
-      position: absolute;
-      bottom: 0;
-      aspect-ratio: 8;
-      width: 100%;
-      background-image: radial-gradient(ellipse at bottom, var(--brand-color) 0%, transparent 50%);
-    }
     & > * {
       width: var(--inner-width);
       max-width: var(--inner-width-maximum);
@@ -143,11 +134,28 @@
   }
   #colophon {
     opacity: 1;
+    position: relative;
     margin-top: 1.5rem;
     padding: var(--navigation-unit);
     transition-property: opacity, filter;
     transition-duration: .25s;
     transition-timing-function: ease;
+    &:before {
+      content: "";
+      opacity: 5%;
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      bottom: 0;
+      aspect-ratio: 8;
+      height: 20rem;
+      background-image: radial-gradient(ellipse at bottom, var(--brand-color) 0%, transparent 50%);
+      transform: translateX(-50%);
+    }
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
   }
 }
 
