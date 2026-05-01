@@ -2,29 +2,69 @@
 [data-page="works"] {
   [data-view="work"] {
     [data-section="excerpt"] {
-      & > * {
+      --excerpt-row-gap: var(--excerpt-column-gap);
+      --excerpt-column-gap: 2rem;
+      .rows {
         display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap;
+        gap: var(--excerpt-row-gap);
+        margin: 0 auto;
         text-align: left;
-      }
-      .block {
-        position: relative;
-        padding: 1em;
-        font-size: 1rem;
-        line-height: 125%;
-        & > .label {
-          margin-bottom: .1875em;
-          color: var(--figure-inactive-color);
-          font-size: .75em;
-          font-weight: 700;
-          text-transform: uppercase;
+        & > .row {
+          display: flex;
+          justify-content: space-between;
+          gap: var(--excerpt-column-gap);
+          position: relative;
+          font-size: 1rem;
+          line-height: 125%;
+          & > .list {
+            white-space: nowrap;
+            & > .term {
+              margin-bottom: .1875em;
+              color: var(--figure-inactive-color);
+              font-size: .75em;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            & > .definition {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              font-size: .875em;
+            }
+          }
         }
-        & > .item {
-          font-size: .875em;
-          & > .link {
-            display: table;
+      }
+    }
+  }
+}
+
+// Style: Works > Work > Excerpt (< 768px)
+@media (max-width: 767.98px) {
+  [data-page="works"] {
+    [data-view="work"] {
+      [data-section="excerpt"] {
+        --excerpt-row-gap: 1rem;
+        --excerpt-column-gap: 1.5rem;
+        .rows {
+          flex-direction: column;
+          justify-content: stretch;
+          width: min-content;
+          & > .row {
+            & + .row {
+              padding-top: var(--excerpt-row-gap);
+              border-top: 1px dotted var(--tone-color);
+            }
+            & > .list {
+              &:only-child {
+                flex-grow: 1;
+                text-align: center;
+                & > .definition {
+                  align-items: center;
+                }
+              }
+            }
           }
         }
       }

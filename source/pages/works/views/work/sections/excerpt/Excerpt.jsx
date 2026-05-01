@@ -14,7 +14,8 @@ import { getAttributes, getClassName } from '@source/helpers/component'
 import './Excerpt.scss'
 
 // Data (Local)
-const EXCERPT_COLUMNS_IN_ORDER = ['year', 'role', 'tags', 'client', 'demo']
+const COLUMNS_IN_ORDER = ['year', 'role', 'tags', 'client', 'demo']
+const MAXIMUM_COLUMN_COUNT_PER_ROW = 3
 
 // Functions (Local)
 function getExcerpt (data) {
@@ -33,27 +34,47 @@ function Excerpt ({ className, data, style, ...rest }) {
 
   // Data (Memoized)
   const excerpt = useMemo(() => getExcerpt(data), [data])
+  const columns = useMemo(() => {
+    const extractedColumns = Object.keys(excerpt)
+    return COLUMNS_IN_ORDER.filter(item => extractedColumns.includes(item) && excerpt[item])
+  }, [excerpt])
+  const rows = useMemo(() => {
+    const count = MAXIMUM_COLUMN_COUNT_PER_ROW
+    return Array.from(
+      { length: Math.ceil(columns.length / count) },
+      (item, index) => columns.slice(index * count, index * count + count)
+    )
+  }, [columns])
 
   // Functions
-  function renderBlock (id, value) {
+  function renderDataList (id, value) {
+    if (!id || !value) return null
+    return (
+      <dl className="list">
+        <dt className="term">{id}</dt>
+        {renderDataDefinition(id, value)}
+      </dl>
+    )
+  }
+  function renderDataDefinition (id, value) {
     if (!id || !value) return null
     if (Array.isArray(value)) {
       return value.map((item, index) =>
         <dd
           key={index}
-          className="item">
+          className="definition">
           {renderValue(id, item)}
         </dd>
       )
     }
-    return <dd className="item">{renderValue(id, value)}</dd>
+    return <dd className="definition">{renderValue(id, value)}</dd>
   }
   function renderValue (id, value) {
     switch (id) {
       case 'client':
-        if (typeof value === 'string') return value
-        else if (value.link) return renderLink(value.link, value.name)
-        return null
+        const name = value.fullName || value.name
+        if (value.link) return renderLink(value.link, name)
+        return name
       case 'demo':
         return (
           <>
@@ -81,23 +102,20 @@ function Excerpt ({ className, data, style, ...rest }) {
   return (
     <Page.Section
       name="excerpt"
-      spacing="none"
+      spacing="xsmall"
       {...attributes}
       className={className}
       style={style}>
       <Content>
-        {Object
-          .keys(excerpt)
-          .sort((x, y) => EXCERPT_COLUMNS_IN_ORDER.indexOf(x) - EXCERPT_COLUMNS_IN_ORDER.indexOf(y))
-          .map(key =>
-            <dl
-              key={key}
-              className={getClassName('block', { [key]: true })}>
-              <dt className="label">{key}</dt>
-              {renderBlock(key, excerpt[key])}
-            </dl>
-          )
-        }
+        <ul className="rows">
+          {rows.map((row, rowIndex) =>
+            <li
+              key={rowIndex}
+              className="row">
+              {row.map(column => renderDataList(column, excerpt[column]))}
+            </li>
+          )}
+        </ul>
       </Content>
     </Page.Section>
   )
