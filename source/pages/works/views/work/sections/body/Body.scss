@@ -35,6 +35,9 @@
       }
       .information {
         margin-top: 1.5rem;
+        & + .information {
+          margin-top: .75rem;
+        }
       }
       .note {
         margin-top: 1rem;
