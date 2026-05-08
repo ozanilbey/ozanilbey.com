@@ -13,8 +13,8 @@ function Favogue () {
           type="image"
           className="media"
           path="/favogue/teaser.png" />
-        <p className="lead">Favogue is a <strong>photo-sharing platform</strong> focused on <strong>daily fashion inspiration</strong>. Favogue redefines “feedback“ by going beyond likes and comments. Give feedback by clicking/tapping on any clothing item you want to “like“, then let Favogue do its job.</p>
-        <p className="lead">It is all about giving style feedback and getting suggestions for better clothing combinations. <strong>No irrelevant feedback, no negative reactions, no spam.</strong></p>
+        <p>Favogue is a <strong>photo-sharing platform</strong> focused on <strong>daily fashion inspiration</strong>. Favogue redefines “feedback“ by going beyond likes and comments. Give feedback by clicking/tapping on any clothing item you want to “like“, then let Favogue do its job.</p>
+        <p>It is all about giving style feedback and getting suggestions for better clothing combinations. <strong>No irrelevant feedback, no negative reactions, no spam.</strong></p>
       </Content>
       <Content>
         <Heading

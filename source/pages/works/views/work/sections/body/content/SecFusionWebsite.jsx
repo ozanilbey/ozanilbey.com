@@ -15,14 +15,21 @@ function SecFusionWebsite () {
           type="image"
           className="media"
           path="/secfusion-website/teaser.png" />
-        <p className="lead">SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
-        <p className="lead">I designed and developed a clean, multilingual, and responsive website for SecFusion in <strong>2020</strong>.</p>
+        <p>SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
+        <p>I designed and developed a clean, multilingual, and responsive website for SecFusion in <strong>2020</strong>.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           I also worked on <Link to="/works/secfusion-branding">SecFusion Branding</Link> and <Link to="/works/secfusion-brochure">SecFusion Brochure</Link>.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
         </Callout>
       </Content>
       <Content>

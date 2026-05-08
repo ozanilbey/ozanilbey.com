@@ -13,7 +13,7 @@ function Fihrist () {
           type="image"
           className="media"
           path="/fihrist/teaser.png" />
-        <p className="lead">Fihrist is a platform for reading curated articles. There is no imagery, no ads, no moving items on the article pages to prevent an uncomfortable experience.</p>
+        <p>Fihrist is a platform for reading curated articles. There is no imagery, no ads, no moving items on the article pages to prevent an uncomfortable experience.</p>
       </Content>
       <Content>
         <Heading

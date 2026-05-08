@@ -13,8 +13,8 @@ function MarufCorporateIdentity () {
           type="image"
           className="media"
           path="/maruf-corporate-identity/teaser.png" />
-        <p className="lead">Maruf is an <strong>accounting firm</strong> located in Ankara, Turkey.</p>
-        <p className="lead">I designed <strong>a corporate identity</strong> for Maruf YMM <strong>in 2011</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and envelope. I also designed and developed the website.</p>
+        <p>Maruf is an <strong>accounting firm</strong> located in Ankara, Turkey.</p>
+        <p>I designed <strong>a corporate identity</strong> for Maruf YMM <strong>in 2011</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and envelope. I also designed and developed the website.</p>
       </Content>
       <Content>
         <Heading

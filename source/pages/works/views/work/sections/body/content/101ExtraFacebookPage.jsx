@@ -15,9 +15,8 @@ function _101ExtraFacebookPage () {
           type="image"
           className="media"
           path="/101-extra-facebook-page/teaser.png" />
-        <p className="lead">101 Extra is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
-        <p className="lead">I designed 8 different Facebook post templates for 101 Extra <strong>in 2016</strong>. Each of these templates serves different purposes.</p>
-        <p className="lead">Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for helping me on this project!</p>
+        <p>101 Extra is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
+        <p>I designed 8 different Facebook post templates for 101 Extra <strong>in 2016</strong>. Each of these templates serves different purposes.</p>
         <Callout
           size="large"
           intent="information"
@@ -25,7 +24,14 @@ function _101ExtraFacebookPage () {
           className="information">
           I also designed Facebook Pages for the other games developed by Digitoy Games such as <Link to="/works/okey-extra-facebook-page">Okey Extra</Link>, <Link to="/works/can-okey-facebook-page">Can Okey</Link>, <Link to="/works/tekel-okey-facebook-page">Tekel Okey</Link>, and <Link to="/works/rakkip-facebook-page">Rakkip</Link>.
         </Callout>
-      </Content>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
+        </Callout>
+        </Content>
       <Content>
         <Heading
           rank={2}

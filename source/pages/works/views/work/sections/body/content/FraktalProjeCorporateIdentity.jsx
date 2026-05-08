@@ -14,8 +14,8 @@ function FraktalProjeCorporateIdentity () {
           type="image"
           className="media"
           path="/fraktal-proje-corporate-identity/teaser.png" />
-        <p className="lead">Fraktal Proje is a <strong>multidisciplinary design company</strong> located in <strong>Ankara</strong>.</p>
-        <p className="lead">I designed <strong>a corporate identity</strong> for Fraktal Proje <strong>in 2013</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, envelope and invoice.</p>
+        <p>Fraktal Proje is a <strong>multidisciplinary design company</strong> located in <strong>Ankara</strong>.</p>
+        <p>I designed <strong>a corporate identity</strong> for Fraktal Proje <strong>in 2013</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, envelope and invoice.</p>
         <Callout
           size="large"
           intent="information"

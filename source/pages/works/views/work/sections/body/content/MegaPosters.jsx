@@ -13,8 +13,8 @@ function MegaPosters () {
           type="image"
           className="media"
           path="/mega-posters/teaser.png" />
-        <p className="lead">MEGA Industries is a <strong>petroleum solutions company</strong> located in Ankara, Turkey. Its mission is to design, develop and implement end-to-end monitoring and control systems.</p>
-        <p className="lead">I designed 12 posters (one per each month of 2017) for MEGA Industries <strong>in 2016</strong> utilising famous quotations about corporate image, success, engineering, design, and business in poster designs for inspirational and motivational purposes.</p>
+        <p>MEGA Industries is a <strong>petroleum solutions company</strong> located in Ankara, Turkey. Its mission is to design, develop and implement end-to-end monitoring and control systems.</p>
+        <p>I designed 12 posters (one per each month of 2017) for MEGA Industries <strong>in 2016</strong> utilising famous quotations about corporate image, success, engineering, design, and business in poster designs for inspirational and motivational purposes.</p>
       </Content>
       <Content>
         <Heading

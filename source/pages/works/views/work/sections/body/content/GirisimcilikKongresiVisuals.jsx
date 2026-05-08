@@ -13,8 +13,8 @@ function GirisimcilikKongresiVisuals () {
           type="image"
           className="media"
           path="/girisimcilik-kongresi-visuals/teaser.png" />
-        <p className="lead">Girişimcilik Kongresi is an <strong>entrepreneurship congress</strong> held by ODTÜ GGT (Young Entrepreneurs Society). Its mission is to make essential conversations happen related to the entrepreneurial ecosystem in Turkey and around the globe.</p>
-        <p className="lead">I designed a set of promotional visuals for ODTÜ GGT <strong>in 2012</strong>: A poster, a leaflet, an invitation card, a billboard advertisement, a certificate, a ticket, roll-ups, and staff cards.</p>
+        <p>Girişimcilik Kongresi is an <strong>entrepreneurship congress</strong> held by ODTÜ GGT (Young Entrepreneurs Society). Its mission is to make essential conversations happen related to the entrepreneurial ecosystem in Turkey and around the globe.</p>
+        <p>I designed a set of promotional visuals for ODTÜ GGT <strong>in 2012</strong>: A poster, a leaflet, an invitation card, a billboard advertisement, a certificate, a ticket, roll-ups, and staff cards.</p>
       </Content>
       <Content>
         <Heading

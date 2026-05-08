@@ -15,8 +15,8 @@ function WaplogMobileApplication () {
           type="image"
           className="media"
           path="/waplog-mobile-application/teaser.png" />
-        <p className="lead">Waplog is a <strong>dating platform</strong> for people who are on a quest to find their soulmate. It has <strong>over 90 million members</strong> from more than 50 countries. It provides over 20 universal languages.</p>
-        <p className="lead">I designed a generic multiplatform user interface for Waplog Mobile <strong>in 2010</strong>. The same design is used in all mobile platforms (iOS, Android and mobile web).</p>
+        <p>Waplog is a <strong>dating platform</strong> for people who are on a quest to find their soulmate. It has <strong>over 90 million members</strong> from more than 50 countries. It provides over 20 universal languages.</p>
+        <p>I designed a generic multiplatform user interface for Waplog Mobile <strong>in 2010</strong>. The same design is used in all mobile platforms (iOS, Android and mobile web).</p>
         <Callout
           size="large"
           intent="information"

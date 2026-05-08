@@ -27,8 +27,8 @@ function PosterCollection () {
   return (
     <>
       <Content>
-        <p className="lead">I’ve started designing posters <strong>in 2008</strong>, just for fun. I’ve learned lots of things about it since then. However, I’ve never considered it as one of my professional skills. I am still doing it for fun.</p>
-        <p className="lead">Here are some of my works.</p>
+        <p>I’ve started designing posters <strong>in 2008</strong>, just for fun. I’ve learned lots of things about it since then. However, I’ve never considered it as one of my professional skills. I am still doing it for fun.</p>
+        <p>Here are some of my works.</p>
       </Content>
       <Content>
         <Heading

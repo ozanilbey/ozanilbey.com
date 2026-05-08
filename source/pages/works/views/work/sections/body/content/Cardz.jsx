@@ -16,7 +16,7 @@ function Cardz () {
           path="/cardz/teaser.png" />
         <p>Cardz is an amazing tool for networking. Buy a pack of Cardz anytime with <strong>any design option</strong> you want. Link your Cardz to your <strong>instantly-generated online profile</strong> by using the QR code on the back of your cards. Then share your information with your network with the help of your <strong>pack of printed cards</strong>. Get social in <strong>the coolest way possible</strong>.</p>
         <p>It’s not a business card. It’s your <strong>persona</strong>. Pick your style, provide your information, then have both a pack of cards and a web page.</p>
-        <p className="lead"><strong>Simple as that.</strong></p>
+        <p><strong>Simple as that.</strong></p>
       </Content>
       <Content>
         <Heading
@@ -117,7 +117,7 @@ function Cardz () {
           style={{ marginBottom: '2rem' }}>
           Story of the project
         </Heading>
-        <p className="lead">Cardz was <strong>entirely designed and developed in 48 hours</strong> at <strong>LAUNCH Hackathon 2014</strong>, by <strong>Ozan Yilmaz</strong> and <Link isExternal arrow="upright" to="//volkan.io">Volkan Özçelik</Link>.</p>
+        <p>Cardz was <strong>entirely designed and developed in 48 hours</strong> at <strong>LAUNCH Hackathon 2014</strong>, by <strong>Ozan Yilmaz</strong> and <Link isExternal arrow="upright" to="//volkan.io">Volkan Özçelik</Link>.</p>
         <p>Ozan, having had 5 years of experience on branding at the time, came up with the idea of <strong>easy-to-have, branded-looking, socially consumable business cards</strong>. Compared to ordinary business cards, the main distinguishing factor of Cardz concept is that <strong>it democratizes having business cards</strong> by making it <strong>simple and cheaper</strong>.</p>
         <Media
           width={1152}

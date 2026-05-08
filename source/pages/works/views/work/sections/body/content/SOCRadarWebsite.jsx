@@ -15,14 +15,21 @@ function SOCRadarWebsite () {
           type="image"
           className="media"
           path="/socradar-website/teaser.png" />
-        <p className="lead">SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
-        <p className="lead">I <strong>designed the SOCRadar website</strong> with <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link>. Then I heavily <strong>customized a WordPress theme</strong> (HTML + CSS + JS + graphics) to match the design and also accommodate the client’s needs.</p>
+        <p>SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
+        <p>I <strong>designed the SOCRadar website</strong>. Then I heavily <strong>customized a WordPress theme</strong> (HTML + CSS + JS + graphics) to match the design and also accommodate the client’s needs.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           We also worked on <Link to="/works/socradar-branding">SOCRadar Branding</Link>{/* and created <Link to="/works/socradar-docs">SOCRadar Docs</Link> */}.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
         </Callout>
       </Content>
       <Content>

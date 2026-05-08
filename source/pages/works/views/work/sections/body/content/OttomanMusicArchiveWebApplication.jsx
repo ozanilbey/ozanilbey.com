@@ -13,8 +13,8 @@ function OttomanMusicArchiveWebApplication () {
           type="image"
           className="media"
           path="/ottoman-music-archive-web-application/teaser.png" />
-        <p className="lead">TRT Külliyat is an <strong>online note archive</strong> of Ottoman music, owned and operated by TRT (Turkish National Television).</p>
-        <p className="lead">I designed a user interface for the project <strong>in 2012</strong>. The interface includes many oriental design details to reflect the Ottoman Culture properly. I also developed the frontend of the web application.</p>
+        <p>TRT Külliyat is an <strong>online note archive</strong> of Ottoman music, owned and operated by TRT (Turkish National Television).</p>
+        <p>I designed a user interface for the project <strong>in 2012</strong>. The interface includes many oriental design details to reflect the Ottoman Culture properly. I also developed the frontend of the web application.</p>
       </Content>
       <Content>
         <Heading

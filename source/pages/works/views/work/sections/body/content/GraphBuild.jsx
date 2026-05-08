@@ -13,8 +13,8 @@ function GraphBuild () {
           type="image"
           className="media"
           path="/graphbuild/teaser.png" />
-        <p className="lead">GraphBuild is a simple visual <strong>graph application builder</strong>.</p>
-        <p className="lead">I created the “graph.build“ brand, <strong>designed the user interface</strong>, and <strong>developed the web application</strong> using React in <strong>2018</strong>.</p>
+        <p>GraphBuild (formerly “graph.build“) is a simple visual <strong>graph application builder</strong>.</p>
+        <p>I created the “graph.build“ brand, <strong>designed the user interface</strong>, and <strong>developed the web application</strong> using React in <strong>2018</strong>.</p>
       </Content>
       <Content>
         <Heading

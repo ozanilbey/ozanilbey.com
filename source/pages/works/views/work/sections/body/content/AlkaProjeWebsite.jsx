@@ -13,8 +13,8 @@ function AlkaProjeWebsite () {
           type="image"
           className="media"
           path="/alka-proje-website/teaser.png" />
-        <p className="lead">Alka Proje is an <strong>architecture company</strong> located in Ankara, Turkey.</p>
-        <p className="lead">I designed a sleek and responsive user interface for Alka Proje <strong>in 2016</strong>. I crafted the website with HTML, CSS, jQuery and a file-based JSON database. I also provided a solution to filter and sort the projects displayed; without messing the responsive design.</p>
+        <p>Alka Proje is an <strong>architecture company</strong> located in Ankara, Turkey.</p>
+        <p>I designed a sleek and responsive user interface for Alka Proje <strong>in 2016</strong>. I crafted the website with HTML, CSS, jQuery and a file-based JSON database. I also provided a solution to filter and sort the projects displayed; without messing the responsive design.</p>
       </Content>
       <Content>
         <Heading

@@ -13,8 +13,8 @@ function EsetronCorporateIdentity () {
           type="image"
           className="media"
           path="/esetron-corporate-identity/teaser.png" />
-        <p className="lead">Esetron is a <strong>robotics company</strong> located in Ankara, Turkey.</p>
-        <p className="lead">I designed <strong>a simple corporate identity</strong> for Esetron <strong>in 2012</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, envelope, and invoice.</p>
+        <p>Esetron is a <strong>robotics company</strong> located in Ankara, Turkey.</p>
+        <p>I designed <strong>a simple corporate identity</strong> for Esetron <strong>in 2012</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, envelope, and invoice.</p>
       </Content>
       <Content>
         <Heading

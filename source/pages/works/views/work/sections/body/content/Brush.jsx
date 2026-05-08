@@ -13,8 +13,8 @@ function Brush () {
           type="image"
           className="media"
           path="/brush/teaser.png" />
-        <p className="lead">Brush is an e-commerce project where creative people run their campaigns by offering limited number of <strong>canvas and t-shirt prints</strong> to <strong>early backers</strong>. Thanks to Brush, it becomes easy to acquire unique artwork products while supporting artists, graphic designers, illustrators. You only need to back your favorite artist’s <strong>limited-edition artwork prints</strong> campaign.</p>
-        <p className="lead">Support art, be unique, pay less.</p>
+        <p>Brush is an e-commerce project where creative people run their campaigns by offering limited number of <strong>canvas and t-shirt prints</strong> to <strong>early backers</strong>. Thanks to Brush, it becomes easy to acquire unique artwork products while supporting artists, graphic designers, illustrators. You only need to back your favorite artist’s <strong>limited-edition artwork prints</strong> campaign.</p>
+        <p><strong>Support art, be unique, pay less.</strong></p>
       </Content>
       <Content>
         <Heading

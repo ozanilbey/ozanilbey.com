@@ -15,15 +15,21 @@ function TekelOkeyFacebookPage () {
           type="image"
           className="media"
           path="/tekel-okey-facebook-page/teaser.png" />
-        <p className="lead">Tekel Okey is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
-        <p className="lead">I designed 8 different Facebook post templates for Tekel Okey <strong>in 2016</strong>. Each of these templates serves different purposes.</p>
-        <p className="lead">Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for helping me on this project!</p>
+        <p>Tekel Okey is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
+        <p>I designed 8 different Facebook post templates for Tekel Okey <strong>in 2016</strong>. Each of these templates serves different purposes.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           I also designed Facebook Pages for the other games developed by Digitoy Games such as <Link to="/works/okey-extra-facebook-page">Okey Extra</Link>, <Link to="/works/101-extra-facebook-page">101 Extra</Link>, <Link to="/works/can-okey-facebook-page">Can Okey</Link>, and <Link to="/works/rakkip-facebook-page">Rakkip</Link>.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
         </Callout>
       </Content>
       <Content>

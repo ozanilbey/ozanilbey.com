@@ -15,14 +15,21 @@ function SecFusionBranding () {
           type="image"
           className="media"
           path="/secfusion-branding/teaser.png" />
-        <p className="lead">SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
-        <p className="lead">I designed <strong>a fresh brand image</strong> for SecFusion in <strong>2020</strong> to express the main aspects of the platform: alertness and unification.</p>
+        <p>SecFusion is a <strong>unified vunerability management platform</strong> providing vulnerability management automation solutions.</p>
+        <p>I designed <strong>a fresh brand image</strong> for SecFusion in <strong>2020</strong> to express the main aspects of the platform: alertness and unification.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           I also worked on <Link to="/works/secfusion-website">SecFusion Website</Link> and <Link to="/works/secfusion-brochure">SecFusion Brochure</Link>.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
         </Callout>
       </Content>
       <Content>

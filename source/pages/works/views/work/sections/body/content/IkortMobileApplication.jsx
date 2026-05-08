@@ -14,8 +14,8 @@ function IkortMobileApplication () {
           type="image"
           className="media"
           path="/ikort-mobile-application/teaser.png" />
-        <p className="lead">i-kort is a <strong>sports app</strong> displaying real-time scores, results and match statistics of tennis matches. It also displays player profiles, personalised player-related alerts, play status, the order of play, and tournament schedules. It is <strong>the official app of the Turkish Tennis Federation</strong>.</p>
-        <p className="lead">I designed <strong>a clean and data-focused user interface</strong> for i-kort apps (iOS and Android) <strong>in 2015</strong>. I also provided image assets at various resolutions for iOS and Android platforms.</p>
+        <p>i-kort is a <strong>sports app</strong> displaying real-time scores, results and match statistics of tennis matches. It also displays player profiles, personalised player-related alerts, play status, the order of play, and tournament schedules. It is <strong>the official app of the Turkish Tennis Federation</strong>.</p>
+        <p>I designed <strong>a clean and data-focused user interface</strong> for i-kort apps (iOS and Android) <strong>in 2015</strong>. I also provided image assets at various resolutions for iOS and Android platforms.</p>
         <Callout
           size="large"
           intent="information"

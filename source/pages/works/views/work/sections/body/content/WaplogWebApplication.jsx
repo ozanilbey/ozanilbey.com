@@ -15,8 +15,8 @@ function WaplogWebApplication () {
           type="image"
           className="media"
           path="/waplog-web-application/teaser.png" />
-        <p className="lead">Waplog is a <strong>dating platform</strong> for people who are on a quest to find their soulmate. It has <strong>over 90 million members</strong> from more than 50 countries. It provides over 20 universal languages.</p>
-        <p className="lead">I designed an attractive user interface and crafted a frontend for Waplog Web <strong>in 2012</strong>.</p>
+        <p>Waplog is a <strong>dating platform</strong> for people who are on a quest to find their soulmate. It has <strong>over 90 million members</strong> from more than 50 countries. It provides over 20 universal languages.</p>
+        <p>I designed an attractive user interface and crafted a frontend for Waplog Web <strong>in 2012</strong>.</p>
         <Callout
           size="large"
           intent="information"

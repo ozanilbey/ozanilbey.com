@@ -13,8 +13,8 @@ function RockSenligiVisuals () {
           type="image"
           className="media"
           path="/rock-senligi-visuals/teaser.png" />
-        <p className="lead">Rock Şenliği is a <strong>Rock Festival</strong> organized by ODTÜ MT (Music Society).</p>
-        <p className="lead">I designed a set of promotional visuals for ODTÜ MT <strong>in 2011</strong>: A poster, a handout, and a set of 5 tickets (one per each day).</p>
+        <p>Rock Şenliği is a <strong>Rock Festival</strong> organized by ODTÜ MT (Music Society).</p>
+        <p>I designed a set of promotional visuals for ODTÜ MT <strong>in 2011</strong>: A poster, a handout, and a set of 5 tickets (one per each day).</p>
       </Content>
       <Content>
         <Heading

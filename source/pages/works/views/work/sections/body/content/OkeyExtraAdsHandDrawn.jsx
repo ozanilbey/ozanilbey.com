@@ -15,15 +15,21 @@ function OkeyExtraAdsHandDrawn () {
           type="image"
           className="media"
           path="/okey-extra-ads-hand-drawn/teaser.png" />
-        <p className="lead">Okey Extra is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
-        <p className="lead">I designed advertisement visuals for Okey Extra <strong>in 2017</strong>. All images are used on Facebook as sponsored content.</p>
-        <p className="lead">Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for helping me on this project!</p>
+        <p>Okey Extra is a <strong>social game</strong>, based on traditional Turkish game Okey, developed and managed by Digitoy Games. It is available on Apple Store, Google Play Store, and Facebook.</p>
+        <p>I designed advertisement visuals for Okey Extra <strong>in 2017</strong>. All images are used on Facebook as sponsored content.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           I also designed <Link to="/works/okey-extra-facebook-page">Okey Extra Facebook Page</Link>.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
         </Callout>
       </Content>
       <Content>

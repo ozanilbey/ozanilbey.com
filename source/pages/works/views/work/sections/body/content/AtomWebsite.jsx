@@ -13,8 +13,8 @@ function AtomWebsite () {
           type="image"
           className="media"
           path="/atom-website/teaser.png" />
-        <p className="lead">ATOM is an <strong>early-stage incubator for game development startups</strong>. It is a part of ODTÜ TEKNOKENT and located in Ankara, Turkey.</p>
-        <p className="lead">I designed and developed the website of ATOM <strong>in 2011</strong>.</p>
+        <p>ATOM is an <strong>early-stage incubator for game development startups</strong>. It is a part of ODTÜ TEKNOKENT and located in Ankara, Turkey.</p>
+        <p>I designed and developed the website of ATOM <strong>in 2011</strong>.</p>
       </Content>
       <Content>
         <Heading

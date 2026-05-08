@@ -14,8 +14,8 @@ function FlashtechWebApplicationUI () {
           type="image"
           className="media"
           path="/flashtech-web-application-ui/teaser.png" />
-        <p className="lead">Flashtech is a <strong>terminal automation system</strong> used in petroleum industry that controls the flow of information from the loading area to the central business system of an enterprise. It provides user-friendly access to data and events.</p>
-        <p className="lead">I provided <strong>a complete design solution</strong> for Flashtech (a set of 16 applications) <strong>in 2016</strong>: A dashboard screen to choose between apps, a generic login screen, a common navigation bar, and a UI kit to be used in all current/future apps. I also created design guidelines for all the apps.</p>
+        <p>Flashtech is a <strong>terminal automation system</strong> used in petroleum industry that controls the flow of information from the loading area to the central business system of an enterprise. It provides user-friendly access to data and events.</p>
+        <p>I provided <strong>a complete design solution</strong> for Flashtech (a set of 16 applications) <strong>in 2016</strong>: A dashboard screen to choose between apps, a generic login screen, a common navigation bar, and a UI kit to be used in all current/future apps. I also created design guidelines for all the apps.</p>
         <Callout
           size="large"
           intent="information"

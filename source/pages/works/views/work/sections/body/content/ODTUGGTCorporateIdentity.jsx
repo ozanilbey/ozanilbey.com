@@ -14,14 +14,14 @@ function ODTUGGTCorporateIdentity () {
           type="image"
           className="media"
           path="/odtu-ggt-corporate-identity/teaser.png" />
-        <p className="lead">ODTÜ GGT (Young Entrepreneurs Society) is a <strong>student club</strong> operating at <strong>Middle East Technical University</strong>.</p>
-        <p className="lead">I designed <strong>a simple corporate identity with a bright look</strong> for ODTÜ GGT <strong>in 2011</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and email signatures. I also designed and developed the website.</p>
+        <p>ODTÜ GGT (Young Entrepreneurs Society) is a <strong>student club</strong> operating at <strong>Middle East Technical University</strong>.</p>
+        <p>I designed <strong>a simple corporate identity with a bright look</strong> for ODTÜ GGT <strong>in 2011</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and email signatures. I also designed and developed the website.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
-          The logo design work is mainly a revision.
+          The logo design work is simply a revision of the previous logo.
         </Callout>
       </Content>
       <Content>

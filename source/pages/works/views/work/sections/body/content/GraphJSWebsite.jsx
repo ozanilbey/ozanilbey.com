@@ -20,15 +20,21 @@ function GraphJSWebsite () {
           type="image"
           className="media"
           path="/graphjs-website/teaser.png" />
-        <p className="lead">GraphJS (formerly “Graph.js“) is an amazing tool for <strong>making any website social</strong> with just a few lines of code. It’s an <strong>open source client-side JavaScript library</strong>. It helps you to easily add authentication, comments, messages, forum, groups, profiles and many more to static web pages.</p>
-        <p className="lead">I created the “Graph.js“ brand; designed, developed and maintained its website in <strong>2018–2019</strong>.</p>
-        <p className="lead">Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for beautiful illustrations!</p>
+        <p>GraphJS (formerly “graph.js“) is an amazing tool for <strong>making any website social</strong> with just a few lines of code. It’s an <strong>open source client-side JavaScript library</strong>. It helps you to easily add authentication, comments, messages, forum, groups, profiles and many more to static web pages.</p>
+        <p>I created the “graph.js“ brand; designed, developed and maintained its website in <strong>2018–2019</strong>.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           I also designed and developed the <Link to="/works/graphjs">GraphJS</Link> library itself.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for beautiful illustrations!
         </Callout>
       </Content>
       <Content>

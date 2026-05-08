@@ -15,14 +15,21 @@ function SOCRadarBranding () {
           type="image"
           className="media"
           path="/socradar-website/teaser.png" />
-        <p className="lead">SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
-        <p className="lead">I created <strong>a fresh brand image</strong> for SOCRadar with <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> to properly express the company’s dynamic yet reliable nature.</p>
+        <p>SOCRadar is a <strong>digital risk protection platform</strong> providing contextualized intelligence.</p>
+        <p>I created <strong>a fresh brand image</strong> for SOCRadar to properly express the company’s dynamic yet reliable nature.</p>
         <Callout
           size="large"
           intent="information"
           hasBackground={false}
           className="information">
           We also worked on <Link to="/works/socradar-website">SOCRadar Website</Link>{/* and created <Link to="/works/socradar-docs">SOCRadar Docs</Link> */}.
+        </Callout>
+        <Callout
+          size="large"
+          intent="information"
+          hasBackground={false}
+          className="information">
+          Special thanks to <Link isExternal arrow="upright" to="https://cerenmurgan.com">Ceren</Link> for her significant contribution to this project!
         </Callout>
       </Content>
       <Content>

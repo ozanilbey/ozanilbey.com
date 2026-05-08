@@ -20,8 +20,8 @@ function GraphJS () {
           type="image"
           className="media"
           path="/graphjs/teaser.png" />
-        <p className="lead">GraphJS (formerly “Graph.js“) is an amazing tool for <strong>making any website social</strong> with just a few lines of code. It’s an <strong>open source client-side JavaScript library</strong>. It helps you to easily add authentication, comments, messages, forum, groups, profiles and many more to static web pages.</p>
-        <p className="lead">I created the “Graph.js“ brand, designed all user interface components, and written <strong>more than 90% of its codebase</strong>, using Riot.js and LESS in <strong>2018–2019</strong>.</p>
+        <p>GraphJS (formerly “graph.js“) is an amazing tool for <strong>making any website social</strong> with just a few lines of code. It’s an <strong>open source client-side JavaScript library</strong>. It helps you to easily add authentication, comments, messages, forum, groups, profiles and many more to static web pages.</p>
+        <p>I created the “graph.js“ brand, designed all user interface components, and written <strong>more than 90% of its codebase</strong>, using Riot.js and LESS in <strong>2018–2019</strong>.</p>
         <Callout
           size="large"
           intent="information"

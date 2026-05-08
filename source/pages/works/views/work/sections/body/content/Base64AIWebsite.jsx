@@ -15,8 +15,8 @@ function Base64AIWebsite () {
           type="image"
           className="media"
           path="/base64-ai-website/teaser.png" />
-        <p className="lead">Base64.ai is an <strong>document processing AI platform</strong> extracting and interpreting data from more than 500 types of documents.</p>
-        <p className="lead">I worked at Base64.ai as <strong>the #1 employee</strong>. I designed and developed a clean SAAS website including a product demo for Base64.ai in <strong>2020</strong>.</p>
+        <p>Base64.ai is an <strong>document processing AI platform</strong> extracting and interpreting data from more than 500 types of documents.</p>
+        <p>I worked at Base64.ai as <strong>the #1 employee</strong>. I designed and developed a clean SAAS website including a product demo for Base64.ai in <strong>2020</strong>.</p>
         <Callout
           size="large"
           intent="information"

@@ -13,8 +13,8 @@ function Piccture () {
           type="image"
           className="media"
           path="/piccture/teaser.png" />
-        <p className="lead">Piccture is <strong>a social platform for designers</strong> and everyone else. It provides a tool for giving <strong>visual feedback</strong> on images. No more text comments!</p>
-        <p className="lead">Any feedback on Piccture is <strong>point-specific</strong> and <strong>visually-informant</strong>. Piccture connects everyone with designers all over the world. Piccture connects everyone with designers all over the world. Users follow each other, and they also have the chance to follow other artists, stylists, painters, photographers, illustrators, architects, designers, and even companies.</p>
+        <p>Piccture is <strong>a social platform for designers</strong> and everyone else. It provides a tool for giving <strong>visual feedback</strong> on images. No more text comments!</p>
+        <p>Any feedback on Piccture is <strong>point-specific</strong> and <strong>visually-informant</strong>. Piccture connects everyone with designers all over the world. Piccture connects everyone with designers all over the world. Users follow each other, and they also have the chance to follow other artists, stylists, painters, photographers, illustrators, architects, designers, and even companies.</p>
       </Content>
       <Content>
         <Heading

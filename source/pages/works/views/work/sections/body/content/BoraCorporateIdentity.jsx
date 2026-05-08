@@ -13,8 +13,8 @@ function BoraCorporateIdentity () {
           type="image"
           className="media"
           path="/bora-corporate-identity/teaser.png" />
-        <p className="lead">Bora is an <strong>architecture and planning company</strong> located in Ankara, Turkey. The company is mainly operating in 4 fields: city planning, architecture, construction, and cartography.</p>
-        <p className="lead">I designed <strong>a clean corporate identity</strong> for Bora <strong>in 2012</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and envelope.</p>
+        <p>Bora is an <strong>architecture and planning company</strong> located in Ankara, Turkey. The company is mainly operating in 4 fields: city planning, architecture, construction, and cartography.</p>
+        <p>I designed <strong>a clean corporate identity</strong> for Bora <strong>in 2012</strong>, providing essential pieces of a corporate identity such as logo, business cards, letterhead, folder, and envelope.</p>
       </Content>
       <Content>
         <Heading

@@ -28,8 +28,8 @@ function WebsiteCollection () {
   return (
     <>
       <Content>
-        <p className="lead">I started designing websites <strong>in 2003</strong>. First, I was only writing HTML. Then, I started working with graphical user interfaces. After years of practice, I learned a lot about web design, user interfaces and frontend engineering. I learned to balance form and function to create fully-functional and still aesthetically-pleasing web designs.</p>
-        <p className="lead">Here are some of my works.</p>
+        <p>I started designing websites <strong>in 2003</strong>. First, I was only writing HTML. Then, I started working with graphical user interfaces. After years of practice, I learned a lot about web design, user interfaces and frontend engineering. I learned to balance form and function to create fully-functional and still aesthetically-pleasing web designs.</p>
+        <p>Here are some of my works.</p>
       </Content>
       <Content>
         <Heading
