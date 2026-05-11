@@ -21,8 +21,9 @@ import './Media.scss'
 // Component: Model > Media
 function Media ({ className, height, path, style, type, width, willCrop, ...rest }) {
   // Data
+  const extension = type === 'image' ? 'webp' : null
   const attributes = getAttributes(rest, ['aria', 'data', 'title'])
-  const { source, sourceSet } = useSource({ height, path, type, width, willCrop })
+  const { source, sourceSet } = useSource({ extension, height, path, type, width, willCrop })
 
   // Functions
   function renderContent () {

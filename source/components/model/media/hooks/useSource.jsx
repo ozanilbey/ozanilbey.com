@@ -8,7 +8,7 @@ import { MEDIA_URL } from '@source/constants/environment'
 const BREAKPOINTS = [64, 128, 192, 256, 320, 384, 512, 640, 768, 896, 1024, 1152]
 
 // Functions (Local)
-function calculateURL (path, { height, prefix, width, willCrop } = {}) {
+function calculateURL (path, { extension, height, prefix, width, willCrop } = {}) {
   let transformation = 'dpr_1'
   if (width || height) {
     if (width) transformation += `,w_${width}`
@@ -18,12 +18,13 @@ function calculateURL (path, { height, prefix, width, willCrop } = {}) {
       if (width && height) transformation += `/ar_${width / height},c_crop,g_north`
     } else transformation += `,c_limit`
   }
+  if (extension) path = path.replace(/\.[^.]+$/, `.${extension}`)
   return `${MEDIA_URL}${prefix || ''}/${transformation}${path}`
 }
-function calculateSources (path, { height, width, willCrop }) {
+function calculateSources (path, { extension, height, width, willCrop }) {
   const sources = {}
   BREAKPOINTS.forEach(breakpoint => {
-    const options = { width: breakpoint, willCrop }
+    const options = { extension, width: breakpoint, willCrop }
     if (width && height) options.height = Math.ceil(height / width * breakpoint)
     sources[breakpoint] = calculateURL(path, options)
   })
@@ -31,20 +32,21 @@ function calculateSources (path, { height, width, willCrop }) {
 }
 
 // Hook: Model > Media > Source
-function useSource ({ height, path, type, width, willCrop }) {
+function useSource ({ extension, height, path, type, width, willCrop }) {
   // Data (Memoized)
   const sources = useMemo(() => {
-    if (type === 'image') return calculateSources(path, { height, width, willCrop })
-  }, [height, path, type, width, willCrop])
+    if (type === 'image') return calculateSources(path, { extension, height, width, willCrop })
+  }, [extension, height, path, type, width, willCrop])
   const source = useMemo(() => {
     if (type === 'image') return Object.values(sources)[0]
     return calculateURL(path, {
+      extension,
       height,
       prefix: type === 'video' ? '/video/upload' : null,
       width,
       willCrop
     })
-  }, [height, path, type, width, willCrop])
+  }, [extension, height, path, type, width, willCrop])
   const sourceSet = useMemo(() => {
     if (type !== 'image') return
     return Object
