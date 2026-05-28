@@ -11,10 +11,16 @@ function Document ({ children, stylesheets = [] }) {
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1" />
+        <link
+          as="font"
+          rel="preload"
+          crossOrigin=""
+          type="font/woff2"
+          href="/fonts/InterVariable.woff2" />
         {stylesheets.map(stylesheet =>
           <link
-            key={stylesheet}
             rel="stylesheet"
+            key={stylesheet}
             href={stylesheet} />
         )}
       </head>
