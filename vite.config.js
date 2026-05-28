@@ -8,7 +8,7 @@ const configuration = defineConfig({
   build: {
     manifest: true,
     rollupOptions: { input: './source/client.jsx' },
-    sourcemap: 'hidden'
+    sourcemap: true
   },
   css: { devSourcemap: true },
   plugins: [react({ jsxRuntime: 'automatic' })],
