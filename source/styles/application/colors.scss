@@ -2,7 +2,7 @@
 :root {
   color-scheme: light dark;
 
-  // Variables (Hue & saturation)
+  // Constants (Hue & saturation)
   --base-hue: 210;
   --base-saturation: 15%;
 
@@ -15,7 +15,7 @@
   --brand-color-hsl: var(--brand-green-hsl);
 
   // HSL values (Theme)
-  --theme-common-color-hsl: var(--base-hue), var(--base-saturation), 45%;
+  --theme-common-color-hsl: var(--base-hue), var(--base-saturation), 55%;
   --theme-dark-color-hsl: var(--base-hue), var(--base-saturation), 15%;
   --theme-dark-alternative-color-hsl: var(--base-hue), var(--base-saturation), 20%;
   --theme-dark-extreme-color-hsl: var(--base-hue), var(--base-saturation), 0%;
@@ -24,27 +24,27 @@
   --theme-light-extreme-color-hsl: var(--base-hue), var(--base-saturation), 100%;
 
   // HSL values (Figure - Dark)
-  --figure-dark-strong-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 0);
-  --figure-dark-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 1);
-  --figure-dark-weak-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 2);
-  --figure-dark-inactive-color-hsl: var(--base-hue), var(--base-saturation), calc(20% + (80% - 20%) / 3 * 3);
+  --figure-dark-strong-color-hsl: var(--base-hue), var(--base-saturation), 17.5%;
+  --figure-dark-color-hsl: var(--base-hue), var(--base-saturation), 30%;
+  --figure-dark-weak-color-hsl: var(--base-hue), var(--base-saturation), 55%;
+  --figure-dark-inactive-color-hsl: var(--base-hue), var(--base-saturation), 80%;
 
   // HSL values (Figure - Light)
-  --figure-light-strong-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 0);
-  --figure-light-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 1);
-  --figure-light-weak-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 2);
-  --figure-light-inactive-color-hsl: var(--base-hue), var(--base-saturation), calc(100% - (100% - 25%) / 3 * 3);
+  --figure-light-strong-color-hsl: var(--base-hue), var(--base-saturation), 100%;
+  --figure-light-color-hsl: var(--base-hue), var(--base-saturation), 85%;
+  --figure-light-weak-color-hsl: var(--base-hue), var(--base-saturation), 55%;
+  --figure-light-inactive-color-hsl: var(--base-hue), var(--base-saturation), 25%;
 
   // HSL values (Ground - Dark)
-  --ground-dark-color-hsl: var(--base-hue), var(--base-saturation), 12.5%;
-  --ground-dark-accent-color-hsl: var(--base-hue), var(--base-saturation), 11.25%;
-  --ground-dark-alternative-color-hsl: var(--base-hue), var(--base-saturation), 10%;
+  --ground-dark-color-hsl: var(--base-hue), var(--base-saturation), 11.25%;
+  --ground-dark-accent-color-hsl: var(--base-hue), var(--base-saturation), 10%;
+  --ground-dark-alternative-color-hsl: var(--base-hue), var(--base-saturation), 8.75%;
   --ground-dark-inactive-color-hsl: var(--base-hue), var(--base-saturation), 40%;
 
   // HSL values (Ground - Light)
   --ground-light-color-hsl: var(--base-hue), var(--base-saturation), 100%;
-  --ground-light-accent-color-hsl: var(--base-hue), var(--base-saturation), 96.25%;
-  --ground-light-alternative-color-hsl: var(--base-hue), var(--base-saturation), 92.5%;
+  --ground-light-accent-color-hsl: var(--base-hue), var(--base-saturation), 97.5%;
+  --ground-light-alternative-color-hsl: var(--base-hue), var(--base-saturation), 95%;
   --ground-light-inactive-color-hsl: var(--base-hue), var(--base-saturation), 70%;
 
   // HSL values (Intent)

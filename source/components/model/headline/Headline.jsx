@@ -24,7 +24,7 @@ import './Headline.scss'
 // Constants (Local)
 const THEME_LIGHTNESS_MAPPING = {
   dark: { high: 100, low: 25 },
-  light: { high: 20, low: 80 }
+  light: { high: 17.5, low: 80 }
 }
 
 // Functions (Local)
