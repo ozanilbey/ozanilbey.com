@@ -22,7 +22,7 @@ function SOCRadarBranding () {
           intent="information"
           hasBackground={false}
           className="information">
-          We also worked on <Link to="/works/socradar-website">SOCRadar Website</Link>{/* and created <Link to="/works/socradar-docs">SOCRadar Docs</Link> */}.
+          I also worked on <Link to="/works/socradar-website">SOCRadar Website</Link>{/* and created <Link to="/works/socradar-documents">SOCRadar Documents</Link> */}.
         </Callout>
         <Callout
           size="large"
