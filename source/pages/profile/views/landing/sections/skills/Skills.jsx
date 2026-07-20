@@ -28,7 +28,7 @@ function Skills () {
           contentBefore="Let’s talk about">
           professional skills
         </Headline>
-        <p className="lead">I have a wide range of digital product experience. My design work is focused on <strong>UI/UX/IxD</strong> while my development work is focused on <strong>design engineering</strong> and <strong>web app development</strong>.</p>
+        <p className="lead">I have a wide range of digital product experience. My design work is focused on <strong>UI/UX/IxD</strong> while my development work is focused on <strong>design engineering</strong> and <strong>web application development</strong>.</p>
         <Separator
           hasLine={false}
           spacing="xlarge" />
