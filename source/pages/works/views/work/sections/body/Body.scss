@@ -25,7 +25,7 @@
         margin: 0 auto;
         margin-top: 2.5rem;
         border-radius: .125rem;
-        filter: drop-shadow(0 0 1px var(--shade-strong-color));
+        filter: drop-shadow(0 0 1px hsla(var(--tone-color-hsl), .25));
         &.weak {
           opacity: 87.5%;
         }
@@ -41,7 +41,10 @@
       }
       .note {
         margin-top: 1rem;
-        font-weight: 450;
+        margin-bottom: .25rem;
+        color: var(--figure-weak-color);
+        font-weight: 350;
+        font-size: .875em;
         .detail {
           font-size: .875em;
           font-weight: 300;
