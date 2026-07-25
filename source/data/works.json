@@ -705,7 +705,7 @@
     "year": 2013,
     "colors": {
       "primary": [167, 56, 91],
-      "secondary": [198, 200, 202]
+      "secondary": [255, 255, 255]
     },
     "preview": ["Corporate Identity"],
     "role": ["Brand Designer", "Graphic Designer"],
@@ -723,7 +723,7 @@
     "year": 2012,
     "colors": {
       "primary": [31, 123, 166],
-      "secondary": [237, 245, 248]
+      "secondary": [255, 255, 255]
     },
     "preview": ["Corporate Identity"],
     "role": ["Brand Designer", "Graphic Designer"],
@@ -780,7 +780,7 @@
     "year": 2012,
     "colors": {
       "primary": [0, 145, 192],
-      "secondary": [225, 234, 238]
+      "secondary": [255, 255, 255]
     },
     "preview": ["Corporate Identity"],
     "role": ["Brand Designer", "Graphic Designer"],
