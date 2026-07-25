@@ -1,0 +1,81 @@
+// Component: Works > Work > Body > Markdown (Main)
+[data-page="works"] {
+  [data-view="work"] {
+    [data-section="body"] {
+      [data-component="markdown"] {
+        text-align: center;
+        & > * {
+          &:first-child {
+            max-width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            .media {
+              margin-top: 0;
+              margin-bottom: 2.5rem;
+              border-radius: 1rem;
+            }
+          }
+        }
+        .title {
+          margin-top: 2.5rem;
+          margin-bottom: 0;
+          & + .paragraph {
+            margin-top: 2rem;
+          }
+        }
+        .media {
+          display: flex;
+          max-width: 100%;
+          margin: 0 auto;
+          margin-top: 2.5rem;
+          border-radius: .125rem;
+          filter: drop-shadow(0 0 1px hsla(var(--tone-color-hsl), .25));
+          &.weak {
+            opacity: 87.5%;
+          }
+          &.spaced {
+            margin-top: 4rem;
+          }
+        }
+        .information {
+          margin-top: 1.5rem;
+          & + .information {
+            margin-top: .75rem;
+          }
+        }
+        .note {
+          margin-top: 1rem;
+          margin-bottom: .25rem;
+          color: var(--figure-weak-color);
+          font-weight: 350;
+          font-size: .875em;
+          .detail {
+            font-size: .875em;
+            font-weight: 300;
+          }
+        }
+        .detail {
+          display: block;
+          color: var(--brand-color);
+        }
+      }
+    }
+  }
+}
+
+// Component: Works > Work > Body > Markdown (< 1024px)
+@media (max-width: 1023.98px) {
+  [data-page="works"] {
+    [data-view="work"] {
+      [data-section="body"] {
+        [data-component="markdown"] {
+          & > * {
+            &:first-child {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

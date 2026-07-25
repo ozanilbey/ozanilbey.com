@@ -1,5 +1,5 @@
 // Modules
-import { useEffect, useMemo } from 'react'
+import { Suspense, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -36,6 +36,7 @@ function Work ({ category, className, data, next, style, ...rest }) {
   useEffect(() => {
     if (!data) navigate('/works', { replace: true })
   }, [data, navigate])
+
   // Render
   if (!data) return null
   return (
@@ -55,7 +56,9 @@ function Work ({ category, className, data, next, style, ...rest }) {
         recommendation={next?.slug ? `/works/${next.slug}` : null} />
       <Preview data={data} />
       <Excerpt data={data} />
-      <Body identifier={data.slug} />
+      <Suspense fallback={null}>
+        <Body identifier={data.slug} />
+      </Suspense>
       <Separator />
       <Actions
         category={category}
