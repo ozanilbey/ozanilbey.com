@@ -50,7 +50,9 @@ function Excerpt ({ className, data, style, ...rest }) {
   function renderDataList (id, value) {
     if (!id || !value) return null
     return (
-      <dl className="list">
+      <dl
+        key={id}
+        className="list">
         <dt className="term">{id}</dt>
         {renderDataDefinition(id, value)}
       </dl>
