@@ -32,11 +32,11 @@ function Preview ({ className, data, style, ...rest }) {
   // Effects
   useEffect(() => {
     function handleScroll () {
-      if (window.scrollY <= 0) setFactor(0)
+      if (isMobile || window.scrollY <= 0) setFactor(0)
       else if (window.scrollY > 0 && window.scrollY <= 100) setFactor(window.scrollY)
       else setFactor(100)
     }
-    if (!isMobile) window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isMobile])
 
