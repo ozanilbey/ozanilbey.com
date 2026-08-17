@@ -17,6 +17,9 @@ import Document from './Document'
 // Application
 import Application from './Application'
 
+// Helpers
+import { getSiteDescription } from './helpers/site'
+
 // Constants (Local)
 const DEFAULT_PORT = 3000
 const PORT = process.env.PORT || DEFAULT_PORT
@@ -62,6 +65,12 @@ application.get('/sitemap.xml', (request, response) => {
   const declaration = '<?xml version="1.0" encoding="UTF-8"?>'
   response.write(declaration + '\n' + renderToString(<Sitemap />))
   response.end()
+})
+
+// Request: Site description (GET)
+application.get('/llms.txt', (request, response) => {
+  response.setHeader('content-type', 'text/plain; charset=utf-8')
+  response.send(getSiteDescription())
 })
 
 // Request: Health (GET)

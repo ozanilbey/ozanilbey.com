@@ -4,61 +4,12 @@ import PropTypes from 'prop-types'
 // Data
 import socialAccounts from '@source/data/socialAccounts.json'
 
+// Constants
+import { ROOT_URL } from '@source/constants/environment'
+import { BRAND, SITE } from '@source/constants/metadata'
+import { DEFAULT_LOCALE } from '@source/constants/settings'
+
 // Constants (Local)
-const DEFAULT_LOCALE = 'en_US'
-const BASE_URL = 'https://ozanilbey.com'
-const DEFAULT_COLOR = '#2dd27d'
-const THEMES = ['dark', 'light']
-const AUTHOR = {
-  description: 'Ozan Yilmaz is a senior designer+developer focused on creating digital products with unique visual identities.',
-  keywords: ['Ozan Yilmaz', 'Ozan Ilbey Yilmaz', 'ozanilbey', 'ozan', 'design', 'designer', 'multidisciplinary designer', 'developer', 'web designer', 'web developer', 'user interface designer', 'UI designer', 'user experience designer', 'UX designer', 'frontend developer', 'fullstack developer', 'software engineer', 'engineering manager', 'tech lead'],
-  name: 'Ozan Yilmaz',
-  username: 'ozanilbey'
-}
-const BRAND = {
-  color: DEFAULT_COLOR,
-  images: {
-    icons: {
-      default: {
-        type: 'image/png',
-        url: `${BASE_URL}/images/brand/icon.png`
-      },
-      mask: {
-        type: 'image/svg+xml',
-        url: `${BASE_URL}/images/brand/icon.svg`
-      },
-      tile: {
-        type: 'image/png',
-        url: `${BASE_URL}/images/brand/icon-tile.png`
-      },
-      touch: {
-        type: 'image/png',
-        url: `${BASE_URL}/images/brand/icon-touch.png`
-      }
-    },
-    preview: {
-      default: {
-        type: 'image/png',
-        url: `${BASE_URL}/images/brand/preview.png`
-      }
-    }
-  },
-  name: AUTHOR.username
-}
-const SITE = {
-  author: AUTHOR.name,
-  color: BRAND.color,
-  description: AUTHOR.description,
-  keywords: AUTHOR.keywords,
-  name: BRAND.name,
-  resources: [
-    {
-      name: 'Cloudinary',
-      url: 'https://cloudinary.com'
-    }
-  ],
-  themes: THEMES
-}
 const ACCOUNTS = {
   facebook: socialAccounts.find(account => account.id === 'facebook'),
   x: socialAccounts.find(account => account.id === 'x')
@@ -73,7 +24,7 @@ function Meta ({ article, category, description = SITE.description, keywords = S
     return 'website'
   }
   function getURL () {
-    let url = BASE_URL
+    let url = ROOT_URL
     if (page && page !== 'home') url += `/${page}`
     if (view) url += `/${view}`
     return url
@@ -190,7 +141,7 @@ function Meta ({ article, category, description = SITE.description, keywords = S
           {recommendation &&
             <meta
               property="og:see_also"
-              content={`${BASE_URL}${recommendation}`} />
+              content={`${ROOT_URL}${recommendation}`} />
           }
           {/* Article information */}
           {article &&
@@ -206,7 +157,7 @@ function Meta ({ article, category, description = SITE.description, keywords = S
           {/* Hierarchical index */}
           <link
             rel="index"
-            href={`${BASE_URL}/${page}/`} />
+            href={`${ROOT_URL}/${page}/`} />
           {/* Profile information */}
           {page === 'profile' &&
             <meta
