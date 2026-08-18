@@ -58,7 +58,7 @@ It’s not a business card. It’s your **persona**. Pick your style, provide yo
 
 ## Story of the project
 
-Cardz was **entirely designed and developed in 48 hours** at **LAUNCH Hackathon 2014**, by **Ozan Yilmaz** and [Volkan Özçelik](//volkan.io).
+Cardz was **entirely designed and developed in 48 hours** at **LAUNCH Hackathon 2014**, by **Ozan Ilbey Yilmaz** and [Volkan Özçelik](//volkan.io).
 
 Ozan, having had 5 years of experience on branding at the time, came up with the idea of **easy-to-have, branded-looking, socially consumable business cards**. Compared to ordinary business cards, the main distinguishing factor of Cardz concept is that **it democratizes having business cards** by making it **simple and cheaper**.
 

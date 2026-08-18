@@ -63,7 +63,7 @@ function Work ({ category, className, data, next, style, ...rest }) {
       <Actions
         category={category}
         recommendation={next}
-        label={`${title} by Ozan Yilmaz`} />
+        label={`${title} by Ozan Ilbey Yilmaz`} />
       <Promotion className="promotion" />
     </Page.View>
   )

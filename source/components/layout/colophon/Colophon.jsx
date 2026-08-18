@@ -43,7 +43,7 @@ function Colophon ({ className, style, ...rest }) {
         <section
           className="about"
           data-label="about">
-          <p className="paragraph">This website is an online portfolio of <strong>Ozan Yilmaz</strong>.</p>
+          <p className="paragraph">This website is the portfolio of <strong>Ozan Ilbey Yilmaz</strong>.</p>
           <p className="paragraph">
             <Link
               isExternal

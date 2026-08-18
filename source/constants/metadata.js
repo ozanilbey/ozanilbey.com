@@ -5,9 +5,9 @@ import { DEFAULT_COLOR_IN_HEX } from '@source/constants/settings'
 
 // Constant: Meta > Author
 const AUTHOR = {
-  description: 'Ozan Yilmaz is a senior designer+developer focused on creating digital products with unique visual identities.',
+  description: 'Ozan Ilbey Yilmaz is a senior designer+developer focused on creating digital products with unique visual identities.',
   keywords: ['Ozan Yilmaz', 'Ozan Ilbey Yilmaz', 'ozanilbey', 'ozan', 'design', 'designer', 'multidisciplinary designer', 'developer', 'web designer', 'web developer', 'user interface designer', 'UI designer', 'user experience designer', 'UX designer', 'frontend developer', 'fullstack developer', 'software engineer', 'engineering manager', 'tech lead'],
-  name: 'Ozan Yilmaz',
+  name: 'Ozan Ilbey Yilmaz',
   username: 'ozanilbey'
 }
 
